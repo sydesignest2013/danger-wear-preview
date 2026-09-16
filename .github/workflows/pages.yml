@@ -1,5 +1,5 @@
 name: Deploy Danger Wear preview
-# sync-trigger: 2026-09-16 Sportswear-Fightwear-MESH-title-row
+# sync-trigger: 2026-09-16 unified-product-reference-layout
 
 on:
   push:
