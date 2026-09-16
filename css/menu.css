@@ -54,3 +54,17 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 500; display: flex; j
   .nav-links { display: none; }
   .hamburger { display: flex; }
 }
+
+/* === PRODUCT GROUPS: SPORTSWEAR / FIGHTWEAR STACKED === */
+.nav-dropdown{max-height:min(72vh,680px);overflow-y:auto;}
+.nav-dropdown .nav-dropdown-label{display:block;padding:12px 18px 5px;color:var(--red);font-family:"Chakra Petch",sans-serif;font-size:12px;font-weight:800;letter-spacing:.10em;text-transform:uppercase;pointer-events:none;}
+.nav-dropdown .nav-dropdown-label-fight{margin-top:8px;padding-top:14px;border-top:1px solid rgba(255,255,255,.10);}
+.nav-dropdown .nav-dropdown-sub{padding-left:24px;font-size:12px;}
+
+
+/* === GLOBAL PRODUCT NAV ACCENT === */
+#projLi > .nav-link,
+#projLi > button.nav-link,
+.mob-section-btn#mobProjBtn{
+  color:var(--red)!important;
+}

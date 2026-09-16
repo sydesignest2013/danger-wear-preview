@@ -6,7 +6,7 @@
   --line:#292929;
   --muted:#969696;
   --text:#eeeeee;
-  --red:#8A0303;
+  --red:#BF1304;
 }
 html{background:var(--bg);color:var(--text);font-family:"Chakra Petch",sans-serif}
 body{margin:0;background:var(--bg)}
@@ -1434,4 +1434,563 @@ body::before{
 }
 .products-index-card h2 a::after{
   content:none!important;
+}
+
+
+/* === 2026-09 KARUZELA: podpis wyśrodkowany, bez prawego przycisku GALERIA === */
+.caption{
+  justify-content:center;
+  text-align:center;
+}
+.caption>div{
+  width:100%;
+  align-items:center;
+  text-align:center;
+}
+.caption strong,
+.caption span{
+  width:100%;
+  text-align:center;
+}
+.caption>a{
+  display:none!important;
+}
+/* === CATEGORY SPLIT: SPORTSWEAR + FIGHTWEAR IN ONE MEGA-MENU COLUMN === */
+.products-dropdown .products-group-secondary{
+  margin-top:16px;
+  padding-top:15px;
+  border-top:1px solid #242424;
+}
+.products-index-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+}
+@media(max-width:700px){
+  .products-index-grid{grid-template-columns:1fr}
+}
+
+
+
+/* === CATEGORY SPLIT V2: TANK TOP + KOMPLETY === */
+.products-dropdown section:first-child{min-width:0;}
+.products-dropdown section:first-child a{line-height:1.25;}
+
+
+
+/* === 2026-09 SYNC: wspólne decyzje projektu zachowane po przebudowie Fightwear === */
+:root{--red:#BF1304;}
+.products-trigger{color:var(--red);}
+@media (min-width:901px){
+  .products-index-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
+}
+
+/* ==========================================================================
+   FIGHTWEAR — WZOR KARTY 2026-09-16
+   Układ odwzorowujący referencję użytkownika. Reguły są ściśle ograniczone
+   do body.fw-reference-page, więc pozostałe karty w MESH_KARTA_V1 są bez zmian.
+   ========================================================================== */
+body.fw-reference-page{
+  --fw-shell:1260px;
+  --fw-gap:48px;
+  --fw-red:#BF1304;
+  --fw-line:#252525;
+  --fw-panel:rgba(7,7,7,.90);
+  background-color:#050505;
+}
+body.fw-reference-page .topbar{
+  height:72px;
+  min-height:72px;
+  padding:0 24px;
+  background:rgba(5,5,5,.96);
+  border-bottom:1px solid #171717;
+}
+body.fw-reference-page .brand{gap:11px}
+body.fw-reference-page .brand img{width:38px;height:38px}
+body.fw-reference-page .brand b{font-size:12px;letter-spacing:.055em}
+body.fw-reference-page .navlinks{gap:36px;font-size:11px;letter-spacing:.16em}
+body.fw-reference-page .products-menu{height:72px}
+body.fw-reference-page .products-dropdown{top:72px!important}
+
+body.fw-reference-page .fw-page-shell{
+  position:relative;
+  z-index:1;
+  max-width:var(--fw-shell);
+  margin:0 auto;
+  padding:18px 22px 0;
+}
+body.fw-reference-page .fw-main{
+  display:grid;
+  grid-template-columns:minmax(0,.98fr) minmax(0,1fr);
+  gap:var(--fw-gap);
+  align-items:start;
+}
+body.fw-reference-page .fw-lifestyle{
+  display:block;
+  margin:0;
+  min-width:0;
+}
+body.fw-reference-page .fw-lifestyle .stage{
+  min-height:572px;
+  height:auto;
+  padding:0;
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+  overflow:visible;
+}
+body.fw-reference-page .fw-lifestyle .main-card{
+  width:min(462px,88%);
+  max-width:462px;
+  margin:0 auto;
+  border:1px solid #222;
+  background:#080808;
+  box-shadow:0 22px 46px rgba(0,0,0,.52);
+}
+body.fw-reference-page .fw-lifestyle .main-card>img{
+  width:100%;
+  aspect-ratio:1 / 1.025;
+  object-fit:cover;
+  background:#090909;
+}
+body.fw-reference-page .fw-lifestyle .caption{
+  min-height:82px;
+  padding:13px 16px 14px;
+  border-top:2px solid var(--fw-red);
+  background:rgba(8,8,8,.96);
+  justify-content:center;
+  text-align:center;
+}
+body.fw-reference-page .fw-lifestyle .caption>div{
+  align-items:center;
+  width:100%;
+  gap:4px;
+}
+body.fw-reference-page .fw-lifestyle .caption strong{
+  color:#BF1304;
+  font-size:15px;
+  line-height:1.15;
+  letter-spacing:.035em;
+  font-weight:800;
+}
+body.fw-reference-page .fw-lifestyle .caption span{
+  color:#8f8f8f;
+  font-size:13px;
+  line-height:1.25;
+  font-weight:700;
+  letter-spacing:.025em;
+}
+body.fw-reference-page .fw-lifestyle .side{
+  top:88px;
+  width:41%;
+  height:390px;
+  opacity:.11;
+  border:0;
+  filter:saturate(.75) brightness(.64);
+  box-shadow:none;
+}
+body.fw-reference-page .fw-lifestyle .side-left{left:-3%;transform:translateX(-8%) scale(.95)}
+body.fw-reference-page .fw-lifestyle .side-right{right:-3%;transform:translateX(8%) scale(.95)}
+body.fw-reference-page .fw-lifestyle .side:hover,
+body.fw-reference-page .fw-lifestyle .side:focus-visible{opacity:.22}
+body.fw-reference-page .fw-lifestyle .carousel-arrow{
+  position:absolute;
+  z-index:8;
+  top:224px;
+  width:35px;
+  height:46px;
+  display:grid;
+  place-items:center;
+  padding:0;
+  border:1px solid #343434;
+  background:rgba(8,8,8,.88);
+  color:#BF1304;
+  font-size:34px;
+  line-height:1;
+  cursor:pointer;
+  transition:border-color .15s ease,color .15s ease,background .15s ease;
+}
+body.fw-reference-page .fw-lifestyle .carousel-arrow:hover,
+body.fw-reference-page .fw-lifestyle .carousel-arrow:focus-visible{
+  border-color:var(--fw-red);
+  color:#BF1304;
+  background:#0b0b0b;
+}
+body.fw-reference-page .fw-lifestyle .carousel-arrow-prev{left:calc(50% - 231px + 7px)}
+body.fw-reference-page .fw-lifestyle .carousel-arrow-next{right:calc(50% - 231px + 7px)}
+
+body.fw-reference-page .fw-info{
+  min-width:0;
+  padding-top:22px;
+}
+body.fw-reference-page .fw-kicker{
+  margin:0 0 13px;
+  color:#d4d4d4;
+  font-family:"DM Mono",monospace;
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+body.fw-reference-page .fw-kicker a:hover,
+body.fw-reference-page .fw-kicker a:focus-visible{color:var(--fw-red)}
+body.fw-reference-page .fw-info h1{
+  display:inline;
+  margin:0;
+  padding:0 5px 1px;
+  background:#030303;
+  box-decoration-break:clone;
+  -webkit-box-decoration-break:clone;
+  color:#BF1304;
+  font-size:clamp(40px,4.15vw,58px);
+  line-height:.93;
+  letter-spacing:-.035em;
+  font-weight:900;
+  text-transform:uppercase;
+}
+body.fw-reference-page .fw-lead{
+  margin:21px 0 20px;
+  max-width:none;
+  color:#a7a7a7;
+  font-size:12px;
+  line-height:1.55;
+}
+body.fw-reference-page .fw-features{
+  list-style:none;
+  margin:0 0 17px;
+  padding:0;
+  border-top:1px solid var(--fw-line);
+}
+body.fw-reference-page .fw-features li{
+  position:relative;
+  min-height:34px;
+  display:flex;
+  align-items:center;
+  padding:8px 10px 8px 24px;
+  border-bottom:1px solid var(--fw-line);
+  color:#cfcfcf;
+  font-size:10px;
+  line-height:1.35;
+}
+body.fw-reference-page .fw-features li::before{
+  content:"";
+  position:absolute;
+  left:2px;
+  top:50%;
+  width:5px;
+  height:5px;
+  transform:translateY(-50%);
+  background:#f1f1f1;
+}
+body.fw-reference-page .fw-specs{
+  margin:0 0 10px;
+}
+body.fw-reference-page .fw-specs>div{
+  display:grid;
+  grid-template-columns:minmax(120px,.85fr) minmax(0,1.15fr);
+  gap:20px;
+  min-height:36px;
+  align-items:center;
+  padding:7px 0;
+  border-bottom:1px solid #252525;
+}
+body.fw-reference-page .fw-specs dt{
+  color:#777;
+  font-size:10px;
+}
+body.fw-reference-page .fw-specs dd{
+  margin:0;
+  color:#e5e5e5;
+  text-align:right;
+  font-size:10px;
+  font-weight:800;
+}
+
+body.fw-reference-page .fw-personalization{
+  margin-top:9px;
+  border:1px solid #1d1d1d;
+  background:rgba(6,6,6,.76);
+}
+body.fw-reference-page .fw-personalization summary{
+  min-height:91px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 74px;
+  gap:15px;
+  align-items:stretch;
+  padding:0 0 0 20px;
+  cursor:pointer;
+  list-style:none;
+}
+body.fw-reference-page .fw-personalization summary::-webkit-details-marker{display:none}
+body.fw-reference-page .fw-personalization-copy{
+  align-self:center;
+  min-width:0;
+}
+body.fw-reference-page .fw-personalization-copy small{
+  display:block;
+  margin:0 0 7px;
+  color:#d3d3d3;
+  font-family:"DM Mono",monospace;
+  font-size:7px;
+  font-weight:700;
+  letter-spacing:.18em;
+}
+body.fw-reference-page .fw-personalization-copy strong{
+  display:block;
+  margin:0 0 7px;
+  color:#f0f0f0;
+  font-size:19px;
+  line-height:1;
+  letter-spacing:-.015em;
+}
+body.fw-reference-page .fw-personalization-copy span{
+  display:block;
+  color:#7d7d7d;
+  font-size:7px;
+  line-height:1.45;
+}
+body.fw-reference-page .fw-mark-panel{
+  min-height:91px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:2px;
+  border-left:1px solid #202020;
+  background:#080808;
+}
+body.fw-reference-page .fw-mark-panel .mark-badge{
+  width:46px;
+  height:46px;
+  display:grid;
+  place-items:center;
+}
+body.fw-reference-page .fw-mark-panel .mark-badge img{
+  width:auto!important;
+  height:auto!important;
+  max-width:42px!important;
+  max-height:42px!important;
+  object-fit:contain;
+}
+body.fw-reference-page .fw-mark-panel b{
+  color:#BF1304;
+  font-family:"DM Mono",monospace;
+  font-size:6px;
+  letter-spacing:.10em;
+}
+body.fw-reference-page .fw-personalization-body{
+  padding:12px 20px 15px;
+  border-top:1px solid #202020;
+  color:#999;
+  font-size:10px;
+  line-height:1.55;
+}
+body.fw-reference-page .fw-personalization-body p{margin:0 0 7px}
+body.fw-reference-page .fw-personalization-body a{color:#eee;font-weight:800}
+body.fw-reference-page .fw-personalization-body a:hover,
+body.fw-reference-page .fw-personalization-body a:focus-visible{color:var(--fw-red)}
+
+body.fw-reference-page .fw-realizations{
+  position:relative;
+  z-index:1;
+  max-width:calc(var(--fw-shell) + 22px);
+  margin:0 auto 24px;
+  padding:10px 22px 26px;
+  background:rgba(5,5,5,.60);
+}
+body.fw-reference-page .realizations-heading{
+  margin:0 0 24px;
+  text-align:center;
+  font-size:28px;
+  line-height:1;
+  font-weight:900;
+  letter-spacing:.015em;
+  color:#f0f0f0;
+}
+body.fw-reference-page .realizations-track{
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:7px;
+  overflow:visible;
+  border:0;
+  background:transparent;
+}
+body.fw-reference-page .realization-thumb{
+  position:relative;
+  min-width:0;
+  width:100%;
+  display:grid;
+  grid-template-rows:auto minmax(38px,auto);
+  padding:0;
+  border:1px solid #242424;
+  background:#090909;
+  cursor:zoom-in;
+  opacity:1;
+  overflow:hidden;
+}
+body.fw-reference-page .realization-thumb:hover,
+body.fw-reference-page .realization-thumb:focus-visible{
+  outline:1px solid var(--fw-red);
+  outline-offset:-1px;
+}
+body.fw-reference-page .realization-thumb img{
+  width:100%;
+  aspect-ratio:1.31 / 1;
+  display:block;
+  object-fit:cover;
+  transition:transform .22s ease;
+}
+body.fw-reference-page .realization-thumb:hover img,
+body.fw-reference-page .realization-thumb:focus-visible img{transform:scale(1.025)}
+body.fw-reference-page .realization-thumb span{
+  position:static;
+  display:flex;
+  align-items:center;
+  min-height:38px;
+  padding:8px 9px;
+  border-top:1px solid var(--fw-red);
+  background:#090909;
+  color:#a6a6a6;
+  font-size:8px;
+  line-height:1.25;
+  font-weight:800;
+  letter-spacing:.02em;
+  white-space:normal;
+  overflow:visible;
+  text-overflow:clip;
+  text-align:left;
+}
+body.fw-reference-page .realization-thumb:hover span,
+body.fw-reference-page .realization-thumb:focus-visible span{color:#BF1304}
+body.fw-reference-page .gallery-footer{display:none}
+
+body.fw-reference-page .cta{
+  position:relative;
+  z-index:1;
+  margin-top:0;
+  background:rgba(6,6,6,.82);
+}
+
+@media(max-width:1180px){
+  body.fw-reference-page .topbar{height:72px;min-height:72px;padding:0 22px}
+  body.fw-reference-page .products-dropdown{top:72px!important}
+  body.fw-reference-page .fw-page-shell{padding-left:18px;padding-right:18px}
+  body.fw-reference-page .fw-main{gap:34px}
+  body.fw-reference-page .fw-lifestyle .main-card{width:min(430px,88%)}
+  body.fw-reference-page .fw-lifestyle .carousel-arrow-prev{left:calc(50% - min(215px,44%) + 7px)}
+  body.fw-reference-page .fw-lifestyle .carousel-arrow-next{right:calc(50% - min(215px,44%) + 7px)}
+  body.fw-reference-page .fw-realizations{padding-left:18px;padding-right:18px}
+  body.fw-reference-page .realizations-track{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+
+@media(max-width:900px){
+  body.fw-reference-page .fw-page-shell{padding:18px 18px 0}
+  body.fw-reference-page .fw-main{grid-template-columns:1fr;gap:24px}
+  body.fw-reference-page .fw-lifestyle{order:0}
+  body.fw-reference-page .fw-info{order:1;padding-top:0}
+  body.fw-reference-page .fw-lifestyle .stage{min-height:0;padding-bottom:0}
+  body.fw-reference-page .fw-lifestyle .main-card{width:min(470px,84vw);max-width:470px}
+  body.fw-reference-page .fw-lifestyle .main-card>img{aspect-ratio:1 / 1.02}
+  body.fw-reference-page .fw-lifestyle .side{top:62px;width:36%;height:330px;opacity:.12}
+  body.fw-reference-page .fw-lifestyle .carousel-arrow{top:38%;transform:translateY(-50%)}
+  body.fw-reference-page .fw-lifestyle .carousel-arrow-prev{left:7vw}
+  body.fw-reference-page .fw-lifestyle .carousel-arrow-next{right:7vw}
+  body.fw-reference-page .fw-info h1{font-size:clamp(34px,9vw,50px);line-height:.94}
+  body.fw-reference-page .fw-lead{font-size:13px;line-height:1.6}
+  body.fw-reference-page .fw-features li{font-size:11px;min-height:39px}
+  body.fw-reference-page .fw-specs>div{min-height:40px}
+  body.fw-reference-page .fw-specs dt,body.fw-reference-page .fw-specs dd{font-size:11px}
+  body.fw-reference-page .fw-personalization-copy strong{font-size:18px}
+  body.fw-reference-page .fw-realizations{padding:28px 18px 24px;margin-top:0}
+  body.fw-reference-page .realizations-track{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+  body.fw-reference-page .realization-thumb span{font-size:8px}
+}
+
+@media(max-width:620px){
+  body.fw-reference-page .topbar{height:68px;min-height:68px;padding:0 14px}
+  body.fw-reference-page .brand img{width:34px;height:34px}
+  body.fw-reference-page .brand b{font-size:11px}
+  body.fw-reference-page .products-dropdown{top:68px!important}
+  body.fw-reference-page .fw-page-shell{padding:12px 12px 0}
+  body.fw-reference-page .fw-lifestyle .main-card{width:84vw}
+  body.fw-reference-page .fw-lifestyle .caption{min-height:68px;padding:10px 12px}
+  body.fw-reference-page .fw-lifestyle .caption strong{font-size:13px}
+  body.fw-reference-page .fw-lifestyle .caption span{font-size:11px}
+  body.fw-reference-page .fw-lifestyle .side{height:260px;top:48px}
+  body.fw-reference-page .fw-lifestyle .carousel-arrow{width:32px;height:44px;font-size:30px}
+  body.fw-reference-page .fw-lifestyle .carousel-arrow-prev{left:4vw}
+  body.fw-reference-page .fw-lifestyle .carousel-arrow-next{right:4vw}
+  body.fw-reference-page .fw-info h1{font-size:clamp(30px,10vw,43px)}
+  body.fw-reference-page .fw-kicker{font-size:7px;margin-bottom:11px}
+  body.fw-reference-page .fw-personalization summary{grid-template-columns:minmax(0,1fr) 70px;padding-left:14px}
+  body.fw-reference-page .fw-personalization-copy strong{font-size:16px}
+  body.fw-reference-page .fw-personalization-copy span{font-size:7px}
+  body.fw-reference-page .fw-realizations{padding-left:12px;padding-right:12px}
+  body.fw-reference-page .realizations-heading{font-size:25px}
+  body.fw-reference-page .realizations-track{grid-template-columns:repeat(2,minmax(0,1fr))}
+  body.fw-reference-page .realization-thumb span{min-height:36px;font-size:8px;padding:7px}
+}
+
+
+/* === SPORTSWEAR — wariant referencyjny + zachowane dane techniczne === */
+
+/* MESH: full-width title row above the 50/50 content split */
+body.sw-mesh-page .fw-main{
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+}
+body.sw-mesh-page .fw-title-row{
+  grid-column:1 / -1;
+  width:100%;
+  padding:10px 0 6px;
+}
+body.sw-mesh-page .fw-title-row .fw-kicker{margin:0 0 10px}
+body.sw-mesh-page .fw-title-row h1{
+  display:block;
+  width:100%;
+  margin:0;
+  color:#BF1304;
+  font-size:clamp(44px,4.7vw,66px);
+  line-height:.92;
+  letter-spacing:-.035em;
+  font-weight:900;
+  text-transform:uppercase;
+}
+body.sw-mesh-page .fw-info{padding-top:0}
+body.sw-mesh-page .fw-info .fw-lead{margin-top:0}
+@media(max-width:900px){
+  body.sw-mesh-page .fw-main{grid-template-columns:1fr}
+  body.sw-mesh-page .fw-title-row{grid-column:1;padding:4px 0 0}
+  body.sw-mesh-page .fw-title-row h1{font-size:clamp(34px,9vw,50px);line-height:.94}
+}
+body.sw-reference-page .fw-data-fold{
+  margin:9px 0 0;
+  border:1px solid #1d1d1d;
+  background:rgba(6,6,6,.76);
+}
+body.sw-reference-page .fw-data-fold summary{
+  min-height:44px;display:flex;align-items:center;justify-content:space-between;gap:18px;
+  padding:10px 14px;cursor:pointer;list-style:none;color:#d5d5d5;font-size:10px;font-weight:800;letter-spacing:.08em;
+}
+body.sw-reference-page .fw-data-fold summary::-webkit-details-marker{display:none}
+body.sw-reference-page .fw-data-fold summary span{color:var(--fw-red);font-size:18px;transition:transform .18s ease}
+body.sw-reference-page .fw-data-fold[open] summary span{transform:rotate(45deg)}
+body.sw-reference-page .fw-data-fold-body{padding:0 12px 12px;border-top:1px solid #202020;overflow-x:auto}
+body.sw-reference-page .fw-data-fold table{width:100%;min-width:540px;border-collapse:collapse;font-size:9px}
+body.sw-reference-page .fw-data-fold th,body.sw-reference-page .fw-data-fold td{padding:9px 8px;border:1px solid #252525;text-align:center}
+body.sw-reference-page .fw-data-fold th{background:#0d0d0d;color:#e6e6e6}
+body.sw-reference-page .fw-data-fold td{color:#aaa}
+body.sw-reference-page .fw-mark-pending{gap:0}
+body.sw-reference-page .fw-pending-dot{color:#BF1304;font-size:34px;line-height:.55}
+body.sw-reference-page .fw-mark-pending b{font-size:6px;text-align:center;padding:0 4px}
+body.sw-reference-page .empty-gallery{
+  grid-column:1/-1;min-height:104px;display:grid;place-items:center;padding:24px;
+  border:1px solid #242424;background:#090909;color:#777;font-family:"DM Mono",monospace;
+  font-size:9px;letter-spacing:.08em;text-align:center;text-transform:uppercase;
+}
+body.sw-reference-page .sw-gallery-footer{display:flex;justify-content:flex-end;margin-top:11px}
+body.sw-reference-page .sw-gallery-footer .full-gallery{
+  display:inline-flex;align-items:center;gap:8px;padding:7px 0;color:#9a9a9a;font-size:9px;font-weight:800;letter-spacing:.07em;
+}
+body.sw-reference-page .sw-gallery-footer .full-gallery:hover,body.sw-reference-page .sw-gallery-footer .full-gallery:focus-visible{color:#BF1304}
+@media(max-width:620px){
+  body.sw-reference-page .fw-data-fold table{font-size:8px}
+  body.sw-reference-page .sw-gallery-footer{justify-content:center}
 }

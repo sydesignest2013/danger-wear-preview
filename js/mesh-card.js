@@ -5,6 +5,8 @@
 
   const hero = document.getElementById("lifestyleHero");
   const title = document.getElementById("lifestyleTitle");
+  const subtitle = document.getElementById("lifestyleSubtitle");
+  const fallbackSubtitle = subtitle?.textContent || "";
   const prevButton = document.getElementById("lifestylePrev");
   const nextButton = document.getElementById("lifestyleNext");
   const carouselArrowPrev = document.getElementById("carouselArrowPrev");
@@ -24,6 +26,7 @@
       hero.removeAttribute("src");
       hero.alt = "Brak zdjęć w folderze Lifestyle";
       title.textContent = "DODAJ ZDJĘCIA DO FOLDERU LIFESTYLE";
+      if (subtitle) subtitle.textContent = fallbackSubtitle;
       prevButton.hidden = true;
       nextButton.hidden = true;
       return;
@@ -37,6 +40,7 @@
     hero.src = current.src;
     hero.alt = current.title || "Zdjęcie lifestyle";
     title.textContent = current.title || "LIFESTYLE";
+    if (subtitle) subtitle.textContent = current.subtitle || fallbackSubtitle;
 
     prevImage.src = prev.src;
     prevImage.alt = prev.title || "";
@@ -113,7 +117,7 @@
     if (!realizacje.length) {
       const empty = document.createElement("div");
       empty.className = "empty-gallery";
-      empty.textContent = "Dodaj pliki do folderu Realizacje i uruchom ODSWIEZ_GALERIE.bat.";
+      empty.textContent = galleries.emptyRealizationsText || "Dodaj pliki do folderu Realizacje i uruchom ODSWIEZ_GALERIE.bat.";
       track.appendChild(empty);
       return;
     }

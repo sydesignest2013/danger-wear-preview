@@ -1,7 +1,7 @@
 /* Danger Wear — mobile-first finishing layer. Loaded last on every page. */
 img,svg,video,canvas{max-width:100%}
 button,input,select,textarea{font:inherit}
-:where(a,button,input,select,textarea,summary):focus-visible{outline:2px solid #8A0303;outline-offset:3px}
+:where(a,button,input,select,textarea,summary):focus-visible{outline:2px solid #BF1304;outline-offset:3px}
 
 @media (max-width: 900px){
   html{scroll-padding-top:76px}
@@ -105,7 +105,7 @@ button,input,select,textarea{font:inherit}
   .mob-close{width:44px!important;height:44px!important;top:12px!important;right:12px!important}
   .mob-panel>a,.mob-products summary{min-height:48px;display:flex;align-items:center}
   .mob-products-tree a{min-height:42px;display:flex!important;align-items:center!important;padding:8px 4px!important;line-height:1.3}
-  .mob-products-tree b{display:block;margin-top:16px;margin-bottom:5px;color:#8A0303;font-size:.75rem;letter-spacing:.12em}
+  .mob-products-tree b{display:block;margin-top:16px;margin-bottom:5px;color:#BF1304;font-size:.75rem;letter-spacing:.12em}
   .product-head{padding:28px 18px 20px!important;margin-top:72px!important}
   .product-head p{font-size:.68rem!important;line-height:1.5}.product-head h1{font-size:clamp(1.9rem,9vw,2.8rem)!important;line-height:.96!important;margin-top:8px}
   .product-grid{grid-template-columns:1fr!important;padding:24px 18px 34px!important;gap:28px!important}
@@ -148,7 +148,7 @@ button,input,select,textarea{font:inherit}
 @media (max-width: 520px){
   #mainNav .nav-logo-text{max-width:145px;font-size:.72rem}
   .hero{min-height:690px!important;padding-top:88px!important}
-  .hero-pills{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px!important}
+  .hero-pills{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px!important}
   .hero-pill{justify-content:center;gap:6px!important;padding:9px 7px!important;font-size:.51rem!important;letter-spacing:.08em!important}
   .hero-pill-dot{display:none}
   .cat-section{padding-inline:12px!important}.cat-grid{gap:6px!important}.cat-tile-body{padding:11px 9px 12px}.cat-tile-name{font-size:.69rem}
@@ -157,7 +157,7 @@ button,input,select,textarea{font:inherit}
 }
 
 @media (max-width: 360px){
-  #mainNav .nav-logo-text{display:none}
+  #mainNav .nav-logo-text{display:block;max-width:132px;font-size:.60rem;line-height:1.05}
   .hero-title,.hero-title-brand{font-size:2.65rem!important}.hero-title-brand .hero-production{font-size:.64rem!important}
   .cat-grid{grid-template-columns:1fr!important}.cat-tile{aspect-ratio:16/11}.cat-tile-name{font-size:.8rem}
   .hero-pills{grid-template-columns:1fr!important}.hero-pill{min-height:40px}
@@ -167,4 +167,136 @@ button,input,select,textarea{font:inherit}
 @media (hover:none) and (pointer:coarse){
   .cat-tile:hover img,.pp-visual:hover img,.realization-thumb:hover img{transform:none!important}
   .cat-tile:hover::after{box-shadow:none!important}
+}
+
+
+/* === 2026-09 MOBILE: one-line adaptive names + clearer lifestyle carousel === */
+@media (max-width:900px){
+  .dw-mobile-fit-line{
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    white-space:nowrap!important;
+    overflow:visible!important;
+    text-wrap:nowrap!important;
+    word-break:normal!important;
+    overflow-wrap:normal!important;
+  }
+
+  /* Main lifestyle carousel: deliberately reveal neighbours on mobile/tablet. */
+  .realization{overflow:visible!important}
+  .stage{
+    min-height:470px!important;
+    overflow:visible!important;
+    isolation:isolate;
+  }
+  .main-card{
+    width:84%!important;
+    max-width:430px!important;
+    z-index:4!important;
+  }
+  .main-card>img{
+    aspect-ratio:1/1.02!important;
+    object-fit:cover!important;
+  }
+  .side{
+    display:block!important;
+    width:42%!important;
+    height:360px!important;
+    top:24px!important;
+    opacity:.48!important;
+    z-index:1!important;
+    pointer-events:auto!important;
+  }
+  .side-left{left:0!important;transform:translateX(-6%) scale(.94)!important}
+  .side-right{right:0!important;transform:translateX(6%) scale(.94)!important}
+  .side img{width:100%!important;height:100%!important;object-fit:cover!important}
+
+  .caption{
+    min-height:74px!important;
+    padding:12px 14px!important;
+    justify-content:center!important;
+    text-align:center!important;
+  }
+  .caption>div{
+    width:100%!important;
+    align-items:center!important;
+    text-align:center!important;
+    gap:4px!important;
+  }
+  .caption strong,
+  .caption span{
+    width:100%;
+    text-align:center;
+  }
+  .caption strong{font-size:14px!important}
+  .caption span{font-size:10px!important;letter-spacing:.08em!important;color:#aaa!important}
+  .caption a{display:none!important}
+
+  .carousel-arrow{z-index:8!important}
+  .carousel-arrow-prev{left:9%!important}
+  .carousel-arrow-next{right:9%!important}
+}
+
+@media (max-width:600px){
+  .stage{min-height:390px!important}
+  .main-card{
+    width:78%!important;
+    max-width:360px!important;
+  }
+  .side{
+    width:48%!important;
+    height:285px!important;
+    top:18px!important;
+    opacity:.52!important;
+  }
+  .side-left{transform:translateX(-8%) scale(.96)!important}
+  .side-right{transform:translateX(8%) scale(.96)!important}
+  .carousel-arrow-prev{left:10.5%!important}
+  .carousel-arrow-next{right:10.5%!important}
+}
+
+@media (max-width:380px){
+  .stage{min-height:355px!important}
+  .main-card{width:76%!important}
+  .side{height:250px!important;top:16px!important}
+  .caption{min-height:68px!important;padding:10px 12px!important}
+  .caption strong{font-size:13px!important}
+  .caption span{font-size:9px!important}
+}
+
+
+/* === MOBILE BRAND / HERO REFINEMENT === */
+@media(max-width:520px){
+  .hero-pills{
+    width:min(330px,88vw);
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:8px!important;
+  }
+  .hero-pill{
+    width:100%;
+    min-height:50px!important;
+    padding:10px 14px!important;
+    font-size:.58rem!important;
+    letter-spacing:.13em!important;
+  }
+  .hero-title-brand .hero-production{
+    font-size:.54em!important;
+    letter-spacing:.05em!important;
+  }
+  #mainNav .nav-logo-text{
+    display:block!important;
+    max-width:150px;
+    white-space:normal;
+    font-size:.68rem;
+    line-height:1.05;
+  }
+}
+@media(max-width:360px){
+  #mainNav .nav-logo-text{
+    display:block!important;
+    max-width:122px;
+    font-size:.58rem!important;
+  }
 }

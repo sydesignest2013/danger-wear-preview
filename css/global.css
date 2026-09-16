@@ -1,6 +1,6 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
-  --red: #8A0303;
+  --red: #BF1304;
   --bg: #060606;
   --surface: #0d0d0d;
   --border: rgba(255,255,255,.07);
@@ -47,13 +47,13 @@ body{
 .cat-tile img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(.5) brightness(.62); transition: filter .65s, transform .65s; }
 .cat-tile:hover img { filter: saturate(.82) brightness(.8); transform: scale(1.05); }
 .cat-tile::before { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 60%; background: linear-gradient(to top, rgba(6,6,6,.97) 0%, rgba(6,6,6,.55) 45%, transparent 100%); z-index: 2; }
-.cat-tile-glow { position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(138,3,3,.20) 0%, transparent 70%); opacity: 0; z-index: 1; transition: opacity .5s; pointer-events: none; }
+.cat-tile-glow { position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(191,19,4,.20) 0%, transparent 70%); opacity: 0; z-index: 1; transition: opacity .5s; pointer-events: none; }
 .cat-tile:hover .cat-tile-glow { opacity: 1; }
 .cat-tile::after { content: ''; position: absolute; inset: -1px; pointer-events: none; z-index: 10; transition: box-shadow .5s; }
 .cat-tile:hover::after { box-shadow: 0 28px 55px -8px rgba(0,0,0,.85), -16px 0 38px -20px rgba(0,0,0,.6), 16px 0 38px -20px rgba(0,0,0,.6); }
 
 .cat-tile-body { position: absolute; bottom: 0; left: 0; right: 0; z-index: 3; padding: 1.3rem 1.5rem 1.4rem; transform: translateY(4px); transition: transform .32s; border-top: 1px solid rgba(240,240,240,.12); }
-.cat-tile:hover .cat-tile-body { transform: translateY(0); border-top-color: rgba(138,3,3,.55); }
+.cat-tile:hover .cat-tile-body { transform: translateY(0); border-top-color: rgba(191,19,4,.55); }
 .cat-tile-name { font-size: 1.05rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--white); text-shadow: 0 2px 8px rgba(0,0,0,.9); position: relative; overflow: hidden; display: inline-block; }
 .cat-tile-name::after { content: ''; position: absolute; top: 0; left: -120%; width: 60%; height: 100%; background: linear-gradient(to right, transparent, rgba(255,255,255,.55), transparent); transform: skewX(-20deg); pointer-events: none; }
 .cat-tile:hover .cat-tile-name::after { animation: shimmer .55s ease forwards; }

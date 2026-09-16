@@ -6,5 +6,8 @@
   "pass5_mobile_brand": [],
   "pages": 36,
   "products": 27,
-  "reachable": 36
+  "reachable": 36,
+  "sync_note": "2026-09-16: Sportswear/Fightwear reference layouts, MESH full-width title row, #BF1304, updated responsive CSS/JS.",
+  "tank_top_present": true,
+  "mesh_title_full_width_row": true
 }

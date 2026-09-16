@@ -76,7 +76,71 @@
 .hero-title-brand .hero-production{font-family:'DM Mono',monospace;font-size:clamp(.82rem,1.65vw,1.6rem);letter-spacing:.58em;color:#f2f2f2;margin-right:-.58em;line-height:1.25}
 .hero-title-brand::before,.hero-title-brand::after{display:none}
 .hero-pills a.hero-pill{text-decoration:none;color:var(--mid);transition:border-color .25s,color .25s,background .25s}
-.hero-pills a.hero-pill:hover,.hero-pills a.hero-pill:focus-visible{color:#fff;border-color:var(--red);background:rgba(138,3,3,.18)}
+.hero-pills a.hero-pill:hover,.hero-pills a.hero-pill:focus-visible{color:#fff;border-color:var(--red);background:rgba(191,19,4,.18)}
 .hero-scroll{text-decoration:none;cursor:pointer}
 .hero-scroll:hover .scroll-word,.hero-scroll:focus-visible .scroll-word{color:var(--red)}
 .hero-scroll:focus-visible{outline:1px solid var(--red);outline-offset:8px}
+
+
+/* === DANGER WEAR / PRODUCTION HERO LOCKUP === */
+.dw-hero-logo{display:none!important}
+.hero-title-brand{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:.06em;
+  line-height:.82;
+  font-family:'Chakra Petch',sans-serif;
+}
+.hero-title-brand .solid{
+  white-space:nowrap;
+  color:var(--white);
+  font-family:inherit;
+  font-weight:700;
+  animation:dwBrandPulse 7s ease-in-out infinite;
+}
+.hero-title-brand .hero-production{
+  display:block;
+  font-family:inherit;
+  font-size:.57em;
+  font-weight:700;
+  letter-spacing:.055em;
+  line-height:1;
+  color:transparent;
+  -webkit-text-stroke:1.7px var(--red);
+  text-stroke:1.7px var(--red);
+  margin:0;
+  animation:dwProductionPulse 7s ease-in-out infinite;
+}
+.hero-title-brand::before,.hero-title-brand::after{display:none!important}
+@keyframes dwBrandPulse{
+  0%,100%{opacity:1;transform:scale(1);text-shadow:0 0 0 transparent}
+  22%{opacity:1;transform:scale(1.022);text-shadow:0 0 18px rgba(255,255,255,.14)}
+  48%,72%{opacity:.68;transform:scale(.992);text-shadow:0 0 0 transparent}
+}
+@keyframes dwProductionPulse{
+  0%,22%,100%{opacity:.62;transform:scale(.992);filter:drop-shadow(0 0 0 transparent)}
+  48%{opacity:1;transform:scale(1.026);filter:drop-shadow(0 0 12px rgba(191,19,4,.34))}
+  72%{opacity:.72;transform:scale(1)}
+}
+.hero-pills{
+  gap:1rem;
+  margin-top:.55rem;
+}
+.hero-pill{
+  min-width:210px;
+  min-height:58px;
+  justify-content:center;
+  padding:.75rem 1.35rem;
+  border:1px solid rgba(255,255,255,.34);
+  font-size:.67rem;
+  letter-spacing:.18em;
+}
+.hero-pills a.hero-pill:hover,.hero-pills a.hero-pill:focus-visible{
+  color:#fff;
+  border-color:var(--red);
+  background:rgba(191,19,4,.18);
+}
+@media (prefers-reduced-motion:reduce){
+  .hero-title-brand .solid,.hero-title-brand .hero-production{animation:none!important}
+}
