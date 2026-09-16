@@ -3530,3 +3530,39 @@ body.sw-mesh-page .sw-gallery-footer{display:none!important;}
   body.sw-mesh-page .mesh-ref-visual .mesh-carousel-dots{display:none!important;}
   body.sw-mesh-page .mesh-carousel-caption-below #lifestyleSubtitle{display:none!important;}
 }
+
+
+/* === MESH / REALIZACJE PNG + ALIGN KARUZELI / 2026-09-16 === */
+body.sw-mesh-page .realization-thumb{
+  background:#fff!important;
+}
+body.sw-mesh-page .realization-thumb img{
+  background:#fff!important;
+  object-fit:contain!important;
+}
+body.sw-mesh-page .realization-thumb span{
+  background:#090909!important;
+}
+body.sw-mesh-page .realization-thumb:hover span,
+body.sw-mesh-page .realization-thumb:focus-visible span{
+  background:#BF1304!important;
+  color:#fff!important;
+}
+@media (min-width:1281px){
+  body.sw-mesh-page .mesh-ref-visual{margin-top:52px!important;}
+}
+@media (min-width:901px) and (max-width:1280px){
+  body.sw-mesh-page .mesh-ref-visual{margin-top:38px!important;}
+}
+
+
+/* === UNIFIED PRODUCT TEMPLATE — MESH 1:1 FOR ALL PRODUCT CARDS / 2026-09-16 === */
+body.dw-unified-product-page{background:#0b0d0f!important;}
+body.dw-unified-product-page .fw-main.mesh-ref-main{grid-template-columns:minmax(405px,48%) minmax(0,1fr)!important;}
+body.dw-unified-product-page .fw-data-note{margin:0;padding:14px 16px;color:#8e8e8e;font-size:10px;line-height:1.45;}
+body.dw-unified-product-page .mark-badge-pending{display:flex!important;align-items:center!important;justify-content:center!important;border:1px solid #BF1304!important;border-radius:50%!important;color:#BF1304!important;font-family:"DM Mono",monospace!important;font-size:24px!important;font-weight:700!important;}
+body.dw-unified-product-page .realization-thumb{background:#fff!important;}
+body.dw-unified-product-page .realization-thumb img{background:#fff!important;object-fit:contain!important;}
+body.dw-unified-product-page .realization-thumb span{background:#090909!important;}
+body.dw-unified-product-page .realization-thumb:hover span,body.dw-unified-product-page .realization-thumb:focus-visible span{background:#BF1304!important;color:#fff!important;}
+@media(max-width:900px){body.dw-unified-product-page .fw-main.mesh-ref-main{grid-template-columns:1fr!important;}body.dw-unified-product-page .fw-data-note{font-size:9px;}}
