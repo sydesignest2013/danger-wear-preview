@@ -1,5 +1,5 @@
 name: Deploy Danger Wear preview
-# sync-trigger: 2026-09-16 mesh-carousel-return-reference
+# sync-trigger: 2026-09-16 all-products-mesh-template
 
 on:
   push:
