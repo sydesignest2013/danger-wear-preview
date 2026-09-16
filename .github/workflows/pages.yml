@@ -1,4 +1,4 @@
-name: Deploy Danger Wear Preview
+name: Deploy Danger Wear preview
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -23,18 +23,57 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync complete site package into repository
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/danger-wear-site
+          mkdir -p /tmp/danger-wear-site
+          curl -L --fail --retry 3 --retry-delay 2 \
+            "https://drive.google.com/uc?export=download&id=1YyvZMKZfl5IyxFO2sA49sdGLPZi1cxJt" \
+            -o /tmp/danger-wear-site.zip
+          unzip -tq /tmp/danger-wear-site.zip >/dev/null
+          unzip -qo /tmp/danger-wear-site.zip -d /tmp/danger-wear-site
+
+          # Keep the workflow itself, replace the rest of the public preview with the verified build.
+          rsync -a --delete \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            /tmp/danger-wear-site/ ./
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "Sync complete Danger Wear site [skip ci]"
+            git push origin HEAD:main
+          fi
+
+      - name: Build static Pages artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf _site
+          mkdir -p _site
+          rsync -a \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='_site/' \
+            --exclude='README.md' \
+            --exclude='QA_REPORT.json' \
+            ./ _site/
+          touch _site/.nojekyll
+
+          test -f _site/index.html
+          test -f _site/css/mobile.css
+          test -f _site/assets/images/dangerwear-logo.webp
+          test -f _site/smycze-na-klucze.html
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
-
-      - name: Download preview package
-        run: |
-          mkdir -p _site
-          curl -L --fail --retry 3 'https://sdmntprpolandcentral.oaiusercontent.com/files/00000000-22e0-820a-8621-9c1a101e17be/raw?se=2026-09-16T04%3A53%3A10Z&sp=r&sv=2026-02-06&sr=b&scid=02e962fd-4428-542c-bdfb-3c7065d9c7ed&skoid=e5f84a89-964a-4fd3-92c2-c2cb3a12ea16&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-15T12%3A12%3A51Z&ske=2026-09-16T12%3A12%3A51Z&sks=b&skv=2026-02-06&sig=Ykm46us/wJAfTu1zpsNMcvnTqRouYUuO8jbHQ05DI9Q%3D' -o site.zip
-          unzip -q site.zip -d _site
-          touch _site/.nojekyll
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
