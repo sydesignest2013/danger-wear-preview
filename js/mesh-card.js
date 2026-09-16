@@ -13,15 +13,36 @@
   const carouselArrowNext = document.getElementById("carouselArrowNext");
   const prevImage = document.getElementById("lifestylePrevImage");
   const nextImage = document.getElementById("lifestyleNextImage");
+  const lifestyleStage = document.getElementById("lifestyleStage");
+  const lifestyleDots = document.getElementById("lifestyleDots");
+  const isMeshPage = document.body.classList.contains("sw-mesh-page");
+  const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
 
   let lifestyleIndex = 0;
+  let lifestyleAnimating = false;
+  let queuedLifestyle = null;
 
   function normalizeIndex(index, length) {
     if (!length) return 0;
     return (index + length) % length;
   }
 
-  function setLifestyle(index) {
+  function renderLifestyleDots() {
+    if (!lifestyleDots) return;
+    if (lifestyle.length <= 1) {
+      lifestyleDots.innerHTML = "";
+      return;
+    }
+    const dotCount = Math.min(5, lifestyle.length);
+    const activeDot = lifestyle.length <= dotCount
+      ? lifestyleIndex
+      : Math.round((lifestyleIndex / Math.max(1, lifestyle.length - 1)) * (dotCount - 1));
+    lifestyleDots.innerHTML = Array.from({ length: dotCount }, (_, dotIndex) =>
+      `<span class="mesh-carousel-dot${dotIndex === activeDot ? " is-active" : ""}"></span>`
+    ).join("");
+  }
+
+  function renderLifestyle(index) {
     if (!lifestyle.length) {
       hero.removeAttribute("src");
       hero.alt = "Brak zdjęć w folderze Lifestyle";
@@ -29,6 +50,7 @@
       if (subtitle) subtitle.textContent = fallbackSubtitle;
       prevButton.hidden = true;
       nextButton.hidden = true;
+      renderLifestyleDots();
       return;
     }
 
@@ -50,13 +72,69 @@
     const multiple = lifestyle.length > 1;
     prevButton.hidden = !multiple;
     nextButton.hidden = !multiple;
+    renderLifestyleDots();
   }
 
-  prevButton?.addEventListener("click", () => setLifestyle(lifestyleIndex - 1));
-  nextButton?.addEventListener("click", () => setLifestyle(lifestyleIndex + 1));
-  carouselArrowPrev?.addEventListener("click", () => setLifestyle(lifestyleIndex - 1));
-  carouselArrowNext?.addEventListener("click", () => setLifestyle(lifestyleIndex + 1));
-  setLifestyle(0);
+  function finishQueuedLifestyle() {
+    lifestyleAnimating = false;
+    if (!queuedLifestyle) return;
+    const queued = queuedLifestyle;
+    queuedLifestyle = null;
+    setLifestyle(queued.index, queued.direction);
+  }
+
+  function setLifestyle(index, direction = 0, animate = true) {
+    if (!lifestyle.length) {
+      renderLifestyle(index);
+      return;
+    }
+
+    const target = normalizeIndex(index, lifestyle.length);
+    if (target === lifestyleIndex && hero?.getAttribute("src")) return;
+
+    const resolvedDirection = direction || (target > lifestyleIndex ? 1 : -1);
+    const use3D = isMeshPage && lifestyleStage && animate && !reduceMotion && lifestyle.length > 1;
+
+    if (!use3D) {
+      renderLifestyle(target);
+      return;
+    }
+
+    if (lifestyleAnimating) {
+      queuedLifestyle = { index: target, direction: resolvedDirection };
+      return;
+    }
+
+    lifestyleAnimating = true;
+    const slideClass = resolvedDirection < 0 ? "mesh-slide-prev" : "mesh-slide-next";
+    lifestyleStage.classList.remove("mesh-slide-next", "mesh-slide-prev", "mesh-resetting");
+    lifestyleStage.classList.add(slideClass);
+
+    window.setTimeout(() => {
+      /* Reset bez animacji jest wykonywany w jednej klatce, więc użytkownik widzi
+         płynne przejście fizycznych kart, a nie podmianę zdjęcia w połowie ruchu. */
+      lifestyleStage.classList.add("mesh-resetting");
+      renderLifestyle(target);
+      lifestyleStage.classList.remove(slideClass);
+
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          lifestyleStage.classList.remove("mesh-resetting");
+          finishQueuedLifestyle();
+        });
+      });
+    }, 710);
+  }
+
+  function goLifestyle(delta) {
+    setLifestyle(lifestyleIndex + delta, delta > 0 ? 1 : -1);
+  }
+
+  prevButton?.addEventListener("click", () => goLifestyle(-1));
+  nextButton?.addEventListener("click", () => goLifestyle(1));
+  carouselArrowPrev?.addEventListener("click", () => goLifestyle(-1));
+  carouselArrowNext?.addEventListener("click", () => goLifestyle(1));
+  renderLifestyle(0);
 
   /* === AUTOPLAY LIFESTYLE 5S === */
   const AUTOPLAY_DELAY = 5000;
@@ -66,7 +144,7 @@
     stopLifestyleAutoplay();
     if (lifestyle.length <= 1) return;
     lifestyleAutoplayTimer = window.setInterval(() => {
-      setLifestyle(lifestyleIndex + 1);
+      goLifestyle(1);
     }, AUTOPLAY_DELAY);
   }
 
@@ -87,7 +165,6 @@
   prevButton?.addEventListener("click", restartLifestyleAutoplay);
   nextButton?.addEventListener("click", restartLifestyleAutoplay);
 
-  const lifestyleStage = document.getElementById("lifestyleStage");
   lifestyleStage?.addEventListener("mouseenter", stopLifestyleAutoplay);
   lifestyleStage?.addEventListener("mouseleave", startLifestyleAutoplay);
   lifestyleStage?.addEventListener("focusin", stopLifestyleAutoplay);
@@ -219,7 +296,7 @@
 
   // UNIFIED FW/SW REFERENCE CHROME 2026-09-16
   const fwPage = document.body.classList.contains("fw-reference-page");
-  const meshPage = document.body.classList.contains("sw-mesh-page");
+  const meshPage = isMeshPage;
   if (fwPage && !meshPage) {
     const card = document.querySelector(".fw-lifestyle .main-card");
     const info = document.querySelector(".fw-info");
@@ -271,6 +348,6 @@
     }, { passive: true });
   }
 
-  addSwipe(lifestyleStage, () => { setLifestyle(lifestyleIndex + 1); restartLifestyleAutoplay(); }, () => { setLifestyle(lifestyleIndex - 1); restartLifestyleAutoplay(); });
+  addSwipe(lifestyleStage, () => { goLifestyle(1); restartLifestyleAutoplay(); }, () => { goLifestyle(-1); restartLifestyleAutoplay(); });
   addSwipe(lightbox, () => setLightbox(realizationIndex + 1), () => setLightbox(realizationIndex - 1));
 })();
