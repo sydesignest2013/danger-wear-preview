@@ -217,6 +217,41 @@
     if (event.key === "Escape" && panel?.classList.contains("open")) closeMobilePanel();
   });
 
+  // UNIFIED FW/SW REFERENCE CHROME 2026-09-16
+  const fwPage = document.body.classList.contains("fw-reference-page");
+  const meshPage = document.body.classList.contains("sw-mesh-page");
+  if (fwPage && !meshPage) {
+    const card = document.querySelector(".fw-lifestyle .main-card");
+    const info = document.querySelector(".fw-info");
+    const heading = info?.querySelector("h1");
+    const captionWrap = card?.querySelector(".caption > div");
+
+    if (card && !card.querySelector(".fw-ref-brand")) {
+      const brand = document.createElement("div");
+      brand.className = "fw-ref-brand";
+      brand.innerHTML = "<strong>DANGER WEAR</strong><span>PRODUCTION</span>";
+      card.appendChild(brand);
+    }
+
+    if (captionWrap && heading && !captionWrap.querySelector(".fw-ref-product-title")) {
+      const productTitle = document.createElement("strong");
+      productTitle.className = "fw-ref-product-title";
+      productTitle.textContent = heading.textContent.trim();
+      captionWrap.prepend(productTitle);
+    }
+
+    if (info && !info.querySelector(".fw-ref-actions")) {
+      const isSportswear = document.body.classList.contains("sw-reference-page");
+      const file = window.location.pathname.split("/").pop() || "produkt.html";
+      const slug = file.replace(/\.html$/i, "");
+      const actions = document.createElement("div");
+      actions.className = "fw-ref-actions";
+      actions.innerHTML = '<a class="fw-ref-primary" href="kontakt.html?produkt=' + encodeURIComponent(slug) + '">ZAPYTAJ O PRODUKCJĘ <span aria-hidden="true">→</span></a>' +
+        '<a class="fw-ref-secondary" href="fightwear.html#' + (isSportswear ? 'sportswear' : 'fightwear') + '">WRÓĆ DO ' + (isSportswear ? 'SPORTSWEAR' : 'FIGHTWEAR') + '</a>';
+      info.appendChild(actions);
+    }
+  }
+
   // Touch navigation for mobile: swipe the lifestyle carousel and realization lightbox.
   function addSwipe(target, onLeft, onRight) {
     if (!target) return;

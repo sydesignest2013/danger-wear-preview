@@ -1623,9 +1623,9 @@ body.fw-reference-page .fw-info{
 }
 body.fw-reference-page .fw-kicker{
   margin:0 0 13px;
-  color:#d4d4d4;
+  color:#BF1304;
   font-family:"DM Mono",monospace;
-  font-size:8px;
+  font-size:9px;
   font-weight:700;
   letter-spacing:.18em;
   text-transform:uppercase;
@@ -1639,7 +1639,7 @@ body.fw-reference-page .fw-info h1{
   background:#030303;
   box-decoration-break:clone;
   -webkit-box-decoration-break:clone;
-  color:#BF1304;
+  color:#f4f4f4;
   font-size:clamp(40px,4.15vw,58px);
   line-height:.93;
   letter-spacing:-.035em;
@@ -1649,9 +1649,9 @@ body.fw-reference-page .fw-info h1{
 body.fw-reference-page .fw-lead{
   margin:21px 0 20px;
   max-width:none;
-  color:#a7a7a7;
-  font-size:12px;
-  line-height:1.55;
+  color:#bdbdbd;
+  font-size:14px;
+  line-height:1.58;
 }
 body.fw-reference-page .fw-features{
   list-style:none;
@@ -1666,9 +1666,9 @@ body.fw-reference-page .fw-features li{
   align-items:center;
   padding:8px 10px 8px 24px;
   border-bottom:1px solid var(--fw-line);
-  color:#cfcfcf;
-  font-size:10px;
-  line-height:1.35;
+  color:#d8d8d8;
+  font-size:13px;
+  line-height:1.42;
 }
 body.fw-reference-page .fw-features li::before{
   content:"";
@@ -1693,14 +1693,14 @@ body.fw-reference-page .fw-specs>div{
   border-bottom:1px solid #252525;
 }
 body.fw-reference-page .fw-specs dt{
-  color:#777;
-  font-size:10px;
+  color:#929292;
+  font-size:12px;
 }
 body.fw-reference-page .fw-specs dd{
   margin:0;
   color:#e5e5e5;
   text-align:right;
-  font-size:10px;
+  font-size:12px;
   font-weight:800;
 }
 
@@ -1729,23 +1729,23 @@ body.fw-reference-page .fw-personalization-copy small{
   margin:0 0 7px;
   color:#d3d3d3;
   font-family:"DM Mono",monospace;
-  font-size:7px;
+  font-size:9px;
   font-weight:700;
-  letter-spacing:.18em;
+  letter-spacing:.16em;
 }
 body.fw-reference-page .fw-personalization-copy strong{
   display:block;
   margin:0 0 7px;
   color:#f0f0f0;
-  font-size:19px;
+  font-size:22px;
   line-height:1;
   letter-spacing:-.015em;
 }
 body.fw-reference-page .fw-personalization-copy span{
   display:block;
-  color:#7d7d7d;
-  font-size:7px;
-  line-height:1.45;
+  color:#9a9a9a;
+  font-size:10px;
+  line-height:1.5;
 }
 body.fw-reference-page .fw-mark-panel{
   min-height:91px;
@@ -1779,9 +1779,9 @@ body.fw-reference-page .fw-mark-panel b{
 body.fw-reference-page .fw-personalization-body{
   padding:12px 20px 15px;
   border-top:1px solid #202020;
-  color:#999;
-  font-size:10px;
-  line-height:1.55;
+  color:#aaa;
+  font-size:12px;
+  line-height:1.6;
 }
 body.fw-reference-page .fw-personalization-body p{margin:0 0 7px}
 body.fw-reference-page .fw-personalization-body a{color:#eee;font-weight:800}
@@ -1946,7 +1946,7 @@ body.sw-mesh-page .fw-title-row h1{
   display:block;
   width:100%;
   margin:0;
-  color:#BF1304;
+  color:#f4f4f4;
   font-size:clamp(44px,4.7vw,66px);
   line-height:.92;
   letter-spacing:-.035em;
@@ -1954,11 +1954,58 @@ body.sw-mesh-page .fw-title-row h1{
   text-transform:uppercase;
 }
 body.sw-mesh-page .fw-info{padding-top:0}
-body.sw-mesh-page .fw-info .fw-lead{margin-top:0}
+body.sw-mesh-page .fw-info .fw-lead{
+  margin:0 0 24px;
+  color:#d2d2d2;
+  font-size:18px;
+  line-height:1.72;
+}
+body.sw-mesh-page .fw-features{display:none}
+body.sw-mesh-page .fw-specs{
+  margin:0 0 14px;
+}
+body.sw-mesh-page .fw-specs>div{
+  min-height:42px;
+  padding:10px 0;
+}
+body.sw-mesh-page .fw-specs dt{
+  font-size:14px;
+}
+body.sw-mesh-page .fw-specs dd{
+  font-size:15px;
+}
+body.sw-mesh-page .fw-data-fold summary{
+  min-height:50px;
+  font-size:12px;
+}
+body.sw-mesh-page .fw-personalization summary{
+  min-height:100px;
+}
+body.sw-mesh-page .fw-personalization-copy small{
+  font-size:10px;
+}
+body.sw-mesh-page .fw-personalization-copy strong{
+  font-size:26px;
+}
+body.sw-mesh-page .fw-personalization-copy span{
+  font-size:12px;
+  line-height:1.55;
+}
+body.sw-mesh-page .fw-personalization-body{
+  font-size:13px;
+}
+body.sw-mesh-page .fw-mark-panel b{
+  font-size:7px;
+}
 @media(max-width:900px){
   body.sw-mesh-page .fw-main{grid-template-columns:1fr}
   body.sw-mesh-page .fw-title-row{grid-column:1;padding:4px 0 0}
   body.sw-mesh-page .fw-title-row h1{font-size:clamp(34px,9vw,50px);line-height:.94}
+  body.sw-mesh-page .fw-info .fw-lead{font-size:15px;line-height:1.65;margin-bottom:18px}
+  body.sw-mesh-page .fw-specs dt,body.sw-mesh-page .fw-specs dd{font-size:12px}
+  body.sw-mesh-page .fw-data-fold summary{font-size:11px}
+  body.sw-mesh-page .fw-personalization-copy strong{font-size:20px}
+  body.sw-mesh-page .fw-personalization-copy span{font-size:10px}
 }
 body.sw-reference-page .fw-data-fold{
   margin:9px 0 0;
@@ -1993,4 +2040,628 @@ body.sw-reference-page .sw-gallery-footer .full-gallery:hover,body.sw-reference-
 @media(max-width:620px){
   body.sw-reference-page .fw-data-fold table{font-size:8px}
   body.sw-reference-page .sw-gallery-footer{justify-content:center}
+}
+
+/* MESH — final readability pass: compact intro, no bullets, larger technical block */
+body.sw-mesh-page .fw-info .fw-features{display:none!important}
+body.sw-mesh-page .fw-info .fw-lead{
+  margin:0 0 26px!important;
+  color:#d7d7d7!important;
+  font-size:19px!important;
+  line-height:1.72!important;
+  font-weight:400;
+}
+body.sw-mesh-page .fw-info .fw-specs{margin:0 0 16px!important}
+body.sw-mesh-page .fw-info .fw-specs>div{
+  min-height:46px!important;
+  padding:11px 0!important;
+}
+body.sw-mesh-page .fw-info .fw-specs dt{
+  font-size:15px!important;
+  line-height:1.35!important;
+}
+body.sw-mesh-page .fw-info .fw-specs dd{
+  font-size:16px!important;
+  line-height:1.35!important;
+}
+body.sw-mesh-page .fw-info .fw-data-fold summary{
+  min-height:52px!important;
+  font-size:12px!important;
+}
+body.sw-mesh-page .fw-info .fw-personalization summary{min-height:104px!important}
+body.sw-mesh-page .fw-info .fw-personalization-copy small{font-size:10px!important}
+body.sw-mesh-page .fw-info .fw-personalization-copy strong{font-size:27px!important}
+body.sw-mesh-page .fw-info .fw-personalization-copy span{
+  font-size:12px!important;
+  line-height:1.55!important;
+}
+body.sw-mesh-page .fw-info .fw-personalization-body{font-size:13px!important}
+@media(max-width:900px){
+  body.sw-mesh-page .fw-info .fw-lead{font-size:15px!important;line-height:1.65!important;margin-bottom:18px!important}
+  body.sw-mesh-page .fw-info .fw-specs dt,
+  body.sw-mesh-page .fw-info .fw-specs dd{font-size:12px!important}
+  body.sw-mesh-page .fw-info .fw-personalization-copy strong{font-size:20px!important}
+  body.sw-mesh-page .fw-info .fw-personalization-copy span{font-size:10px!important}
+}
+
+/* === MESH — układ referencyjny 2-kolumnowy: duży visual lewo / dane prawo === */
+body.sw-mesh-page .mesh-ref-shell{
+  width:min(100%,1490px)!important;
+  max-width:1490px!important;
+  margin:0 auto!important;
+  padding:16px 24px 0!important;
+}
+body.sw-mesh-page .mesh-ref-main{
+  display:grid!important;
+  grid-template-columns:minmax(520px,48.5%) minmax(440px,1fr)!important;
+  gap:74px!important;
+  align-items:stretch!important;
+  padding-top:2px!important;
+  border-top:1px solid #121212;
+}
+body.sw-mesh-page .mesh-ref-visual{
+  min-width:0;
+  margin:0!important;
+  padding:0!important;
+}
+body.sw-mesh-page .mesh-ref-visual .stage{
+  position:relative!important;
+  min-height:792px!important;
+  height:792px!important;
+  padding:0!important;
+  overflow:hidden!important;
+}
+body.sw-mesh-page .mesh-ref-visual .main-card{
+  position:relative!important;
+  width:100%!important;
+  max-width:none!important;
+  height:792px!important;
+  margin:0!important;
+  border:0!important;
+  background:#050505!important;
+  box-shadow:none!important;
+  overflow:hidden!important;
+}
+body.sw-mesh-page .mesh-ref-visual .main-card>img{
+  width:100%!important;
+  height:100%!important;
+  aspect-ratio:auto!important;
+  display:block!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  filter:grayscale(.08) brightness(.82)!important;
+}
+body.sw-mesh-page .mesh-ref-visual .side{
+  display:none!important;
+}
+body.sw-mesh-page .mesh-ref-visual .carousel-arrow{
+  top:50%!important;
+  width:36px!important;
+  height:54px!important;
+  transform:translateY(-50%)!important;
+  z-index:8!important;
+  border:1px solid rgba(255,255,255,.12)!important;
+  background:rgba(4,4,4,.72)!important;
+  color:#BF1304!important;
+  font-size:34px!important;
+  line-height:1!important;
+}
+body.sw-mesh-page .mesh-ref-visual .carousel-arrow-prev{left:14px!important}
+body.sw-mesh-page .mesh-ref-visual .carousel-arrow-next{right:14px!important}
+body.sw-mesh-page .mesh-ref-visual .carousel-arrow:hover,
+body.sw-mesh-page .mesh-ref-visual .carousel-arrow:focus-visible{
+  border-color:#BF1304!important;
+  background:#050505!important;
+  color:#BF1304!important;
+}
+body.sw-mesh-page .mesh-visual-brand{
+  position:absolute;
+  top:14px;
+  left:15px;
+  z-index:5;
+  display:flex;
+  flex-direction:column;
+  gap:1px;
+  color:rgba(236,236,236,.46);
+  text-transform:uppercase;
+  line-height:.88;
+  letter-spacing:.18em;
+  pointer-events:none;
+}
+body.sw-mesh-page .mesh-visual-brand strong{
+  font-size:17px;
+  font-weight:700;
+}
+body.sw-mesh-page .mesh-visual-brand span{
+  font-size:11px;
+  font-weight:500;
+}
+body.sw-mesh-page .mesh-ref-caption{
+  position:absolute!important;
+  inset:auto 0 0!important;
+  min-height:104px!important;
+  display:block!important;
+  padding:28px 18px 16px!important;
+  background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.78) 42%,rgba(0,0,0,.96) 100%)!important;
+  pointer-events:none;
+}
+body.sw-mesh-page .mesh-ref-caption>div{
+  display:block!important;
+  width:100%!important;
+}
+body.sw-mesh-page .mesh-ref-caption strong{
+  display:block!important;
+  margin:0!important;
+  color:rgba(255,255,255,.24)!important;
+  font-size:52px!important;
+  line-height:.9!important;
+  font-weight:700!important;
+  letter-spacing:.085em!important;
+  text-transform:uppercase!important;
+  white-space:nowrap!important;
+}
+body.sw-mesh-page .mesh-ref-caption #lifestyleTitle{
+  display:inline-block!important;
+  margin-top:7px!important;
+  color:rgba(205,205,205,.48)!important;
+  font-family:"DM Mono",monospace!important;
+  font-size:13px!important;
+  font-weight:500!important;
+  line-height:1.2!important;
+  letter-spacing:.22em!important;
+  text-transform:uppercase!important;
+}
+body.sw-mesh-page .mesh-ref-caption #lifestyleSubtitle{
+  display:inline-block!important;
+  margin-left:18px!important;
+  color:rgba(205,205,205,.34)!important;
+  font-family:"DM Mono",monospace!important;
+  font-size:11px!important;
+  font-style:normal!important;
+  font-weight:500!important;
+  line-height:1.2!important;
+  letter-spacing:.22em!important;
+  text-transform:uppercase!important;
+}
+
+body.sw-mesh-page .mesh-ref-info{
+  min-width:0!important;
+  padding:58px 8px 0 0!important;
+}
+body.sw-mesh-page .mesh-ref-info .fw-kicker{
+  margin:0 0 22px!important;
+  color:#BF1304!important;
+  font-family:"DM Mono",monospace!important;
+  font-size:12px!important;
+  font-weight:700!important;
+  letter-spacing:.30em!important;
+  line-height:1.35!important;
+  text-transform:uppercase!important;
+}
+body.sw-mesh-page .mesh-ref-info .fw-kicker a,
+body.sw-mesh-page .mesh-ref-info .fw-kicker a:hover,
+body.sw-mesh-page .mesh-ref-info .fw-kicker a:focus-visible{
+  color:#BF1304!important;
+}
+body.sw-mesh-page .mesh-ref-info h1{
+  display:block!important;
+  width:auto!important;
+  margin:0 0 30px!important;
+  padding:0!important;
+  background:transparent!important;
+  color:#f3f3f3!important;
+  font-size:clamp(58px,5.3vw,82px)!important;
+  line-height:.88!important;
+  font-weight:700!important;
+  letter-spacing:-.035em!important;
+  text-transform:uppercase!important;
+}
+body.sw-mesh-page .mesh-ref-info .fw-lead{
+  margin:0 0 30px!important;
+  max-width:640px!important;
+  color:#bdbdbd!important;
+  font-size:16px!important;
+  line-height:1.58!important;
+  font-weight:400!important;
+}
+body.sw-mesh-page .mesh-ref-info .fw-features{
+  display:none!important;
+}
+body.sw-mesh-page .mesh-ref-info .fw-specs{
+  margin:0 0 16px!important;
+}
+body.sw-mesh-page .mesh-ref-info .fw-specs>div{
+  display:grid!important;
+  grid-template-columns:minmax(130px,.85fr) minmax(0,1.15fr)!important;
+  gap:18px!important;
+  min-height:46px!important;
+  align-items:center!important;
+  padding:9px 0!important;
+  border-bottom:1px solid #1b1b1b!important;
+}
+body.sw-mesh-page .mesh-ref-info .fw-specs dt{
+  color:#858585!important;
+  font-size:16px!important;
+  line-height:1.3!important;
+  font-weight:400!important;
+}
+body.sw-mesh-page .mesh-ref-info .fw-specs dd{
+  margin:0!important;
+  color:#f1f1f1!important;
+  text-align:right!important;
+  font-size:16px!important;
+  line-height:1.3!important;
+  font-weight:700!important;
+}
+body.sw-mesh-page .mesh-ref-info .fw-data-fold{
+  margin:12px 0 0!important;
+  border:1px solid #232323!important;
+  background:rgba(5,5,5,.88)!important;
+}
+body.sw-mesh-page .mesh-ref-info .fw-data-fold summary{
+  min-height:52px!important;
+  padding:12px 14px!important;
+  color:#dedede!important;
+  font-size:12px!important;
+  font-weight:700!important;
+  letter-spacing:.07em!important;
+}
+body.sw-mesh-page .mesh-ref-info .fw-personalization{
+  margin-top:10px!important;
+  border:1px solid #232323!important;
+  background:rgba(5,5,5,.88)!important;
+}
+body.sw-mesh-page .mesh-ref-info .fw-personalization summary{
+  min-height:96px!important;
+  grid-template-columns:minmax(0,1fr) 78px!important;
+  padding-left:18px!important;
+}
+body.sw-mesh-page .mesh-ref-info .fw-personalization-copy small{
+  margin-bottom:6px!important;
+  color:#c9c9c9!important;
+  font-size:9px!important;
+}
+body.sw-mesh-page .mesh-ref-info .fw-personalization-copy strong{
+  margin-bottom:6px!important;
+  color:#f2f2f2!important;
+  font-size:22px!important;
+  line-height:1!important;
+}
+body.sw-mesh-page .mesh-ref-info .fw-personalization-copy span{
+  color:#919191!important;
+  font-size:10px!important;
+  line-height:1.45!important;
+}
+body.sw-mesh-page .mesh-ref-info .fw-personalization-body{
+  font-size:12px!important;
+  line-height:1.55!important;
+}
+body.sw-mesh-page .mesh-ref-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:18px;
+}
+body.sw-mesh-page .mesh-ref-primary,
+body.sw-mesh-page .mesh-ref-secondary{
+  min-height:50px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:13px 20px;
+  font-family:"DM Mono",monospace;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+  transition:border-color .18s ease,color .18s ease,background .18s ease,transform .18s ease;
+}
+body.sw-mesh-page .mesh-ref-primary{
+  min-width:242px;
+  gap:16px;
+  color:#fff;
+  border:1px solid #BF1304;
+  background:#BF1304;
+}
+body.sw-mesh-page .mesh-ref-secondary{
+  min-width:196px;
+  color:#ededed;
+  border:1px solid #343434;
+  background:transparent;
+}
+body.sw-mesh-page .mesh-ref-primary:hover,
+body.sw-mesh-page .mesh-ref-primary:focus-visible,
+body.sw-mesh-page .mesh-ref-secondary:hover,
+body.sw-mesh-page .mesh-ref-secondary:focus-visible{
+  border-color:#BF1304;
+  color:#fff;
+  transform:translateY(-1px);
+}
+body.sw-mesh-page .fw-realizations{
+  max-width:1490px!important;
+  margin:76px auto 24px!important;
+  padding-left:24px!important;
+  padding-right:24px!important;
+}
+
+@media(max-width:1280px){
+  body.sw-mesh-page .mesh-ref-shell{padding-left:18px!important;padding-right:18px!important}
+  body.sw-mesh-page .mesh-ref-main{grid-template-columns:minmax(450px,48%) minmax(0,1fr)!important;gap:42px!important}
+  body.sw-mesh-page .mesh-ref-visual .stage,
+  body.sw-mesh-page .mesh-ref-visual .main-card{height:700px!important;min-height:700px!important}
+  body.sw-mesh-page .mesh-ref-caption strong{font-size:44px!important}
+  body.sw-mesh-page .mesh-ref-info{padding-top:42px!important}
+  body.sw-mesh-page .mesh-ref-info h1{font-size:clamp(52px,5.5vw,72px)!important}
+  body.sw-mesh-page .mesh-ref-info .fw-lead,
+  body.sw-mesh-page .mesh-ref-info .fw-specs dt,
+  body.sw-mesh-page .mesh-ref-info .fw-specs dd{font-size:15px!important}
+  body.sw-mesh-page .fw-realizations{padding-left:18px!important;padding-right:18px!important}
+}
+
+@media(max-width:900px){
+  body.sw-mesh-page .mesh-ref-shell{padding:12px 12px 0!important}
+  body.sw-mesh-page .mesh-ref-main{grid-template-columns:1fr!important;gap:24px!important;padding-top:0!important;border-top:0!important}
+  body.sw-mesh-page .mesh-ref-visual{order:0!important}
+  body.sw-mesh-page .mesh-ref-info{order:1!important;padding:0!important}
+  body.sw-mesh-page .mesh-ref-visual .stage,
+  body.sw-mesh-page .mesh-ref-visual .main-card{height:auto!important;min-height:0!important}
+  body.sw-mesh-page .mesh-ref-visual .main-card>img{height:auto!important;aspect-ratio:1 / 1.14!important}
+  body.sw-mesh-page .mesh-ref-visual .carousel-arrow{width:34px!important;height:48px!important;font-size:31px!important}
+  body.sw-mesh-page .mesh-visual-brand strong{font-size:13px!important}
+  body.sw-mesh-page .mesh-visual-brand span{font-size:9px!important}
+  body.sw-mesh-page .mesh-ref-caption{min-height:84px!important;padding:24px 12px 12px!important}
+  body.sw-mesh-page .mesh-ref-caption strong{font-size:28px!important;white-space:normal!important}
+  body.sw-mesh-page .mesh-ref-caption #lifestyleTitle{font-size:9px!important;letter-spacing:.16em!important}
+  body.sw-mesh-page .mesh-ref-caption #lifestyleSubtitle{font-size:8px!important;letter-spacing:.16em!important;margin-left:10px!important}
+  body.sw-mesh-page .mesh-ref-info .fw-kicker{margin-bottom:14px!important;font-size:8px!important;letter-spacing:.20em!important}
+  body.sw-mesh-page .mesh-ref-info h1{margin-bottom:18px!important;font-size:clamp(42px,11vw,58px)!important;line-height:.9!important}
+  body.sw-mesh-page .mesh-ref-info .fw-lead{margin-bottom:20px!important;font-size:12px!important;line-height:1.62!important}
+  body.sw-mesh-page .mesh-ref-info .fw-specs>div{min-height:40px!important;padding:7px 0!important}
+  body.sw-mesh-page .mesh-ref-info .fw-specs dt,
+  body.sw-mesh-page .mesh-ref-info .fw-specs dd{font-size:12px!important}
+  body.sw-mesh-page .mesh-ref-info .fw-data-fold summary{font-size:11px!important}
+  body.sw-mesh-page .mesh-ref-info .fw-personalization-copy strong{font-size:18px!important}
+  body.sw-mesh-page .mesh-ref-info .fw-personalization-copy span{font-size:9px!important}
+  body.sw-mesh-page .mesh-ref-actions{gap:10px!important}
+  body.sw-mesh-page .mesh-ref-primary,
+  body.sw-mesh-page .mesh-ref-secondary{width:100%!important;min-width:0!important;font-size:11px!important}
+  body.sw-mesh-page .fw-realizations{margin-top:52px!important;padding-left:12px!important;padding-right:12px!important}
+}
+
+/* === UNIFIED FW/SW REFERENCE LAYOUT 2026-09-16 === */
+body.fw-reference-page:not(.sw-mesh-page) .fw-page-shell{
+  width:min(100%,1490px)!important;
+  max-width:1490px!important;
+  margin:0 auto!important;
+  padding:16px 24px 0!important;
+}
+body.fw-reference-page:not(.sw-mesh-page) .fw-main{
+  display:grid!important;
+  grid-template-columns:minmax(520px,48.5%) minmax(440px,1fr)!important;
+  gap:74px!important;
+  align-items:stretch!important;
+  padding-top:2px!important;
+  border-top:1px solid #121212!important;
+}
+body.fw-reference-page:not(.sw-mesh-page) .fw-lifestyle{min-width:0!important;margin:0!important;padding:0!important}
+body.fw-reference-page:not(.sw-mesh-page) .fw-lifestyle .stage{
+  position:relative!important;
+  min-height:792px!important;
+  height:792px!important;
+  padding:0!important;
+  overflow:hidden!important;
+}
+body.fw-reference-page:not(.sw-mesh-page) .fw-lifestyle .main-card{
+  position:relative!important;
+  width:100%!important;
+  max-width:none!important;
+  height:792px!important;
+  margin:0!important;
+  border:0!important;
+  background:#050505!important;
+  box-shadow:none!important;
+  overflow:hidden!important;
+}
+body.fw-reference-page:not(.sw-mesh-page) .fw-lifestyle .main-card>img{
+  width:100%!important;
+  height:100%!important;
+  aspect-ratio:auto!important;
+  display:block!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  filter:grayscale(.08) brightness(.80)!important;
+}
+body.fw-reference-page:not(.sw-mesh-page) .fw-lifestyle .side{display:none!important}
+body.fw-reference-page:not(.sw-mesh-page) .fw-lifestyle .carousel-arrow{
+  top:50%!important;
+  width:36px!important;
+  height:54px!important;
+  transform:translateY(-50%)!important;
+  z-index:8!important;
+  border:1px solid rgba(255,255,255,.12)!important;
+  background:rgba(4,4,4,.72)!important;
+  color:#BF1304!important;
+  font-size:34px!important;
+}
+body.fw-reference-page:not(.sw-mesh-page) .fw-lifestyle .carousel-arrow-prev{left:16px!important}
+body.fw-reference-page:not(.sw-mesh-page) .fw-lifestyle .carousel-arrow-next{right:16px!important}
+body.fw-reference-page:not(.sw-mesh-page) .fw-ref-brand{
+  position:absolute;
+  top:14px;
+  left:14px;
+  z-index:7;
+  display:flex;
+  flex-direction:column;
+  gap:1px;
+  color:rgba(235,235,235,.43);
+  line-height:.88;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+body.fw-reference-page:not(.sw-mesh-page) .fw-ref-brand strong{font-size:17px;font-weight:700}
+body.fw-reference-page:not(.sw-mesh-page) .fw-ref-brand span{font-size:11px;font-weight:500}
+body.fw-reference-page:not(.sw-mesh-page) .fw-lifestyle .caption{
+  position:absolute!important;
+  right:0!important;
+  bottom:0!important;
+  left:0!important;
+  z-index:7!important;
+  min-height:0!important;
+  padding:38px 18px 17px!important;
+  background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.78) 46%,rgba(0,0,0,.96) 100%)!important;
+  border:0!important;
+}
+body.fw-reference-page:not(.sw-mesh-page) .fw-lifestyle .caption>div{display:block!important}
+body.fw-reference-page:not(.sw-mesh-page) .fw-ref-product-title{
+  display:block!important;
+  margin:0!important;
+  color:rgba(255,255,255,.22)!important;
+  font-size:clamp(34px,3.2vw,58px)!important;
+  line-height:.9!important;
+  font-weight:700!important;
+  letter-spacing:.10em!important;
+  text-transform:uppercase!important;
+  white-space:nowrap!important;
+  overflow:hidden!important;
+}
+body.fw-reference-page:not(.sw-mesh-page) .fw-lifestyle .caption #lifestyleTitle,
+body.fw-reference-page:not(.sw-mesh-page) .fw-lifestyle .caption #lifestyleSubtitle{
+  display:inline-block!important;
+  margin:8px 18px 0 0!important;
+  color:rgba(205,205,205,.34)!important;
+  font-family:'DM Mono',monospace!important;
+  font-size:11px!important;
+  font-style:normal!important;
+  font-weight:500!important;
+  line-height:1.2!important;
+  letter-spacing:.20em!important;
+  text-transform:uppercase!important;
+}
+body.fw-reference-page:not(.sw-mesh-page) .fw-info{
+  min-width:0!important;
+  padding:58px 8px 42px 0!important;
+}
+body.fw-reference-page:not(.sw-mesh-page) .fw-kicker{
+  margin:0 0 22px!important;
+  color:#BF1304!important;
+  font-family:'DM Mono',monospace!important;
+  font-size:12px!important;
+  font-weight:700!important;
+  line-height:1.35!important;
+  letter-spacing:.30em!important;
+  text-transform:uppercase!important;
+}
+body.fw-reference-page:not(.sw-mesh-page) .fw-kicker a,
+body.fw-reference-page:not(.sw-mesh-page) .fw-kicker a:hover,
+body.fw-reference-page:not(.sw-mesh-page) .fw-kicker a:focus-visible{color:#BF1304!important}
+body.fw-reference-page:not(.sw-mesh-page) .fw-info h1{
+  display:block!important;
+  margin:0 0 34px!important;
+  padding:0!important;
+  background:transparent!important;
+  color:#f3f3f3!important;
+  font-size:clamp(58px,5.3vw,88px)!important;
+  line-height:.86!important;
+  font-weight:700!important;
+  letter-spacing:-.035em!important;
+  text-transform:uppercase!important;
+}
+body.fw-reference-page:not(.sw-mesh-page) .fw-lead{
+  margin:0 0 34px!important;
+  max-width:650px!important;
+  color:#c8c8c8!important;
+  font-size:17px!important;
+  line-height:1.58!important;
+}
+body.fw-reference-page:not(.sw-mesh-page) .fw-features{
+  margin:0 0 28px!important;
+  padding:0!important;
+  border-top:1px solid #1a1a1a!important;
+}
+body.fw-reference-page:not(.sw-mesh-page) .fw-features li{
+  min-height:51px!important;
+  padding:13px 0 13px 22px!important;
+  border-bottom:1px solid #171717!important;
+  color:#ededed!important;
+  font-size:16px!important;
+  line-height:1.4!important;
+  font-weight:500!important;
+}
+body.fw-reference-page:not(.sw-mesh-page) .fw-features li::before{
+  left:0!important;
+  width:7px!important;
+  height:7px!important;
+  background:#BF1304!important;
+}
+body.fw-reference-page:not(.sw-mesh-page) .fw-specs{margin:0 0 18px!important}
+body.fw-reference-page:not(.sw-mesh-page) .fw-specs>div{
+  grid-template-columns:minmax(130px,.85fr) minmax(0,1.15fr)!important;
+  gap:18px!important;
+  min-height:46px!important;
+  padding:9px 0!important;
+  border-bottom:1px solid #171717!important;
+}
+body.fw-reference-page:not(.sw-mesh-page) .fw-specs dt{color:#858585!important;font-size:16px!important;font-weight:400!important}
+body.fw-reference-page:not(.sw-mesh-page) .fw-specs dd{color:#f1f1f1!important;font-size:17px!important;font-weight:700!important}
+body.fw-reference-page:not(.sw-mesh-page) .fw-personalization,
+body.fw-reference-page:not(.sw-mesh-page) .fw-data-fold{border-color:#232323!important;background:rgba(5,5,5,.88)!important}
+body.fw-reference-page:not(.sw-mesh-page) .fw-personalization-copy strong{font-size:22px!important}
+body.fw-reference-page:not(.sw-mesh-page) .fw-ref-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:18px;
+}
+body.fw-reference-page:not(.sw-mesh-page) .fw-ref-primary,
+body.fw-reference-page:not(.sw-mesh-page) .fw-ref-secondary{
+  min-height:50px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:13px 20px;
+  font-family:'DM Mono',monospace;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+body.fw-reference-page:not(.sw-mesh-page) .fw-ref-primary{min-width:242px;gap:16px;color:#fff;border:1px solid #BF1304;background:#BF1304}
+body.fw-reference-page:not(.sw-mesh-page) .fw-ref-secondary{min-width:196px;color:#ededed;border:1px solid #343434;background:transparent}
+body.fw-reference-page:not(.sw-mesh-page) .fw-realizations{max-width:1490px!important;margin:76px auto 24px!important;padding-left:24px!important;padding-right:24px!important}
+@media(max-width:1280px){
+  body.fw-reference-page:not(.sw-mesh-page) .fw-page-shell{padding-left:18px!important;padding-right:18px!important}
+  body.fw-reference-page:not(.sw-mesh-page) .fw-main{grid-template-columns:minmax(450px,48%) minmax(0,1fr)!important;gap:42px!important}
+  body.fw-reference-page:not(.sw-mesh-page) .fw-lifestyle .stage,
+  body.fw-reference-page:not(.sw-mesh-page) .fw-lifestyle .main-card{height:700px!important;min-height:700px!important}
+  body.fw-reference-page:not(.sw-mesh-page) .fw-info{padding-top:42px!important}
+  body.fw-reference-page:not(.sw-mesh-page) .fw-info h1{font-size:clamp(52px,5.5vw,72px)!important}
+  body.fw-reference-page:not(.sw-mesh-page) .fw-lead,
+  body.fw-reference-page:not(.sw-mesh-page) .fw-specs dt,
+  body.fw-reference-page:not(.sw-mesh-page) .fw-specs dd{font-size:15px!important}
+  body.fw-reference-page:not(.sw-mesh-page) .fw-features li{font-size:14px!important}
+}
+@media(max-width:900px){
+  body.fw-reference-page:not(.sw-mesh-page) .fw-page-shell{padding:12px 12px 0!important}
+  body.fw-reference-page:not(.sw-mesh-page) .fw-main{grid-template-columns:1fr!important;gap:24px!important;padding-top:0!important;border-top:0!important}
+  body.fw-reference-page:not(.sw-mesh-page) .fw-lifestyle{order:0!important}
+  body.fw-reference-page:not(.sw-mesh-page) .fw-info{order:1!important;padding:0 0 18px!important}
+  body.fw-reference-page:not(.sw-mesh-page) .fw-lifestyle .stage,
+  body.fw-reference-page:not(.sw-mesh-page) .fw-lifestyle .main-card{height:auto!important;min-height:0!important}
+  body.fw-reference-page:not(.sw-mesh-page) .fw-lifestyle .main-card>img{height:auto!important;aspect-ratio:1 / 1.14!important}
+  body.fw-reference-page:not(.sw-mesh-page) .fw-ref-brand strong{font-size:13px}
+  body.fw-reference-page:not(.sw-mesh-page) .fw-ref-brand span{font-size:9px}
+  body.fw-reference-page:not(.sw-mesh-page) .fw-lifestyle .caption{padding:28px 12px 12px!important}
+  body.fw-reference-page:not(.sw-mesh-page) .fw-ref-product-title{font-size:28px!important;white-space:normal!important}
+  body.fw-reference-page:not(.sw-mesh-page) .fw-kicker{margin-bottom:14px!important;font-size:8px!important;letter-spacing:.20em!important}
+  body.fw-reference-page:not(.sw-mesh-page) .fw-info h1{margin-bottom:18px!important;font-size:clamp(42px,11vw,58px)!important;line-height:.9!important}
+  body.fw-reference-page:not(.sw-mesh-page) .fw-lead{margin-bottom:20px!important;font-size:12px!important;line-height:1.62!important}
+  body.fw-reference-page:not(.sw-mesh-page) .fw-features{margin-bottom:20px!important}
+  body.fw-reference-page:not(.sw-mesh-page) .fw-features li{min-height:42px!important;padding:10px 0 10px 18px!important;font-size:12px!important}
+  body.fw-reference-page:not(.sw-mesh-page) .fw-specs>div{min-height:40px!important;padding:7px 0!important}
+  body.fw-reference-page:not(.sw-mesh-page) .fw-specs dt,
+  body.fw-reference-page:not(.sw-mesh-page) .fw-specs dd{font-size:12px!important}
+  body.fw-reference-page:not(.sw-mesh-page) .fw-ref-actions{gap:10px}
+  body.fw-reference-page:not(.sw-mesh-page) .fw-ref-primary,
+  body.fw-reference-page:not(.sw-mesh-page) .fw-ref-secondary{width:100%;min-width:0;font-size:11px}
+  body.fw-reference-page:not(.sw-mesh-page) .fw-realizations{margin-top:52px!important;padding-left:12px!important;padding-right:12px!important}
 }
