@@ -1,0 +1,152 @@
+/* NADPISANIE / DODATKI DO BODY DLA TEGO PLIKU SĄ JUŻ W INLINE CSS */
+/* ── WRAPPER ── */
+.proc-wrap {
+  width: 100%;
+  max-width: 900px;
+}
+
+/* ── HEADER ── */
+.proc-header {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  margin-bottom: 3rem; padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  gap: 2rem;
+}
+.proc-eyebrow {
+  font-size: .56rem; letter-spacing: .38em;
+  color: var(--red); text-transform: uppercase; margin-bottom: .6rem;
+}
+.proc-title {
+  font-size: 2.2rem; font-weight: 700; letter-spacing: -.03em;
+  text-transform: uppercase; line-height: 1;
+}
+.proc-intro {
+  font-size: .78rem; line-height: 1.75; color: var(--mid);
+  text-align: right; max-width: 240px; font-weight: 300;
+}
+
+/* ── 2×2 GRID ── */
+.proc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  position: relative;
+}
+
+/* SVG overlay */
+.proc-svg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  pointer-events: none; z-index: 5;
+  overflow: visible;
+}
+
+/* ── STEP ── */
+.proc-step {
+  display: flex; flex-direction: column; align-items: center;
+  padding: 2.5rem 1.5rem;
+  position: relative; z-index: 1;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: rgba(13,13,13,.65);
+  transition: border-color .4s, background .4s;
+  min-height: 300px;
+}
+.proc-step:nth-child(2n) { border-left: none; }
+.proc-step:nth-child(3), .proc-step:nth-child(4) { border-top: none; }
+
+.proc-step:hover, .proc-step.active {
+  border-color: rgba(240,240,240,.45);
+  background: rgba(13,13,13,.92);
+}
+/* red top line draws in */
+.proc-step::before {
+  content: ''; position: absolute; top: -1px; left: 0;
+  height: 2px; background: var(--red);
+  width: 0; transition: width .5s cubic-bezier(.22,1,.36,1); z-index: 2;
+}
+.proc-step:hover::before, .proc-step.active::before { width: 100%; }
+
+/* red glow */
+.proc-step::after {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at top center, rgba(240,240,240,.07) 0%, transparent 65%);
+  opacity: 0; transition: opacity .4s; pointer-events: none;
+}
+.proc-step:hover::after, .proc-step.active::after { opacity: 1; }
+
+/* ── NODE (icon circle) ── */
+.proc-node {
+  position: relative; width: 64px; height: 64px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1.4rem; flex-shrink: 0;
+}
+.proc-node-ring {
+  position: absolute; inset: 0; border-radius: 50%;
+  border: 1px solid rgba(240,240,240,.25);
+  transition: border-color .4s, transform .4s;
+}
+.proc-step:hover .proc-node-ring,
+.proc-step.active .proc-node-ring {
+  border-color: var(--red); transform: scale(1.15);
+}
+.proc-icon {
+  width: 28px; height: 28px;
+  color: rgba(240,240,240,.38);
+  transition: color .4s, transform .35s;
+  flex-shrink: 0;
+}
+.proc-step:hover .proc-icon,
+.proc-step.active .proc-icon { color: var(--red); transform: scale(1.1); }
+
+.proc-node-pulse {
+  position: absolute; inset: -8px; border-radius: 50%;
+  border: 1px solid transparent; pointer-events: none;
+}
+.proc-step.active .proc-node-pulse {
+  animation: nodePulse 1.8s ease-out infinite;
+}
+@keyframes nodePulse {
+  0% { border-color: rgba(240,240,240,.6); transform: scale(1); opacity: 1; }
+  100% { border-color: rgba(240,240,240,0); transform: scale(1.9); opacity: 0; }
+}
+
+/* ── CARD CONTENT ── */
+.proc-num {
+  font-size: 2rem; font-weight: 700; letter-spacing: -.04em;
+  color: rgba(240,240,240,.13); line-height: 1; margin-bottom: .6rem;
+  transition: color .4s;
+}
+.proc-step:hover .proc-num, .proc-step.active .proc-num { color: rgba(138,3,3,.20); }
+
+.proc-card-title {
+  font-size: 1rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .05em; line-height: 1.1; margin-bottom: .7rem; text-align: center;
+}
+.proc-card-desc {
+  font-size: .72rem; line-height: 1.8; color: var(--mid); font-weight: 300;
+  text-align: center; max-width: 430px; flex: 1; margin-bottom: 1rem;
+}
+.proc-tag {
+  font-size: .52rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--red); border: 1px solid rgba(240,240,240,.25);
+  padding: .3rem .8rem; margin-top: auto;
+  transition: background .3s, border-color .3s;
+}
+.proc-step:hover .proc-tag, .proc-step.active .proc-tag {
+  background: rgba(240,240,240,.1); border-color: rgba(240,240,240,.5);
+}
+
+
+
+@media(max-width:600px) {
+  .proc-grid { grid-template-columns: 1fr; }
+  .proc-step:nth-child(2n) { border-left: 1px solid var(--border); }
+  .proc-step:nth-child(3), .proc-step:nth-child(4) { border-top: none; }
+  .proc-step { min-height: unset; }
+  .proc-header { flex-direction: column; align-items: flex-start; }
+  .proc-intro { text-align: left; max-width: unset; }
+  .proc-specs-grid { grid-template-columns: repeat(2, 1fr); }
+}
+/* Main wrapper moved from inline HTML so responsive behavior is controlled in CSS. */
+.proc-main{flex:1;display:flex;align-items:center;justify-content:center;padding:120px 1.5rem 4rem;width:100%}

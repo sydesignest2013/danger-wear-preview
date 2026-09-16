@@ -1,0 +1,3 @@
+/* No layout or visual redesign. Only keyboard focus and reduced-motion support. */
+a:focus-visible,button:focus-visible{outline:2px solid #f0f0f0;outline-offset:4px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal,.hero-title,.hero-tagline,.hero-pills,.hero-cat,.hero-sub,.hero-meta,.ps-img-wrap,.ps-text-wrap,.cr-bg-text,.f-block{opacity:1!important;transform:none!important}}

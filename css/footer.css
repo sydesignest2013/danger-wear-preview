@@ -1,0 +1,4 @@
+/* ===== FOOTER ===== */
+footer { text-align: center; padding: 3rem 2rem; border-top: 1px solid var(--border); }
+footer p { font-size: .62rem; letter-spacing: .22em; color: var(--muted); text-transform: uppercase; }
+footer small { display: block; font-size: .48rem; letter-spacing: .16em; color: rgba(255,255,255,.15); text-transform: uppercase; margin-top: .5rem; }

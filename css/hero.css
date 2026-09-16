@@ -1,0 +1,82 @@
+/* ===== HERO / SLIDER ===== */
+.hero { 
+  height: 66vh; 
+  position: relative; 
+  overflow: hidden; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  padding: 6.5rem 2.5rem; 
+  border-bottom: 1px solid var(--border); 
+}
+/* BG photos cycling */
+.hero-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1.4s ease; background-size: cover; background-position: center; filter: brightness(.16) saturate(.15) contrast(.9); }
+.hero-slide.visible { opacity: 1; }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(6,6,6,.97) 30%, rgba(6,6,6,.25) 100%), linear-gradient(to top, rgba(6,6,6,.8) 0%, transparent 50%); z-index: 1; }
+.hero-grid-lines { position: absolute; inset: 0; background: linear-gradient(to right, rgba(240,240,240,.025) 1px, transparent 1px), linear-gradient(to bottom, rgba(240,240,240,.025) 1px, transparent 1px); background-size: 70px 70px; animation: gridMove 22s linear infinite; z-index: 1; pointer-events: none; }
+@keyframes gridMove { from { background-position: 0 0; } to { background-position: 70px 70px; } }
+.hero-orb { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 700px; height: 500px; background: radial-gradient(ellipse, rgba(240,240,240,.09) 0%, transparent 65%); animation: orbPulse 7s ease-in-out infinite; z-index: 1; pointer-events: none; }
+@keyframes orbPulse { 0%,100% { transform: translate(-50%,-50%) scale(1); opacity: 1; } 50% { transform: translate(-50%,-50%) scale(1.12); opacity: .6; } }
+
+.hero-content { 
+  position: relative; 
+  z-index: 2; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center; 
+  gap: .8rem; 
+  flex: 0 1 auto; 
+}
+
+/* SY / DESIGN with glitch */
+.hero-title { font-size: clamp(3.8rem, 10vw, 9rem); font-weight: 700; letter-spacing: -.04em; line-height: .9; text-transform: uppercase; position: relative; display: inline-flex; align-items: baseline; opacity: 0; animation: fadeUp .85s .3s forwards; }
+.hero-title .solid { color: var(--white); }
+.hero-title .outline { color: transparent; -webkit-text-stroke: 1.5px var(--red); margin-left: .05em; }
+/* Glitch */
+.hero-title::before, .hero-title::after { content: attr(data-text); position: absolute; left: 0; top: 0; font-size: inherit; font-weight: inherit; letter-spacing: inherit; line-height: inherit; text-transform: inherit; clip-path: inset(0 0 100% 0); pointer-events: none; white-space: pre; }
+.hero-title::before { color: var(--red); animation: gt1 9s 1.5s infinite; transform: translateX(-3px); }
+.hero-title::after { color: #bdbdbd; animation: gt2 9s 1.5s infinite; transform: translateX(3px); }
+@keyframes gt1 { 0%,91%,100% { clip-path: inset(0 0 100% 0); } 92% { clip-path: inset(18% 0 55% 0); transform: translateX(-6px); } 95% { clip-path: inset(70% 0 5% 0); transform: translateX(4px); } 98% { clip-path: inset(0 0 100% 0); } }
+@keyframes gt2 { 0%,91%,100% { clip-path: inset(0 0 100% 0); } 92% { clip-path: inset(55% 0 22% 0); transform: translateX(6px); } 95% { clip-path: inset(5% 0 72% 0); transform: translateX(-4px); } 98% { clip-path: inset(0 0 100% 0); } }
+
+.hero-tagline { font-family: 'DM Mono', monospace; font-size: .91rem; letter-spacing: .38em; color: rgba(255,255,255,.38); text-transform: uppercase; opacity: 0; animation: fadeUp .8s .6s forwards; }
+.hero-pills { 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  gap: .8rem; 
+  flex-wrap: wrap; 
+  opacity: 0; 
+  animation: fadeUp .7s .9s forwards; 
+}
+.hero-pill { display: inline-flex; align-items: center; gap: .85rem; padding: .4rem 1rem; border: 1px solid rgba(240,240,240,.3); font-family: 'DM Mono', monospace; font-size: .55rem; letter-spacing: .22em; text-transform: uppercase; color: var(--mid); }
+.hero-pill-dot { width: 4px; height: 4px; background: var(--red); border-radius: 50%; animation: blink 2s infinite; flex-shrink: 0; }
+@keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: .12; } }
+
+/* Slide dots */
+.hero-dots { position: absolute; bottom: 1.5rem; right: 2.5rem; z-index: 3; display: flex; gap: .5rem; align-items: center; }
+.hero-dot { border:0; padding:0; width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,.2); cursor: pointer; transition: background .3s, width .3s; }
+.hero-dot.active { background: var(--red); width: 20px; border-radius: 2px; }
+
+/* Scroll cue */
+.hero-scroll { position: absolute; right: 2.5rem; bottom: 5rem; z-index: 3; display: flex; flex-direction: column; align-items: center; gap: .4rem; opacity: 0; animation: fadeUp .6s 1.4s forwards; }
+.scroll-word { font-family: 'DM Mono', monospace; font-size: .75rem; letter-spacing: .3em; color: rgba(255,255,255,.25); text-transform: uppercase; writing-mode: vertical-rl; }
+.scroll-line { width: 1px; height: 60px; background: linear-gradient(to bottom, var(--red), transparent); animation: scrollAnim 2.2s ease-in-out infinite; }
+@keyframes scrollAnim { 0% { transform: scaleY(0); transform-origin: top; } 50% { transform: scaleY(1); transform-origin: top; } 51% { transform-origin: bottom; } 100% { transform: scaleY(0); transform-origin: bottom; } }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 600px) {
+  .hero-scroll { display: none; }
+}
+/* Danger Wear hero brand lockup */
+.hero-title-brand{display:flex;flex-direction:column;align-items:center;gap:.12em;line-height:.82}
+.hero-title-brand .solid{white-space:nowrap}
+.hero-title-brand .hero-production{font-family:'DM Mono',monospace;font-size:clamp(.82rem,1.65vw,1.6rem);letter-spacing:.58em;color:#f2f2f2;margin-right:-.58em;line-height:1.25}
+.hero-title-brand::before,.hero-title-brand::after{display:none}
+.hero-pills a.hero-pill{text-decoration:none;color:var(--mid);transition:border-color .25s,color .25s,background .25s}
+.hero-pills a.hero-pill:hover,.hero-pills a.hero-pill:focus-visible{color:#fff;border-color:var(--red);background:rgba(138,3,3,.18)}
+.hero-scroll{text-decoration:none;cursor:pointer}
+.hero-scroll:hover .scroll-word,.hero-scroll:focus-visible .scroll-word{color:var(--red)}
+.hero-scroll:focus-visible{outline:1px solid var(--red);outline-offset:8px}

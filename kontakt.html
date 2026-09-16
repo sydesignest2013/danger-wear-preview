@@ -1,0 +1,184 @@
+<!DOCTYPE html><html lang="pl"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt — wycena produkcji | Danger Wear Production</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,600;0,700&amp;family=DM+Mono:wght@300;400&amp;display=swap" rel="stylesheet">
+  
+  <!-- Globalne arkusze -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/footer.css">
+  
+  <!-- Style specyficzne dla formularza kontaktowego -->
+  <link rel="stylesheet" href="css/kontakt.css">
+<link rel="stylesheet" href="css/technical-fixes.css"><meta name="description" content="Kontakt — wycena produkcji — Danger Wear. Produkcja odzieży personalizowanej, druk sublimacyjny i gadżety."><link rel="stylesheet" href="css/dangerwear.css"><link rel="stylesheet" href="css/product-update.css"><link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+  <!-- KURSOR -->
+  
+  
+  
+  <!-- TŁO DLA STRONY KONTAKT (Orby) -->
+  <div class="bg-orb bg-orb-1"></div>
+  <div class="bg-orb bg-orb-2"></div>
+
+  <!-- MOBILE MENU (Z index.html) -->
+  <div class="mob-overlay" id="mobOverlay" onclick="closeMob()"></div>
+  <div class="mob-menu" id="mobMenu">
+    <button class="mob-close" onclick="closeMob()" aria-label="Zamknij menu">✕</button>
+    <div class="mob-section">
+      <button class="mob-section-btn" id="mobProjBtn" onclick="toggleMobSub()">Produkty <span class="mc">›</span></button>
+      <div class="mob-sub" id="mobSub"><a href="produkty.html" onclick="closeMob()">Wszystkie produkty</a><a href="koszulki-sportowe.html" onclick="closeMob()">Koszulki sportowe</a><a href="fightwear.html" onclick="closeMob()">Fightwear</a><a href="streetwear.html" onclick="closeMob()">Streetwear</a><a href="akcesoria.html" onclick="closeMob()">Akcesoria</a></div>
+    </div>
+    <a href="produkcja.html" class="mob-plain" onclick="closeMob()">Produkcja</a>
+    <a href="onas.html" class="mob-plain" onclick="closeMob()">O nas</a>
+    <a href="kontakt.html" class="mob-plain" onclick="closeMob()">Kontakt</a>
+  </div>
+
+  <!-- NAV (Z index.html) -->
+  <nav id="mainNav">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/dangerwear-logo.webp" alt="Danger Wear Production">
+      <span class="nav-logo-text">DANGER WEAR</span>
+    </a>
+    <ul class="nav-links">
+      <li id="projLi">
+        <button class="nav-link" onclick="toggleProj()">Produkty <span class="nav-chev">▾</span></button>
+        <div class="nav-dropdown"><a href="produkty.html">Wszystkie produkty</a><a href="koszulki-sportowe.html">Koszulki sportowe</a><a href="fightwear.html">Fightwear</a><a href="streetwear.html">Streetwear</a><a href="akcesoria.html">Akcesoria</a></div>
+      </li>
+      <li><a href="produkcja.html" class="nav-link">Produkcja</a></li>
+      <li><a href="onas.html" class="nav-link">O nas</a></li>
+      <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" onclick="toggleMob()" aria-label="Otwórz menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- SUCCESS OVERLAY -->
+  <div class="success-overlay" id="successOverlay">
+    <div class="success-inner">
+      <div class="success-icon">✓</div>
+      <h2 class="success-title">Wiadomość<br>przygotowana</h2>
+      <p class="success-sub">Wiadomość nie została jeszcze wysłana. Otwórz swoją pocztę, sprawdź treść i kliknij w niej „Wyślij”.</p>
+      <a href="mailto:k.patyk@dangerwear.pl" class="btn-ghost" id="openPreparedMail">Otwórz w poczcie</a>
+    <p style="margin-top:1rem"><button type="button" class="btn-ghost" onclick="closePreparedMail()">Wróć do formularza</button></p></div>
+  </div>
+
+  <!-- STRONA Z FORMULARZEM (PAGE) -->
+  <div class="page">
+    
+    <!-- LEFT: sticky panel -->
+    <div class="page-left" id="pageLeft">
+      <div class="left-ghost" id="leftGhost">BRIEF</div>
+      <div class="left-step-count" id="leftStepTxt">Krok 1 / 7</div>
+      <div class="left-step-progress">
+        <div class="left-step-bar" id="leftStepBar" style="width:14%"></div>
+      </div>
+      <p class="left-eyebrow">Zapytanie o produkcję</p>
+      <h1 class="left-title">Zamów<br><span class="outline">produkcję</span></h1>
+      <p class="left-desc" id="leftDesc">Podaj produkt, ilość sztuk i termin. Przygotujemy wycenę zamówienia.</p>
+      <div class="left-vtext">DANGER WEAR / PRODUKCJA / 2026</div>
+    <div class="dw-contact"><a href="mailto:k.patyk@dangerwear.pl">k.patyk@dangerwear.pl</a><a href="tel:+48796278888">796 278 888</a><p>DW Solutions<br>ul. Pogodna 85<br>42-233 Kolonia Wierzchowisko</p></div></div>
+
+    <!-- RIGHT: scrollable form -->
+    <div class="page-right">
+      <form id="orderForm" onsubmit="handleSubmit(event)">
+
+        <!-- 01 PRODUKT -->
+        <div class="f-block" id="fb1">
+          <span class="f-step-num">01</span>
+          <label class="f-label" for="produkt">Produkt</label>
+          <div class="f-select-wrap">
+            <select class="f-select" id="produkt" name="produkt" required="" onchange="this.classList.add('filled'); updateLeft();"><option value="" disabled="" selected="">Wybierz produkt…</option><optgroup label="Fightwear"><option value="Koszulki sportowe MESH">Koszulki sportowe MESH</option><option value="Rashguard — krótki rękaw">Rashguard — krótki rękaw</option><option value="Rashguard — długi rękaw">Rashguard — długi rękaw</option><option value="Spodenki MMA luźne">Spodenki MMA luźne</option><option value="Spodenki MMA Vale Tudo">Spodenki MMA Vale Tudo</option><option value="Legginsy sportowe">Legginsy sportowe</option></optgroup><optgroup label="Streetwear"><option value="Koszulki bawełniane">Koszulki bawełniane</option><option value="Bluzy bez kaptura">Bluzy bez kaptura</option><option value="Bluzy z kapturem">Bluzy z kapturem</option><option value="Bezrękawniki">Bezrękawniki</option><option value="Spodnie dresowe bawełniane">Spodnie dresowe bawełniane</option><option value="Spodenki bawełniane">Spodenki bawełniane</option><option value="Spodenki poliestrowe">Spodenki poliestrowe</option><option value="Spodenki plażowe">Spodenki plażowe</option></optgroup><optgroup label="Akcesoria"><option value="Czapki z daszkiem">Czapki z daszkiem</option><option value="Czapki zimowe bawełniane">Czapki zimowe bawełniane</option><option value="Kominy termoaktywne">Kominy termoaktywne</option><option value="Kominy polarowe zimowe">Kominy polarowe zimowe</option><option value="Kominiarki">Kominiarki</option><option value="Chusty">Chusty</option><option value="Rękawiczki">Rękawiczki</option><option value="Szaliki fullprint">Szaliki fullprint</option><option value="Nerki / saszetki">Nerki / saszetki</option><option value="Ręczniki">Ręczniki</option><option value="Worki sportowe — Basic / Pro">Worki sportowe — Basic / Pro</option><option value="Flagi drukowane">Flagi drukowane</option><option value="Poduszki z nadrukiem">Poduszki z nadrukiem</option><option value="Smycze na klucze">Smycze na klucze</option><option value="Podkładki pod myszkę">Podkładki pod myszkę</option></optgroup><option value="Inne">Inne</option></select>
+          </div>
+        </div>
+
+        <!-- 02 KLUB -->
+        <div class="f-block" id="fb2">
+          <span class="f-step-num">02</span>
+          <label class="f-label" for="klub">Klub / Ekipa / Firma</label>
+          <input class="f-input" type="text" id="klub" name="klub" placeholder="Nazwa klubu, ekipy lub firmy" required="" oninput="updateLeft()">
+        </div>
+
+        <!-- 03 OSOBA -->
+        <div class="f-block" id="fb3">
+          <span class="f-step-num">03</span>
+          <label class="f-label" for="osoba">Osoba kontaktowa</label>
+          <input class="f-input" type="text" id="osoba" name="osoba" placeholder="Imię i nazwisko" required="" oninput="updateLeft()">
+        </div>
+
+        <!-- 04 EMAIL -->
+        <div class="f-block" id="fb4">
+          <span class="f-step-num">04</span>
+          <label class="f-label" for="email">Email</label>
+          <input class="f-input" type="email" id="email" name="email" placeholder="twoj@email.pl" required="" oninput="updateLeft()">
+        </div>
+
+        <!-- 05 TELEFON -->
+        <div class="f-block" id="fb5">
+          <span class="f-step-num">05</span>
+          <label class="f-label" for="telefon">Telefon <span class="f-label-optional">— nieobowiązkowy</span></label>
+          <input class="f-input" type="tel" id="telefon" name="telefon" placeholder="+48 000 000 000" oninput="updateLeft()">
+        </div>
+
+        <!-- 06 PRODUKCJA -->
+        <div class="f-block" id="fb6">
+          <span class="f-step-num">06</span>
+          <label class="f-label">Produkcja</label>
+          <p class="f-prod-info">Podaj planowaną wielkość zamówienia i oczekiwany termin.</p>
+          
+          
+          
+          <!-- Slide-in extras -->
+          <div class="f-extra open" id="fExtra">
+            <div class="f-extra-inner">
+              <div class="f-block">
+                <span class="f-step-num">06a</span>
+                <label class="f-label" for="ilosc">Ilość sztuk</label>
+                <input class="f-input" type="number" id="ilosc" name="ilosc" placeholder="np. 100" min="1" required="required">
+              </div>
+              <div class="f-block">
+                <span class="f-step-num">06b</span>
+                <label class="f-label" for="termin">Oczekiwany termin</label>
+                <input class="f-input" type="date" id="termin" name="termin" onchange="this.classList.add('filled')">
+              </div>
+            </div>
+          </div>
+        <input type="hidden" name="produkcja" value="TAK"></div>
+
+        <!-- 07 OPIS -->
+        <div class="f-block" id="fb7">
+          <span class="f-step-num">07</span>
+          <label class="f-label" for="opis">Opis zamówienia</label>
+          <textarea class="f-textarea" id="opis" name="opis" placeholder="Opisz produkt, kolorystykę, nadruki, rozmiary i pozostałe wymagania." required="" oninput="document.getElementById('charCount').textContent=this.value.length+' znaków'; updateLeft();"></textarea>
+          <div class="f-char-count" id="charCount">0 znaków</div>
+        </div>
+
+        <!-- SUBMIT -->
+        <div class="f-submit-wrap">
+          <p class="f-submit-note">
+            Możesz też napisać bezpośrednio do nas:<br>
+            <a href="mailto:k.patyk@dangerwear.pl">k.patyk@dangerwear.pl</a>
+          </p>
+          <button type="submit" class="btn-submit" id="submitBtn">Przygotuj wiadomość</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER (Z index.html) -->
+  <footer id="kontakt">
+    <p>© 2026 Danger Wear Production. Wszelkie prawa zastrzeżone.</p>
+    <small>Produkcja odzieży i gadżetów w Polsce.</small>
+  </footer>
+
+  <!-- SKRYPTY -->
+  <script src="js/main.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/production-contact.js"></script>
+
+
+</body></html>

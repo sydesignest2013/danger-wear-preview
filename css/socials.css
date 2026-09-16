@@ -1,0 +1,20 @@
+/* ===== SOCIAL ===== */
+.social-bar { display: grid; grid-template-columns: repeat(3,1fr); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-top: 3px; position: relative; z-index: 10; }
+.social-item { display: flex; align-items: center; gap: 1.4rem; padding: 2.2rem 2.5rem; text-decoration: none; color: var(--white); border-right: 1px solid var(--border); transition: background .35s; position: relative; overflow: hidden; }
+.social-item:last-child { border-right: none; }
+.social-item::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--red); transform: scaleX(0); transform-origin: center; transition: transform .4s cubic-bezier(.22,1,.36,1); }
+.social-item:hover { background: rgba(240,240,240,.05); }
+.social-item:hover::after { transform: scaleX(1); }
+.social-icon { width: 30px; height: 30px; flex-shrink: 0; color: rgba(240,240,240,.45); transition: color .35s, transform .35s; }
+.social-item:hover .social-icon { color: var(--red); transform: scale(1.1); }
+.social-info { display: flex; flex-direction: column; gap: .2rem; flex: 1; }
+.social-name { font-size: .85rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.social-handle { font-family: 'DM Mono', monospace; font-size: .58rem; letter-spacing: .12em; color: var(--mid); }
+.social-arrow { font-size: 1.1rem; color: rgba(240,240,240,.35); transition: transform .3s, color .3s; flex-shrink: 0; }
+.social-item:hover .social-arrow { transform: translate(3px,-3px); color: var(--red); }
+
+@media (max-width: 600px) {
+  .social-bar { grid-template-columns: 1fr; }
+  .social-item { border-right: none; border-bottom: 1px solid var(--border); }
+  .social-item:last-child { border-bottom: none; }
+}

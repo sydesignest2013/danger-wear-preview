@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bezrękawniki | Danger Wear Production</title>
+<meta name="description" content="Bezrękawniki — Danger Wear Production. Produkcja personalizowana i znakowanie na zamówienie.">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,600;0,700&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/menu.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/zamow.css">
+<link rel="stylesheet" href="css/dangerwear.css">
+<link rel="stylesheet" href="css/product-page.css">
+<link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+<!-- MOBILE MENU -->
+<div class="mob-overlay" id="mobOverlay" onclick="closeMob()"></div>
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" onclick="closeMob()" aria-label="Zamknij menu">✕</button>
+  <div class="mob-section">
+    <button class="mob-section-btn" id="mobProjBtn" onclick="toggleMobSub()">Produkty <span class="mc">›</span></button>
+    <div class="mob-sub" id="mobSub">
+      <a href="produkty.html" onclick="closeMob()">Wszystkie produkty</a>
+      <a href="fightwear.html" onclick="closeMob()">Sportswear</a>
+      <a href="streetwear.html" onclick="closeMob()">Streetwear</a>
+      <a href="akcesoria.html" onclick="closeMob()">Akcesoria</a>
+    </div>
+  </div>
+  <a href="produkcja.html" class="mob-plain" onclick="closeMob()">Produkcja</a>
+  <a href="onas.html" class="mob-plain" onclick="closeMob()">O nas</a>
+  <a href="kontakt.html" class="mob-plain" onclick="closeMob()">Kontakt</a>
+</div>
+<nav id="mainNav">
+  <a href="index.html" class="nav-logo"><img src="assets/images/dangerwear-logo.webp" alt="Danger Wear Production"><span class="nav-logo-text">DANGER WEAR PRODUCTION</span></a>
+  <ul class="nav-links">
+    <li id="projLi"><button class="nav-link" onclick="toggleProj()">Produkty <span class="nav-chev">▾</span></button>
+      <div class="nav-dropdown"><a href="produkty.html">Wszystkie produkty</a><a href="fightwear.html">Sportswear</a><a href="streetwear.html">Streetwear</a><a href="akcesoria.html">Akcesoria</a></div>
+    </li>
+    <li><a href="produkcja.html" class="nav-link">Produkcja</a></li>
+    <li><a href="onas.html" class="nav-link">O nas</a></li>
+    <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" onclick="toggleMob()" aria-label="Otwórz menu"><span></span><span></span><span></span></button>
+</nav>
+<main class="pp-page">
+  <nav class="pp-breadcrumb" aria-label="Okruszki"><a href="produkty.html">PRODUKTY</a><span>/</span><a href="streetwear.html">STREETWEAR</a><span>/</span><strong>Bezrękawniki</strong></nav>
+  <section class="pp-hero">
+    <div class="pp-visual"><img src="assets/images/catalog/photo-14.webp" alt="Bezrękawniki"><div class="pp-visual-shade"></div><span class="pp-index">DW / 05</span></div>
+    <div class="pp-copy">
+      <p class="pp-kicker">DANGER WEAR PRODUCTION / STREETWEAR</p>
+      <h1>Bezrękawniki</h1>
+      <p class="pp-lead">Lekki, pikowany bezrękawnik z ociepleniem, zaprojektowany na chłodniejsze dni i produkcję personalizowaną.</p>
+      <ul class="pp-bullets"><li>Lekki i komfortowy krój zapewniający swobodę ruchów</li><li>Pikowana konstrukcja z ociepleniem 290 g/m²</li><li>Wiatroszczelny i wodoodporny impregnowany materiał</li><li>Dwie kieszenie z przodu zapinane na zamek</li></ul>
+      <dl class="pp-specs"><div><dt>Tkanina zewnętrzna</dt><dd>100% poliester, 300T</dd></div><div><dt>Podszewka</dt><dd>100% poliester</dd></div><div><dt>Ocieplenie</dt><dd>100% poliester, 290 g/m²</dd></div></dl>
+      <div class="pp-actions"><a class="pp-primary" href="kontakt.html?produkt=streetwear-bezrekawniki">ZAPYTAJ O PRODUKCJĘ <span>→</span></a><a class="pp-secondary" href="streetwear.html">WRÓĆ DO STREETWEAR</a></div>
+      
+    </div>
+  </section>
+  <section class="pp-marking" id="znakowanie"><div><p class="pp-kicker">METODY ZNAKOWANIA</p><h2>Personalizacja produktu</h2><p>Dobór metody znakowania zależy od materiału, projektu i nakładu. Ikony poniżej odnoszą się do metod przewidzianych dla tej karty lub najczęściej stosowanych w danej grupie.</p></div><div class="pp-methods"><div class="pp-method"><img src="assets/images/metody-znakowania/haft.png" alt="Haft"><span>Haft</span></div><div class="pp-method"><img src="assets/images/metody-znakowania/dtf.png" alt="DTF"><span>DTF</span></div></div></section>
+  
+  <section class="pp-related"><a href="streetwear-kurtki.html"><span>← POPRZEDNI</span><strong>Kurtki</strong></a><a href="streetwear-spodnie.html"><span>NASTĘPNY →</span><strong>Spodnie</strong></a></section>
+</main>
+<section class="inquiry reveal"><p class="inquiry-eyebrow">Zamów produkcję</p><h2 class="inquiry-title">Odzież i akcesoria dla Twojej ekipy.<br>Produkcja od podstaw.</h2><p class="inquiry-sub">Dobierzemy produkt, ustalimy zakres personalizacji i przygotujemy wycenę produkcji.</p><p class="inquiry-fine">Podaj rodzaj produktu, liczbę sztuk i oczekiwany termin.</p><a href="kontakt.html?produkt=streetwear-bezrekawniki" class="btn-primary">Zapytaj o produkcję</a></section>
+<footer><p>© 2026 Danger Wear Production. Wszelkie prawa zastrzeżone.</p><small>Produkcja odzieży i gadżetów w Polsce.</small></footer>
+<script src="js/main.js"></script><script src="js/menu.js"></script>
+</body></html>

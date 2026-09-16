@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="pl"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Produkcja | Danger Wear Production</title>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/menu.css">
+<link rel="stylesheet" href="css/produkcja.css">
+<link rel="stylesheet" href="css/socials.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/zamow.css">
+<link rel="stylesheet" href="css/technical-fixes.css"><meta name="description" content="Produkcja — Danger Wear. Produkcja odzieży personalizowanej, druk sublimacyjny i gadżety."><link rel="stylesheet" href="css/dangerwear.css"><link rel="stylesheet" href="css/product-update.css"><link rel="stylesheet" href="css/mobile.css">
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column; padding: 0;">
+
+
+
+
+<!-- MOBILE MENU -->
+<div class="mob-overlay" id="mobOverlay" onclick="closeMob()"></div>
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" onclick="closeMob()" aria-label="Zamknij menu">✕</button>
+  <div class="mob-section">
+    <button class="mob-section-btn" id="mobProjBtn" onclick="toggleMobSub()">Produkty <span class="mc">›</span></button>
+    <div class="mob-sub" id="mobSub"><a href="produkty.html" onclick="closeMob()">Wszystkie produkty</a><a href="koszulki-sportowe.html" onclick="closeMob()">Koszulki sportowe</a><a href="fightwear.html" onclick="closeMob()">Fightwear</a><a href="streetwear.html" onclick="closeMob()">Streetwear</a><a href="akcesoria.html" onclick="closeMob()">Akcesoria</a></div>
+  </div>
+  <a href="produkcja.html" class="mob-plain" onclick="closeMob()">Produkcja</a>
+  <a href="onas.html" class="mob-plain" onclick="closeMob()">O nas</a>
+  <a href="kontakt.html" class="mob-plain" onclick="closeMob()">Kontakt</a>
+</div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/images/dangerwear-logo.webp" alt="Danger Wear Production">
+    <span class="nav-logo-text">DANGER WEAR</span>
+  </a>
+  <ul class="nav-links">
+    <li id="projLi">
+      <button class="nav-link" onclick="toggleProj()">Produkty <span class="nav-chev">▾</span></button>
+      <div class="nav-dropdown"><a href="produkty.html">Wszystkie produkty</a><a href="koszulki-sportowe.html">Koszulki sportowe</a><a href="fightwear.html">Fightwear</a><a href="streetwear.html">Streetwear</a><a href="akcesoria.html">Akcesoria</a></div>
+    </li>
+    <li><a href="produkcja.html" class="nav-link active">Produkcja</a></li>
+    <li><a href="onas.html" class="nav-link">O nas</a></li>
+    <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" onclick="toggleMob()" aria-label="Otwórz menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MAIN WRAPPER -->
+<div class="proc-main">
+  <div class="proc-wrap">
+
+    <!-- HEADER -->
+    <div class="proc-header">
+      <div>
+        <p class="proc-eyebrow">Jak to działa</p>
+        <h1 class="proc-title">Proces produkcji</h1>
+      </div>
+     
+    </div>
+
+    <!-- 2×2 GRID -->
+    <div class="proc-grid" id="procGrid">
+
+      <!-- SVG overlay for animated dot + lines -->
+      <svg class="proc-svg" id="procSvg" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="dotGlow" x="-200%" y="-200%" width="500%" height="500%">
+            <feGaussianBlur stdDeviation="3" result="blur"></feGaussianBlur>
+            <feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge>
+          </filter>
+        </defs>
+        <!-- static dashed lines (drawn by JS) -->
+        <line id="pLine1" stroke="#8A0303" stroke-width="1" stroke-dasharray="5 6" opacity="0"></line>
+        <line id="pLine2" stroke="#8A0303" stroke-width="1" stroke-dasharray="5 6" opacity="0"></line>
+        <line id="pLine3" stroke="#8A0303" stroke-width="1" stroke-dasharray="5 6" opacity="0"></line>
+        <!-- traveling dot -->
+        <circle id="pDot" r="5" fill="#8A0303" filter="url(#dotGlow)" opacity="0"></circle>
+      </svg>
+
+      <!-- STEP 1: Brief / pomysł -->
+      <div class="proc-step" data-idx="0">
+        <div class="proc-node">
+          <div class="proc-node-ring"></div>
+          <div class="proc-node-pulse"></div>
+          <!-- lightbulb icon -->
+          <svg class="proc-icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 4a7 7 0 0 1 4.5 12.3c-.8.7-1.3 1.7-1.5 2.7H11c-.2-1-.7-2-1.5-2.7A7 7 0 0 1 14 4z"></path>
+            <line x1="11" y1="22" x2="17" y2="22"></line>
+            <line x1="12.5" y1="25" x2="15.5" y2="25"></line>
+            <line x1="14" y1="1.5" x2="14" y2="3"></line>
+            <line x1="20.5" y1="3.5" x2="19.5" y2="4.5"></line>
+            <line x1="7.5" y1="3.5" x2="8.5" y2="4.5"></line>
+          </svg>
+        </div>
+        <div class="proc-num">01</div>
+        <h3 class="proc-card-title">Ustalenia i wycena</h3>
+        <p class="proc-card-desc">Wybieramy produkt, materiał, liczbę sztuk i sposób znakowania. Uzgadniamy zakres zamówienia i termin.</p>
+        <span class="proc-tag">Start procesu</span>
+      </div>
+
+      <!-- STEP 2: Projekt graficzny -->
+      <div class="proc-step" data-idx="1">
+        <div class="proc-node">
+          <div class="proc-node-ring"></div>
+          <div class="proc-node-pulse"></div>
+          <!-- paper + brush icon -->
+          <svg class="proc-icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="5" y="4" width="13" height="17" rx="1.5"></rect>
+            <line x1="8" y1="9" x2="15" y2="9"></line>
+            <line x1="8" y1="12" x2="15" y2="12"></line>
+            <line x1="8" y1="15" x2="12" y2="15"></line>
+            <path d="M18 3 L24 9 L21 20 C20 23 17 24 15 22 C13 20 14 17 17 16 Z"></path>
+            <line x1="20.5" y1="11" x2="16.5" y2="15"></line>
+          </svg>
+        </div>
+        <div class="proc-num">02</div>
+        <h3 class="proc-card-title">Przygotowanie produkcji</h3>
+        <p class="proc-card-desc">Sprawdzamy materiały do nadruku, rozmiarówkę i ustalenia techniczne. Produkcję rozpoczynamy po ich zatwierdzeniu.</p>
+        <span class="proc-tag">~3–5 dni</span>
+      </div>
+
+      <!-- STEP 3: Produkcja / maszyna -->
+      <div class="proc-step" data-idx="2">
+        <div class="proc-node">
+          <div class="proc-node-ring"></div>
+          <div class="proc-node-pulse"></div>
+          <!-- sewing machine icon -->
+          <svg class="proc-icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="16" width="18" height="7" rx="2"></rect>
+            <path d="M6 16 V11 Q6 8 9 8 H17 Q20 8 20 11 V16"></path>
+            <line x1="13" y1="10" x2="13" y2="23"></line>
+            <line x1="11" y1="23" x2="15" y2="23"></line>
+            <circle cx="13" cy="12.5" r="1.2"></circle>
+            <circle cx="21.5" cy="11" r="3"></circle>
+            <circle cx="21.5" cy="11" r="1"></circle>
+          </svg>
+        </div>
+        <div class="proc-num">03</div>
+        <h3 class="proc-card-title">Druk i szycie</h3>
+        <p class="proc-card-desc">Wykonujemy nadruki sublimacyjne i szyjemy odzież. Zakres prac dopasowujemy do zamówienia — od samego druku po gotowy produkt.</p>
+        <span class="proc-tag">~2–3 tyg.</span>
+      </div>
+
+      <!-- STEP 4: Dostawa / paczka -->
+      <div class="proc-step" data-idx="3">
+        <div class="proc-node">
+          <div class="proc-node-ring"></div>
+          <div class="proc-node-pulse"></div>
+          <!-- package icon -->
+          <svg class="proc-icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 10 L14 5 L24 10 L24 22 L14 27 L4 22 Z"></path>
+            <path d="M4 10 L14 15 L24 10"></path>
+            <line x1="14" y1="15" x2="14" y2="27"></line>
+            <line x1="9" y1="7.5" x2="19" y2="12.5"></line>
+          </svg>
+        </div>
+        <div class="proc-num">04</div>
+        <h3 class="proc-card-title">Kontrola i dostawa</h3>
+        <p class="proc-card-desc">Sprawdzamy gotową odzież, kompletujemy zamówienie i przygotowujemy je do wysyłki.</p>
+        <span class="proc-tag">Pod drzwi</span>
+      </div>
+
+    </div><!-- /proc-grid -->
+
+ 
+
+  </div><!-- /proc-wrap -->
+</div><!-- /MAIN WRAPPER -->
+
+<!-- SOCIAL -->
+<div class="social-bar reveal" style="width: 100%;">
+  <a href="https://www.instagram.com/danger_wear_production/" target="_blank" rel="noopener" class="social-item">
+    <svg class="social-icon" viewBox="0 0 24 24" fill="none">
+      <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"></rect>
+      <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.5"></circle>
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor"></circle>
+    </svg>
+    <div class="social-info">
+      <span class="social-name">Instagram</span>
+      <span class="social-handle">@danger_wear_production</span>
+    </div>
+    <span class="social-arrow">↗</span>
+  </a>
+  <a href="https://www.facebook.com/DangerWearProduction" target="_blank" rel="noopener" class="social-item">
+    <svg class="social-icon" viewBox="0 0 24 24" fill="none">
+      <path d="M18 2H15C13.3 2 12 3.3 12 5V8H9V12H12V22H16V12H19L20 8H16V5C16 4.4 16.4 4 17 4H20V2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+    <div class="social-info">
+      <span class="social-name">Facebook</span>
+      <span class="social-handle">DangerWearProduction</span>
+    </div>
+    <span class="social-arrow">↗</span>
+  </a>
+  
+</div>
+
+<!-- FOOTER -->
+<footer id="kontakt" style="width: 100%;">
+  <p>© 2026 Danger Wear Production. Wszelkie prawa zastrzeżone.</p>
+  <small>Produkcja odzieży i gadżetów w Polsce.</small>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/produkcja.js"></script>
+
+</body></html>
