@@ -32,7 +32,7 @@ jobs:
       - name: Download preview package
         run: |
           mkdir -p _site
-          curl -L --fail --retry 3 'https://sdmntprpolandcentral.oaiusercontent.com/files/00000000-9580-820a-bfea-555fb8e92153/raw?se=2026-09-16T04%3A45%3A28Z&sp=r&sv=2026-02-06&sr=b&scid=18e06e9f-3bb4-5dfe-b660-5d7c0a7e7005&skoid=e5f84a89-964a-4fd3-92c2-c2cb3a12ea16&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-16T03%3A13%3A14Z&ske=2026-09-17T03%3A13%3A14Z&sks=b&skv=2026-02-06&sig=MFRDWodkGKAda%2BRRmsVdEoX9%2BlC8vgzqyeskoxATzZU%3D' -o site.zip
+          curl -L --fail --retry 3 'https://sdmntprpolandcentral.oaiusercontent.com/files/00000000-22e0-820a-8621-9c1a101e17be/raw?se=2026-09-16T04%3A53%3A10Z&sp=r&sv=2026-02-06&sr=b&scid=02e962fd-4428-542c-bdfb-3c7065d9c7ed&skoid=e5f84a89-964a-4fd3-92c2-c2cb3a12ea16&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-15T12%3A12%3A51Z&ske=2026-09-16T12%3A12%3A51Z&sks=b&skv=2026-02-06&sig=Ykm46us/wJAfTu1zpsNMcvnTqRouYUuO8jbHQ05DI9Q%3D' -o site.zip
           unzip -q site.zip -d _site
           touch _site/.nojekyll
 
