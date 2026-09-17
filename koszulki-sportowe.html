@@ -8,166 +8,41 @@
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,600;0,700&amp;family=DM+Mono:wght@300;400&amp;display=swap" rel="stylesheet"/>
 <link href="css/mesh-card.css?v=20260916-all-products-unified-1" rel="stylesheet"/>
 <link href="css/mobile.css?v=20260916-all-products-unified-1" rel="stylesheet"/>
+<style>
+.mesh-mobile-heading{display:none;}
+@media (max-width:900px) and (orientation:portrait){
+body.sw-mesh-page .mesh-ref-main{grid-template-columns:1fr!important;gap:16px!important;}
+body.sw-mesh-page .mesh-mobile-heading{display:block;order:0;margin:0 0 2px;padding:0;}
+body.sw-mesh-page .mesh-mobile-heading .fw-kicker{margin:0 0 12px!important;font-size:8px!important;letter-spacing:.20em!important;}
+body.sw-mesh-page .mesh-mobile-heading h1{margin:0!important;color:#f4f4f4;font-size:clamp(30px,7.7vw,41px)!important;line-height:.9!important;letter-spacing:-.035em;font-weight:900;text-transform:uppercase;}
+body.sw-mesh-page .mesh-ref-visual{order:1!important;}body.sw-mesh-page .mesh-ref-info{order:2!important;}
+body.sw-mesh-page .mesh-ref-info>.fw-kicker,body.sw-mesh-page .mesh-ref-info>h1{display:none!important;}
+body.sw-mesh-page .mesh-ref-visual .stage{height:min(76.6vw,58svh)!important;min-height:0!important;}
+body.sw-mesh-page .mesh-ref-visual .main-card{width:min(67.2vw,calc(58svh / 1.14))!important;max-width:none!important;height:100%!important;}
+body.sw-mesh-page .mesh-ref-visual .main-card>img{width:100%!important;height:100%!important;aspect-ratio:auto!important;object-fit:cover!important;}
+body.sw-mesh-page .mesh-carousel-caption-below{width:min(67.2vw,calc(58svh / 1.14))!important;margin:8px auto 0!important;}
+body.sw-mesh-page .realizations-track{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:6px!important;}
+body.sw-mesh-page .realization-thumb img{width:100%!important;aspect-ratio:1.31 / 1!important;object-fit:contain!important;object-position:center!important;}
+}
+@media (max-width:900px) and (orientation:landscape){
+body.sw-mesh-page .mesh-ref-shell{padding:10px 14px 0!important;}
+body.sw-mesh-page .mesh-ref-main{display:grid!important;grid-template-columns:minmax(0,48%) minmax(0,1fr)!important;gap:24px!important;align-items:start!important;}
+body.sw-mesh-page .mesh-mobile-heading{display:none!important;}body.sw-mesh-page .mesh-ref-visual{order:0!important;margin:0!important;}body.sw-mesh-page .mesh-ref-info{order:1!important;padding:0!important;}
+body.sw-mesh-page .mesh-ref-info>.fw-kicker,body.sw-mesh-page .mesh-ref-info>h1{display:block!important;}
+body.sw-mesh-page .mesh-ref-visual .stage{height:min(72vh,430px)!important;min-height:0!important;}
+body.sw-mesh-page .mesh-ref-visual .main-card{width:min(100%,calc(72vh / 1.14))!important;max-width:none!important;height:100%!important;}
+body.sw-mesh-page .mesh-ref-visual .main-card>img{width:100%!important;height:100%!important;aspect-ratio:auto!important;object-fit:cover!important;}
+body.sw-mesh-page .mesh-carousel-caption-below{width:min(100%,calc(72vh / 1.14))!important;margin:7px auto 0!important;}
+body.sw-mesh-page .mesh-ref-info h1{margin-bottom:14px!important;font-size:clamp(25px,4.7vw,38px)!important;}body.sw-mesh-page .mesh-ref-info .fw-lead{margin-bottom:16px!important;font-size:11px!important;line-height:1.5!important;}
+body.sw-mesh-page .realizations-track{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:6px!important;}
+body.sw-mesh-page .realization-thumb img{width:100%!important;aspect-ratio:1.31 / 1!important;object-fit:contain!important;object-position:center!important;}
+body.sw-mesh-page .realization-thumb span{min-height:32px!important;padding:6px 7px!important;font-size:7px!important;}
+}
+</style>
 </head>
 <body class="fw-reference-page sw-reference-page sw-mesh-page dw-unified-product-page">
-<div aria-hidden="true" class="mob-panel" id="mobPanel">
-<button aria-label="Zamknij menu" class="mob-close" id="mobClose">×</button>
-<details class="mob-products">
-<summary>Produkty</summary>
-<div class="mob-products-tree">
-<b>SPORTSWEAR</b>
-<a href="koszulki-sportowe.html">Koszulki sportowe MESH</a>
-<a href="koszulki-sportowe-athletic.html">Koszulki sportowe Athletic</a>
-<a href="tank-top.html">Tank Top</a>
-<b>FIGHTWEAR</b>
-<a href="fightwear-set.html">Komplety</a>
-<a href="rashguard.html">Rashguard</a>
-<a href="spodenki-mma-luzne.html">Spodenki MMA luźne</a>
-<a href="spodenki-mma-vale-tudo.html">Spodenki MMA Vale Tudo</a>
-<a href="legginsy-sportowe.html">Legginsy sportowe</a>
-<b>STREETWEAR</b>
-<a href="streetwear-koszulki.html">Koszulki</a>
-<a href="streetwear-bluzy.html">Bluzy</a>
-<a href="streetwear-kurtki.html">Kurtki</a>
-<a href="streetwear-bezrekawniki.html">Bezrękawniki</a>
-<a href="streetwear-spodnie.html">Spodnie</a>
-<a href="streetwear-spodenki.html">Spodenki</a>
-<b>AKCESORIA</b>
-<a href="czapki-z-daszkiem.html">Czapki z daszkiem</a>
-<a href="czapki-zimowe.html">Czapki zimowe</a>
-<a href="kominy-termoaktywne.html">Kominy termoaktywne</a>
-<a href="kominy-polarowe-zimowe.html">Kominy polarowe zimowe</a>
-<a href="kominiarki.html">Kominiarki</a>
-<a href="chusty.html">Chusty</a>
-<a href="rekawiczki.html">Rękawiczki</a>
-<a href="szaliki.html">Szaliki</a>
-<a href="nerki-saszetki.html">Nerki / saszetki</a>
-<a href="reczniki.html">Ręczniki</a>
-<a href="worki-sportowe.html">Worki sportowe</a>
-<a href="flagi-drukowane.html">Flagi drukowane</a>
-<a href="poduszki.html">Poduszki</a>
-<a href="smycze-na-klucze.html">Smycze na klucze</a>
-</div>
-</details>
-<a href="produkcja.html">Produkcja</a>
-<a href="onas.html">O nas</a>
-<a href="kontakt.html">Kontakt</a>
-</div>
-<nav class="topbar">
-<a class="brand" href="index.html">
-<img alt="Danger Wear Production" src="assets/images/dangerwear-logo.webp"/>
-<b>DANGER WEAR <span>PRODUCTION</span></b>
-</a>
-<div class="navlinks">
-<div class="products-menu">
-<a class="products-trigger" href="produkty.html">PRODUKTY <span>•</span></a>
-<div aria-label="Kategorie produktów" class="products-dropdown">
-<section>
-<a class="products-group" href="fightwear.html#sportswear">SPORTSWEAR</a>
-<a href="koszulki-sportowe.html">Koszulki sportowe MESH</a>
-<a href="koszulki-sportowe-athletic.html">Koszulki sportowe Athletic</a>
-<a href="tank-top.html">Tank Top</a>
-<a class="products-group products-group-secondary" href="fightwear.html#fightwear">FIGHTWEAR</a>
-<a href="fightwear-set.html">Komplety</a>
-<a href="rashguard.html">Rashguard</a>
-<a href="spodenki-mma-luzne.html">Spodenki MMA luźne</a>
-<a href="spodenki-mma-vale-tudo.html">Spodenki MMA Vale Tudo</a>
-<a href="legginsy-sportowe.html">Legginsy sportowe</a>
-</section>
-<section>
-<a class="products-group" href="streetwear.html">STREETWEAR</a>
-<a href="streetwear-koszulki.html">Koszulki</a>
-<a href="streetwear-bluzy.html">Bluzy</a>
-<a href="streetwear-kurtki.html">Kurtki</a>
-<a href="streetwear-bezrekawniki.html">Bezrękawniki</a>
-<a href="streetwear-spodnie.html">Spodnie</a>
-<a href="streetwear-spodenki.html">Spodenki</a>
-</section>
-<section>
-<a class="products-group" href="akcesoria.html">AKCESORIA</a>
-<a href="czapki-z-daszkiem.html">Czapki z daszkiem</a>
-<a href="czapki-zimowe.html">Czapki zimowe</a>
-<a href="kominy-termoaktywne.html">Kominy termoaktywne</a>
-<a href="kominy-polarowe-zimowe.html">Kominy polarowe zimowe</a>
-<a href="kominiarki.html">Kominiarki</a>
-<a href="chusty.html">Chusty</a>
-<a href="rekawiczki.html">Rękawiczki</a>
-<a href="szaliki.html">Szaliki</a>
-<a href="nerki-saszetki.html">Nerki / saszetki</a>
-<a href="reczniki.html">Ręczniki</a>
-<a href="worki-sportowe.html">Worki sportowe</a>
-<a href="flagi-drukowane.html">Flagi drukowane</a>
-<a href="poduszki.html">Poduszki</a>
-<a href="smycze-na-klucze.html">Smycze na klucze</a>
-</section>
-</div>
-</div>
-<a href="produkcja.html">PRODUKCJA</a>
-<a href="onas.html">O NAS</a>
-<a href="kontakt.html">KONTAKT</a>
-</div>
-<button aria-label="Menu" class="burger" id="burger">☰</button>
-</nav>
-<main class="fw-page-shell mesh-ref-shell">
-  <section class="fw-main mesh-ref-main" aria-label="Karta produktu KOSZULKI SPORTOWE MESH">
-    <section aria-label="Galeria lifestyle" class="realization fw-lifestyle mesh-ref-visual" data-gallery-role="lifestyle">
-      <div class="stage" id="lifestyleStage">
-        <button aria-label="Poprzednie zdjęcie lifestyle" class="side side-left" id="lifestylePrev" type="button"><img alt="" id="lifestylePrevImage" src=""/></button>
-        <button aria-label="Poprzednie zdjęcie lifestyle" class="carousel-arrow carousel-arrow-prev" id="carouselArrowPrev" type="button">‹</button>
-        <article class="main-card">
-          <img alt="" id="lifestyleHero" src=""/>
-          <div class="mesh-visual-brand"><strong>DANGER WEAR</strong><span>PRODUCTION</span></div>
-        </article>
-        <button aria-label="Następne zdjęcie lifestyle" class="carousel-arrow carousel-arrow-next" id="carouselArrowNext" type="button">›</button>
-        <button aria-label="Następne zdjęcie lifestyle" class="side side-right" id="lifestyleNext" type="button"><img alt="" id="lifestyleNextImage" src=""/></button>
-      </div>
-      <div class="caption mesh-ref-caption mesh-carousel-caption-below"><div><span class="mesh-project-title" id="lifestyleTitle">LIFESTYLE</span><em id="lifestyleSubtitle"></em></div></div>
-    </section>
-    <section class="fw-info mesh-ref-info" aria-label="Informacje o produkcie">
-      <p class="fw-kicker"><a href="index.html">DANGER WEAR PRODUCTION</a> / <a href="fightwear.html#sportswear">SPORTSWEAR</a></p>
-      <h1>KOSZULKI SPORTOWE MESH</h1>
-      <p class="fw-lead">Koszulka o luźnym kroju przeznaczona do aktywności fizycznej. Oddychający materiał poliestrowy dobrze sprawdza się podczas treningu i codziennego użytkowania sportowego. Nadruk sublimacyjny na całej powierzchni pozwala na pełną personalizację kolorystyki, napisów i numeracji.</p>
-      <dl class="fw-specs"><div><dt>Materiał</dt><dd>100% poliester</dd></div><div><dt>Krój</dt><dd>Komfortowy, luźny</dd></div><div><dt>Znakowanie</dt><dd>Sublimacja fullprint</dd></div><div><dt>Personalizacja</dt><dd>Kolorystyka, napisy i numeracja</dd></div></dl>
-      <details class="fw-data-fold"><summary>TABELA ROZMIARÓW <span aria-hidden="true">+</span></summary><div class="fw-data-fold-body table-wrap"><table><thead><tr><th>Rozmiar</th><th>S</th><th>M</th><th>L</th><th>XL</th><th>XXL</th><th>XXXL</th></tr></thead><tbody><tr><th>Długość</th><td>65</td><td>67</td><td>72</td><td>74</td><td>78</td><td>80</td></tr><tr><th>Szerokość</th><td>50</td><td>53</td><td>57</td><td>59</td><td>62</td><td>65</td></tr></tbody></table></div></details>
-      <details class="fw-personalization mesh-marking-details" id="znakowanie">
-        <summary>
-          <div class="fw-personalization-copy"><small>METODY ZNAKOWANIA</small><strong>PERSONALIZACJA PRODUKTU</strong></div>
-          <div class="fw-mark-panel" aria-label="Sublimacja">
-            <span class="mark-badge"><img alt="Sublimacja" src="assets/images/metody-znakowania/sublimacja.png"/></span>
-            <span class="fw-mark-plus" aria-hidden="true">+</span>
-          </div>
-        </summary>
-        <div class="fw-personalization-body mesh-marking-body">
-          <strong>SUBLIMACJA FULLPRINT</strong>
-          <p>Sublimacja to metoda znakowania, która pozwala nanieść nadruk na całej powierzchni poliestru. Zapewnia trwałe, żywe kolory i pełną personalizację kolorystyki, napisów i numeracji.</p>
-          <a href="produkcja.html">POZNAJ PROCES PRODUKCJI →</a>
-        </div>
-      </details>
-      <div class="mesh-ref-actions"><a class="mesh-ref-primary" href="kontakt.html?produkt=koszulki-sportowe">ZAPYTAJ O PRODUKCJĘ <span aria-hidden="true">→</span></a><a class="mesh-category-return" href="fightwear.html#sportswear">WRÓĆ DO SPORTSWEAR</a></div>
-    </section>
-  </section>
-</main>
-<section aria-label="Nasze realizacje" class="thumb-zone fw-realizations" data-gallery-role="realizacje" id="realizacje">
-  <h2 class="realizations-heading">NASZE REALIZACJE</h2>
-  <div class="realizations-track" id="realizationsTrack"></div>
-</section>
-<section class="cta">
-  <p>ZAMÓW PRODUKCJĘ</p>
-  <h2>ODZIEŻ DLA TWOJEJ EKIPY.<br/>PRODUKCJA OD PODSTAW.</h2>
-  <div class="cta-copy">Dobierzemy produkt, ustalimy zakres personalizacji i przygotujemy wycenę produkcji.<br/><br/>Podaj rodzaj produktu, liczbę sztuk i oczekiwany termin.</div>
-  <a href="kontakt.html?produkt=koszulki-sportowe">ZAPYTAJ O PRODUKCJĘ <span>→</span></a>
-</section>
-<div aria-hidden="true" class="lightbox" id="realizationLightbox">
-  <div class="lightbox-backdrop" data-lightbox-close=""></div>
-  <div aria-label="Powiększona realizacja" aria-modal="true" class="lightbox-dialog" role="dialog">
-    <button aria-label="Zamknij" class="lightbox-close" data-lightbox-close="" type="button">×</button>
-    <button aria-label="Poprzednia realizacja" class="lightbox-nav lightbox-prev" id="lightboxPrev" type="button">‹</button>
-    <figure><img alt="" id="lightboxImage" src=""/><figcaption id="lightboxCaption"></figcaption></figure>
-    <button aria-label="Następna realizacja" class="lightbox-nav lightbox-next" id="lightboxNext" type="button">›</button>
-  </div>
-</div>
-<script>window.DW_GALLERIES={"lifestyle":[{"src":"Lifestyle/01_ApatorTorun.jpg","title":"APATOR TORUŃ"},{"src":"Lifestyle/01_MiedzLegnicaSekcjaSportowoTurystyczna.jpg","title":"MIEDŹ LEGNICA","subtitle":"SEKCJA SPORTOWO-TURYSTYCZNA"},{"src":"Lifestyle/01_Rakow3W.jpg","title":"RAKÓW","subtitle":"3W"}],"realizacje":[{"src":"Realizacje/Realizacja1_RUCH CHORZÓW.png","title":"RUCH CHORZÓW"},{"src":"Realizacje/Realizacja2_ŚLĄSK WROCŁAW.png","title":"ŚLĄSK WROCŁAW"},{"src":"Realizacje/Realizacja2_UNIA OŚWIĘCIM.png","title":"UNIA OŚWIĘCIM"},{"src":"Realizacje/Realizacja4_CHEMIK KĘDZIERZYN-KOŹLE.png","title":"CHEMIK KĘDZIERZYN-KOŹLE"},{"src":"Realizacje/Realizacja5_GWARDIA& ARKA.png","title":"GWARDIA & ARKA"},{"src":"Realizacje/Realizacja6_ARKA GDYNIA.png","title":"ARKA GDYNIA"},{"src":"Realizacje/Realizacja7_POLONIA BYTOM.png","title":"POLONIA BYTOM"},{"src":"Realizacje/Realizacja8_WISŁA PŁOCK.png","title":"WISŁA PŁOCK"},{"src":"Realizacje/Realizacja9_GGKM GRUDZIĄDZ.png","title":"GGKM GRUDZIĄDZ"},{"src":"Realizacje/Realizacja10_GKS TYCHY.png","title":"GKS TYCHY"},{"src":"Realizacje/Realizacja11_SANDECJA NOWY SĄCZ.png","title":"SANDECJA NOWY SĄCZ"},{"src":"Realizacje/Realizacja12_GÓRNIK ZABRZE.png","title":"GÓRNIK ZABRZE"}]};</script>
-<script src="js/mesh-card.js?v=20260916-all-products-unified-1"></script>
-<script src="js/mobile.js?v=20260916-all-products-unified-1"></script>
-</body>
-</html>
+<div aria-hidden="true" class="mob-panel" id="mobPanel"><button aria-label="Zamknij menu" class="mob-close" id="mobClose">×</button><details class="mob-products"><summary>Produkty</summary><div class="mob-products-tree"><b>SPORTSWEAR</b><a href="koszulki-sportowe.html">Koszulki sportowe MESH</a><a href="koszulki-sportowe-athletic.html">Koszulki sportowe Athletic</a><a href="tank-top.html">Tank Top</a><b>FIGHTWEAR</b><a href="fightwear-set.html">Komplety</a><a href="rashguard.html">Rashguard</a><a href="spodenki-mma-luzne.html">Spodenki MMA luźne</a><a href="spodenki-mma-vale-tudo.html">Spodenki MMA Vale Tudo</a><a href="legginsy-sportowe.html">Legginsy sportowe</a><b>STREETWEAR</b><a href="streetwear-koszulki.html">Koszulki</a><a href="streetwear-bluzy.html">Bluzy</a><a href="streetwear-kurtki.html">Kurtki</a><a href="streetwear-bezrekawniki.html">Bezrękawniki</a><a href="streetwear-spodnie.html">Spodnie</a><a href="streetwear-spodenki.html">Spodenki</a><b>AKCESORIA</b><a href="czapki-z-daszkiem.html">Czapki z daszkiem</a><a href="czapki-zimowe.html">Czapki zimowe</a><a href="kominy-termoaktywne.html">Kominy termoaktywne</a><a href="kominy-polarowe-zimowe.html">Kominy polarowe zimowe</a><a href="kominiarki.html">Kominiarki</a><a href="chusty.html">Chusty</a><a href="rekawiczki.html">Rękawiczki</a><a href="szaliki.html">Szaliki</a><a href="nerki-saszetki.html">Nerki / saszetki</a><a href="reczniki.html">Ręczniki</a><a href="worki-sportowe.html">Worki sportowe</a><a href="flagi-drukowane.html">Flagi drukowane</a><a href="poduszki.html">Poduszki</a><a href="smycze-na-klucze.html">Smycze na klucze</a></div></details><a href="produkcja.html">Produkcja</a><a href="onas.html">O nas</a><a href="kontakt.html">Kontakt</a></div>
+<nav class="topbar"><a class="brand" href="index.html"><img alt="Danger Wear Production" src="assets/images/dangerwear-logo.webp"/><b>DANGER WEAR <span>PRODUCTION</span></b></a><div class="navlinks"><div class="products-menu"><a class="products-trigger" href="produkty.html">PRODUKTY <span>•</span></a><div aria-label="Kategorie produktów" class="products-dropdown"><section><a class="products-group" href="fightwear.html#sportswear">SPORTSWEAR</a><a href="koszulki-sportowe.html">Koszulki sportowe MESH</a><a href="koszulki-sportowe-athletic.html">Koszulki sportowe Athletic</a><a href="tank-top.html">Tank Top</a><a class="products-group products-group-secondary" href="fightwear.html#fightwear">FIGHTWEAR</a><a href="fightwear-set.html">Komplety</a><a href="rashguard.html">Rashguard</a><a href="spodenki-mma-luzne.html">Spodenki MMA luźne</a><a href="spodenki-mma-vale-tudo.html">Spodenki MMA Vale Tudo</a><a href="legginsy-sportowe.html">Legginsy sportowe</a></section><section><a class="products-group" href="streetwear.html">STREETWEAR</a><a href="streetwear-koszulki.html">Koszulki</a><a href="streetwear-bluzy.html">Bluzy</a><a href="streetwear-kurtki.html">Kurtki</a><a href="streetwear-bezrekawniki.html">Bezrękawniki</a><a href="streetwear-spodnie.html">Spodnie</a><a href="streetwear-spodenki.html">Spodenki</a></section><section><a class="products-group" href="akcesoria.html">AKCESORIA</a><a href="czapki-z-daszkiem.html">Czapki z daszkiem</a><a href="czapki-zimowe.html">Czapki zimowe</a><a href="kominy-termoaktywne.html">Kominy termoaktywne</a><a href="kominy-polarowe-zimowe.html">Kominy polarowe zimowe</a><a href="kominiarki.html">Kominiarki</a><a href="chusty.html">Chusty</a><a href="rekawiczki.html">Rękawiczki</a><a href="szaliki.html">Szaliki</a><a href="nerki-saszetki.html">Nerki / saszetki</a><a href="reczniki.html">Ręczniki</a><a href="worki-sportowe.html">Worki sportowe</a><a href="flagi-drukowane.html">Flagi drukowane</a><a href="poduszki.html">Poduszki</a><a href="smycze-na-klucze.html">Smycze na klucze</a></section></div></div><a href="produkcja.html">PRODUKCJA</a><a href="onas.html">O NAS</a><a href="kontakt.html">KONTAKT</a></div><button aria-label="Menu" class="burger" id="burger">☰</button></nav>
+<main class="fw-page-shell mesh-ref-shell"><section class="fw-main mesh-ref-main" aria-label="Karta produktu KOSZULKI SPORTOWE MESH"><header class="mesh-mobile-heading" aria-hidden="true"><p class="fw-kicker"><a href="index.html">DANGER WEAR PRODUCTION</a> / <a href="fightwear.html#sportswear">SPORTSWEAR</a></p><h1>KOSZULKI SPORTOWE MESH</h1></header><section aria-label="Galeria lifestyle" class="realization fw-lifestyle mesh-ref-visual" data-gallery-role="lifestyle"><div class="stage" id="lifestyleStage"><button aria-label="Poprzednie zdjęcie lifestyle" class="side side-left" id="lifestylePrev" type="button"><img alt="" id="lifestylePrevImage" src=""/></button><button aria-label="Poprzednie zdjęcie lifestyle" class="carousel-arrow carousel-arrow-prev" id="carouselArrowPrev" type="button">‹</button><article class="main-card"><img alt="" id="lifestyleHero" src=""/><div class="mesh-visual-brand"><strong>DANGER WEAR</strong><span>PRODUCTION</span></div></article><button aria-label="Następne zdjęcie lifestyle" class="carousel-arrow carousel-arrow-next" id="carouselArrowNext" type="button">›</button><button aria-label="Następne zdjęcie lifestyle" class="side side-right" id="lifestyleNext" type="button"><img alt="" id="lifestyleNextImage" src=""/></button></div><div class="caption mesh-ref-caption mesh-carousel-caption-below"><div><span class="mesh-project-title" id="lifestyleTitle">LIFESTYLE</span><em id="lifestyleSubtitle"></em></div></div></section><section class="fw-info mesh-ref-info" aria-label="Informacje o produkcie"><p class="fw-kicker"><a href="index.html">DANGER WEAR PRODUCTION</a> / <a href="fightwear.html#sportswear">SPORTSWEAR</a></p><h1>KOSZULKI SPORTOWE MESH</h1><p class="fw-lead">Koszulka o luźnym kroju przeznaczona do aktywności fizycznej. Oddychający materiał poliestrowy dobrze sprawdza się podczas treningu i codziennego użytkowania sportowego. Nadruk sublimacyjny na całej powierzchni pozwala na pełną personalizację kolorystyki, napisów i numeracji.</p><dl class="fw-specs"><div><dt>Materiał</dt><dd>100% poliester</dd></div><div><dt>Krój</dt><dd>Komfortowy, luźny</dd></div><div><dt>Znakowanie</dt><dd>Sublimacja fullprint</dd></div><div><dt>Personalizacja</dt><dd>Kolorystyka, napisy i numeracja</dd></div></dl><details class="fw-data-fold"><summary>TABELA ROZMIARÓW <span aria-hidden="true">+</span></summary><div class="fw-data-fold-body table-wrap"><table><thead><tr><th>Rozmiar</th><th>S</th><th>M</th><th>L</th><th>XL</th><th>XXL</th><th>XXXL</th></tr></thead><tbody><tr><th>Długość</th><td>65</td><td>67</td><td>72</td><td>74</td><td>78</td><td>80</td></tr><tr><th>Szerokość</th><td>50</td><td>53</td><td>57</td><td>59</td><td>62</td><td>65</td></tr></tbody></table></div></details><details class="fw-personalization mesh-marking-details" id="znakowanie"><summary><div class="fw-personalization-copy"><small>METODY ZNAKOWANIA</small><strong>PERSONALIZACJA PRODUKTU</strong></div><div class="fw-mark-panel" aria-label="Sublimacja"><span class="mark-badge"><img alt="Sublimacja" src="assets/images/metody-znakowania/sublimacja.png"/></span><span class="fw-mark-plus" aria-hidden="true">+</span></div></summary><div class="fw-personalization-body mesh-marking-body"><strong>SUBLIMACJA FULLPRINT</strong><p>Sublimacja to metoda znakowania, która pozwala nanieść nadruk na całej powierzchni poliestru. Zapewnia trwałe, żywe kolory i pełną personalizację kolorystyki, napisów i numeracji.</p><a href="produkcja.html">POZNAJ PROCES PRODUKCJI →</a></div></details><div class="mesh-ref-actions"><a class="mesh-ref-primary" href="kontakt.html?produkt=koszulki-sportowe">ZAPYTAJ O PRODUKCJĘ <span aria-hidden="true">→</span></a><a class="mesh-category-return" href="fightwear.html#sportswear">WRÓĆ DO SPORTSWEAR</a></div></section></section></main>
+<section aria-label="Nasze realizacje" class="thumb-zone fw-realizations" data-gallery-role="realizacje" id="realizacje"><h2 class="realizations-heading">NASZE REALIZACJE</h2><div class="realizations-track" id="realizationsTrack"></div></section><section class="cta"><p>ZAMÓW PRODUKCJĘ</p><h2>ODZIEŻ DLA TWOJEJ EKIPY.<br/>PRODUKCJA OD PODSTAW.</h2><div class="cta-copy">Dobierzemy produkt, ustalimy zakres personalizacji i przygotujemy wycenę produkcji.<br/><br/>Podaj rodzaj produktu, liczbę sztuk i oczekiwany termin.</div><a href="kontakt.html?produkt=koszulki-sportowe">ZAPYTAJ O PRODUKCJĘ <span>→</span></a></section><div aria-hidden="true" class="lightbox" id="realizationLightbox"><div class="lightbox-backdrop" data-lightbox-close=""></div><div aria-label="Powiększona realizacja" aria-modal="true" class="lightbox-dialog" role="dialog"><button aria-label="Zamknij" class="lightbox-close" data-lightbox-close="" type="button">×</button><button aria-label="Poprzednia realizacja" class="lightbox-nav lightbox-prev" id="lightboxPrev" type="button">‹</button><figure><img alt="" id="lightboxImage" src=""/><figcaption id="lightboxCaption"></figcaption></figure><button aria-label="Następna realizacja" class="lightbox-nav lightbox-next" id="lightboxNext" type="button">›</button></div></div>
+<script>window.DW_GALLERIES={"lifestyle":[{"src":"Lifestyle/01_ApatorTorun.jpg","title":"APATOR TORUŃ"},{"src":"Lifestyle/01_MiedzLegnicaSekcjaSportowoTurystyczna.jpg","title":"MIEDŹ LEGNICA","subtitle":"SEKCJA SPORTOWO-TURYSTYCZNA"},{"src":"Lifestyle/01_Rakow3W.jpg","title":"RAKÓW","subtitle":"3W"}],"realizacje":[{"src":"Realizacje/Realizacja1_RUCH CHORZÓW.png","title":"RUCH CHORZÓW"},{"src":"Realizacje/Realizacja2_ŚLĄSK WROCŁAW.png","title":"ŚLĄSK WROCŁAW"},{"src":"Realizacje/Realizacja2_UNIA OŚWIĘCIM.png","title":"UNIA OŚWIĘCIM"},{"src":"Realizacje/Realizacja4_CHEMIK KĘDZIERZYN-KOŹLE.png","title":"CHEMIK KĘDZIERZYN-KOŹLE"},{"src":"Realizacje/Realizacja5_GWARDIA& ARKA.png","title":"GWARDIA & ARKA"},{"src":"Realizacje/Realizacja6_ARKA GDYNIA.png","title":"ARKA GDYNIA"},{"src":"Realizacje/Realizacja7_POLONIA BYTOM.png","title":"POLONIA BYTOM"},{"src":"Realizacje/Realizacja8_WISŁA PŁOCK.png","title":"WISŁA PŁOCK"},{"src":"Realizacje/Realizacja9_GGKM GRUDZIĄDZ.png","title":"GGKM GRUDZIĄDZ"},{"src":"Realizacje/Realizacja10_GKS TYCHY.png","title":"GKS TYCHY"},{"src":"Realizacje/Realizacja11_SANDECJA NOWY SĄCZ.png","title":"SANDECJA NOWY SĄCZ"},{"src":"Realizacje/Realizacja12_GÓRNIK ZABRZE.png","title":"GÓRNIK ZABRZE"}]};</script><script src="js/mesh-card.js?v=20260916-all-products-unified-1"></script><script src="js/mobile.js?v=20260916-all-products-unified-1"></script></body></html>
