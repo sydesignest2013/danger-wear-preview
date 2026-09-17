@@ -15,6 +15,7 @@
   const nextImage = document.getElementById("lifestyleNextImage");
   const lifestyleStage = document.getElementById("lifestyleStage");
   const lifestyleDots = document.getElementById("lifestyleDots");
+  const mainCard = hero?.closest(".main-card");
   const isMeshPage = document.body.classList.contains("sw-mesh-page");
   const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
 
@@ -45,15 +46,22 @@
   function renderLifestyle(index) {
     if (!lifestyle.length) {
       hero.removeAttribute("src");
-      hero.alt = "Brak zdjęć w folderze Lifestyle";
-      title.textContent = "DODAJ ZDJĘCIA DO FOLDERU LIFESTYLE";
-      if (subtitle) subtitle.textContent = fallbackSubtitle;
-      prevButton.hidden = true;
-      nextButton.hidden = true;
+      hero.alt = "Miejsce na zdjęcie lifestyle";
+      prevImage?.removeAttribute("src");
+      nextImage?.removeAttribute("src");
+      lifestyleStage?.classList.add("is-empty-media");
+      mainCard?.classList.add("is-empty-media");
+      title.textContent = galleries.emptyLifestyleText || "MIEJSCE NA ZDJĘCIE — LIFESTYLE";
+      if (subtitle) subtitle.textContent = "";
+      [prevButton, nextButton, carouselArrowPrev, carouselArrowNext].forEach((button) => {
+        if (button) button.hidden = true;
+      });
       renderLifestyleDots();
       return;
     }
 
+    lifestyleStage?.classList.remove("is-empty-media");
+    mainCard?.classList.remove("is-empty-media");
     lifestyleIndex = normalizeIndex(index, lifestyle.length);
     const current = lifestyle[lifestyleIndex];
     const prev = lifestyle[normalizeIndex(lifestyleIndex - 1, lifestyle.length)];
@@ -72,6 +80,8 @@
     const multiple = lifestyle.length > 1;
     prevButton.hidden = !multiple;
     nextButton.hidden = !multiple;
+    if (carouselArrowPrev) carouselArrowPrev.hidden = !multiple;
+    if (carouselArrowNext) carouselArrowNext.hidden = !multiple;
     renderLifestyleDots();
   }
 
@@ -232,7 +242,7 @@
     if (!realizacje.length) {
       const empty = document.createElement("div");
       empty.className = "empty-gallery";
-      empty.textContent = galleries.emptyRealizationsText || "Dodaj pliki do folderu Realizacje i uruchom ODSWIEZ_GALERIE.bat.";
+      empty.textContent = galleries.emptyRealizationsText || "MIEJSCE NA ZDJĘCIA — REALIZACJE";
       track.appendChild(empty);
       return;
     }

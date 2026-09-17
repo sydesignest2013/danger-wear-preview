@@ -4473,3 +4473,53 @@ body.sw-mesh-page .realization-thumb span::after{
   outline:0!important;
   box-shadow:none!important;
 }
+
+/* === PRODUCT MEDIA PLACEHOLDERS 2026-09-17 === */
+body.dw-unified-product-page .mesh-ref-visual .stage.is-empty-media .main-card.is-empty-media{
+  display:grid!important;
+  place-items:center!important;
+  background:linear-gradient(145deg,rgba(255,255,255,.025),rgba(255,255,255,.008))!important;
+  border:1px dashed rgba(255,255,255,.16)!important;
+  box-shadow:none!important;
+}
+body.dw-unified-product-page .mesh-ref-visual .stage.is-empty-media .main-card.is-empty-media>img:not([src]){display:none!important;}
+body.dw-unified-product-page .mesh-ref-visual .stage.is-empty-media .main-card.is-empty-media::before{
+  content:"MIEJSCE NA ZDJĘCIE — LIFESTYLE";
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+  padding:24px;
+  color:rgba(255,255,255,.46);
+  font-family:"DM Mono",monospace;
+  font-size:11px;
+  line-height:1.35;
+  letter-spacing:.16em;
+  text-align:center;
+  text-transform:uppercase;
+  pointer-events:none;
+}
+body.dw-unified-product-page .mesh-ref-visual .stage.is-empty-media .side,
+body.dw-unified-product-page .mesh-ref-visual .stage.is-empty-media .carousel-arrow{display:none!important;}
+body.dw-unified-product-page .realizations-track>.empty-gallery{
+  grid-column:1/-1!important;
+  width:100%!important;
+  min-height:180px!important;
+  display:grid!important;
+  place-items:center!important;
+  margin:0!important;
+  padding:24px!important;
+  border:1px dashed rgba(255,255,255,.14)!important;
+  background:rgba(255,255,255,.012)!important;
+  color:rgba(255,255,255,.42)!important;
+  font-family:"DM Mono",monospace!important;
+  font-size:11px!important;
+  line-height:1.35!important;
+  letter-spacing:.15em!important;
+  text-align:center!important;
+  text-transform:uppercase!important;
+}
+@media(max-width:900px){
+  body.dw-unified-product-page .realizations-track>.empty-gallery{min-height:120px!important;padding:18px 12px!important;font-size:9px!important;}
+  body.dw-unified-product-page .mesh-ref-visual .stage.is-empty-media .main-card.is-empty-media::before{padding:16px;font-size:9px;}
+}

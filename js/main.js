@@ -31,3 +31,38 @@ document.querySelectorAll('.reveal').forEach(function(el) { obs.observe(el); });
   visual.appendChild(brand);
   visual.appendChild(caption);
 })();
+
+/* === DANGER WEAR THEME SWITCH — GLOBAL / 2026-09-18 === */
+(function(){
+  if(window.__DW_THEME_SWITCH__) return;
+  window.__DW_THEME_SWITCH__=true;
+  var KEY='danger-wear-theme';
+  function getSaved(){
+    try{return localStorage.getItem(KEY)==='light'?'light':'dark';}catch(e){return 'dark';}
+  }
+  function apply(theme){
+    var value=theme==='light'?'light':'dark';
+    document.documentElement.setAttribute('data-theme',value);
+    document.documentElement.style.colorScheme=value;
+    try{localStorage.setItem(KEY,value);}catch(e){}
+    document.querySelectorAll('.dw-theme-toggle button[data-theme-value]').forEach(function(btn){btn.setAttribute('aria-pressed',String(btn.getAttribute('data-theme-value')===value));});
+  }
+  function mount(){
+    if(document.querySelector('.dw-theme-toggle')){apply(getSaved());return;}
+    document.body.classList.add('dw-theme-ready');
+    var wrap=document.createElement('div');
+    wrap.className='dw-theme-toggle';
+    wrap.setAttribute('role','group');
+    wrap.setAttribute('aria-label','Wybierz motyw strony');
+    wrap.innerHTML='<button type="button" data-theme-value="light" aria-label="Motyw jasny" title="Motyw jasny">☀</button><button type="button" data-theme-value="dark" aria-label="Motyw ciemny" title="Motyw ciemny">☾</button>';
+    wrap.addEventListener('click',function(event){
+      var btn=event.target.closest('button[data-theme-value]');
+      if(btn) apply(btn.getAttribute('data-theme-value'));
+    });
+    document.body.appendChild(wrap);
+    apply(getSaved());
+  }
+  apply(getSaved());
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',mount,{once:true});
+  else mount();
+})();

@@ -569,3 +569,263 @@ button,input,select,textarea{font:inherit}
     font-size:9px!important;
   }
 }
+
+
+/* === DANGER WEAR THEME SWITCH — GLOBAL / 2026-09-18 === */
+:root{
+  color-scheme:dark;
+  --dw-theme-bg:#0b0d0f;
+  --dw-theme-surface:#0f1215;
+  --dw-theme-panel:#12161a;
+  --dw-theme-text:#f2f2f2;
+  --dw-theme-muted:#9ca0a4;
+  --dw-theme-line:rgba(255,255,255,.12);
+  --dw-theme-accent:#BF1304;
+}
+html[data-theme="light"]{
+  color-scheme:light;
+  --dw-theme-bg:#f7f7f5;
+  --dw-theme-surface:#ffffff;
+  --dw-theme-panel:#f0f0ed;
+  --dw-theme-text:#111214;
+  --dw-theme-muted:#5c6065;
+  --dw-theme-line:#d9d9d5;
+  --dw-theme-accent:#BF1304;
+}
+
+/* Switch lives in the upper-right area of both header systems. */
+.dw-theme-toggle{
+  position:fixed;
+  top:14px;
+  right:16px;
+  z-index:10050;
+  display:grid;
+  grid-template-columns:34px 34px;
+  align-items:center;
+  gap:2px;
+  padding:3px;
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:999px;
+  background:rgba(8,10,12,.88);
+  box-shadow:0 8px 24px rgba(0,0,0,.22);
+  -webkit-backdrop-filter:blur(12px);
+  backdrop-filter:blur(12px);
+}
+.dw-theme-toggle button{
+  appearance:none;
+  width:34px;
+  height:30px;
+  display:grid;
+  place-items:center;
+  padding:0;
+  border:0;
+  border-radius:999px;
+  background:transparent;
+  color:#a9adb1;
+  font:700 17px/1 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  cursor:pointer;
+  transition:background-color .2s ease,color .2s ease,transform .2s ease;
+}
+.dw-theme-toggle button:hover{transform:translateY(-1px);color:#fff;}
+.dw-theme-toggle button[aria-pressed="true"]{background:#fff;color:#111;}
+html[data-theme="light"] .dw-theme-toggle{
+  border-color:#d8d8d4;
+  background:rgba(255,255,255,.91);
+  box-shadow:0 8px 24px rgba(0,0,0,.08);
+}
+html[data-theme="light"] .dw-theme-toggle button{color:#686c70;}
+html[data-theme="light"] .dw-theme-toggle button:hover{color:#111;}
+html[data-theme="light"] .dw-theme-toggle button[aria-pressed="true"]{background:#111;color:#fff;}
+html[data-theme="light"] .dw-theme-toggle button[data-theme-value="light"][aria-pressed="true"]{background:#BF1304;color:#fff;}
+
+/* Give desktop navigation enough room for the control. */
+@media (min-width:901px){
+  body.dw-theme-ready nav.topbar .navlinks{padding-right:92px!important;}
+  body.dw-theme-ready nav#mainNav .nav-links{margin-right:92px!important;}
+}
+@media (max-width:900px){
+  .dw-theme-toggle{top:13px;right:64px;grid-template-columns:30px 30px;padding:2px;}
+  .dw-theme-toggle button{width:30px;height:28px;font-size:15px;}
+}
+
+/* LIGHT THEME — shared shell/navigation */
+html[data-theme="light"] body{
+  background:#f7f7f5!important;
+  color:#111214!important;
+}
+html[data-theme="light"] body::before,
+html[data-theme="light"] body::after{opacity:.035!important;}
+html[data-theme="light"] nav.topbar,
+html[data-theme="light"] nav#mainNav{
+  background:rgba(255,255,255,.96)!important;
+  color:#111214!important;
+  border-color:#deded9!important;
+  box-shadow:0 1px 0 rgba(0,0,0,.04)!important;
+}
+html[data-theme="light"] .brand,
+html[data-theme="light"] .brand b,
+html[data-theme="light"] .brand span,
+html[data-theme="light"] .nav-logo,
+html[data-theme="light"] .nav-logo-text,
+html[data-theme="light"] .navlinks a,
+html[data-theme="light"] .nav-links a,
+html[data-theme="light"] .nav-link,
+html[data-theme="light"] .burger{
+  color:#111214!important;
+}
+html[data-theme="light"] .products-trigger,
+html[data-theme="light"] .nav-links .nav-link[onclick*="toggleProj"]{color:#BF1304!important;}
+html[data-theme="light"] .products-dropdown,
+html[data-theme="light"] .nav-dropdown,
+html[data-theme="light"] .dw-home-mega{
+  background:#fff!important;
+  border-color:#d8d8d4!important;
+  box-shadow:0 20px 50px rgba(0,0,0,.12)!important;
+}
+html[data-theme="light"] .products-dropdown a,
+html[data-theme="light"] .nav-dropdown a{color:#222!important;}
+html[data-theme="light"] .products-dropdown .products-group,
+html[data-theme="light"] .nav-dropdown-label,
+html[data-theme="light"] .nav-dropdown-label-link{color:#BF1304!important;}
+
+/* Mobile navigation */
+html[data-theme="light"] .mob-panel,
+html[data-theme="light"] .mob-menu,
+html[data-theme="light"] .mob-products-tree,
+html[data-theme="light"] .mob-sub{
+  background:#fff!important;
+  color:#111!important;
+  border-color:#d8d8d4!important;
+}
+html[data-theme="light"] .mob-panel a,
+html[data-theme="light"] .mob-menu a,
+html[data-theme="light"] .mob-products summary,
+html[data-theme="light"] .mob-section-btn,
+html[data-theme="light"] .mob-close{color:#111!important;}
+html[data-theme="light"] .mob-products-tree b{color:#BF1304!important;}
+html[data-theme="light"] .mob-overlay{background:rgba(0,0,0,.28)!important;}
+
+/* Product pages */
+html[data-theme="light"] body.dw-unified-product-page,
+html[data-theme="light"] body.fw-reference-page,
+html[data-theme="light"] body.sw-reference-page{
+  background:#f7f7f5!important;
+  color:#111214!important;
+}
+html[data-theme="light"] .mesh-ref-shell,
+html[data-theme="light"] .mesh-ref-main,
+html[data-theme="light"] .fw-main,
+html[data-theme="light"] .mesh-ref-info,
+html[data-theme="light"] .fw-info,
+html[data-theme="light"] .mesh-ref-visual,
+html[data-theme="light"] .fw-lifestyle{
+  background:transparent!important;
+  color:#111214!important;
+  border-color:#d9d9d5!important;
+}
+html[data-theme="light"] .mesh-ref-info h1,
+html[data-theme="light"] .mesh-mobile-heading h1,
+html[data-theme="light"] .fw-info h1,
+html[data-theme="light"] .product-head h1,
+html[data-theme="light"] .realizations-heading,
+html[data-theme="light"] .fw-realizations h2,
+html[data-theme="light"] .cta h2{color:#111214!important;}
+html[data-theme="light"] .fw-kicker,
+html[data-theme="light"] .fw-kicker a,
+html[data-theme="light"] .product-head p{color:#BF1304!important;}
+html[data-theme="light"] .fw-lead,
+html[data-theme="light"] .cta-copy,
+html[data-theme="light"] .fw-specs dt{color:#5d6166!important;}
+html[data-theme="light"] .fw-specs dd{color:#111214!important;}
+html[data-theme="light"] .fw-specs>div{border-color:#deded9!important;}
+html[data-theme="light"] .fw-data-fold,
+html[data-theme="light"] .fw-personalization,
+html[data-theme="light"] .mesh-marking-details{
+  background:#fff!important;
+  border-color:#d8d8d4!important;
+  color:#111214!important;
+  box-shadow:none!important;
+}
+html[data-theme="light"] .fw-data-fold summary,
+html[data-theme="light"] .fw-personalization summary,
+html[data-theme="light"] .mesh-marking-details summary,
+html[data-theme="light"] .fw-personalization-copy strong,
+html[data-theme="light"] .fw-personalization-copy small{color:#111214!important;}
+html[data-theme="light"] .fw-data-fold-body,
+html[data-theme="light"] .fw-personalization-body,
+html[data-theme="light"] .mesh-marking-body{background:#fafaf8!important;color:#25272a!important;border-color:#e1e1dc!important;}
+html[data-theme="light"] .fw-mark-panel{background:#fff!important;border-color:#deded9!important;}
+html[data-theme="light"] .table-wrap table,
+html[data-theme="light"] .table-wrap th,
+html[data-theme="light"] .table-wrap td{color:#111214!important;border-color:#deded9!important;background:transparent!important;}
+
+/* Lifestyle carousel remains photographic; surrounding chrome becomes light. */
+html[data-theme="light"] .mesh-ref-visual .stage{background:#ececea!important;}
+html[data-theme="light"] .mesh-ref-visual .main-card,
+html[data-theme="light"] .mesh-ref-visual .side{background:#111!important;border-color:rgba(0,0,0,.12)!important;}
+html[data-theme="light"] .mesh-carousel-caption-below,
+html[data-theme="light"] .mesh-ref-caption{background:transparent!important;color:#111214!important;}
+html[data-theme="light"] .mesh-project-title{color:#111214!important;}
+
+/* Realizations */
+html[data-theme="light"] .fw-realizations,
+html[data-theme="light"] .thumb-zone{background:#f1f1ee!important;color:#111214!important;}
+html[data-theme="light"] .realizations-track{background:transparent!important;}
+html[data-theme="light"] .realization-thumb{background:#fff!important;border-color:transparent!important;}
+html[data-theme="light"] .realization-thumb img{background:#111!important;}
+html[data-theme="light"] .realization-thumb span{background:#fff!important;color:#111214!important;}
+html[data-theme="light"] .realization-thumb:hover span,
+html[data-theme="light"] .realization-thumb:focus-visible span{background:#BF1304!important;color:#fff!important;}
+
+/* Empty media placeholders for products without photos. */
+html[data-theme="light"] .dw-empty-media,
+html[data-theme="light"] .dw-empty-realizations,
+html[data-theme="light"] [data-empty-gallery="true"]{
+  background:#ededeb!important;
+  color:#666b70!important;
+  border-color:#cfcfca!important;
+}
+
+/* Buttons/CTA */
+html[data-theme="light"] .mesh-ref-primary,
+html[data-theme="light"] .fw-ref-primary,
+html[data-theme="light"] .cta>a{background:#BF1304!important;color:#fff!important;border-color:#BF1304!important;}
+html[data-theme="light"] .mesh-category-return,
+html[data-theme="light"] .fw-ref-secondary{background:#fff!important;color:#111214!important;border-color:#bfc0bc!important;}
+html[data-theme="light"] .cta{background:#fff!important;color:#111214!important;border-color:#deded9!important;}
+
+/* Generic content, cards, forms and footer used outside product pages. */
+html[data-theme="light"] main,
+html[data-theme="light"] .section,
+html[data-theme="light"] .content-section,
+html[data-theme="light"] .products-section,
+html[data-theme="light"] .product-page,
+html[data-theme="light"] .contact-section,
+html[data-theme="light"] .about-section{color:#111214;}
+html[data-theme="light"] .card,
+html[data-theme="light"] .product-card,
+html[data-theme="light"] .category-card,
+html[data-theme="light"] .contact-card,
+html[data-theme="light"] .info-card{
+  background:#fff!important;
+  color:#111214!important;
+  border-color:#deded9!important;
+}
+html[data-theme="light"] input,
+html[data-theme="light"] textarea,
+html[data-theme="light"] select{
+  background:#fff!important;
+  color:#111214!important;
+  border-color:#cfcfca!important;
+}
+html[data-theme="light"] input::placeholder,
+html[data-theme="light"] textarea::placeholder{color:#7b7f83!important;}
+html[data-theme="light"] footer,
+html[data-theme="light"] .footer{background:#ededeb!important;color:#25272a!important;border-color:#d8d8d4!important;}
+html[data-theme="light"] footer a,
+html[data-theme="light"] .footer a{color:#25272a!important;}
+
+/* Keep modal/lightbox deliberately dark for image viewing in both themes. */
+html[data-theme="light"] .lightbox,
+html[data-theme="light"] .lightbox-dialog{color:#fff!important;}
+html[data-theme="light"] .lightbox-backdrop{background:rgba(0,0,0,.88)!important;}
