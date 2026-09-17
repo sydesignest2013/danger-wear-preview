@@ -1,5 +1,5 @@
 name: Deploy Danger Wear preview
-# sync-trigger: 2026-09-17 landscape-resync-after-drive-v2
+# deploy-source: repository-main (Drive synced separately)
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -24,34 +24,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Sync complete site package into repository
-        shell: bash
-        run: |
-          set -euo pipefail
-          rm -rf /tmp/danger-wear-site
-          mkdir -p /tmp/danger-wear-site
-          curl -L --fail --retry 3 --retry-delay 2 \
-            "https://drive.google.com/uc?export=download&id=1YyvZMKZfl5IyxFO2sA49sdGLPZi1cxJt" \
-            -o /tmp/danger-wear-site.zip
-          unzip -tq /tmp/danger-wear-site.zip >/dev/null
-          unzip -qo /tmp/danger-wear-site.zip -d /tmp/danger-wear-site
-
-          # Keep the workflow itself, replace the rest of the public preview with the verified build.
-          rsync -a --delete \
-            --exclude='.git/' \
-            --exclude='.github/' \
-            /tmp/danger-wear-site/ ./
-
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          if ! git diff --cached --quiet; then
-            git commit -m "Sync complete Danger Wear site [skip ci]"
-            git push origin HEAD:main
-          fi
 
       - name: Build static Pages artifact
         shell: bash
@@ -69,9 +41,10 @@ jobs:
           touch _site/.nojekyll
 
           test -f _site/index.html
+          test -f _site/koszulki-sportowe.html
           test -f _site/css/mobile.css
+          test -f _site/css/mobile-hotfix.css
           test -f _site/assets/images/dangerwear-logo.webp
-          test -f _site/smycze-na-klucze.html
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
