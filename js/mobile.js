@@ -1,13 +1,4 @@
 (() => {
-  /* MESH-only mobile stylesheet. Kept separate so desktop and other product cards are untouched. */
-  if (document.body?.classList.contains('sw-mesh-page') && !document.querySelector('link[data-mesh-mobile-fix]')) {
-    const meshMobileFix = document.createElement('link');
-    meshMobileFix.rel = 'stylesheet';
-    meshMobileFix.href = 'css/mesh-mobile-fix.css?v=20260917-1';
-    meshMobileFix.dataset.meshMobileFix = 'true';
-    document.head.appendChild(meshMobileFix);
-  }
-
   const MOBILE_MAX = 900;
   const selectors = [
     '.product-head h1',
@@ -51,6 +42,7 @@
     }
     el.style.fontSize = `${Math.max(minSize, low - 0.15)}px`;
 
+    // Extreme fallback: preserve one line by tightening tracking slightly.
     if (el.scrollWidth > width) {
       const currentSpacing = parseFloat(getComputedStyle(el).letterSpacing) || 0;
       el.style.letterSpacing = `${Math.min(currentSpacing, -0.35)}px`;
