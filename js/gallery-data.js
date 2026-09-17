@@ -1,67 +1,67 @@
 window.DW_GALLERIES = {
   "lifestyle": [
     {
-      "src": "Lifestyle/01_ApatorTorun.jpg",
+      "src": "products/koszulki-sportowe-mesh/lifestyle/apator-torun.jpg",
       "title": "APATOR TORUŃ"
     },
     {
-      "src": "Lifestyle/01_MiedzLegnicaSekcjaSportowoTurystyczna.jpg",
+      "src": "products/koszulki-sportowe-mesh/lifestyle/miedz-legnica.jpg",
       "title": "MIEDŹ LEGNICA",
       "subtitle": "SEKCJA SPORTOWO-TURYSTYCZNA"
     },
     {
-      "src": "Lifestyle/01_Rakow3W.jpg",
+      "src": "products/koszulki-sportowe-mesh/lifestyle/rakow-3w.jpg",
       "title": "RAKÓW",
       "subtitle": "3W"
     }
   ],
   "realizacje": [
     {
-      "src": "Realizacje/Kopia Realizacja1_RUCH CHORZÓW_2000x1527.jpg",
+      "src": "products/koszulki-sportowe-mesh/realizacje/01-ruch-chorzow.jpg",
       "title": "RUCH CHORZÓW"
     },
     {
-      "src": "Realizacje/Kopia Realizacja2_ŚLĄSK WROCŁAW_2000x1527.jpg",
+      "src": "products/koszulki-sportowe-mesh/realizacje/02-slask-wroclaw.jpg",
       "title": "ŚLĄSK WROCŁAW"
     },
     {
-      "src": "Realizacje/Kopia Realizacja2_UNIA OŚWIĘCIM_2000x1527.jpg",
+      "src": "products/koszulki-sportowe-mesh/realizacje/03-unia-oswiecim.jpg",
       "title": "UNIA OŚWIĘCIM"
     },
     {
-      "src": "Realizacje/Kopia Realizacja4_CHEMIK KĘDZIERZYN-KOŹLE_2000x1527.jpg",
+      "src": "products/koszulki-sportowe-mesh/realizacje/04-chemik-kedzierzyn-kozle.jpg",
       "title": "CHEMIK KĘDZIERZYN-KOŹLE"
     },
     {
-      "src": "Realizacje/Kopia Realizacja5_GWARDIA& ARKA_2000x1527.jpg",
+      "src": "products/koszulki-sportowe-mesh/realizacje/05-gwardia-arka.jpg",
       "title": "GWARDIA & ARKA"
     },
     {
-      "src": "Realizacje/Kopia Realizacja6_ARKA GDYNIA_2000x1527.jpg",
+      "src": "products/koszulki-sportowe-mesh/realizacje/06-arka-gdynia.jpg",
       "title": "ARKA GDYNIA"
     },
     {
-      "src": "Realizacje/Kopia Realizacja7_POLONIA BYTOM_2000x1527.jpg",
+      "src": "products/koszulki-sportowe-mesh/realizacje/07-polonia-bytom.jpg",
       "title": "POLONIA BYTOM"
     },
     {
-      "src": "Realizacje/Kopia Realizacja8_WISŁA PŁOCK_2000x1527.jpg",
+      "src": "products/koszulki-sportowe-mesh/realizacje/08-wisla-plock.jpg",
       "title": "WISŁA PŁOCK"
     },
     {
-      "src": "Realizacje/Kopia Realizacja9_GGKM GRUDZIĄDZ_2000x1527.jpg",
+      "src": "products/koszulki-sportowe-mesh/realizacje/09-ggkm-grudziadz.jpg",
       "title": "GGKM GRUDZIĄDZ"
     },
     {
-      "src": "Realizacje/Kopia Realizacja10_GKS TYCHY_2000x1527.jpg",
+      "src": "products/koszulki-sportowe-mesh/realizacje/10-gks-tychy.jpg",
       "title": "GKS TYCHY"
     },
     {
-      "src": "Realizacje/Kopia Realizacja11_SANDECJA NOWY SĄCZ_2000x1527.jpg",
+      "src": "products/koszulki-sportowe-mesh/realizacje/11-sandecja-nowy-sacz.jpg",
       "title": "SANDECJA NOWY SĄCZ"
     },
     {
-      "src": "Realizacje/Kopia Realizacja12_GÓRNIK ZABRZE_2000x1527.jpg",
+      "src": "products/koszulki-sportowe-mesh/realizacje/12-gornik-zabrze.jpg",
       "title": "GÓRNIK ZABRZE"
     }
   ]
