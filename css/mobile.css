@@ -300,3 +300,273 @@ button,input,select,textarea{font:inherit}
     font-size:.58rem!important;
   }
 }
+
+/* === UNIFIED PRODUCT MOBILE PORTRAIT/LANDSCAPE FINAL 2026-09-17 === */
+/* Desktop >=901px is intentionally untouched. */
+.mesh-mobile-heading{display:none!important;}
+
+@media (max-width:900px) and (orientation:portrait){
+  body.dw-unified-product-page .mesh-ref-shell{
+    padding:12px 12px 0!important;
+  }
+  body.dw-unified-product-page .mesh-ref-main{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:16px!important;
+    align-items:start!important;
+    padding-top:0!important;
+    border-top:0!important;
+  }
+  body.dw-unified-product-page .mesh-mobile-heading{
+    display:block!important;
+    order:0!important;
+    margin:0 0 2px!important;
+    padding:0!important;
+  }
+  body.dw-unified-product-page .mesh-mobile-heading .fw-kicker{
+    margin:0 0 10px!important;
+    color:#BF1304!important;
+    font-family:"DM Mono",monospace!important;
+    font-size:8px!important;
+    line-height:1.35!important;
+    font-weight:700!important;
+    letter-spacing:.20em!important;
+    text-transform:uppercase!important;
+  }
+  body.dw-unified-product-page .mesh-mobile-heading .fw-kicker a{
+    color:#BF1304!important;
+  }
+  body.dw-unified-product-page .mesh-mobile-heading h1{
+    margin:0!important;
+    color:#f4f4f4!important;
+    font-size:clamp(30px,7.7vw,41px)!important;
+    line-height:.90!important;
+    letter-spacing:-.035em!important;
+    font-weight:900!important;
+    text-transform:uppercase!important;
+  }
+  body.dw-unified-product-page .mesh-ref-visual{
+    order:1!important;
+    margin:0!important;
+    padding:0!important;
+    overflow:visible!important;
+  }
+  body.dw-unified-product-page .mesh-ref-info{
+    order:2!important;
+    padding:0!important;
+  }
+  body.dw-unified-product-page .mesh-ref-info>.fw-kicker,
+  body.dw-unified-product-page .mesh-ref-info>h1{
+    display:none!important;
+  }
+
+  /* Previous mobile card width was 84vw. 67.2vw is exactly 20% smaller. */
+  body.dw-unified-product-page .mesh-ref-visual .stage{
+    width:100%!important;
+    height:min(76.6vw,54svh)!important;
+    min-height:0!important;
+    max-height:54svh!important;
+    margin:0 auto!important;
+    padding:0!important;
+    overflow:hidden!important;
+    perspective:none!important;
+  }
+  body.dw-unified-product-page .mesh-ref-visual .main-card{
+    position:relative!important;
+    width:min(67.2vw,calc(54svh / 1.14))!important;
+    max-width:none!important;
+    height:100%!important;
+    min-height:0!important;
+    margin:0 auto!important;
+    transform:none!important;
+  }
+  body.dw-unified-product-page .mesh-ref-visual .main-card>img{
+    width:100%!important;
+    height:100%!important;
+    aspect-ratio:auto!important;
+    object-fit:cover!important;
+    object-position:center center!important;
+  }
+  body.dw-unified-product-page .mesh-ref-visual .side{
+    display:none!important;
+  }
+  body.dw-unified-product-page .mesh-ref-visual .carousel-arrow{
+    top:50%!important;
+    transform:translateY(-50%)!important;
+  }
+  body.dw-unified-product-page .mesh-ref-visual .carousel-arrow-prev{left:8%!important;}
+  body.dw-unified-product-page .mesh-ref-visual .carousel-arrow-next{right:8%!important;}
+  body.dw-unified-product-page .mesh-carousel-caption-below,
+  body.dw-unified-product-page .mesh-ref-caption{
+    position:relative!important;
+    left:auto!important;
+    right:auto!important;
+    bottom:auto!important;
+    width:min(67.2vw,calc(54svh / 1.14))!important;
+    min-height:0!important;
+    margin:8px auto 0!important;
+    padding:8px 2px 0!important;
+    background:none!important;
+    text-align:center!important;
+  }
+  body.dw-unified-product-page .mesh-carousel-caption-below .mesh-project-title,
+  body.dw-unified-product-page .mesh-carousel-caption-below #lifestyleTitle,
+  body.dw-unified-product-page .mesh-ref-caption #lifestyleTitle{
+    font-size:13px!important;
+    line-height:1.2!important;
+    white-space:normal!important;
+  }
+  body.dw-unified-product-page .mesh-carousel-caption-below #lifestyleSubtitle,
+  body.dw-unified-product-page .mesh-ref-caption #lifestyleSubtitle{
+    display:none!important;
+  }
+}
+
+@media (max-width:900px) and (orientation:landscape){
+  body.dw-unified-product-page .mesh-ref-shell{
+    width:100%!important;
+    max-width:100%!important;
+    padding:10px 14px 0!important;
+  }
+  body.dw-unified-product-page .mesh-ref-main{
+    display:grid!important;
+    grid-template-columns:minmax(0,48%) minmax(0,1fr)!important;
+    gap:22px!important;
+    align-items:start!important;
+    padding-top:0!important;
+    border-top:0!important;
+  }
+  body.dw-unified-product-page .mesh-mobile-heading{display:none!important;}
+  body.dw-unified-product-page .mesh-ref-visual{
+    order:0!important;
+    margin:0!important;
+    padding:0!important;
+    overflow:hidden!important;
+  }
+  body.dw-unified-product-page .mesh-ref-info{
+    order:1!important;
+    min-width:0!important;
+    padding:0 2px 0 0!important;
+  }
+  body.dw-unified-product-page .mesh-ref-info>.fw-kicker,
+  body.dw-unified-product-page .mesh-ref-info>h1{
+    display:block!important;
+  }
+  body.dw-unified-product-page .mesh-ref-visual .stage{
+    width:100%!important;
+    height:min(64svh,420px)!important;
+    min-height:0!important;
+    max-height:64svh!important;
+    margin:0!important;
+    padding:0!important;
+    overflow:hidden!important;
+    perspective:none!important;
+  }
+  body.dw-unified-product-page .mesh-ref-visual .main-card{
+    position:relative!important;
+    width:min(100%,calc(64svh / 1.14))!important;
+    max-width:none!important;
+    height:100%!important;
+    min-height:0!important;
+    margin:0 auto!important;
+    transform:none!important;
+  }
+  body.dw-unified-product-page .mesh-ref-visual .main-card>img{
+    width:100%!important;
+    height:100%!important;
+    aspect-ratio:auto!important;
+    object-fit:cover!important;
+    object-position:center center!important;
+  }
+  body.dw-unified-product-page .mesh-ref-visual .side{display:none!important;}
+  body.dw-unified-product-page .mesh-ref-visual .carousel-arrow{
+    top:50%!important;
+    transform:translateY(-50%)!important;
+  }
+  body.dw-unified-product-page .mesh-ref-visual .carousel-arrow-prev{left:8px!important;}
+  body.dw-unified-product-page .mesh-ref-visual .carousel-arrow-next{right:8px!important;}
+  body.dw-unified-product-page .mesh-carousel-caption-below,
+  body.dw-unified-product-page .mesh-ref-caption{
+    position:relative!important;
+    left:auto!important;
+    right:auto!important;
+    bottom:auto!important;
+    width:min(100%,calc(64svh / 1.14))!important;
+    min-height:0!important;
+    margin:6px auto 0!important;
+    padding:6px 2px 0!important;
+    background:none!important;
+    text-align:center!important;
+  }
+  body.dw-unified-product-page .mesh-ref-caption #lifestyleTitle,
+  body.dw-unified-product-page .mesh-carousel-caption-below #lifestyleTitle{
+    font-size:12px!important;
+    line-height:1.18!important;
+  }
+  body.dw-unified-product-page .mesh-ref-caption #lifestyleSubtitle,
+  body.dw-unified-product-page .mesh-carousel-caption-below #lifestyleSubtitle{display:none!important;}
+
+  body.dw-unified-product-page .mesh-ref-info .fw-kicker{
+    margin:0 0 8px!important;
+    font-size:7px!important;
+    letter-spacing:.17em!important;
+  }
+  body.dw-unified-product-page .mesh-ref-info h1{
+    margin:0 0 12px!important;
+    font-size:clamp(24px,4.2vw,36px)!important;
+    line-height:.90!important;
+  }
+  body.dw-unified-product-page .mesh-ref-info .fw-lead{
+    margin:0 0 12px!important;
+    font-size:11px!important;
+    line-height:1.45!important;
+  }
+  body.dw-unified-product-page .mesh-ref-info .fw-specs{
+    margin:0 0 10px!important;
+  }
+  body.dw-unified-product-page .mesh-ref-info .fw-specs>div{
+    grid-template-columns:minmax(82px,.78fr) minmax(0,1.22fr)!important;
+    gap:10px!important;
+    min-height:30px!important;
+    padding:5px 0!important;
+  }
+  body.dw-unified-product-page .mesh-ref-info .fw-specs dt,
+  body.dw-unified-product-page .mesh-ref-info .fw-specs dd{
+    font-size:10px!important;
+    line-height:1.25!important;
+  }
+  body.dw-unified-product-page .mesh-ref-info .fw-data-fold summary{
+    min-height:36px!important;
+    padding:8px 10px!important;
+    font-size:9px!important;
+  }
+  body.dw-unified-product-page .mesh-ref-info .fw-personalization{
+    margin-top:7px!important;
+  }
+  body.dw-unified-product-page .mesh-ref-info .fw-personalization summary{
+    min-height:66px!important;
+    grid-template-columns:minmax(0,1fr) 60px!important;
+    padding-left:11px!important;
+  }
+  body.dw-unified-product-page .mesh-ref-info .fw-personalization-copy small{font-size:7px!important;}
+  body.dw-unified-product-page .mesh-ref-info .fw-personalization-copy strong{font-size:14px!important;}
+  body.dw-unified-product-page .mesh-ref-info .fw-mark-panel .mark-badge{width:46px!important;height:46px!important;}
+  body.dw-unified-product-page .mesh-ref-info .fw-mark-panel .mark-badge img{max-width:42px!important;max-height:42px!important;}
+  body.dw-unified-product-page .mesh-ref-actions,
+  body.dw-unified-product-page .fw-ref-actions{
+    grid-template-columns:1fr!important;
+    gap:7px!important;
+    margin-top:10px!important;
+  }
+  body.dw-unified-product-page .mesh-ref-primary,
+  body.dw-unified-product-page .mesh-category-return,
+  body.dw-unified-product-page .fw-ref-primary,
+  body.dw-unified-product-page .fw-ref-secondary{
+    width:100%!important;
+    min-width:0!important;
+    min-height:38px!important;
+    padding:9px 11px!important;
+    font-size:9px!important;
+  }
+}
+

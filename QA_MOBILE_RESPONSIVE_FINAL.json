@@ -1,0 +1,20 @@
+{
+  "check1_template_28": true,
+  "check2_responsive_logic": true,
+  "check3_assets_syntax": true,
+  "product_count": 28,
+  "jpg_realizacje_count": 12,
+  "missing_refs": [],
+  "css_brace_balance": 0,
+  "logic": {
+    "portrait_media": true,
+    "title_order": true,
+    "carousel_order": true,
+    "info_order": true,
+    "reduced_exact_20pct": true,
+    "viewport_cap": true,
+    "landscape_2col": true,
+    "desktop_file_untouched_marker": true
+  },
+  "mesh_card_sha256": "0a7ecf5e39052bb19d5018fd479074f2f150005cbbbbdbaeeaa6452db39e928e"
+}

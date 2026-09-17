@@ -93,7 +93,7 @@
     if (target === lifestyleIndex && hero?.getAttribute("src")) return;
 
     const resolvedDirection = direction || (target > lifestyleIndex ? 1 : -1);
-    const use3D = isMeshPage && lifestyleStage && animate && !reduceMotion && lifestyle.length > 1;
+    const use3D = isMeshPage && lifestyleStage && animate && lifestyle.length > 1;
 
     if (!use3D) {
       renderLifestyle(target);
@@ -123,7 +123,7 @@
           finishQueuedLifestyle();
         });
       });
-    }, 710);
+    }, 980);
   }
 
   function goLifestyle(delta) {
@@ -187,6 +187,44 @@
   const lightboxNext = document.getElementById("lightboxNext");
   let realizationIndex = 0;
 
+  function buildAssetCandidates(src) {
+    const base = String(src || "").trim();
+    const candidates = [];
+    const push = (value) => {
+      const normalized = String(value || "").trim();
+      if (normalized && !candidates.includes(normalized)) candidates.push(normalized);
+    };
+    push(base);
+    const filename = base.split("/").pop();
+    if (filename && filename !== base) push(filename);
+    if (filename) {
+      push(`Realizacje/${filename}`);
+      push(`Lifestyle/${filename}`);
+      push(`images/${filename}`);
+      push(`assets/${filename}`);
+    }
+    return candidates;
+  }
+
+  function attachFallbackSource(img, src) {
+    const candidates = buildAssetCandidates(src);
+    let currentIndex = 0;
+    const apply = () => {
+      img.src = candidates[currentIndex] || "";
+    };
+    const handleError = () => {
+      currentIndex += 1;
+      if (currentIndex < candidates.length) {
+        apply();
+      } else {
+        img.removeEventListener("error", handleError);
+      }
+    };
+    img.addEventListener("error", handleError);
+    apply();
+  }
+
+
   function renderRealizations() {
     if (!track) return;
     track.innerHTML = "";
@@ -204,7 +242,14 @@
       button.type = "button";
       button.className = "realization-thumb";
       button.setAttribute("aria-label", `Powiększ: ${item.title || "realizacja"}`);
-      button.innerHTML = `<img src="${item.src}" alt="${escapeHtml(item.title || "Realizacja")}" loading="lazy"><span>${escapeHtml(item.title || "REALIZACJA")}</span>`;
+      const img = document.createElement("img");
+      img.alt = escapeHtml(item.title || "Realizacja");
+      img.loading = "lazy";
+      attachFallbackSource(img, item.src);
+      const label = document.createElement("span");
+      label.textContent = item.title || "REALIZACJA";
+      button.appendChild(img);
+      button.appendChild(label);
       button.addEventListener("click", () => openLightbox(index));
       track.appendChild(button);
     });
@@ -222,8 +267,8 @@
     if (!realizacje.length) return;
     realizationIndex = normalizeIndex(index, realizacje.length);
     const item = realizacje[realizationIndex];
-    lightboxImage.src = item.src;
     lightboxImage.alt = item.title || "Powiększona realizacja";
+    attachFallbackSource(lightboxImage, item.src);
     lightboxCaption.textContent = item.title || "REALIZACJA";
     const multiple = realizacje.length > 1;
     lightboxPrev.hidden = !multiple;
@@ -350,4 +395,9 @@
 
   addSwipe(lifestyleStage, () => { goLifestyle(1); restartLifestyleAutoplay(); }, () => { goLifestyle(-1); restartLifestyleAutoplay(); });
   addSwipe(lightbox, () => setLightbox(realizationIndex + 1), () => setLightbox(realizationIndex - 1));
+
+  // PRODUCT TITLE GLITCH TEXT — VIDEO REFERENCE 2026-09-17
+  document.querySelectorAll(".mesh-ref-info h1, .mesh-mobile-heading h1").forEach((title) => {
+    title.dataset.glitchText = title.textContent.trim();
+  });
 })();

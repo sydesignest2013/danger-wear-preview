@@ -1,0 +1,45 @@
+{
+  "version": "20260917-mobile-responsive-v3",
+  "product_count": 28,
+  "mobile_heading_inserted": [
+    "koszulki-sportowe-athletic.html",
+    "tank-top.html",
+    "fightwear-set.html",
+    "rashguard.html",
+    "spodenki-mma-luzne.html",
+    "spodenki-mma-vale-tudo.html",
+    "legginsy-sportowe.html",
+    "streetwear-koszulki.html",
+    "streetwear-bluzy.html",
+    "streetwear-kurtki.html",
+    "streetwear-bezrekawniki.html",
+    "streetwear-spodnie.html",
+    "streetwear-spodenki.html",
+    "czapki-z-daszkiem.html",
+    "czapki-zimowe.html",
+    "kominy-termoaktywne.html",
+    "kominy-polarowe-zimowe.html",
+    "kominiarki.html",
+    "chusty.html",
+    "rekawiczki.html",
+    "szaliki.html",
+    "nerki-saszetki.html",
+    "reczniki.html",
+    "worki-sportowe.html",
+    "flagi-drukowane.html",
+    "poduszki.html",
+    "smycze-na-klucze.html"
+  ],
+  "portrait": {
+    "title_before_carousel": true,
+    "carousel_width_vw": 67.2,
+    "previous_width_vw": 84,
+    "reduction_percent": 20,
+    "max_height": "54svh"
+  },
+  "landscape": {
+    "columns": "48% / remainder",
+    "max_carousel_height": "64svh"
+  },
+  "desktop_touched": false
+}
