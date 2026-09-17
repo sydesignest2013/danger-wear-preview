@@ -1,5 +1,5 @@
 name: Deploy Danger Wear preview
-# sync-trigger: 2026-09-16 all-products-mesh-template
+# sync-trigger: 2026-09-17 mobile-responsive-all-products-v3
 
 on:
   push:
