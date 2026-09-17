@@ -1,0 +1,140 @@
+/* Danger Wear — mobile hotfix 2026-09-17. Desktop >= 901px untouched. */
+@media (max-width:900px){
+  body.sw-mesh-page.dw-unified-product-page .realizations-track{
+    gap:8px!important;
+  }
+  body.sw-mesh-page.dw-unified-product-page .realization-thumb,
+  body.sw-mesh-page.dw-unified-product-page .realization-thumb:nth-child(n){
+    display:grid!important;
+    grid-template-rows:auto auto!important;
+    width:auto!important;
+    max-width:none!important;
+    min-width:0!important;
+    height:auto!important;
+    padding:0!important;
+    margin:0!important;
+    border:0!important;
+    outline:0!important;
+    box-shadow:none!important;
+    background:transparent!important;
+    overflow:hidden!important;
+  }
+  body.sw-mesh-page.dw-unified-product-page .realization-thumb img{
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:auto!important;
+    object-fit:contain!important;
+    object-position:center center!important;
+    margin:0!important;
+    padding:0!important;
+    border:0!important;
+    outline:0!important;
+    box-shadow:none!important;
+    background:transparent!important;
+  }
+  body.sw-mesh-page.dw-unified-product-page .realization-thumb span{
+    width:100%!important;
+    min-height:38px!important;
+    margin:0!important;
+    padding:8px 6px!important;
+    border:0!important;
+    outline:0!important;
+    box-shadow:none!important;
+    background:#090909!important;
+    color:#bdbdbd!important;
+    font-size:10px!important;
+    line-height:1.15!important;
+    font-weight:700!important;
+    text-align:center!important;
+    justify-content:center!important;
+  }
+
+  body.sw-mesh-page.dw-unified-product-page .mesh-ref-visual{
+    position:relative!important;
+  }
+  body.sw-mesh-page.dw-unified-product-page .mesh-visual-brand{
+    display:none!important;
+  }
+  body.sw-mesh-page.dw-unified-product-page .mesh-carousel-caption-below,
+  body.sw-mesh-page.dw-unified-product-page .mesh-ref-caption{
+    position:absolute!important;
+    z-index:30!important;
+    left:50%!important;
+    right:auto!important;
+    top:auto!important;
+    bottom:10px!important;
+    width:auto!important;
+    min-width:0!important;
+    max-width:80%!important;
+    margin:0!important;
+    padding:0!important;
+    border:0!important;
+    border-top:0!important;
+    outline:0!important;
+    background:transparent!important;
+    box-shadow:none!important;
+    transform:translateX(-50%)!important;
+    pointer-events:none!important;
+    text-align:center!important;
+  }
+  body.sw-mesh-page.dw-unified-product-page .mesh-carousel-caption-below>div,
+  body.sw-mesh-page.dw-unified-product-page .mesh-ref-caption>div{
+    display:block!important;
+    width:auto!important;
+    margin:0!important;
+    padding:0!important;
+  }
+  body.sw-mesh-page.dw-unified-product-page .mesh-carousel-caption-below .mesh-project-title,
+  body.sw-mesh-page.dw-unified-product-page .mesh-carousel-caption-below #lifestyleTitle,
+  body.sw-mesh-page.dw-unified-product-page .mesh-ref-caption .mesh-project-title,
+  body.sw-mesh-page.dw-unified-product-page .mesh-ref-caption #lifestyleTitle{
+    display:block!important;
+    width:auto!important;
+    margin:0!important;
+    padding:0!important;
+    color:rgba(255,255,255,.48)!important;
+    background:transparent!important;
+    font-family:"DM Mono",monospace!important;
+    font-size:9px!important;
+    line-height:1.1!important;
+    font-weight:400!important;
+    letter-spacing:.13em!important;
+    text-transform:uppercase!important;
+    white-space:nowrap!important;
+    text-shadow:0 1px 4px rgba(0,0,0,.9)!important;
+  }
+  body.sw-mesh-page.dw-unified-product-page .mesh-carousel-caption-below #lifestyleSubtitle,
+  body.sw-mesh-page.dw-unified-product-page .mesh-ref-caption #lifestyleSubtitle{
+    display:none!important;
+  }
+}
+
+@media (max-width:900px) and (orientation:portrait){
+  body.sw-mesh-page.dw-unified-product-page .realizations-track{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+}
+
+@media (max-width:900px) and (orientation:landscape){
+  body.sw-mesh-page.dw-unified-product-page .realizations-track{
+    grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  }
+  body.sw-mesh-page.dw-unified-product-page .realization-thumb span{
+    min-height:30px!important;
+    padding:6px 4px!important;
+    font-size:8px!important;
+  }
+  body.sw-mesh-page.dw-unified-product-page .mesh-carousel-caption-below,
+  body.sw-mesh-page.dw-unified-product-page .mesh-ref-caption{
+    bottom:8px!important;
+  }
+  body.sw-mesh-page.dw-unified-product-page .mesh-carousel-caption-below .mesh-project-title,
+  body.sw-mesh-page.dw-unified-product-page .mesh-carousel-caption-below #lifestyleTitle,
+  body.sw-mesh-page.dw-unified-product-page .mesh-ref-caption .mesh-project-title,
+  body.sw-mesh-page.dw-unified-product-page .mesh-ref-caption #lifestyleTitle{
+    font-size:8px!important;
+  }
+}
