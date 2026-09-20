@@ -175,3 +175,218 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 500; display: flex; j
   nav#mainNav #projLi{position:static!important;z-index:2147483150!important;}
   nav#mainNav .nav-dropdown.dw-home-mega{z-index:2147483200!important;}
 }
+
+
+/* === PC MENU UNIFIED V3 / 2026-09-18 === */
+@media (min-width:901px){
+  /* Topbar ma odpowiadać wymiarom i rytmowi kart produktowych. */
+  nav#mainNav{
+    height:72px!important;
+    min-height:72px!important;
+    padding:0 24px!important;
+    gap:30px!important;
+    background:rgba(5,5,5,.96)!important;
+    border-bottom:1px solid #171717!important;
+    overflow:visible!important;
+  }
+  nav#mainNav .nav-logo{gap:11px!important;}
+  nav#mainNav .nav-logo img{width:38px!important;height:38px!important;object-fit:contain!important;}
+  nav#mainNav .nav-logo-text{
+    font-family:'Chakra Petch',sans-serif!important;
+    font-size:12px!important;
+    line-height:1!important;
+    font-weight:900!important;
+    letter-spacing:.055em!important;
+    color:#f0f0f0!important;
+  }
+  nav#mainNav .nav-links{
+    gap:36px!important;
+    margin:0!important;
+    padding:0!important;
+    align-items:center!important;
+  }
+  nav#mainNav .nav-link{
+    font-family:'Chakra Petch',sans-serif!important;
+    font-size:11px!important;
+    line-height:1!important;
+    font-weight:900!important;
+    letter-spacing:.16em!important;
+    color:#f0f0f0!important;
+  }
+  nav#mainNav #projLi>.nav-link{color:#BF1304!important;}
+  nav#mainNav .nav-chev{color:#BF1304!important;}
+
+  /* Mega-menu: 90% tła, odchudzona typografia i ciaśniejszy rytm wierszy. */
+  nav#mainNav .nav-dropdown.dw-home-mega{
+    top:72px!important;
+    width:min(1180px,calc(100vw - 48px))!important;
+    padding:22px 26px 24px!important;
+    background:rgba(0,0,0,.90)!important;
+    background-image:none!important;
+    border:1px solid rgba(255,255,255,.10)!important;
+    border-top:2px solid #BF1304!important;
+    box-shadow:0 28px 72px rgba(0,0,0,.70)!important;
+    -webkit-backdrop-filter:blur(10px)!important;
+    backdrop-filter:blur(10px)!important;
+  }
+  nav#mainNav .nav-dropdown.dw-home-mega section{
+    padding:0 22px!important;
+    background:transparent!important;
+    border-right:1px solid rgba(255,255,255,.11)!important;
+  }
+  nav#mainNav .nav-dropdown.dw-home-mega section:last-child{border-right:0!important;}
+  nav#mainNav .nav-dropdown.dw-home-mega a{
+    display:block!important;
+    padding:5px 7px!important;
+    color:#f0f0f0!important;
+    background:transparent!important;
+    border:0!important;
+    border-radius:2px!important;
+    font-family:'Chakra Petch',sans-serif!important;
+    font-size:14px!important;
+    line-height:1.12!important;
+    font-weight:500!important;
+    letter-spacing:.005em!important;
+    text-transform:none!important;
+    transition:color .15s ease,background-color .15s ease,padding-left .15s ease!important;
+  }
+  nav#mainNav .nav-dropdown.dw-home-mega a::before{display:none!important;content:none!important;}
+  nav#mainNav .nav-dropdown.dw-home-mega .nav-dropdown-label{
+    margin:0 0 6px!important;
+    padding:5px 7px!important;
+    color:#BF1304!important;
+    font-size:16px!important;
+    line-height:1.08!important;
+    font-weight:700!important;
+    letter-spacing:.065em!important;
+    text-transform:uppercase!important;
+  }
+  nav#mainNav .nav-dropdown.dw-home-mega .nav-dropdown-label-fight{
+    margin-top:6px!important;
+    padding-top:10px!important;
+    border-top:1px solid rgba(255,255,255,.11)!important;
+  }
+  nav#mainNav .nav-dropdown.dw-home-mega a:hover,
+  nav#mainNav .nav-dropdown.dw-home-mega a:focus-visible{
+    color:#fff!important;
+    background:rgba(191,19,4,.18)!important;
+    padding-left:10px!important;
+    outline:none!important;
+  }
+  nav#mainNav .nav-dropdown.dw-home-mega .nav-dropdown-label:hover,
+  nav#mainNav .nav-dropdown.dw-home-mega .nav-dropdown-label:focus-visible{
+    color:#fff!important;
+    background:rgba(191,19,4,.24)!important;
+  }
+
+  /* Motyw po KONTAKT — ten sam gabaryt na każdej podstronie. */
+  nav#mainNav .dw-theme-toggle{
+    position:relative!important;
+    inset:auto!important;
+    flex:0 0 auto!important;
+    display:grid!important;
+    grid-template-columns:30px 30px!important;
+    gap:2px!important;
+    margin-left:2px!important;
+    padding:3px!important;
+    border:1px solid #292929!important;
+    border-radius:999px!important;
+    background:#0b0d0f!important;
+    box-shadow:0 5px 14px rgba(0,0,0,.28)!important;
+  }
+  nav#mainNav .dw-theme-toggle button{
+    width:30px!important;height:28px!important;border-radius:999px!important;
+    border:0!important;background:transparent!important;color:#f5f5f5!important;font-size:16px!important;
+  }
+  nav#mainNav .dw-theme-toggle button[aria-pressed='true']{background:#fff!important;color:#111214!important;}
+}
+
+@media (min-width:1181px){
+  nav#mainNav{
+    height:92px!important;
+    min-height:92px!important;
+    padding:0 36px!important;
+  }
+  nav#mainNav .nav-logo{gap:16px!important;}
+  nav#mainNav .nav-logo img{width:54px!important;height:54px!important;}
+  nav#mainNav .nav-logo-text{font-size:19px!important;letter-spacing:.055em!important;}
+  nav#mainNav .nav-links{gap:36px!important;}
+  nav#mainNav .nav-link{font-size:17px!important;letter-spacing:.12em!important;}
+  nav#mainNav .nav-dropdown.dw-home-mega{top:92px!important;}
+}
+
+/* Light-theme fallback for legacy/non-product desktop pages that do not load mobile.css. */
+@media (min-width:901px){
+  html[data-theme="light"] nav#mainNav{
+    background:rgba(255,255,255,.96)!important;
+    border-bottom-color:#deded9!important;
+    color:#111214!important;
+  }
+  html[data-theme="light"] nav#mainNav .nav-logo img{filter:invert(1)!important;}
+  html[data-theme="light"] nav#mainNav .nav-logo-text,
+  html[data-theme="light"] nav#mainNav .nav-link{color:#111214!important;}
+  html[data-theme="light"] nav#mainNav #projLi>.nav-link,
+  html[data-theme="light"] nav#mainNav .nav-chev{color:#BF1304!important;}
+  html[data-theme="light"] nav#mainNav .nav-dropdown.dw-home-mega{
+    background:rgba(255,255,255,.90)!important;
+    border-color:rgba(17,18,20,.14)!important;
+    border-top-color:#BF1304!important;
+    box-shadow:0 26px 64px rgba(0,0,0,.14)!important;
+  }
+  html[data-theme="light"] nav#mainNav .nav-dropdown.dw-home-mega section{
+    background:transparent!important;
+    border-right-color:rgba(17,18,20,.12)!important;
+  }
+  html[data-theme="light"] nav#mainNav .nav-dropdown.dw-home-mega a{color:#1e2023!important;}
+  html[data-theme="light"] nav#mainNav .nav-dropdown.dw-home-mega .nav-dropdown-label{color:#BF1304!important;}
+  html[data-theme="light"] nav#mainNav .nav-dropdown.dw-home-mega a:hover,
+  html[data-theme="light"] nav#mainNav .nav-dropdown.dw-home-mega a:focus-visible{
+    color:#111214!important;
+    background:rgba(191,19,4,.10)!important;
+  }
+  html[data-theme="light"] nav#mainNav .dw-theme-toggle{
+    background:#0b0d0f!important;
+    border-color:#0b0d0f!important;
+  }
+}
+
+/* === TOP NAV TYPOGRAPHY V4 / 2026-09-18 === */
+@media (min-width:901px) and (max-width:1180px){
+  nav#mainNav .nav-link{font-size:10.5px!important;letter-spacing:.14em!important;}
+}
+@media (min-width:1181px){
+  nav#mainNav .nav-link{font-size:16px!important;letter-spacing:.11em!important;}
+}
+
+
+/* === DANGER WEAR / UNIFIED SITE HEADER — MESH reference 2026-09-21 === */
+/* The non-product navbar follows the same size breakpoints as the MESH cards. */
+@media (min-width:1181px){
+  nav#mainNav{
+    height:92px!important;
+    min-height:92px!important;
+    padding:0 36px!important;
+    gap:30px!important;
+  }
+  nav#mainNav .nav-logo{gap:16px!important;}
+  nav#mainNav .nav-logo img{width:54px!important;height:54px!important;}
+  nav#mainNav .nav-logo-text{font-size:19px!important;line-height:1!important;font-weight:900!important;letter-spacing:.055em!important;}
+  nav#mainNav .nav-links{gap:36px!important;}
+  nav#mainNav .nav-link{font-size:16px!important;line-height:1!important;font-weight:900!important;letter-spacing:.11em!important;}
+  nav#mainNav .nav-dropdown.dw-home-mega{top:92px!important;}
+}
+@media (min-width:901px) and (max-width:1180px){
+  nav#mainNav{height:72px!important;min-height:72px!important;padding:0 22px!important;gap:20px!important;}
+  nav#mainNav .nav-logo{gap:11px!important;min-width:0;}
+  nav#mainNav .nav-logo img{width:38px!important;height:38px!important;}
+  nav#mainNav .nav-logo-text{font-size:12px!important;line-height:1!important;font-weight:900!important;}
+  nav#mainNav .nav-links{display:none!important;}
+  nav#mainNav .hamburger{display:flex!important;align-items:center;justify-content:center;margin-left:auto;width:44px;height:44px;}
+  nav#mainNav .dw-theme-toggle{margin-right:0!important;}
+  .dw-theme-toggle{right:72px!important;}
+}
+nav#mainNav .nav-chev{font-size:12px!important;line-height:1!important;display:inline-block;}
+/* Mobile non-product menu: always a down-chevron, matching the product menu. */
+.mob-section-btn .mc{font-size:0!important;line-height:1!important;transform:none!important;}
+.mob-section-btn .mc::after{content:"▾";display:inline-block;font-size:16px!important;font-weight:900;color:#BF1304;line-height:1;transition:transform .2s ease;}
+.mob-section-btn.open .mc::after{transform:rotate(180deg);}
