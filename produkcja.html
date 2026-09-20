@@ -630,6 +630,11 @@ body.dw-production-v3{background:#0b0d0f;color:#f5f5f5}
   function autoTick(now){
     if(!timer)return;
     var elapsed=now-autoStart;
+    // After the last step restart at 01, never rapidly sweep backwards over 03 and 02.
+    if(autoFrom===3 && autoTo===0){
+      if(elapsed>=holdDuration){setRoutePosition(0);chooseStage(0,false);autoFrom=0;autoTo=1;autoStart=now;}
+      timer=window.requestAnimationFrame(autoTick);return;
+    }
     var fraction=clamp((elapsed-holdDuration)/autoDuration,0,1);
     var ease=fraction*fraction*(3-2*fraction);
     var current=autoFrom+(autoTo-autoFrom)*ease;
