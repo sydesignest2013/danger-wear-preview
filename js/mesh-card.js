@@ -406,6 +406,22 @@
   addSwipe(lifestyleStage, () => { goLifestyle(1); restartLifestyleAutoplay(); }, () => { goLifestyle(-1); restartLifestyleAutoplay(); });
   addSwipe(lightbox, () => setLightbox(realizationIndex + 1), () => setLightbox(realizationIndex - 1));
 
+  // Production-page deep links: the method shown on this product opens the same method expanded.
+  // Products without an approved method remain linked to the general information page.
+  const markingLink = document.querySelector('.fw-personalization-body a[href="produkcja.html"]');
+  const markingImage = document.querySelector('.fw-personalization .fw-mark-panel img');
+  if (markingLink && markingImage) {
+    const fileName = (markingImage.getAttribute('src') || '').split('/').pop().toLowerCase();
+    const methodByIcon = {
+      'sublimacja.png': 'sublimacja',
+      'haft.png': 'haft-komputerowy',
+      'sitodruk.png': 'sitodruk',
+      'dtf.png': 'dtf',
+      'dtg.png': 'dtg'
+    };
+    if (methodByIcon[fileName]) markingLink.setAttribute('href', 'produkcja.html#' + methodByIcon[fileName]);
+  }
+
   // PRODUCT TITLE GLITCH TEXT — VIDEO REFERENCE 2026-09-17
   document.querySelectorAll(".mesh-ref-info h1, .mesh-mobile-heading h1").forEach((title) => {
     title.dataset.glitchText = title.textContent.trim();
