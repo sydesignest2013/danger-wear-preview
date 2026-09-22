@@ -61,6 +61,16 @@ function fixLinks(el){
  if(el.matches('a[href]'))process(el);
  el.querySelectorAll('a[href]').forEach(process);
 }
+function flagGraphic(code){
+ const backgrounds={
+ pl:'<rect width="60" height="60" fill="#ffffff"/><rect y="30" width="60" height="30" fill="#dc143c"/>',
+ de:'<rect width="60" height="20" fill="#101010"/><rect y="20" width="60" height="20" fill="#dd0000"/><rect y="40" width="60" height="20" fill="#ffce00"/>',
+ fr:'<rect width="20" height="60" fill="#0055a4"/><rect x="20" width="20" height="60" fill="#ffffff"/><rect x="40" width="20" height="60" fill="#ef4135"/>',
+ en:'<rect width="60" height="60" fill="#012169"/><path d="M0 0L60 60M60 0L0 60" stroke="#ffffff" stroke-width="17"/><path d="M0 0L60 60M60 0L0 60" stroke="#c8102e" stroke-width="7"/><path d="M30 0V60M0 30H60" stroke="#ffffff" stroke-width="20"/><path d="M30 0V60M0 30H60" stroke="#c8102e" stroke-width="11"/>'
+ };
+ return '<svg class="dw-round-flag" viewBox="0 0 60 60" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">'+(backgrounds[code]||backgrounds.pl)+'</svg>';
+}
+window.__dwFlagGraphic=flagGraphic;
 function mount(){
  const nav=document.querySelector('nav.topbar, nav#mainNav');
  if(!nav||nav.querySelector('.dw-language'))return;
@@ -69,14 +79,14 @@ function mount(){
  trigger.setAttribute('aria-label',lang==='pl'?'Wybierz język':lang==='en'?'Choose language':lang==='de'?'Sprache wählen':'Choisir la langue');
  trigger.setAttribute('aria-expanded','false');
  trigger.setAttribute('aria-haspopup','true');trigger.title=trigger.getAttribute('aria-label');
- trigger.innerHTML='<span class="dw-language-flag" aria-hidden="true">'+languages[lang].flag+'</span><span class="dw-language-chevron" aria-hidden="true">⌄</span>';
+ trigger.innerHTML='<span class="dw-language-flag" aria-hidden="true">'+flagGraphic(lang)+'</span>';
  const menu=document.createElement('div');menu.className='dw-language-menu';menu.hidden=true;
  menu.setAttribute('aria-label',trigger.getAttribute('aria-label'));
  Object.keys(languages).forEach(function(k){
   const a=document.createElement('a');a.href=currentUrl(k);a.hreflang=k;
   a.lang=k;a.className='dw-language-option'+(k===lang?' is-active':'');
   if(k===lang)a.setAttribute('aria-current','page');
-  const fl=document.createElement('span');fl.setAttribute('aria-hidden','true');fl.textContent=languages[k].flag;
+  const fl=document.createElement('span');fl.setAttribute('aria-hidden','true');fl.innerHTML=flagGraphic(k);
   const label=document.createElement('span');label.textContent=languages[k].name;
   a.append(fl,label);menu.appendChild(a);
  });
@@ -106,4 +116,137 @@ function init(){
  }
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+})();
+
+/* FIRST-VISIT LANGUAGE WELCOME. No IP lookup, fingerprinting, analytics or external geo API. */
+(function(){
+'use strict';
+const KEY='dw-language-choice-v1';
+const SESSION='dw-language-dialog-dismissed-v1';
+const supported=['pl','en','de','fr'];
+const names={pl:'Polski',en:'English',de:'Deutsch',fr:'Français'};
+const emojis={pl:'🇵🇱',en:'🇬🇧',de:'🇩🇪',fr:'🇫🇷'};
+const words={
+ pl:{kicker:'DANGER WEAR · JĘZYK',title:'Wybierz język',description:'Wybierz język strony Danger Wear Production.',suggestion:'Sugerowany na podstawie języka przeglądarki:',remember:'Zapamiętaj mój wybór',continue:'Przejdź do strony',close:'Zamknij bez zapamiętywania',note:'Wybór zapiszemy tylko w tej przeglądarce. Możesz go zmienić w prawym górnym rogu.'},
+ en:{kicker:'DANGER WEAR · LANGUAGE',title:'Choose your language',description:'Choose the language for the Danger Wear Production website.',suggestion:'Suggested based on your browser language:',remember:'Remember my choice',continue:'Continue to website',close:'Close without saving',note:'Your choice is saved only in this browser. You can change it using the flag in the top-right corner.'},
+ de:{kicker:'DANGER WEAR · SPRACHE',title:'Sprache auswählen',description:'Wählen Sie die Sprache der Danger Wear Production Website.',suggestion:'Vorschlag anhand Ihrer Browsersprache:',remember:'Auswahl merken',continue:'Zur Website',close:'Ohne Speichern schließen',note:'Ihre Auswahl wird nur in diesem Browser gespeichert. Über die Flagge oben rechts können Sie die Sprache jederzeit ändern.'},
+ fr:{kicker:'DANGER WEAR · LANGUE',title:'Choisissez votre langue',description:'Choisissez la langue du site Danger Wear Production.',suggestion:'Langue suggérée selon votre navigateur :',remember:'Mémoriser mon choix',continue:'Accéder au site',close:'Fermer sans enregistrer',note:'Votre choix est enregistré uniquement dans ce navigateur. Vous pouvez changer de langue avec le drapeau en haut à droite.'}
+};
+function read(storage,key){
+ try{return storage.getItem(key)||'';}catch(e){return '';}
+}
+function write(storage,key,value){
+ try{storage.setItem(key,value);}catch(e){}
+}
+function getPreference(){const v=read(localStorage,KEY);return supported.includes(v)?v:'';}
+function browserSuggestion(){
+ const langs=Array.isArray(navigator.languages)&&navigator.languages.length?navigator.languages:[navigator.language||''];
+ for(const value of langs){
+  const primary=String(value||'').toLowerCase().split('-')[0];
+  if(supported.includes(primary))return primary;
+ }
+ return 'en';
+}
+function urlForLanguage(target){
+ const path=location.pathname;
+ const match=path.match(/\/(en|de|fr)\/([^/]*)$/);
+ const root=match?path.slice(0,match.index+1):path.replace(/[^/]*$/,'');
+ const file=(match?match[2]:path.split('/').pop())||'index.html';
+ return root+(target==='pl'?'':target+'/')+file+location.search+location.hash;
+}
+function currentLanguage(){
+ const match=location.pathname.match(/\/(en|de|fr)\/(?:[^/]*)$/);
+ return match?match[1]:'pl';
+}
+function initialize(){
+ // A remembered choice determines the language for future visits through the bare homepage.
+ const pref=getPreference();
+ if(pref && /\/$/.test(location.pathname) && currentLanguage()==='pl' && pref!=='pl'){
+  location.replace(urlForLanguage(pref));
+  return;
+ }
+ document.addEventListener('click',function(e){
+  const a=e.target?.closest?.('a.dw-language-option');
+  if(!a)return;
+  const locale=a.getAttribute('lang');
+  if(!supported.includes(locale))return;
+  if(getPreference())write(localStorage,KEY,locale);
+  write(sessionStorage,SESSION,'yes');
+ },true);
+ if(pref || read(sessionStorage,SESSION))return;
+ const recommended=browserSuggestion();
+ let selected=recommended;
+ let previousOverflow='';
+ const overlay=document.createElement('div');
+ overlay.className='dw-language-welcome';
+ overlay.setAttribute('data-dw-language-dialog','');
+ const svg=(value)=>window.__dwFlagGraphic?.(value)||'<span aria-hidden="true">'+emojis[value]+'</span>';
+ overlay.innerHTML='<section class="dw-language-dialog" role="dialog" aria-modal="true" aria-labelledby="dw-language-title" aria-describedby="dw-language-description">'+
+  '<button class="dw-language-close" type="button" aria-label="" title="">×</button>'+
+  '<p class="dw-language-kicker"></p>'+
+  '<h2 class="dw-language-title" id="dw-language-title"></h2>'+
+  '<p class="dw-language-description" id="dw-language-description"></p>'+
+  '<div class="dw-language-choices" role="radiogroup" aria-labelledby="dw-language-title">'+
+  supported.map(k=>'<label class="dw-language-choice"><input type="radio" name="dw-welcome-language" value="'+k+'" '+(k===recommended?'checked':'')+'><span class="dw-language-modal-flag" aria-hidden="true">'+svg(k)+'</span><span>'+names[k]+'</span></label>').join('')+
+  '</div><p class="dw-language-suggestion"><span></span> <strong>'+names[recommended]+'</strong></p>'+
+  '<label class="dw-language-remember"><input type="checkbox" class="dw-language-save"><span></span></label>'+
+  '<button class="dw-language-submit" type="button"></button>'+
+  '<p class="dw-language-note"></p></section>';
+ document.body.appendChild(overlay);
+ const dialog=overlay.querySelector('.dw-language-dialog');
+ const closeButton=overlay.querySelector('.dw-language-close');
+ const choice=overlay.querySelector('.dw-language-choices');
+ const remember=overlay.querySelector('.dw-language-remember .dw-language-save');
+ const submit=overlay.querySelector('.dw-language-submit');
+ function render(){
+  const w=words[selected];
+  dialog.lang=selected;
+  overlay.querySelector('.dw-language-kicker').textContent=w.kicker;
+  overlay.querySelector('.dw-language-title').textContent=w.title;
+  overlay.querySelector('.dw-language-description').textContent=w.description;
+  overlay.querySelector('.dw-language-suggestion span').textContent=w.suggestion;
+  overlay.querySelector('.dw-language-remember span').textContent=w.remember;
+  submit.textContent=w.continue;
+  closeButton.setAttribute('aria-label',w.close);
+  closeButton.title=w.close;
+  overlay.querySelector('.dw-language-note').textContent=w.note;
+ }
+ function cleanup(){
+  write(sessionStorage,SESSION,'yes');
+  overlay.remove();
+  document.body.style.overflow=previousOverflow;
+  document.querySelector('.dw-language-trigger')?.focus();
+ }
+ function confirm(){
+  if(remember.checked)write(localStorage,KEY,selected);
+  write(sessionStorage,SESSION,'yes');
+  const url=urlForLanguage(selected);
+  if(url!==location.pathname+location.search+location.hash)location.assign(url);
+  else cleanup();
+ }
+ function focusable(){
+  return Array.from(dialog.querySelectorAll('button,input:not([disabled])'));
+ }
+ choice.addEventListener('change',function(event){
+  if(event.target?.name!=='dw-welcome-language')return;
+  const target=event.target.value;
+  if(supported.includes(target)){selected=target;render();}
+ });
+ submit.addEventListener('click',confirm);
+ closeButton.addEventListener('click',cleanup);
+ overlay.addEventListener('keydown',function(event){
+  if(event.key==='Escape'){event.preventDefault();event.stopPropagation();cleanup();return;}
+  if(event.key!=='Tab')return;
+  const els=focusable(),first=els[0],last=els[els.length-1];
+  if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}
+  else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}
+ });
+ render();
+ previousOverflow=document.body.style.overflow;
+ document.body.style.overflow='hidden';
+ const checked=choice.querySelector('input:checked');
+ checked?.focus();
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initialize,{once:true});
+else initialize();
 })();

@@ -1,19 +1,90 @@
-/* Danger Wear premium flag-only language switcher */
-.dw-language{position:relative;z-index:2147482000;display:flex;align-items:center;justify-content:center;margin-left:12px;flex:0 0 auto;font-family:'Chakra Petch',sans-serif}
-.dw-language-trigger{display:inline-flex;align-items:center;justify-content:center;gap:6px;width:46px;height:40px;padding:0;border:1px solid rgba(255,255,255,.14);border-radius:4px;background:rgba(15,16,18,.86);color:#eee;cursor:pointer;transition:background .2s,border-color .2s}
-.dw-language-trigger:hover,.dw-language.open .dw-language-trigger{border-color:#BF1304;background:#1a1a1d}
-.dw-language-trigger:focus-visible,.dw-language-option:focus-visible{outline:2px solid #BF1304;outline-offset:3px}
-.dw-language-flag{display:block;font-size:21px;line-height:1}
-.dw-language-chevron{font-size:13px;color:#b3b3b3;line-height:1}
-.dw-language.open .dw-language-chevron{transform:rotate(180deg)}
-.dw-language-menu{position:absolute;top:calc(100% + 10px);right:0;min-width:183px;padding:6px;background:#08090b;border:1px solid #393b3e;border-top:2px solid #BF1304;box-shadow:0 18px 45px #000b;z-index:2147482100}
+/* Danger Wear | single responsive header + language welcome + theme corner | 2026-09-22 */
+:root{--dw-head-red:#BF1304;--dw-head-dark:#08090b}
+nav.topbar,nav#mainNav{box-sizing:border-box!important;overflow:visible!important;font-family:'Chakra Petch',sans-serif!important}
+nav.topbar .brand,nav#mainNav .nav-logo{display:flex!important;align-items:center!important;min-width:0!important;flex:0 1 auto!important;text-decoration:none!important}
+nav.topbar .brand img,nav#mainNav .nav-logo img{display:block!important;object-fit:contain!important;flex:none!important}
+nav.topbar .brand b,nav.topbar .brand b span,nav#mainNav .nav-logo-text{font-family:'Chakra Petch',sans-serif!important;font-weight:900!important;text-transform:uppercase!important}
+nav.topbar .navlinks,nav#mainNav .nav-links{align-items:center!important;margin-left:auto!important;white-space:nowrap!important}
+nav.topbar .navlinks>a,nav.topbar .navlinks>.products-menu>.products-trigger,nav#mainNav .nav-links>li>.nav-link{font-family:'Chakra Petch',sans-serif!important;font-weight:900!important;line-height:1!important;letter-spacing:.11em!important;text-transform:uppercase!important;white-space:nowrap!important}
+nav.topbar .navlinks>.products-menu>.products-trigger,nav#mainNav .nav-links>li#projLi>.nav-link{color:var(--dw-head-red)!important}
+nav.topbar .navlinks>a:not(.products-trigger),nav#mainNav .nav-links>li:not(#projLi)>.nav-link{color:var(--white,#f5f5f5)!important}
+html[data-theme="light"] nav.topbar .navlinks>a:not(.products-trigger),html[data-theme="light"] nav#mainNav .nav-links>li:not(#projLi)>.nav-link{color:#111214!important}
+nav.topbar .navlinks>a:hover,nav#mainNav .nav-links>li>.nav-link:hover{color:var(--dw-head-red)!important}
+@media (min-width:1181px){
+ nav.topbar,nav#mainNav{height:92px!important;min-height:92px!important;padding:0 36px!important;gap:0!important}
+ nav.topbar .brand,nav#mainNav .nav-logo{gap:16px!important}
+ nav.topbar .brand img,nav#mainNav .nav-logo img{width:54px!important;height:54px!important}
+ nav.topbar .brand b,nav.topbar .brand b span,nav#mainNav .nav-logo-text{font-size:19px!important;line-height:1!important;letter-spacing:.055em!important;white-space:nowrap!important}
+ nav.topbar .navlinks,nav#mainNav .nav-links{display:flex!important;gap:36px!important;padding:0!important}
+ nav.topbar .navlinks>a,nav.topbar .navlinks>.products-menu>.products-trigger,nav#mainNav .nav-links>li>.nav-link{font-size:16px!important;letter-spacing:.11em!important}
+ nav.topbar .products-menu{height:92px!important}
+ nav.topbar .dw-language,nav#mainNav .dw-language{margin:0 0 0 62px!important}
+ nav.topbar .burger,nav#mainNav .hamburger{display:none!important}
+}
+@media (min-width:1181px) and (max-width:1450px){
+ nav.topbar .brand b,nav.topbar .brand b span,nav#mainNav .nav-logo-text{font-size:clamp(13px,1.28vw,19px)!important}
+ nav.topbar .navlinks,nav#mainNav .nav-links{gap:clamp(15px,2.4vw,36px)!important}
+ nav.topbar .navlinks>a,nav.topbar .navlinks>.products-menu>.products-trigger,nav#mainNav .nav-links>li>.nav-link{font-size:clamp(12px,1.1vw,16px)!important}
+ nav.topbar .dw-language,nav#mainNav .dw-language{margin-left:clamp(32px,4.2vw,62px)!important}
+}
+@media (max-width:1180px){
+ nav.topbar,nav#mainNav{height:72px!important;min-height:72px!important;padding:0 14px!important;gap:8px!important}
+ nav.topbar .brand,nav#mainNav .nav-logo{gap:8px!important}
+ nav.topbar .brand img,nav#mainNav .nav-logo img{width:38px!important;height:42px!important}
+ nav.topbar .brand b,nav.topbar .brand b span,nav#mainNav .nav-logo-text{font-size:11px!important;line-height:1.1!important;letter-spacing:.055em!important;white-space:normal!important}
+ nav.topbar .brand b,nav#mainNav .nav-logo-text{width:96px!important;max-width:96px!important;flex-shrink:0!important}
+ nav.topbar .navlinks,nav#mainNav .nav-links{display:none!important}
+ nav.topbar .dw-language,nav#mainNav .dw-language{margin:0 0 0 auto!important}
+ nav.topbar .burger,nav#mainNav .hamburger{display:flex!important;justify-content:center!important;align-items:center!important;flex:none!important;width:44px!important;height:44px!important;margin:0!important}
+}
+@media(max-width:350px){
+ nav.topbar .brand b,nav#mainNav .nav-logo-text{width:76px!important;max-width:76px!important;font-size:10px!important}
+}
+.dw-language{position:relative!important;z-index:2147483300!important;display:flex!important;align-items:center!important;justify-content:center!important;flex:0 0 auto!important;font-family:'Chakra Petch',sans-serif!important}
+.dw-language-trigger{display:grid!important;place-items:center!important;width:44px!important;height:44px!important;min-width:44px!important;min-height:44px!important;padding:3px!important;border:1px solid rgba(255,255,255,.22)!important;border-radius:50%!important;background:#111215!important;color:#fff!important;cursor:pointer!important;box-shadow:0 3px 15px #0009!important;transition:border-color .2s,transform .2s!important}
+.dw-language-trigger:hover,.dw-language.open .dw-language-trigger{border-color:var(--dw-head-red)!important;transform:scale(1.045)!important}
+.dw-language-trigger:focus-visible,.dw-language-option:focus-visible{outline:2px solid var(--dw-head-red)!important;outline-offset:3px!important}
+.dw-language-flag{width:36px!important;height:36px!important;display:block!important;overflow:hidden!important;border-radius:50%!important;line-height:0!important}
+.dw-round-flag{display:block!important;width:100%!important;height:100%!important;border-radius:50%!important;overflow:hidden!important}
+.dw-language-chevron{display:none!important}
+.dw-language-menu{position:absolute!important;top:calc(100% + 12px)!important;right:0!important;min-width:190px!important;padding:6px!important;background:#08090b!important;border:1px solid #393b3e!important;border-top:2px solid var(--dw-head-red)!important;border-radius:4px!important;box-shadow:0 20px 55px #000d!important;z-index:2147483350!important}
 .dw-language-menu[hidden]{display:none!important}
-.dw-language-option{display:flex;align-items:center;gap:12px;min-height:42px;padding:8px 12px;color:#e6e6e6;text-decoration:none;font-size:12px;letter-spacing:.03em;text-transform:none;font-weight:600;white-space:nowrap}
-.dw-language-option>span:first-child{font-size:20px;line-height:1}
-.dw-language-option:hover,.dw-language-option.is-active{background:#191b1e;color:#fff}
-.dw-language-option.is-active{border-left:2px solid #BF1304;padding-left:10px}
-nav.topbar .dw-language{margin-left:auto;margin-right:12px}
-nav.topbar .dw-language-trigger{height:42px}
-nav#mainNav .dw-language{margin-left:14px}
-@media(min-width:901px){nav#mainNav .dw-language{margin-left:auto;margin-right:0}}
-@media(max-width:900px){nav#mainNav .dw-language{margin-left:auto;margin-right:0}nav#mainNav .hamburger{margin-left:4px!important}nav.topbar .dw-language{margin-left:auto;margin-right:4px}nav.topbar .dw-language-trigger,nav#mainNav .dw-language-trigger{width:42px;height:40px}nav.topbar .dw-language-menu,nav#mainNav .dw-language-menu{right:0}}
+.dw-language-option{display:flex!important;align-items:center!important;gap:12px!important;min-height:45px!important;padding:7px 12px!important;color:#e6e6e6!important;text-decoration:none!important;font-family:'Chakra Petch',sans-serif!important;font-size:13px!important;letter-spacing:.02em!important;text-transform:none!important;font-weight:700!important;white-space:nowrap!important}
+.dw-language-option>span:first-child{display:block;width:24px;height:24px;flex:0 0 24px;border-radius:50%;overflow:hidden;line-height:0}
+.dw-language-option:hover,.dw-language-option.is-active{background:#202226!important;color:#fff!important}
+.dw-language-option.is-active{border-left:2px solid var(--dw-head-red)!important;padding-left:10px!important}
+html body > .dw-theme-toggle{position:fixed!important;top:auto!important;right:auto!important;bottom:calc(20px + env(safe-area-inset-bottom,0px))!important;left:20px!important;inset:auto auto calc(20px + env(safe-area-inset-bottom,0px)) 20px!important;z-index:2147483300!important;display:grid!important;grid-template-columns:30px 30px!important;gap:2px!important;width:max-content!important;height:auto!important;min-width:0!important;padding:4px!important;margin:0!important;border:1px solid #292929!important;border-radius:999px!important;background:#0b0d0f!important;box-shadow:0 8px 28px #000a!important;transform:none!important}
+html body > .dw-theme-toggle button{width:30px!important;height:30px!important;min-width:30px!important;min-height:30px!important;padding:0!important;border:0!important;border-radius:50%!important;background:transparent!important;color:#f5f5f5!important;font-size:16px!important;cursor:pointer!important}
+html body > .dw-theme-toggle button[aria-pressed="true"]{color:#111214!important;background:#fff!important}
+@media(max-width:900px){
+ html body > .dw-theme-toggle{bottom:calc(12px + env(safe-area-inset-bottom,0px))!important;left:12px!important;inset:auto auto calc(12px + env(safe-area-inset-bottom,0px)) 12px!important}
+}
+.dw-language-welcome[hidden]{display:none!important}
+.dw-language-welcome{position:fixed!important;inset:0!important;z-index:2147483640!important;display:grid!important;place-items:center!important;overflow:auto!important;padding:22px!important;background:rgba(0,0,0,.83)!important;-webkit-backdrop-filter:blur(11px)!important;backdrop-filter:blur(11px)!important;font-family:'Chakra Petch',sans-serif!important}
+.dw-language-dialog{width:min(100%,490px)!important;max-height:min(92dvh,850px)!important;overflow-y:auto!important;position:relative!important;padding:32px!important;border:1px solid #383b3f!important;border-top:3px solid var(--dw-head-red)!important;border-radius:8px!important;box-shadow:0 30px 95px rgba(0,0,0,.9)!important;background:linear-gradient(150deg,#16181b 0%,#090a0c 78%)!important;color:#f5f5f5!important}
+.dw-language-kicker{margin:0 0 10px!important;font:700 11px/1.3 'DM Mono',monospace!important;letter-spacing:.24em!important;text-transform:uppercase!important;color:var(--dw-head-red)!important}
+.dw-language-title{margin:0 38px 12px 0!important;font:900 clamp(24px,6vw,32px)/1.1 'Chakra Petch',sans-serif!important;letter-spacing:-.025em!important;text-transform:uppercase!important;color:#fff!important}
+.dw-language-description{margin:0 0 18px!important;font-size:14px!important;line-height:1.55!important;font-weight:400!important;color:#b9bbbf!important}
+.dw-language-close{position:absolute!important;top:14px!important;right:14px!important;display:grid!important;place-items:center!important;width:38px!important;height:38px!important;padding:0!important;border:1px solid #333!important;border-radius:50%!important;background:#111215!important;color:#e7e7e7!important;cursor:pointer!important;font-size:20px!important}
+.dw-language-close:hover{border-color:var(--dw-head-red)!important}
+.dw-language-choices{margin:0!important;padding:0!important;border:0!important;display:grid!important;grid-template-columns:1fr 1fr!important;gap:9px!important}
+.dw-language-choice{position:relative!important;display:flex!important;align-items:center!important;gap:11px!important;min-height:65px!important;padding:11px!important;border:1px solid #34363a!important;border-radius:5px!important;background:#111316!important;color:#ededed!important;cursor:pointer!important;font-size:14px!important;font-weight:700!important}
+.dw-language-choice:hover{border-color:#898b91!important}
+.dw-language-choice:has(input:checked){border-color:var(--dw-head-red)!important;background:#231719!important;box-shadow:inset 0 0 0 1px var(--dw-head-red)!important}
+.dw-language-choice input{position:absolute!important;opacity:0!important;inset:0!important;width:100%!important;height:100%!important;cursor:pointer!important}
+.dw-language-choice:has(input:focus-visible){outline:2px solid #fff!important;outline-offset:3px!important}
+.dw-language-choice .dw-round-flag{width:32px!important;height:32px!important;flex:0 0 32px!important}
+.dw-language-suggestion{margin:17px 0!important;font-size:12px!important;line-height:1.5!important;color:#aeb1b6!important}
+.dw-language-suggestion strong{color:#fff!important}
+.dw-language-remember{display:flex!important;gap:10px!important;align-items:center!important;min-height:45px!important;margin:0 0 19px!important;color:#f4f4f4!important;font-size:13px!important;cursor:pointer!important}
+.dw-language-remember input{width:19px!important;height:19px!important;accent-color:var(--dw-head-red)!important;flex:0 0 19px!important}
+.dw-language-submit{display:block!important;width:100%!important;min-height:49px!important;padding:12px 17px!important;border:1px solid var(--dw-head-red)!important;border-radius:3px!important;background:var(--dw-head-red)!important;color:#fff!important;font:900 13px/1 'Chakra Petch',sans-serif!important;letter-spacing:.14em!important;text-transform:uppercase!important;cursor:pointer!important}
+.dw-language-submit:hover{background:#e12212!important}
+.dw-language-note{margin:15px 0 0!important;color:#7d828b!important;font-size:11px!important;line-height:1.5!important}
+@media(max-width:450px){
+ .dw-language-welcome{padding:12px!important}
+ .dw-language-dialog{padding:26px 19px!important}
+ .dw-language-choices{grid-template-columns:1fr!important}
+ .dw-language-choice{min-height:53px!important}
+ .dw-language-choice .dw-round-flag{width:28px!important;height:28px!important;flex-basis:28px!important}
+}

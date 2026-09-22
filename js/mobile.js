@@ -96,13 +96,8 @@
       var btn=event.target.closest('button[data-theme-value]');
       if(btn) apply(btn.getAttribute('data-theme-value'));
     });
-    function placeThemeToggle(){
-      var desktop=window.matchMedia('(min-width:901px)').matches;
-      var target=desktop ? (document.querySelector('nav.topbar .navlinks') || document.querySelector('nav#mainNav .nav-links')) : document.body;
-      if(target && wrap.parentNode!==target) target.appendChild(wrap);
-    }
-    placeThemeToggle();
-    window.addEventListener('resize',placeThemeToggle,{passive:true});
+    /* Global fixed corner control, not part of either header variant. */
+    document.body.appendChild(wrap);
     apply(getSaved());
   }
   apply(getSaved());
