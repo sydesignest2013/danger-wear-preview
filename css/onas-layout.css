@@ -1,0 +1,92 @@
+/* Danger Wear / O nas — layout based on supplied SYDESIGN reference.
+   Scoped to body.dw-about-page, without changes to shared header, contact flow or other pages. */
+body.dw-about-page{--dw-about-accent:#BF1304}
+.dw-about-page .intro{position:relative;isolation:isolate;min-height:clamp(480px,66vh,720px);max-height:none;height:auto;display:flex;align-items:center;border-bottom:1px solid var(--border);overflow:hidden;padding:92px 0 36px}
+.dw-about-page .intro-left{width:58%;padding:clamp(56px,7vw,112px) 3vw clamp(60px,8vw,120px) max(36px,9vw);position:relative;z-index:2;min-width:0}
+.dw-about-page .intro-badge{display:none}
+.dw-about-page .intro-eyebrow{margin-bottom:23px;letter-spacing:.31em;font-size:clamp(.6rem,.9vw,.78rem)}
+.dw-about-page .intro-name{font-size:clamp(3.7rem,8.2vw,8.4rem);line-height:.88;max-width:900px;margin:0;word-break:normal;overflow-wrap:normal;position:relative;z-index:2}
+.dw-about-page .intro-name span{display:block}
+.dw-about-page .intro-name span:last-child{color:transparent;-webkit-text-stroke:1px rgba(245,245,245,.7)}
+.dw-about-page .intro-role{margin-top:32px;flex-wrap:wrap;row-gap:10px}
+.dw-about-page .role-pill{color:#d1d1d1;border-color:rgba(191,19,4,.44);font-size:.6rem;letter-spacing:.14em;white-space:normal}
+.dw-about-page .role-dot{width:5px;height:5px;flex-shrink:0}
+.dw-about-page .intro-right{position:absolute;right:0;top:92px;bottom:0;width:49%;display:flex;justify-content:center;align-items:center;overflow:hidden;background:radial-gradient(ellipse at 72% 54%,rgba(191,19,4,.15),transparent 52%)}
+.dw-about-page .intro-right::before{background:linear-gradient(to right,#080808 0%,rgba(8,8,8,.33) 50%,transparent 100%)}
+.dw-about-page .intro-right::after{left:3%}
+.dw-about-page .intro-right .dw-about-logo{display:block;max-width:76%;width:min(420px,76%);max-height:75%;height:auto;object-fit:contain;mix-blend-mode:screen;opacity:.82;filter:grayscale(1) contrast(1.15);animation:dwAboutZoom 22s ease-in-out infinite alternate}
+@keyframes dwAboutZoom{from{transform:scale(.97)}to{transform:scale(1.06)}}
+.dw-about-page .intro-scroll{bottom:22px;left:50%}
+.dw-about-page .manifesto{padding:clamp(75px,10vw,150px) 0}
+.dw-about-page .manifesto-inner{max-width:1300px;grid-template-columns:1fr 1.65fr;gap:clamp(36px,7vw,110px)}
+.dw-about-page .manifesto-body{max-width:640px;font-size:clamp(.89rem,1.05vw,1.02rem)}
+.dw-about-page .manifesto-ghost{-webkit-text-stroke-color:rgba(191,19,4,.09)}
+.dw-about-page .dw-about-pillars{position:relative;overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:rgba(0,0,0,.18)}
+.dw-about-page .dw-about-pillars::before{content:'DANGER WEAR  /  DANGER WEAR  /  DANGER WEAR';position:absolute;inset:auto auto 5% -3%;font-weight:800;font-size:clamp(6rem,13vw,14rem);line-height:1;color:rgba(255,255,255,.025);white-space:nowrap;pointer-events:none}
+.dw-about-page .dw-about-pillars-grid{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:auto;max-width:1500px}
+.dw-about-page .dw-about-pillar{padding:clamp(32px,4vw,60px) clamp(17px,3vw,40px);border-right:1px solid var(--border);min-width:0;transition:background .3s;position:relative}
+.dw-about-page .dw-about-pillar:last-child{border-right:none}
+.dw-about-page .dw-about-pillar::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--dw-about-accent);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.dw-about-page .dw-about-pillar:hover{background:rgba(191,19,4,.045)}
+.dw-about-page .dw-about-pillar:hover::after{transform:scaleX(1)}
+.dw-about-page .dw-about-pillar-num{font:400 clamp(2.5rem,5vw,5rem)/1 'DM Mono',monospace;color:rgba(245,245,245,.18);margin-bottom:20px}
+.dw-about-page .dw-about-pillar-title{font-size:clamp(.88rem,1.25vw,1.13rem);letter-spacing:.05em;text-transform:uppercase;margin:0 0 11px;line-height:1.2}
+.dw-about-page .dw-about-pillar-desc{font-size:clamp(.75rem,.9vw,.85rem);line-height:1.68;color:var(--mid)}
+.dw-about-page .process-section{max-width:1300px;padding:clamp(70px,9vw,135px) 40px clamp(65px,8vw,125px)}
+.dw-about-page .process-header{margin-bottom:clamp(35px,5vw,75px)}
+.dw-about-page .steps{gap:2px}
+.dw-about-page .step{min-width:0;padding:clamp(23px,3vw,40px) clamp(19px,2.2vw,30px)}
+.dw-about-page .step-num{color:rgba(191,19,4,.26)}
+.dw-about-page .step:hover .step-num{color:rgba(191,19,4,.54)}
+.dw-about-page .dw-about-cta{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:linear-gradient(115deg,rgba(191,19,4,.13),rgba(12,12,12,.95) 48%);padding:clamp(48px,8vw,110px) 24px}
+.dw-about-page .dw-about-cta-inner{max-width:1220px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:36px}
+.dw-about-page .dw-about-cta-label{font:400 .67rem 'DM Mono',monospace;letter-spacing:.28em;text-transform:uppercase;color:var(--dw-about-accent);margin-bottom:18px}
+.dw-about-page .dw-about-cta h2{font-size:clamp(2rem,4.4vw,4.8rem);text-transform:uppercase;letter-spacing:-.03em;line-height:.99;margin-bottom:16px}
+.dw-about-page .dw-about-cta p:not(.dw-about-cta-label){font-size:clamp(.84rem,1vw,1rem);color:var(--mid);line-height:1.8;max-width:630px}
+.dw-about-page .dw-about-cta-link{flex-shrink:0;min-width:190px;display:inline-flex;align-items:center;justify-content:space-between;gap:30px;padding:17px 21px;text-decoration:none;text-transform:uppercase;font-weight:700;letter-spacing:.1em;font-size:.8rem;color:#fff;background:var(--dw-about-accent);border:1px solid var(--dw-about-accent);transition:background .25s,transform .25s}
+.dw-about-page .dw-about-cta-link:hover,.dw-about-page .dw-about-cta-link:focus-visible{background:#080808;transform:translateY(-3px)}
+.dw-about-page .dw-about-cta-link:focus-visible{outline:2px solid #fff;outline-offset:3px}
+@media(max-width:1024px){
+ .dw-about-page .intro-left{width:69%;padding-left:5vw}
+ .dw-about-page .intro-right{width:47%}
+ .dw-about-page .intro-name{font-size:clamp(3.35rem,8vw,6.9rem)}
+ .dw-about-page .manifesto-inner{grid-template-columns:1fr;gap:24px}
+ .dw-about-page .dw-about-pillars-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .dw-about-page .dw-about-pillar:nth-child(2){border-right:0}
+ .dw-about-page .dw-about-pillar:nth-child(n+3){border-top:1px solid var(--border)}
+ .dw-about-page .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:767px){
+ .dw-about-page .intro{min-height:550px!important;max-height:none!important;height:auto!important;padding:72px 0 30px;align-items:flex-end}
+ .dw-about-page .intro-left{width:100%!important;padding:85px 20px 72px!important}
+ .dw-about-page .intro-right{display:flex!important;right:0;top:72px;bottom:0;width:100%;opacity:.4;background:radial-gradient(circle at 70% 32%,rgba(191,19,4,.19),transparent 58%)}
+ .dw-about-page .intro-right::before{background:linear-gradient(to top,#080808 2%,rgba(8,8,8,.8) 40%,rgba(8,8,8,.28) 100%)}
+ .dw-about-page .intro-right::after{display:none}
+ .dw-about-page .intro-right .dw-about-logo{max-width:50%;max-height:45%;position:absolute;right:0;top:6%;opacity:.65}
+ .dw-about-page .intro-name{font-size:clamp(3.1rem,12vw,6rem)!important;line-height:.9!important}
+ .dw-about-page .intro-role{align-items:stretch;flex-direction:column;gap:9px}
+ .dw-about-page .role-pill{width:max-content;max-width:100%}
+ .dw-about-page .intro-scroll{bottom:15px}
+ .dw-about-page .manifesto{padding:70px 0!important}
+ .dw-about-page .manifesto-inner{padding:0 20px;gap:14px}
+ .dw-about-page .manifesto-label{margin-bottom:7px}
+ .dw-about-page .manifesto-counter{display:none}
+ .dw-about-page .manifesto-quote{font-size:clamp(1.85rem,8vw,3rem)!important;margin-bottom:23px}
+ .dw-about-page .dw-about-pillars-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .dw-about-page .dw-about-pillar{padding:26px 17px 29px}
+ .dw-about-page .dw-about-pillar-num{font-size:2.4rem;margin-bottom:14px}
+ .dw-about-page .dw-about-pillar-title{font-size:.85rem}
+ .dw-about-page .dw-about-pillar-desc{font-size:.74rem}
+ .dw-about-page .process-section{padding:70px 20px!important}
+ .dw-about-page .process-header{margin-bottom:32px!important}
+ .dw-about-page .steps{grid-template-columns:1fr!important}
+ .dw-about-page .process-sub{text-align:left!important}
+ .dw-about-page .dw-about-cta{padding:54px 20px}
+ .dw-about-page .dw-about-cta-inner{display:block}
+ .dw-about-page .dw-about-cta-link{margin-top:26px;min-height:52px;width:100%}
+}
+@media(max-width:360px){.dw-about-page .intro-name{font-size:clamp(2.75rem,11vw,3.5rem)!important}.dw-about-page .dw-about-pillar{padding:22px 13px}.dw-about-page .role-pill{font-size:.52rem}}
+@media(prefers-reduced-motion:reduce){.dw-about-page .intro-right .dw-about-logo{animation:none}.dw-about-page .dw-about-cta-link{transition:none}}
+html[data-theme="light"] .dw-about-page .dw-about-pillar-num{color:rgba(0,0,0,.22)}
+html[data-theme="light"] .dw-about-page .intro-right::before{background:linear-gradient(to right,#f5f5f5,rgba(245,245,245,.15) 75%)}
+@media(max-width:767px){html[data-theme="light"] .dw-about-page .intro-right::before{background:linear-gradient(to top,#f5f5f5,rgba(245,245,245,.76),rgba(245,245,245,.1))}}

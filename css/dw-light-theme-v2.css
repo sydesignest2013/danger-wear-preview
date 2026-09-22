@@ -1,0 +1,124 @@
+/* DANGER WEAR — coherent, opt-in LIGHT THEME / desktop + mobile / 2026-09-22.
+   Loaded as the last light-specific layer; the existing dark theme is unchanged.
+   Brand accent intentionally remains #BF1304. Photography and artworks are never inverted. */
+html[data-theme="light"]{
+ color-scheme:light;
+ --bg:#f6f7f8;--surface:#fff;--border:#d9dee2;--mid:#505963;--muted:#606b75;--white:#171c22;--red:#BF1304;
+ --dw-theme-bg:#f6f7f8;--dw-theme-surface:#fff;--dw-theme-panel:#eef1f3;
+ --dw-theme-text:#171c22;--dw-theme-muted:#505963;--dw-theme-line:#d9dee2;
+ --dw-light-bg:#f6f7f8;--dw-light-ink:#171c22;--dw-light-muted:#505963;
+ --dw-light-line:#d9dee2;--dw-light-surface:#fff;--dw-light-surface-strong:#fff;
+ background:#f6f7f8!important;
+}
+html[data-theme="light"] body{
+ background:#f6f7f8!important;background-image:linear-gradient(155deg,#fff 0%,#f6f7f8 45%,#eef1f3 100%)!important;
+ color:#171c22!important;
+}
+html[data-theme="light"] body::before,html[data-theme="light"] body::after{opacity:.015!important;mix-blend-mode:multiply!important}
+/* Shared typography: dark ink on genuinely bright grounds. */
+html[data-theme="light"] :is(.dw-heading h1,.dw-family h2,.products-index-card h2,.intro-name,.manifesto-quote,.process-title,.step-title,.proc-title,.proc-card-title,.left-title,.f-label,.gallery-page h1,.gallery-card h2,.fw-info h1,.mesh-ref-info h1,.mesh-mobile-heading h1,.fw-realizations h2,.realizations-heading,.dw-about-pillar-title,.dw-about-cta h2){color:#171c22!important}
+html[data-theme="light"] :is(.dw-heading p,.products-index-intro,.manifesto-body,.process-sub,.step-desc,.proc-card-desc,.dw-about-pillar-desc,.dw-about-cta p:not(.dw-about-cta-label),.fw-lead,.pp-lead,.pp-source-note,.inquiry-sub,.inquiry-fine,.left-desc,.f-prod-info,.social-handle,.hero-tagline,.hero-meta){color:#505963!important;opacity:1!important}
+html[data-theme="light"] :is(.dw-heading,.dw-catalog,.dw-family,.intro,.manifesto,.process-section,.proc-main,.page,.page-left,.page-right,.products-index,.gallery-page,.fw-realizations,.thumb-zone){border-color:#d9dee2!important}
+/* Both header engines, dropdowns and mobile drawers. */
+html[data-theme="light"] :is(nav#mainNav,nav.topbar){background:rgba(255,255,255,.97)!important;background-image:none!important;border-color:#d9dee2!important;box-shadow:0 6px 24px rgba(23,28,34,.06)!important;color:#171c22!important}
+html[data-theme="light"] :is(nav#mainNav .nav-logo-text,nav.topbar .brand,nav.topbar .brand b,nav.topbar .brand span,nav#mainNav .nav-links>li:not(#projLi)>.nav-link,nav.topbar .navlinks>a:not(.products-trigger)){color:#171c22!important}
+html[data-theme="light"] :is(nav#mainNav .nav-logo img,nav.topbar .brand img){filter:invert(1)!important;mix-blend-mode:multiply!important}
+html[data-theme="light"] :is(nav#mainNav .hamburger span,nav.topbar .burger span){background:#171c22!important;border-color:#171c22!important}
+html[data-theme="light"] :is(.nav-dropdown,.nav-dropdown.dw-home-mega,.products-dropdown,.nav-dropdown.dw-home-mega section,.products-dropdown section,.mob-menu,.mob-panel,.mob-sub,.mob-products-tree){background:#fff!important;background-image:none!important;color:#171c22!important;border-color:#d9dee2!important;box-shadow:0 24px 60px rgba(23,28,34,.12)!important}
+html[data-theme="light"] :is(.nav-dropdown.dw-home-mega a,.nav-dropdown a,.products-dropdown a,.mob-menu a,.mob-panel a,.mob-products summary,.mob-section-btn,.mob-close){color:#242a30!important}
+html[data-theme="light"] :is(.nav-dropdown.dw-home-mega .nav-dropdown-label,.products-dropdown .products-group,.mob-products-tree b){color:#BF1304!important}
+html[data-theme="light"] :is(.nav-dropdown.dw-home-mega a:hover,.nav-dropdown a:hover,.products-dropdown a:hover,.mob-menu a:hover,.mob-panel a:hover){color:#BF1304!important;background:#f3f5f6!important}
+html[data-theme="light"] .mob-overlay{background:rgba(23,28,34,.25)!important}
+/* The theme switch and language selector also become light, not black islands. */
+html[data-theme="light"] .dw-theme-toggle{background:#fff!important;border:1px solid #c8cfd5!important;box-shadow:0 5px 16px rgba(23,28,34,.10)!important}
+html[data-theme="light"] .dw-theme-toggle button{color:#4b5560!important;background:transparent!important}
+html[data-theme="light"] .dw-theme-toggle button[aria-pressed="true"]{color:#fff!important;background:#171c22!important}
+html[data-theme="light"] .dw-theme-toggle button[data-theme-value="light"][aria-pressed="true"]{color:#fff!important;background:#BF1304!important}
+html[data-theme="light"] .dw-language-trigger{background:#fff!important;border-color:#ccd2d7!important;box-shadow:0 3px 14px rgba(23,28,34,.09)!important}
+html[data-theme="light"] .dw-language-menu{background:#fff!important;border-color:#d9dee2!important;border-top-color:#BF1304!important;box-shadow:0 20px 46px rgba(23,28,34,.14)!important}
+html[data-theme="light"] .dw-language-option{color:#171c22!important}
+html[data-theme="light"] .dw-language-option:hover,html[data-theme="light"] .dw-language-option:focus-visible{background:#f0f3f5!important;color:#BF1304!important}
+html[data-theme="light"] :is(.dw-language-welcome,.dw-language-dialog){color:#171c22!important}
+html[data-theme="light"] .dw-language-dialog{background:#fff!important;border-color:#d9dee2!important}
+html[data-theme="light"] .dw-language-dialog :is(h1,h2,h3,strong,label){color:#171c22!important}
+html[data-theme="light"] .dw-language-dialog :is(p,small,.dw-language-note){color:#505963!important}
+html[data-theme="light"] .dw-language-choice{background:#f6f7f8!important;color:#171c22!important;border-color:#d9dee2!important}
+html[data-theme="light"] .dw-language-choice:is(:hover,:focus-visible){background:#eff2f4!important;border-color:#BF1304!important}
+/* Home: bright photography, white veil, readable dark captions. Never invert photos or logos. */
+html[data-theme="light"] .hero{background:#f1f3f5!important;border-color:#d9dee2!important}
+html[data-theme="light"] .hero-slide{filter:saturate(.65) brightness(1.15) contrast(.92)!important;opacity:0}
+html[data-theme="light"] .hero-slide.visible{opacity:.40!important}
+html[data-theme="light"] .hero-overlay{background:linear-gradient(90deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.84) 56%,rgba(255,255,255,.56) 100%),linear-gradient(0deg,rgba(246,247,248,.92),transparent 50%)!important}
+html[data-theme="light"] .hero-grid-lines{opacity:.25!important}
+html[data-theme="light"] .hero-orb{background:radial-gradient(ellipse,rgba(191,19,4,.075),transparent 70%)!important}
+html[data-theme="light"] :is(.hero-title,.hero-title .solid,.hero-title-brand,.hero-title-brand .solid){color:#171c22!important}
+html[data-theme="light"] .hero-title .outline{-webkit-text-stroke-color:#BF1304!important}
+html[data-theme="light"] .hero-title::before{color:#BF1304!important}
+html[data-theme="light"] .hero-title::after{color:#69737b!important}
+html[data-theme="light"] .hero-pill{background:rgba(255,255,255,.9)!important;color:#303942!important;border-color:#d5dbe0!important}
+html[data-theme="light"] .hero-tagline{color:#424b55!important}
+html[data-theme="light"] .hero-scroll .scroll-word{color:#505963!important}
+html[data-theme="light"] .dw-hero-logo{filter:invert(1)!important;mix-blend-mode:multiply!important}
+html[data-theme="light"] .cat-tile{background:#edf0f2!important;border-color:#d9dee2!important;box-shadow:0 14px 28px rgba(23,28,34,.06)!important}
+html[data-theme="light"] .cat-tile img{filter:saturate(.78) brightness(1.08) contrast(.96)!important}
+html[data-theme="light"] .cat-tile::before{background:linear-gradient(to top,rgba(255,255,255,.98) 0%,rgba(255,255,255,.85) 24%,rgba(255,255,255,.16) 66%,transparent 100%)!important}
+html[data-theme="light"] .cat-tile-body{background:rgba(255,255,255,.35)!important;border-top-color:#d9dee2!important}
+html[data-theme="light"] .cat-tile-name{color:#171c22!important;text-shadow:0 1px 6px rgba(255,255,255,.85)!important}
+/* Product pages: photographs remain authentic; cards, specs, descriptions and empty states become light. */
+html[data-theme="light"] :is(.products-index-card,.proc-card,.proc-step,.step,.gallery-card,.dw-about-pillar,.f-block,.pp-copy,.pp-method,.pp-variant,.pp-related a,.data-card,.details-card,.fw-data-fold,.fw-personalization,.mesh-marking-details,.fw-mark-panel){background:#fff!important;background-image:none!important;border-color:#d9dee2!important;color:#171c22!important;box-shadow:none!important}
+html[data-theme="light"] :is(.fw-data-fold-body,.fw-personalization-body,.mesh-marking-body,.pp-specs,.pp-marking,.pp-variants){background:#f9fafb!important;color:#2f3942!important;border-color:#e0e4e7!important}
+html[data-theme="light"] :is(.fw-data-fold summary,.fw-personalization summary,.mesh-marking-details summary,.pp-specs dt,.pp-specs dd,.fw-specs dd,.f-label,.step-title,.proc-card-title,.pp-bullets li,.pp-source-note){color:#171c22!important}
+html[data-theme="light"] :is(.fw-specs dt,.f-step-num,.f-label-optional,.f-char-count,.fw-data-note){color:#505963!important;opacity:1!important}
+html[data-theme="light"] :is(.fw-specs>div,.pp-specs>div,.dw-product-list li,.dw-sizes,.dw-marking-info){border-color:#d9dee2!important}
+html[data-theme="light"] :is(.fw-data-fold table,.fw-data-fold th,.fw-data-fold td,.table-wrap table,.table-wrap th,.table-wrap td,.dw-size-table th,.dw-size-table td){color:#171c22!important;border-color:#d9dee2!important}
+html[data-theme="light"] :is(.fw-data-fold th,.table-wrap th,.dw-size-table tbody th){background:#eef1f3!important;color:#171c22!important}
+html[data-theme="light"] :is(.fw-data-fold td,.table-wrap td,.dw-size-table td){background:#fff!important;color:#171c22!important}
+html[data-theme="light"] :is(.fw-data-fold thead th,.dw-size-table thead th){background:#BF1304!important;color:#fff!important}
+html[data-theme="light"] :is(.mesh-ref-visual .stage,.dw-empty-media,.dw-empty-realizations,[data-empty-gallery="true"]){background:#eef1f3!important;border-color:#cdd4da!important;color:#505963!important}
+html[data-theme="light"] :is(.mesh-ref-caption,.mesh-carousel-caption-below,.mesh-project-title,.realization-thumb span){background:#fff!important;color:#171c22!important}
+html[data-theme="light"] :is(.realization-thumb,.realization-thumb img){background:#fff!important;border-color:#e0e4e7!important}
+html[data-theme="light"] :is(.fw-realizations,.thumb-zone){background:#f6f7f8!important;color:#171c22!important}
+/* About page + manifesto. */
+html[data-theme="light"] .dw-about-page .intro-right{background:radial-gradient(circle at 70% 50%,rgba(191,19,4,.07),transparent 65%)!important}
+html[data-theme="light"] .dw-about-page .intro-right::before{background:linear-gradient(90deg,#f6f7f8,rgba(246,247,248,.15) 90%)!important}
+html[data-theme="light"] .dw-about-page .intro-right .dw-about-logo{filter:invert(1)!important;mix-blend-mode:multiply!important;opacity:.72!important}
+html[data-theme="light"] .dw-about-page .intro-name span:last-child{-webkit-text-stroke-color:#343b43!important}
+html[data-theme="light"] .dw-about-page .role-pill{background:#fff!important;color:#303942!important;border-color:#cbd3d9!important}
+html[data-theme="light"] .dw-about-page .dw-about-pillars{background:#f6f7f8!important;border-color:#d9dee2!important}
+html[data-theme="light"] .dw-about-page .dw-about-pillars::before{color:rgba(23,28,34,.035)!important}
+html[data-theme="light"] .dw-about-page .dw-about-pillar-num{color:rgba(23,28,34,.22)!important}
+html[data-theme="light"] .dw-about-page .dw-about-cta{background:linear-gradient(120deg,#fff,#eef1f3)!important;border-color:#d9dee2!important}
+html[data-theme="light"] .dw-about-page .dw-about-cta-link{background:#BF1304!important;color:#fff!important;border-color:#BF1304!important}
+html[data-theme="light"] .dw-about-page .dw-about-cta-link:hover{background:#8f0e03!important;color:#fff!important}
+html[data-theme="light"] .manifesto-ghost{-webkit-text-stroke-color:rgba(191,19,4,.1)!important}
+html[data-theme="light"] .manifesto-quote em{-webkit-text-stroke-color:#BF1304!important}
+/* Contact: complete light form, select options and feedback overlay. */
+html[data-theme="light"] :is(.page-left,.page-right,.f-extra,.f-extra-inner,.left-step-progress){background:transparent!important;border-color:#d9dee2!important;color:#171c22!important}
+html[data-theme="light"] .f-block.focused{background:#fff!important;border-color:#BF1304!important;box-shadow:0 10px 30px rgba(23,28,34,.06)!important}
+html[data-theme="light"] :is(input,textarea,select,.f-input,.f-textarea,.f-select){background:#fff!important;color:#171c22!important;border-color:#cbd3d9!important}
+html[data-theme="light"] :is(.f-input,.f-textarea,.f-select):focus{background:#fff!important;border-color:#BF1304!important;color:#171c22!important}
+html[data-theme="light"] :is(input,textarea,.f-input,.f-textarea)::placeholder{color:#65707a!important}
+html[data-theme="light"] :is(select,.f-select) option{background:#fff!important;color:#171c22!important}
+html[data-theme="light"] .success-inner{background:#fff!important;color:#171c22!important;border-color:#d9dee2!important}
+html[data-theme="light"] :is(.success-title,.success-sub){color:#171c22!important}
+html[data-theme="light"] .f-radio-label{background:#fff!important;color:#171c22!important;border-color:#cbd3d9!important}
+/* CTA and secondary actions. Text stays white ONLY on the brand-red button. */
+html[data-theme="light"] :is(.btn-primary,.btn-submit,.mesh-ref-primary,.fw-ref-primary,.pp-primary,.cta>a,.dw-about-cta-link){background:#BF1304!important;border-color:#BF1304!important;color:#fff!important}
+html[data-theme="light"] :is(.btn-ghost,.mesh-category-return,.fw-ref-secondary,.pp-secondary){background:#fff!important;border-color:#cbd3d9!important;color:#171c22!important}
+html[data-theme="light"] .inquiry{background:#fff!important;border:1px solid #d9dee2!important;color:#171c22!important}
+html[data-theme="light"] .inquiry-title{color:#171c22!important}
+/* Social and footer were previously forced to remain dark in light theme — correct globally. */
+html[data-theme="light"] :is(.social-bar,.dw-global-social,footer,.dw-global-footer){background:#fff!important;background-image:none!important;border-color:#d9dee2!important;color:#171c22!important}
+html[data-theme="light"] :is(.social-bar .social-item,.dw-global-social .social-item){background:#fff!important;border-color:#d9dee2!important;color:#171c22!important}
+html[data-theme="light"] :is(.social-name,footer p,.dw-global-footer p){color:#171c22!important}
+html[data-theme="light"] :is(.social-handle,.social-icon,.social-arrow,footer small,.dw-global-footer small){color:#505963!important;opacity:1!important}
+html[data-theme="light"] :is(.social-bar .social-item:hover,.dw-global-social .social-item:hover){background:#f0f3f5!important}
+html[data-theme="light"] :is(.social-bar .social-item:hover .social-icon,.social-bar .social-item:hover .social-arrow){color:#BF1304!important}
+/* Preserve dark picture lightbox for accurate image viewing; do not invert photography. */
+html[data-theme="light"] :is(.lightbox,.lightbox-dialog){color:#fff!important}
+html[data-theme="light"] .lightbox-backdrop{background:rgba(0,0,0,.9)!important}
+@media(max-width:767px){
+ html[data-theme="light"] .dw-about-page .intro-right::before{background:linear-gradient(0deg,#f6f7f8 4%,rgba(246,247,248,.85) 42%,rgba(246,247,248,.20) 100%)!important}
+ html[data-theme="light"] .hero-overlay{background:linear-gradient(180deg,rgba(255,255,255,.68),rgba(255,255,255,.88) 54%,rgba(246,247,248,.98))!important}
+}
+@media(prefers-reduced-motion:reduce){html[data-theme="light"] .dw-about-page .intro-right .dw-about-logo{animation:none!important}}
