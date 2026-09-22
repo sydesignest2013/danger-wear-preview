@@ -1,0 +1,19 @@
+/* Danger Wear premium flag-only language switcher */
+.dw-language{position:relative;z-index:2147482000;display:flex;align-items:center;justify-content:center;margin-left:12px;flex:0 0 auto;font-family:'Chakra Petch',sans-serif}
+.dw-language-trigger{display:inline-flex;align-items:center;justify-content:center;gap:6px;width:46px;height:40px;padding:0;border:1px solid rgba(255,255,255,.14);border-radius:4px;background:rgba(15,16,18,.86);color:#eee;cursor:pointer;transition:background .2s,border-color .2s}
+.dw-language-trigger:hover,.dw-language.open .dw-language-trigger{border-color:#BF1304;background:#1a1a1d}
+.dw-language-trigger:focus-visible,.dw-language-option:focus-visible{outline:2px solid #BF1304;outline-offset:3px}
+.dw-language-flag{display:block;font-size:21px;line-height:1}
+.dw-language-chevron{font-size:13px;color:#b3b3b3;line-height:1}
+.dw-language.open .dw-language-chevron{transform:rotate(180deg)}
+.dw-language-menu{position:absolute;top:calc(100% + 10px);right:0;min-width:183px;padding:6px;background:#08090b;border:1px solid #393b3e;border-top:2px solid #BF1304;box-shadow:0 18px 45px #000b;z-index:2147482100}
+.dw-language-menu[hidden]{display:none!important}
+.dw-language-option{display:flex;align-items:center;gap:12px;min-height:42px;padding:8px 12px;color:#e6e6e6;text-decoration:none;font-size:12px;letter-spacing:.03em;text-transform:none;font-weight:600;white-space:nowrap}
+.dw-language-option>span:first-child{font-size:20px;line-height:1}
+.dw-language-option:hover,.dw-language-option.is-active{background:#191b1e;color:#fff}
+.dw-language-option.is-active{border-left:2px solid #BF1304;padding-left:10px}
+nav.topbar .dw-language{margin-left:auto;margin-right:12px}
+nav.topbar .dw-language-trigger{height:42px}
+nav#mainNav .dw-language{margin-left:14px}
+@media(min-width:901px){nav#mainNav .dw-language{margin-left:auto;margin-right:0}}
+@media(max-width:900px){nav#mainNav .dw-language{margin-left:auto;margin-right:0}nav#mainNav .hamburger{margin-left:4px!important}nav.topbar .dw-language{margin-left:auto;margin-right:4px}nav.topbar .dw-language-trigger,nav#mainNav .dw-language-trigger{width:42px;height:40px}nav.topbar .dw-language-menu,nav#mainNav .dw-language-menu{right:0}}
