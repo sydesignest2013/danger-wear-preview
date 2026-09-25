@@ -19,7 +19,7 @@
       var files = sets[method];
       var key = 'dw-prod-gallery-last-' + method;
       var prev = -1;
-      try { prev = Number(localStorage.getItem(key)); } catch (err) {}
+      try { var saved = localStorage.getItem(key); if (saved !== null) prev = Number(saved); } catch (err) {}
       var options = files.map(function(_,i){return i;}).filter(function(i){return i !== prev;});
       var picked = options[Math.floor(Math.random() * options.length)];
       if (picked === undefined) picked = 0;
