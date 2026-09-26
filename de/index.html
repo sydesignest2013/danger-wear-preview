@@ -10,7 +10,14 @@
 <link rel="stylesheet" href="css/footer.css?v=20260918-final-v5">
 <link rel="stylesheet" href="css/zamow.css">
 <link rel="stylesheet" href="css/technical-fixes.css"><meta name="description" content="Bekleidungs- und Werbeartikelproduktion – Danger Wear. Individuelle Bekleidung, Sublimationsdruck und Werbeartikel."><link rel="stylesheet" href="css/dangerwear.css"><link rel="stylesheet" href="css/product-update.css"><link rel="stylesheet" href="css/mobile.css?v=20260921-unified-nav-1">
-<link rel="alternate" hreflang="pl" href="https://sydesignest2013.github.io/danger-wear-preview/index.html"><link rel="alternate" hreflang="en" href="https://sydesignest2013.github.io/danger-wear-preview/en/index.html"><link rel="alternate" hreflang="de" href="https://sydesignest2013.github.io/danger-wear-preview/de/index.html"><link rel="alternate" hreflang="fr" href="https://sydesignest2013.github.io/danger-wear-preview/fr/index.html"><link rel="alternate" hreflang="x-default" href="https://sydesignest2013.github.io/danger-wear-preview/index.html"><link rel="canonical" href="https://sydesignest2013.github.io/danger-wear-preview/de/index.html"><link rel="stylesheet" href="css/i18n.css?v=20260922-header-v2"></head>
+<link rel="alternate" hreflang="pl" href="https://sydesignest2013.github.io/danger-wear-preview/index.html"><link rel="alternate" hreflang="en" href="https://sydesignest2013.github.io/danger-wear-preview/en/index.html"><link rel="alternate" hreflang="de" href="https://sydesignest2013.github.io/danger-wear-preview/de/index.html"><link rel="alternate" hreflang="fr" href="https://sydesignest2013.github.io/danger-wear-preview/fr/index.html"><link rel="alternate" hreflang="x-default" href="https://sydesignest2013.github.io/danger-wear-preview/index.html"><link rel="canonical" href="https://sydesignest2013.github.io/danger-wear-preview/de/index.html"><link rel="stylesheet" href="css/i18n.css?v=20260922-header-v2"><style id="dw-home-video-css">
+/* DW original footage: display-only crop, source MP4 remains byte-for-byte unchanged. */
+.dw-home-video-hero .dw-hero-bg-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;z-index:0;background:#090909;pointer-events:none}
+.dw-home-video-hero .hero-slide{background-position:center;background-size:cover}
+.dw-home-video-hero .hero-overlay{background:linear-gradient(90deg,rgba(6,6,6,.72),rgba(6,6,6,.33)),linear-gradient(0deg,rgba(6,6,6,.66),transparent 55%)}
+@media(max-width:900px){.dw-home-video-hero .hero-overlay{background:linear-gradient(180deg,rgba(5,5,5,.45),rgba(5,5,5,.56) 46%,rgba(5,5,5,.78))}}
+@media(prefers-reduced-motion:reduce){.dw-home-video-hero .dw-hero-bg-video{display:none!important}.dw-home-video-hero .hero-slide{filter:none!important}}
+</style></head>
 <body>
 
 
@@ -88,10 +95,9 @@
 </nav>
 
 <!-- HERO -->
-<div class="hero" id="hero">
-  <div class="hero-slide visible" style="background-image:url('assets/images/catalog/photo-20.webp')"></div>
-  <div class="hero-slide" style="background-image:url('assets/images/catalog/photo-14.webp')"></div>
-  <div class="hero-slide" style="background-image:url('assets/images/catalog/photo-39.webp')"></div>
+<div class="hero dw-home-video-hero" id="hero">
+<div class="hero-slide visible" style="background-image:url('assets/images/produkcja-wideo/home-poster.webp')"></div>
+<video class="dw-hero-bg-video" autoplay muted loop playsinline preload="metadata" poster="assets/images/produkcja-wideo/home-poster.webp" aria-hidden="true"><source src="assets/video/ogolny-hero.mp4" type="video/mp4"></video>
   <div class="hero-overlay"></div>
   <div class="hero-grid-lines"></div>
   <div class="hero-orb"></div>
@@ -105,8 +111,6 @@
       <a class="hero-pill" href="de/akcesoria.html"><span class="hero-pill-dot"></span>Accessoires</a>
     </div>
   </div>
-
-  <div class="hero-dots" id="heroDots" aria-label="Nawigacja slajdera"></div>
   <a class="hero-scroll" href="de/index.html#kategorie" aria-label="Przewiń do kategorii"><div class="scroll-line"></div><span class="scroll-word">Scrollen</span></a>
 </div>
 
@@ -165,7 +169,7 @@
 
 <script src="js/main.js?v=20260918-final-v5"></script>
 <script src="js/menu.js"></script>
-<script src="js/hero.js"></script>
+<script src="js/home-video.js?v=20260926-v1"></script>
 
 <script src="js/mobile.js?v=20260922-header-v2"></script>
 <script src="js/i18n.js?v=20260922-header-v2" defer></script></body></html>
