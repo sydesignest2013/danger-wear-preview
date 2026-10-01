@@ -1,0 +1,66 @@
+/* Danger Wear / responsive media and marking cards 2026-09-26. */
+
+/* Responsive stage: fix constraints on the actual overflowing containers. */
+html, body{width:100%;max-width:100%;min-width:0;margin:0;overflow-x:clip}
+#mainNav,.hero,.cat-section,.cat-grid,.social-bar,footer{max-width:100%;min-width:0}
+.dw-home-video-hero{width:100%;max-width:100%;min-width:0;overflow:hidden;isolation:isolate}
+.dw-home-video-hero .dw-hero-bg-video{display:block;position:absolute;inset:0;width:100%;height:100%;max-width:100%;object-fit:cover;object-position:center center;z-index:0;pointer-events:none;background:#090909}
+.dw-home-video-hero .hero-slide{z-index:0}
+.dw-home-video-hero .hero-content{min-width:0;max-width:100%;width:100%;padding-inline:clamp(8px,2vw,24px)}
+.dw-home-video-hero .hero-title-brand{max-width:100%;min-width:0}
+.dw-home-video-hero .hero-title-brand .solid{font-size:clamp(1.6rem,8.2vw,7.5rem);letter-spacing:-.045em;white-space:nowrap;max-width:100%}
+.dw-home-video-hero .hero-title-brand .hero-production{max-width:100%;white-space:nowrap}
+.dw-home-video-hero .hero-pills{max-width:100%;min-width:0}
+.dw-home-video-hero .hero-pill{min-width:0;max-width:100%;white-space:normal;text-align:center}
+.cat-grid{min-width:0;grid-template-columns:repeat(4,minmax(0,1fr))}
+.cat-tile{min-width:0}
+.cat-tile-body{min-width:0;max-width:100%;padding:clamp(.6rem,2vw,1.3rem)}
+.cat-tile-name{max-width:100%;overflow-wrap:anywhere}
+@media(max-width:900px){.cat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){
+ .dw-home-video-hero{padding-inline:12px!important}
+ .dw-home-video-hero .hero-content{padding-inline:3px}
+ .dw-home-video-hero .hero-title-brand .solid{font-size:clamp(1.52rem,8vw,3rem)}
+ .dw-home-video-hero .hero-pills{width:100%;gap:8px}
+ .dw-home-video-hero .hero-pill{flex:1 1 100%;min-height:39px}
+ .cat-section{padding-inline:12px!important}
+ .cat-tile-name{font-size:clamp(11px,3.3vw,16px)}
+}
+
+
+/* Responsive safety: never expose a sideways-scrolling production gallery. */
+html,body.dw-production-v3{max-width:100%;width:100%;min-width:0;overflow-x:clip}
+.dw-production-v3 .proc-main,.dw-production-v3 .dw-prod-shell,.dw-production-v3 .dw-prod-process,.dw-production-v3 .dw-prod-methods,.dw-production-v3 .dw-prod-method-list,.dw-production-v3 .dw-prod-method,.dw-production-v3 .dw-method-grid,.dw-production-v3 .dw-method-info,.dw-production-v3 .dw-method-visual{max-width:100%;min-width:0;box-sizing:border-box}
+.dw-production-v3 .dw-prod-path-viewport{max-width:100%;overflow-x:clip!important;scroll-snap-type:none!important;overscroll-behavior-x:none!important}
+.dw-production-v3 .dw-prod-path{max-width:100%;min-width:0!important;width:100%!important}
+.dw-production-v3 .dw-prod-stages{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr));width:100%;max-width:100%}
+.dw-production-v3 .dw-prod-stage{width:100%!important;min-width:0!important;max-width:100%;flex-basis:auto!important;overflow:hidden!important}
+.dw-production-v3 .dw-prod-stage-main,.dw-production-v3 .dw-prod-stage-title,.dw-production-v3 .dw-prod-stage-caption{min-width:0;overflow-wrap:break-word}
+.dw-production-v3 .dw-method-grid{max-width:100%;width:100%;min-width:0}
+.dw-production-v3 .dw-method-visual{overflow:hidden!important;max-width:100%;min-width:0}
+.dw-production-v3 .dw-method-visual>img,.dw-production-v3 .dw-method-visual>video{max-width:100%;width:100%;height:100%;object-fit:contain;object-position:center;overflow:hidden}
+.dw-production-v3 .dw-method-icon{max-width:calc(100% - 20px);overflow:hidden;box-sizing:border-box}
+.dw-production-v3 .dw-method-icon img{max-width:100%;object-fit:contain}
+@media(max-width:900px){
+ .dw-production-v3 .dw-prod-stages{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px}
+ .dw-production-v3 .dw-prod-stage{min-height:0!important;padding:0 12px 16px!important}
+ .dw-production-v3 .dw-prod-stage-visual{height:clamp(100px,28vw,160px)!important;margin:0 -12px 12px!important}
+ .dw-production-v3 .dw-prod-stage-main{gap:8px!important}
+ .dw-production-v3 .dw-prod-stage-title{font-size:clamp(12px,2.6vw,17px)!important}
+ .dw-production-v3 .dw-prod-stage-num{font-size:clamp(23px,4.3vw,32px)!important}
+ .dw-production-v3 .dw-prod-stage-caption{font-size:clamp(11px,2.3vw,14px)!important;line-height:1.45!important}
+}
+@media(max-width:420px){
+ .dw-production-v3 .dw-prod-shell{padding-inline:12px!important}
+ .dw-production-v3 .dw-prod-path-viewport{margin:0!important;padding:0!important}
+ .dw-production-v3 .dw-prod-stages{gap:9px!important}
+ .dw-production-v3 .dw-prod-stage{padding:0 9px 14px!important}
+ .dw-production-v3 .dw-prod-stage-visual{height:104px!important;margin:0 -9px 10px!important}
+ .dw-production-v3 .dw-prod-stage-title{font-size:12px!important}
+ .dw-production-v3 .dw-prod-stage-caption{font-size:11px!important}
+ .dw-production-v3 .dw-prod-spotlight{grid-template-columns:minmax(0,39%) minmax(0,61%)}
+ .dw-production-v3 .dw-prod-spotlight-copy{min-width:0;padding:10px!important}
+ .dw-production-v3 .dw-method-grid{grid-template-columns:1fr!important}
+ .dw-production-v3 .dw-method-visual{width:100%!important;min-width:0!important}
+}
+

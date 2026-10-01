@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><base href="../">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Production | Danger Wear Production</title>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="css/global.css" rel="stylesheet"/>
+<link href="css/menu.css?v=20260927-consolidated1" rel="stylesheet"/>
+<link href="css/produkcja.css?v=20260919-production-v2" rel="stylesheet"/>
+<link href="css/socials.css?v=20260918-final-v5" rel="stylesheet"/>
+<link href="css/footer.css?v=20260918-final-v5" rel="stylesheet"/>
+<link href="css/zamow.css" rel="stylesheet"/>
+<link href="css/technical-fixes.css" rel="stylesheet"/><meta content="Production — Danger Wear. Custom apparel, sublimation printing and promotional products." name="description"/><link href="css/dangerwear.css" rel="stylesheet"/><link href="css/product-update.css" rel="stylesheet"/><link href="css/mobile.css?v=20260927-consolidated1" rel="stylesheet"/>
+<style>
+/* Danger Wear / Produkcja v3: isolated page design; shared navigation/footer untouched */
+body.dw-production-v3{background:#0b0d0f;color:#f5f5f5}
+.dw-production-v3 .proc-main{display:block;flex:1;width:100%;padding:0;background:#0b0d0f;min-width:0}
+.dw-production-v3 .dw-prod-shell{max-width:1416px;margin-inline:auto;padding-inline:clamp(20px,3.8vw,58px)}
+.dw-production-v3 .dw-prod-hero{min-height:clamp(410px,38vw,560px);display:flex;align-items:center;border-bottom:1px solid #343434}
+.dw-production-v3 .dw-prod-hero::before{background:linear-gradient(90deg,#0b0d0f 0%,rgba(11,13,15,.90) 30%,rgba(11,13,15,.24) 78%,rgba(11,13,15,.40)),var(--hero) 58% center/cover}
+.dw-production-v3 .dw-prod-hero h1{font-size:clamp(46px,6.2vw,84px);line-height:1.02;max-width:880px;margin-bottom:24px}
+.dw-production-v3 .dw-prod-hero p:last-child{font-size:clamp(15px,1.35vw,19px);line-height:1.72;max-width:640px}
+.dw-production-v3 .dw-prod-process{padding-block:clamp(66px,7vw,108px) clamp(80px,8vw,126px)}
+.dw-production-v3 .dw-prod-heading{text-align:left;max-width:940px;margin-bottom:clamp(32px,4vw,56px)}
+.dw-production-v3 .dw-prod-overline{display:block;font:600 12px/1.4 'Chakra Petch',sans-serif;letter-spacing:.24em;color:#BF1304;margin-bottom:14px}
+.dw-production-v3 .dw-prod-heading h2{font:700 clamp(32px,4.2vw,57px)/1.09 'Chakra Petch',sans-serif;letter-spacing:-.025em;margin:0 0 18px}
+.dw-production-v3 .dw-prod-heading p{font-size:clamp(15px,1.3vw,18px);line-height:1.65;max-width:790px;color:#bcbfc2}
+.dw-prod-spotlight{display:grid;grid-template-columns:54% 46%;min-height:clamp(400px,37vw,520px);background:linear-gradient(110deg,#151719,#0c0e10);border:1px solid #414247;overflow:hidden;margin-bottom:35px}
+.dw-prod-spotlight-image{min-height:100%;position:relative;overflow:hidden;background:#181818}
+.dw-prod-spotlight-image::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 64%,#101214 100%);pointer-events:none}
+.dw-prod-spotlight-image img{width:100%;height:100%;display:block;object-fit:cover;filter:saturate(.83);transition:opacity .32s,transform 1s cubic-bezier(.2,.8,.2,1);transform:scale(1.01)}
+.dw-prod-spotlight.is-changing .dw-prod-spotlight-image img{opacity:.64;transform:scale(1.055)}
+.dw-prod-spotlight-copy{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:clamp(32px,4.6vw,75px);position:relative}
+.dw-prod-spotlight-copy::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(#BF1304,transparent 85%)}
+.dw-prod-spotlight-counter{font:700 13px 'Chakra Petch',sans-serif;color:#BF1304;letter-spacing:.22em;margin-bottom:21px}
+.dw-prod-spotlight h3{font:700 clamp(31px,3.5vw,51px)/1.12 'Chakra Petch',sans-serif;text-transform:uppercase;margin:0 0 28px;letter-spacing:-.02em}
+.dw-prod-spotlight-lead{color:#f0f0f0;font-size:clamp(16px,1.45vw,21px);line-height:1.6;margin:0 0 20px;font-weight:500}
+.dw-prod-spotlight-more{font-size:clamp(14px,1.17vw,17px);line-height:1.75;color:#bcc0c4;margin:0 0 35px}
+.dw-prod-spotlight-bottom{color:#767c81;font:600 11px 'Chakra Petch',sans-serif;letter-spacing:.22em;margin-top:auto}
+.dw-prod-spotlight-bottom span{color:#BF1304;padding:0 10px}
+.dw-prod-path-viewport{overflow-x:auto;scrollbar-width:thin;scrollbar-color:#414141 #111;scroll-padding:20px}
+.dw-prod-path{min-width:780px}
+.dw-prod-stages{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.55vw,24px)}
+.dw-production-v3 .dw-prod-stage{display:flex;min-height:352px;flex-direction:column;position:relative;overflow:hidden;color:#fff;background:#111315;border:1px solid #34383b;padding:0 22px 25px;text-align:left;cursor:pointer;transition:border-color .35s,box-shadow .35s,transform .35s}
+.dw-prod-stage:hover,.dw-prod-stage:focus-visible,.dw-prod-stage.is-active{border-color:#BF1304;outline:none;box-shadow:0 20px 36px rgba(0,0,0,.25)}
+.dw-prod-stage:hover{transform:translateY(-4px)}
+.dw-prod-stage:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.dw-prod-stage-visual{height:155px;display:block;margin:0 -22px 21px;overflow:hidden;position:relative}
+.dw-prod-stage-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,#111315)}
+.dw-prod-stage-visual img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.75);transition:filter .4s,transform .65s}
+.dw-prod-stage:hover .dw-prod-stage-visual img,.dw-prod-stage.is-active .dw-prod-stage-visual img{filter:saturate(1);transform:scale(1.06)}
+.dw-prod-stage-main{display:flex;align-items:flex-start;gap:14px;margin-bottom:15px}
+.dw-prod-stage-num{font:700 clamp(24px,2.6vw,38px)/1 'Chakra Petch',sans-serif;color:#BF1304}
+.dw-prod-stage-title{font:700 clamp(14px,1.4vw,19px)/1.24 'Chakra Petch',sans-serif;text-transform:uppercase;letter-spacing:.005em}
+.dw-prod-stage-caption{font-size:clamp(13px,1vw,15px);color:#c3c7ca;line-height:1.65}
+.dw-prod-progress{height:48px;position:relative;margin:12px 0 0}
+.dw-prod-progress-line{position:absolute;top:23px;left:12.5%;right:12.5%;height:2px;background:#353a3e}
+.dw-prod-progress-line::before,.dw-prod-progress-line::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,#BF1304,transparent);opacity:.17}
+.dw-prod-progress-tracer{position:absolute;top:16px;left:var(--stage-pos,12.5%);height:16px;width:16px;border-radius:50%;background:#BF1304;border:3px solid #0b0d0f;box-shadow:0 0 0 2px #BF1304,0 0 22px rgba(191,19,4,.6);transform:translateX(-50%);transition:left 1s cubic-bezier(.24,.7,.2,1)}
+.dw-prod-path-hint{font-size:12px;color:#888e93;margin:8px 0 0;letter-spacing:.04em}
+.dw-production-v3 .dw-prod-methods{border-top:1px solid #373737;padding:clamp(75px,8vw,125px) 0 clamp(90px,9vw,145px);background:#0b0d0f}
+.dw-prod-method-list{display:grid;gap:clamp(24px,3.2vw,48px)}
+.dw-production-v3 .dw-prod-method{display:block;margin:0;min-height:0;background:#111315;border:1px solid #373b3e;scroll-margin-top:clamp(95px,9vw,135px);transition:border-color .25s,background .25s,box-shadow .25s}
+.dw-production-v3 .dw-prod-method.is-open{background:#141618;border-color:#575d60;box-shadow:0 12px 52px rgba(0,0,0,.20)}
+.dw-method-grid{display:grid;grid-template-columns:minmax(220px,33%) minmax(0,1fr);min-height:178px}
+.dw-method-visual{position:relative;min-height:178px;background:#1c1d1e;overflow:hidden;transition:min-height .42s ease}
+.dw-method-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 50%,rgba(17,19,21,.50));pointer-events:none}
+.dw-prod-method.is-open .dw-method-visual{min-height:370px}
+.dw-method-visual>img{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.8);transition:filter .3s,transform .5s}
+.dw-prod-method.is-open .dw-method-visual>img{filter:saturate(1);transform:scale(1.02)}
+.dw-method-icon{position:absolute;z-index:1;bottom:18px;right:18px;background:rgba(11,13,15,.93);border:1px solid #494e51;display:flex;width:74px;height:74px;padding:9px;align-items:center;justify-content:center;box-shadow:0 12px 28px rgba(0,0,0,.45)}
+.dw-method-icon img{max-width:100%;max-height:100%;width:100%;height:100%;object-fit:contain}
+.dw-method-monogram{font:700 20px 'Chakra Petch',sans-serif;color:#ddd;letter-spacing:.06em}
+.dw-method-info{display:flex;flex-direction:column;min-width:0}
+.dw-method-toggle{width:100%;flex:1;min-height:178px;padding:clamp(24px,3vw,43px) clamp(23px,3.2vw,54px);display:flex;justify-content:space-between;align-items:center;gap:28px;text-align:left;background:transparent;border:0;color:#f2f3f3;cursor:pointer}
+.dw-method-toggle:hover,.dw-method-toggle:focus-visible{background:#1a1d20;outline:0}
+.dw-method-toggle:focus-visible{outline:2px solid #BF1304;outline-offset:-4px}
+.dw-method-title-wrap{display:flex;flex-direction:column;min-width:0}
+.dw-prod-method-num{font:700 12px 'Chakra Petch',sans-serif;letter-spacing:.18em;color:#BF1304}
+.dw-method-title{font:700 clamp(24px,2.8vw,39px)/1.14 'Chakra Petch',sans-serif;text-transform:uppercase;margin:0 0 9px}
+.dw-method-teaser{font-size:clamp(13px,1.1vw,16px);line-height:1.65;color:#acb1b6}
+.dw-method-expand{border:1px solid #5a6064;color:#f7f7f7;display:grid;flex:none;place-items:center;width:54px;height:54px;font:300 35px 'Chakra Petch',sans-serif;line-height:1;transition:background .3s,border-color .3s,transform .3s}
+.dw-method-toggle:hover .dw-method-expand,.dw-prod-method.is-open .dw-method-expand{background:#BF1304;border-color:#BF1304}
+.dw-prod-method.is-open .dw-method-expand{transform:rotate(45deg)}
+.dw-prod-method.is-open .dw-method-toggle{min-height:148px;flex:0 0 auto;padding-bottom:18px}
+.dw-prod-method.is-open .dw-method-teaser{display:none}
+.dw-method-details{padding:0 clamp(23px,3.2vw,54px) 38px;color:#d0d3d5;animation:dw-method-reveal .32s ease both}
+.dw-method-details[hidden]{display:none}
+.dw-method-details p{font-size:clamp(15px,1.2vw,18px);line-height:1.8;color:#c6cbd0;margin:0 0 25px;max-width:850px}
+.dw-prod-features{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 20px;list-style:none;margin:0;padding:24px 0 0;border-top:1px solid #373b3e}
+.dw-prod-features li{font-size:clamp(13px,1.07vw,16px);line-height:1.58;color:#edf0f1}
+.dw-prod-features li::before{content:'✓';color:#BF1304;font-weight:700;margin-right:10px}
+@keyframes dw-method-reveal{from{opacity:0;transform:translateY(-7px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:900px){
+ .dw-prod-spotlight{grid-template-columns:50% 50%;min-height:430px}
+ .dw-prod-spotlight-copy{padding:28px}
+ .dw-prod-spotlight h3{font-size:31px}
+ .dw-prod-path{min-width:830px}
+ .dw-prod-path-viewport{margin-inline:-18px;padding:0 18px}
+ .dw-method-grid{grid-template-columns:minmax(190px,34%) minmax(0,1fr)}
+ .dw-method-icon{width:62px;height:62px}
+}
+@media(max-width:640px){
+ .dw-production-v3 .dw-prod-shell{padding-inline:20px}
+ .dw-production-v3 .dw-prod-hero{min-height:400px}
+ .dw-production-v3 .dw-prod-hero::before{background:linear-gradient(90deg,rgba(11,13,15,.96),rgba(11,13,15,.78) 55%,rgba(11,13,15,.30)),var(--hero) center/cover}
+ .dw-production-v3 .dw-prod-hero h1{font-size:clamp(37px,9vw,53px)}
+ .dw-production-v3 .dw-prod-heading h2{font-size:clamp(31px,7vw,42px)}
+ .dw-prod-spotlight{grid-template-columns:1fr;min-height:0}
+ .dw-prod-spotlight-image{height:clamp(240px,65vw,380px)}
+ .dw-prod-spotlight-image::after{background:linear-gradient(180deg,transparent 55%,#101214)}
+ .dw-prod-spotlight-copy{padding:30px 26px 34px}
+ .dw-prod-spotlight-copy::before{height:3px;width:100%}
+ .dw-prod-spotlight h3{font-size:clamp(29px,7vw,37px);margin-bottom:17px}
+ .dw-prod-spotlight-lead{font-size:17px}
+ .dw-prod-spotlight-more{font-size:15px;margin-bottom:27px}
+ .dw-prod-path{min-width:830px}
+ .dw-prod-path-hint{line-height:1.6}
+ .dw-method-grid{grid-template-columns:1fr}
+ .dw-method-visual,.dw-prod-method.is-open .dw-method-visual{min-height:0;height:clamp(155px,36vw,240px)}
+ .dw-prod-method.is-open .dw-method-visual{height:clamp(245px,63vw,360px)}
+ .dw-method-visual::after{background:linear-gradient(180deg,transparent 45%,rgba(17,19,21,.56))}
+ .dw-method-toggle,.dw-prod-method.is-open .dw-method-toggle{min-height:142px;padding:24px;gap:15px}
+ .dw-method-title{font-size:clamp(24px,6vw,31px)}
+ .dw-method-expand{width:43px;height:43px;font-size:27px}
+ .dw-method-details{padding:0 24px 28px}
+ .dw-prod-features{grid-template-columns:1fr;gap:12px}
+ .dw-method-icon{bottom:13px;right:13px;width:60px;height:60px}
+}
+@media(prefers-reduced-motion:reduce){.dw-prod-spotlight-image img,.dw-prod-progress-tracer,.dw-prod-stage,.dw-method-visual,.dw-method-expand{transition:none!important}.dw-method-details{animation:none!important}}
+
+
+/* PRODUKCJA v4 — video hero + interactive route / desktop and mobile */
+.dw-prod-sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.dw-production-v3 .dw-prod-hero{height:clamp(215px,37svh,375px);min-height:0!important;max-height:calc(100svh - 115px);display:block!important;position:relative!important;isolation:isolate;overflow:hidden;background:#111315;flex:none}
+.dw-production-v3 .dw-prod-hero::before{content:none!important;display:none!important}
+.dw-production-v3 .dw-prod-hero::after{content:''!important;position:absolute;z-index:1;inset:0;background:linear-gradient(90deg,rgba(9,11,12,.24),rgba(9,11,12,.05) 55%,rgba(9,11,12,.24));pointer-events:none}
+.dw-prod-hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 48%;display:block;filter:saturate(.85) brightness(.81)}
+.dw-production-v3 .dw-prod-process{padding-block:0 clamp(70px,7vw,110px)!important}
+.dw-production-v3 .dw-prod-process>h2{margin:0}
+.dw-prod-progress-wrap{margin:0 auto;padding:18px 0 14px;position:relative;background:#0b0d0f;border-bottom:1px solid #292d2f}
+.dw-prod-route-bar{position:relative;width:100%;height:45px;display:flex;align-items:center;justify-content:space-between;isolation:isolate}
+.dw-prod-route-line{position:absolute;z-index:0;top:50%;left:12.5%;right:12.5%;height:3px;transform:translateY(-50%);background:radial-gradient(circle,#585f62 1.5px,transparent 1.7px) left center/12px 3px repeat-x;pointer-events:none}
+.dw-prod-route-line::after{content:'';position:absolute;left:0;top:0;width:var(--route-fill,0%);height:100%;background:repeating-linear-gradient(90deg,#BF1304 0 5px,transparent 5px 12px);transition:width .6s ease}
+.dw-prod-route-node{position:absolute;top:50%;left:calc(12.5% + var(--node-index)*25%);transform:translate(-50%,-50%);z-index:2;display:grid;place-items:center;border:1px solid #50565a;border-radius:999px;background:#111315;color:#a6aaae;font:700 11px 'Chakra Petch',sans-serif;width:34px;height:34px;padding:0;cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+.dw-prod-route-node:hover,.dw-prod-route-node:focus-visible,.dw-prod-route-node.is-active{border-color:#BF1304;background:#BF1304;color:white;outline:none}
+.dw-prod-route-node.is-active::after{content:'';position:absolute;inset:-8px;border:1px solid #BF1304;border-radius:50%;animation:dw-prod-route-pulse 2.1s ease-out infinite;pointer-events:none}
+@keyframes dw-prod-route-pulse{0%{opacity:.8;transform:scale(.72)}100%{opacity:0;transform:scale(1.36)}}
+#dwProdSlider{z-index:3;appearance:none;-webkit-appearance:none;position:absolute;top:50%;left:12.5%;width:75%;height:42px;transform:translateY(-50%);margin:0;background:transparent;cursor:grab;touch-action:pan-y}
+#dwProdSlider:active{cursor:grabbing}
+#dwProdSlider::-webkit-slider-runnable-track{height:4px;background:transparent}
+#dwProdSlider::-moz-range-track{height:4px;background:transparent}
+#dwProdSlider::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;margin-top:-8px;width:20px;height:20px;border:3px solid #0b0d0f;border-radius:50%;background:#BF1304;box-shadow:0 0 0 2px #BF1304,0 0 20px rgba(191,19,4,.8);cursor:grab}
+#dwProdSlider::-moz-range-thumb{width:15px;height:15px;border:3px solid #0b0d0f;border-radius:50%;background:#BF1304;box-shadow:0 0 0 2px #BF1304,0 0 20px rgba(191,19,4,.8);cursor:grab}
+#dwProdSlider:focus-visible{outline:2px solid white;outline-offset:3px}
+.dw-prod-route-hint{text-align:center;font-size:12px;line-height:1.5;color:#969da1;margin:2px auto 0;letter-spacing:.02em}
+.dw-production-v3 .dw-prod-path-viewport{padding-top:20px}
+.dw-production-v3 .dw-prod-stages{gap:clamp(10px,1.3vw,19px)}
+.dw-production-v3 .dw-prod-stage{min-height:clamp(235px,22vw,285px)!important;padding:0 17px 18px}
+.dw-production-v3 .dw-prod-stage-visual{height:clamp(108px,11.8vw,138px);margin:0 -17px 14px}
+.dw-production-v3 .dw-prod-stage-num{font-size:clamp(24px,2.35vw,34px)}
+.dw-production-v3 .dw-prod-stage-title{font-size:clamp(14px,1.28vw,18px)}
+.dw-production-v3 .dw-prod-stage-caption{font-size:clamp(12px,1vw,14px);line-height:1.5}
+.dw-production-v3 .dw-prod-spotlight{margin-top:clamp(30px,3.7vw,54px);margin-bottom:0;min-height:clamp(330px,32vw,440px)}
+.dw-production-v3 .dw-prod-spotlight-copy{padding:clamp(25px,3.5vw,55px)}
+.dw-production-v3 .dw-prod-spotlight h3{font-size:clamp(29px,3vw,43px);margin-bottom:18px}
+.dw-production-v3 .dw-prod-methods{padding-top:clamp(65px,7vw,115px)}
+@media(max-width:900px){
+.dw-production-v3 .dw-prod-hero{height:clamp(205px,31svh,310px)}
+.dw-production-v3 .dw-prod-path-viewport{padding-top:18px;overflow-x:auto}
+.dw-production-v3 .dw-prod-path{min-width:720px}
+.dw-production-v3 .dw-prod-stage{min-height:255px!important}
+.dw-production-v3 .dw-prod-stage-visual{height:126px}
+.dw-production-v3 .dw-prod-spotlight{grid-template-columns:49% 51%;min-height:360px}
+}
+@media(max-width:640px){
+.dw-production-v3 .dw-prod-hero{height:clamp(168px,28svh,245px);max-height:calc(100svh - 92px)}
+.dw-prod-hero video{object-position:57% center}
+.dw-prod-progress-wrap{padding-top:13px;padding-bottom:12px}
+.dw-prod-route-bar{height:42px}
+.dw-prod-route-node{width:30px;height:30px;font-size:10px}
+.dw-prod-route-node.is-active::after{inset:-5px}
+#dwProdSlider::-webkit-slider-thumb{width:17px;height:17px;margin-top:-6px}
+.dw-prod-route-hint{font-size:10px;max-width:330px;padding:0 10px;line-height:1.4}
+.dw-production-v3 .dw-prod-path-viewport{margin-inline:-20px;padding:12px 20px 6px;scroll-snap-type:x proximity}
+.dw-production-v3 .dw-prod-path{min-width:0;width:max-content}
+.dw-production-v3 .dw-prod-stages{grid-template-columns:repeat(4, minmax(0, 1fr));gap:12px}
+.dw-production-v3 .dw-prod-stage{width:clamp(175px,57vw,225px);min-height:229px!important;padding:0 13px 17px;scroll-snap-align:start}
+.dw-production-v3 .dw-prod-stage-visual{height:103px;margin:0 -13px 10px}
+.dw-production-v3 .dw-prod-stage-main{gap:8px;margin-bottom:7px}
+.dw-production-v3 .dw-prod-stage-num{font-size:25px}
+.dw-production-v3 .dw-prod-stage-title{font-size:13px}
+.dw-production-v3 .dw-prod-stage-caption{font-size:12px;line-height:1.42}
+.dw-production-v3 .dw-prod-spotlight{grid-template-columns:1fr;min-height:0;margin-top:30px}
+.dw-production-v3 .dw-prod-spotlight-image{height:clamp(195px,52vw,300px)}
+.dw-production-v3 .dw-prod-spotlight-copy{padding:24px}
+.dw-production-v3 .dw-prod-spotlight h3{font-size:clamp(27px,7.1vw,37px)}
+.dw-production-v3 .dw-prod-methods{padding-top:66px}
+}
+@media(prefers-reduced-motion:reduce){.dw-prod-route-node.is-active::after{animation:none!important;opacity:.5} .dw-prod-route-line::after{transition:none!important}}
+
+/* PRODUKCJA CONTENT WIDTH — align with global footer/product content */
+@media (min-width:901px){
+  .dw-production-v3 .dw-prod-shell{
+    width:min(var(--dw-content-max,1180px),calc(100% - 64px))!important;
+    max-width:var(--dw-content-max,1180px)!important;
+    margin-inline:auto!important;
+    padding-inline:0!important;
+  }
+}
+@media (max-width:900px){
+  .dw-production-v3 .dw-prod-shell{
+    width:calc(100% - 24px)!important;
+    max-width:none!important;
+    margin-inline:auto!important;
+    padding-inline:0!important;
+  }
+}
+
+</style><style>/* Produkcja v6 — cztery fotograficzne karty + przesuwalna sciezka POD kartami (referencja uzytkownika). */
+.dw-production-v3 .dw-prod-process{padding-top:clamp(17px,2vw,30px)!important;padding-bottom:clamp(45px,5vw,78px)!important}
+.dw-production-v3 .dw-prod-path-viewport{overflow:visible;scrollbar-width:none;padding:0;margin:0!important}
+.dw-production-v3 .dw-prod-path{min-width:0;width:100%;margin:0}
+.dw-production-v3 .dw-prod-stages{grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.3vw,20px);margin:0}
+.dw-production-v3 .dw-prod-stage{min-width:0;width:100%;min-height:282px!important;padding:0 18px 22px;background:#121416;border:1px solid #292d30;border-top-color:#363a3e;box-shadow:none;transform:none}
+.dw-production-v3 .dw-prod-stage-visual{height:145px;margin:0 -18px 13px;flex-shrink:0}
+.dw-production-v3 .dw-prod-stage-visual::after{background:linear-gradient(180deg,rgba(11,13,15,0) 28%,#121416 98%)}
+.dw-production-v3 .dw-prod-stage-visual img{filter:saturate(.72) brightness(.8)}
+.dw-production-v3 .dw-prod-stage.is-active{border-color:#BF1304;box-shadow:0 0 0 1px rgba(191,19,4,.6),0 0 20px rgba(191,19,4,.18)}
+.dw-production-v3 .dw-prod-stage.is-active .dw-prod-stage-visual img{filter:saturate(1) brightness(1)}
+.dw-production-v3 .dw-prod-stage-main{gap:12px;margin-bottom:12px;align-items:flex-start}
+.dw-production-v3 .dw-prod-stage-num{font-size:clamp(24px,2.3vw,31px);line-height:1}
+.dw-production-v3 .dw-prod-stage-title{font-size:clamp(12px,1.18vw,16px);line-height:1.25;padding-top:3px;letter-spacing:0}
+.dw-production-v3 .dw-prod-stage-caption{font-size:clamp(12px,1.03vw,14px);line-height:1.54;color:#c5c8ca}
+.dw-production-v3 .dw-prod-progress-wrap{margin:0!important;padding:0 0 3px!important;background:transparent;border:0}
+.dw-production-v3 .dw-prod-route-bar{height:46px;margin:0 auto}
+.dw-production-v3 .dw-prod-route-node{width:36px;height:36px;font-size:11px;background:#111315;color:#dedede;border-color:#495056}
+.dw-production-v3 .dw-prod-route-node.is-active{background:#121416;border-color:#BF1304;color:#fff;box-shadow:0 0 0 3px rgba(191,19,4,.17)}
+.dw-production-v3 .dw-prod-route-node.is-active::after{inset:-7px}
+.dw-production-v3 .dw-prod-route-line{height:3px;background:radial-gradient(circle,#606466 1.5px,transparent 1.9px) left center/12px 3px repeat-x}
+.dw-production-v3 .dw-prod-route-line::after{background:repeating-linear-gradient(90deg,#BF1304 0 6px,transparent 6px 12px)}
+.dw-production-v3 #dwProdSlider{z-index:4;height:45px;touch-action:pan-y}
+.dw-production-v3 #dwProdSlider::-webkit-slider-thumb{width:36px;height:36px;margin-top:-16px;background:transparent;border:0;box-shadow:none}
+.dw-production-v3 #dwProdSlider::-moz-range-thumb{width:36px;height:36px;background:transparent;border:0;box-shadow:none}
+.dw-production-v3 .dw-prod-methods{padding-top:clamp(60px,6vw,100px)}
+@media(max-width:900px){
+ .dw-production-v3 .dw-prod-process{padding-top:16px!important;padding-bottom:42px!important}
+ .dw-production-v3 .dw-prod-path-viewport{margin:0 -20px!important;padding:0 20px 3px!important;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none}
+ .dw-production-v3 .dw-prod-path-viewport::-webkit-scrollbar{display:none}
+ .dw-production-v3 .dw-prod-path{width:max-content;min-width:0}
+ .dw-production-v3 .dw-prod-stages{display:flex;gap:12px}
+ .dw-production-v3 .dw-prod-stage{flex:0 0 clamp(225px,62vw,300px);width:clamp(225px,62vw,300px);min-height:287px!important;padding:0 16px 18px;scroll-snap-align:center}
+ .dw-production-v3 .dw-prod-stage-visual{height:140px;margin:0 -16px 13px}
+ .dw-production-v3 .dw-prod-stage-title{font-size:15px}
+ .dw-production-v3 .dw-prod-stage-caption{font-size:13px;line-height:1.48}
+ .dw-production-v3 .dw-prod-progress-wrap{padding:8px 0 0!important}
+ .dw-production-v3 .dw-prod-route-bar{height:52px}
+ .dw-production-v3 .dw-prod-route-node{width:31px;height:31px;font-size:10px}
+ .dw-production-v3 #dwProdSlider::-webkit-slider-thumb{width:34px;height:34px;margin-top:-15px}
+ .dw-production-v3 #dwProdSlider::-moz-range-thumb{width:34px;height:34px}
+}
+@media(max-width:480px){
+ .dw-production-v3 .dw-prod-stage{flex-basis:74vw;width:74vw;min-height:276px!important}
+ .dw-production-v3 .dw-prod-stage-visual{height:133px}
+ .dw-production-v3 .dw-prod-route-bar{height:47px}
+ .dw-production-v3 .dw-prod-stage-main{gap:10px;margin-bottom:10px}
+ .dw-production-v3 .dw-prod-stage-num{font-size:27px}
+}
+@media(prefers-reduced-motion:reduce){.dw-production-v3 .dw-prod-route-node.is-active::after{animation:none}}
+</style><style>
+/* Produkcja v5 — compact interactive process + methods */
+.dw-production-v3 .dw-prod-process{padding-block:clamp(18px,2.2vw,34px) clamp(56px,6vw,88px)}
+.dw-production-v3 .dw-prod-spotlight{grid-template-columns:minmax(0,42%) minmax(0,58%);min-height:clamp(250px,25vw,360px);margin:0 0 clamp(16px,2vw,26px);border-color:#292d30}
+.dw-production-v3 .dw-prod-spotlight-image{min-height:0;height:100%}
+.dw-production-v3 .dw-prod-spotlight-image img{height:100%;min-height:250px;object-fit:cover}
+.dw-production-v3 .dw-prod-spotlight-copy{padding:clamp(24px,3vw,44px);justify-content:center}
+.dw-production-v3 .dw-prod-spotlight-copy h3{font-size:clamp(25px,2.7vw,40px);line-height:1.03;margin-bottom:12px}
+.dw-production-v3 .dw-prod-spotlight-copy p{max-width:660px;line-height:1.55}
+.dw-production-v3 .dw-prod-progress-wrap{margin:0 0 clamp(18px,2.2vw,30px);padding:8px 0 0}
+.dw-production-v3 .dw-prod-route-hint{margin-top:10px}
+.dw-production-v3 .dw-prod-path-viewport{margin:0}
+.dw-production-v3 .dw-prod-path{margin:0}
+.dw-production-v3 .dw-prod-stages{margin-top:0}
+.dw-production-v3 .dw-prod-methods{padding-top:clamp(62px,7vw,100px)}
+.dw-production-v3 .dw-method-grid{grid-template-columns:minmax(190px,31%) minmax(0,69%)}
+.dw-production-v3 .dw-method-visual{min-width:0}
+.dw-production-v3 .dw-method-visual>img{width:100%;height:100%;object-fit:cover}
+@media(max-width:760px){
+ .dw-production-v3 .dw-prod-process{padding-top:12px}
+ .dw-production-v3 .dw-prod-spotlight{display:grid;grid-template-columns:42% 58%;min-height:178px;margin-bottom:12px}
+ .dw-production-v3 .dw-prod-spotlight-image img{min-height:178px}
+ .dw-production-v3 .dw-prod-spotlight-copy{padding:15px 14px}
+ .dw-production-v3 .dw-prod-spotlight-copy h3{font-size:clamp(18px,5.2vw,24px);margin-bottom:7px}
+ .dw-production-v3 .dw-prod-spotlight-copy p{font-size:11px;line-height:1.38;margin-bottom:6px}
+ .dw-production-v3 .dw-prod-spotlight-copy .dw-prod-overline{font-size:8px;margin-bottom:6px}
+ .dw-production-v3 .dw-prod-progress-wrap{margin-bottom:12px}
+ .dw-production-v3 .dw-prod-route-hint{font-size:9px;white-space:normal}
+ .dw-production-v3 .dw-method-grid{grid-template-columns:34% 66%}
+}
+@media(max-width:460px){
+ .dw-production-v3 .dw-prod-spotlight{grid-template-columns:40% 60%;min-height:160px}
+ .dw-production-v3 .dw-prod-spotlight-image img{min-height:160px}
+ .dw-production-v3 .dw-prod-spotlight-copy{padding:12px 11px}
+ .dw-production-v3 .dw-prod-spotlight-copy p#dwSpotlightMore{display:none}
+ .dw-production-v3 .dw-method-grid{grid-template-columns:31% 69%}
+}
+</style><style>
+/* PRODUKCJA v7 — one coherent interactive sequence; movement visible while dragging. */
+.dw-production-v3 .dw-prod-path-viewport{position:relative}
+.dw-production-v3 .dw-prod-stage{transition:border-color .18s ease,box-shadow .18s ease,background-color .18s ease,transform .28s ease!important;isolation:isolate}
+.dw-production-v3 .dw-prod-stage::before{content:'';position:absolute;z-index:3;inset:0;border:1px solid transparent;pointer-events:none;opacity:0;background:linear-gradient(110deg,transparent 29%,rgba(191,19,4,.14) 49%,transparent 68%);background-size:260% 100%;background-position:130% 0}
+.dw-production-v3 .dw-prod-stage.is-active{border-color:#BF1304!important;background:#161617!important;box-shadow:0 0 0 1px #BF1304,0 0 22px rgba(191,19,4,.32),inset 0 0 35px rgba(191,19,4,.055)!important}
+.dw-production-v3 .dw-prod-stage.is-active .dw-prod-stage-num{color:#e5382c;text-shadow:0 0 14px rgba(191,19,4,.34)}
+.dw-production-v3 .dw-prod-stage.is-active .dw-prod-stage-visual img{filter:saturate(1) brightness(1.08)!important}
+.dw-production-v3 .dw-prod-stage.is-glitch::before{animation:dw-card-sweep .43s steps(6,end) both;opacity:1}
+.dw-production-v3 .dw-prod-stage.is-glitch .dw-prod-stage-title{text-shadow:2px 0 #BF1304,-2px 0 rgba(255,255,255,.63);animation:dw-title-glitch .30s steps(3,end) both}
+@keyframes dw-card-sweep{0%{background-position:130% 0;opacity:0}15%{opacity:.9}100%{background-position:-80% 0;opacity:0}}
+@keyframes dw-title-glitch{0%,100%{transform:none;text-shadow:none}25%{transform:translateX(2px)}50%{transform:translateX(-1px)}75%{transform:translateX(1px)}}
+.dw-production-v3 .dw-prod-route-bar{touch-action:pan-y;user-select:none;-webkit-user-select:none;cursor:pointer;isolation:isolate}
+.dw-production-v3 .dw-prod-route-bar.is-dragging{cursor:grabbing;touch-action:none}
+.dw-production-v3 .dw-prod-route-node{z-index:2;transition:border-color .15s,box-shadow .15s,color .15s;background-color .15s}
+.dw-production-v3 .dw-prod-route-node.is-active{box-shadow:0 0 0 1px #BF1304,0 0 18px rgba(191,19,4,.35)}
+.dw-production-v3 .dw-prod-route-node.is-active::after{display:none}
+.dw-production-v3 .dw-prod-route-line::after{transition:none!important;width:var(--route-fill,0%);filter:drop-shadow(0 0 4px rgba(191,19,4,.8))}
+.dw-production-v3 #dwProdSlider{z-index:1;opacity:0;pointer-events:none;touch-action:none}
+.dw-production-v3 #dwProdSlider:focus-visible{outline:none}
+.dw-production-v3 #dwProdSlider:focus-visible~.dw-prod-route-orb{outline:2px solid #fff;outline-offset:7px}
+.dw-production-v3 .dw-prod-route-orb{position:absolute;z-index:5;top:50%;left:var(--stage-pos,12.5%);width:35px;height:35px;border-radius:50%;display:grid;place-items:center;transform:translate(-50%,-50%);background:#151617;border:2px solid #BF1304;box-shadow:0 0 0 4px rgba(191,19,4,.13),0 0 24px rgba(191,19,4,.4);pointer-events:none;transition:left .55s cubic-bezier(.22,.78,.25,1),box-shadow .25s;filter:drop-shadow(0 0 1px #BF1304)}
+.dw-production-v3 .dw-prod-route-orb.is-glitch{animation:dw-orb-glitch .28s steps(3,end) 1}
+@keyframes dw-orb-glitch{0%,100%{filter:drop-shadow(0 0 2px #BF1304)}30%{filter:drop-shadow(3px 0 1px white) drop-shadow(-3px 0 3px #BF1304)}60%{filter:drop-shadow(-3px 0 1px white) drop-shadow(3px 0 2px #BF1304)}}
+.dw-production-v3 .dw-prod-route-orb::before{content:attr(data-number);color:#fff;font:700 11px/1 'Chakra Petch',sans-serif;letter-spacing:.02em}
+.dw-production-v3 .dw-prod-route-orb::after{content:'';position:absolute;inset:-7px;border:1px solid #BF1304;border-radius:50%;animation:dw-prod-route-pulse 1.7s ease-out infinite;pointer-events:none}
+.dw-production-v3 .dw-prod-route-bar.is-dragging .dw-prod-route-orb,.dw-production-v3 .dw-prod-route-bar.is-autoplay .dw-prod-route-orb{transition:none}
+.dw-production-v3 .dw-prod-route-bar.is-dragging .dw-prod-route-orb{box-shadow:0 0 0 6px rgba(191,19,4,.16),0 0 34px rgba(191,19,4,.72)}
+.dw-production-v3 .dw-prod-route-hint{padding-bottom:7px;color:#9fa4a7}
+@media(max-width:900px){
+ .dw-production-v3 .dw-prod-path-viewport{scroll-snap-type:x proximity!important}
+ .dw-production-v3 .dw-prod-route-orb{width:32px;height:32px}
+ .dw-production-v3 .dw-prod-route-node.is-active{box-shadow:0 0 0 1px #BF1304}
+}
+@media(prefers-reduced-motion:reduce){
+ .dw-production-v3 .dw-prod-route-orb,.dw-production-v3 .dw-prod-stage{transition:none!important}
+ .dw-production-v3 .dw-prod-route-orb::after,.dw-production-v3 .dw-prod-route-orb.is-glitch,.dw-production-v3 .dw-prod-stage.is-glitch::before,.dw-production-v3 .dw-prod-stage.is-glitch .dw-prod-stage-title{animation:none!important}
+}
+</style><style>
+/* v7 layout corrections after real desktop/mobile rendering. */
+.dw-production-v3 .dw-prod-process{padding-top:clamp(82px,7vw,100px)!important}
+.dw-production-v3 .dw-prod-route-hint{font-size:12px}
+@media(max-width:900px){
+ .dw-production-v3 .dw-prod-process{padding-top:76px!important}
+}
+@media(max-width:640px){
+ .dw-production-v3 .dw-prod-shell{padding-inline:16px!important}
+ .dw-production-v3 .dw-prod-path-viewport{margin:0 -16px!important;padding:0 16px 5px!important}
+ .dw-production-v3 .dw-prod-route-hint{font-size:11px;max-width:100%;line-height:1.5;padding:0 5px}
+ .dw-production-v3 .dw-method-grid{grid-template-columns:minmax(0,1fr)!important}
+ .dw-production-v3 .dw-method-visual{height:136px!important;min-height:136px!important}
+ .dw-production-v3 .dw-prod-method.is-open .dw-method-visual{height:190px!important;min-height:190px!important}
+ .dw-production-v3 .dw-method-toggle,.dw-production-v3 .dw-prod-method.is-open .dw-method-toggle{min-height:112px!important;padding:18px 16px!important;gap:16px}
+ .dw-production-v3 .dw-method-icon{width:53px!important;height:53px!important;right:13px!important;bottom:13px!important}
+ .dw-production-v3 .dw-method-title{font-size:clamp(23px,6.2vw,28px)!important;line-height:1.12}
+ .dw-production-v3 .dw-method-teaser{font-size:13px!important;line-height:1.5}
+ .dw-production-v3 .dw-method-expand{width:42px!important;height:42px!important}
+ .dw-production-v3 .dw-method-details{padding:0 18px 25px!important}
+ .dw-production-v3 .dw-prod-method-list{gap:18px}
+}
+</style><link rel="alternate" hreflang="pl" href="https://sydesignest2013.github.io/danger-wear-preview/produkcja.html"><link rel="alternate" hreflang="en" href="https://sydesignest2013.github.io/danger-wear-preview/en/produkcja.html"><link rel="alternate" hreflang="de" href="https://sydesignest2013.github.io/danger-wear-preview/de/produkcja.html"><link rel="alternate" hreflang="fr" href="https://sydesignest2013.github.io/danger-wear-preview/fr/produkcja.html"><link rel="alternate" hreflang="x-default" href="https://sydesignest2013.github.io/danger-wear-preview/produkcja.html"><link rel="canonical" href="https://sydesignest2013.github.io/danger-wear-preview/en/produkcja.html"><link rel="stylesheet" href="css/i18n.css?v=20260927-consolidated1"><style id="dw-prod-method-media-v1">
+.dw-prod-method[data-method="haft-komputerowy"] .dw-method-visual::after,.dw-prod-method[data-method="dtf"] .dw-method-visual::after{display:none!important}
+.dw-prod-method[data-method="haft-komputerowy"] .dw-method-visual>img,.dw-prod-method[data-method="dtf"] .dw-method-visual>img{object-fit:contain!important;object-position:center center!important;background:#101112;filter:none!important;transform:none!important}
+</style><style id="dw-production-video-css">
+/* Footage is displayed in full: portrait clips never crop logos, prints or equipment. */
+.dw-prod-method[data-method="sublimacja"] .dw-method-visual::after,.dw-prod-method[data-method="haft-komputerowy"] .dw-method-visual::after,.dw-prod-method[data-method="dtf"] .dw-method-visual::after{display:none!important}
+.dw-prod-method[data-method="sublimacja"] .dw-method-visual>img,.dw-prod-method[data-method="haft-komputerowy"] .dw-method-visual>img,.dw-prod-method[data-method="dtf"] .dw-method-visual>img{object-fit:contain!important;filter:none!important;transform:none!important;object-position:center!important}
+.dw-method-visual[data-dw-video] {isolation:isolate;background:#101112}
+.dw-method-visual[data-dw-video] .dw-method-video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;background:#101112;z-index:2;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .24s}
+.dw-method-visual.is-video-playing .dw-method-video{opacity:1;visibility:visible}
+.dw-method-visual.is-video-playing .dw-method-icon{opacity:0;pointer-events:none}
+.dw-method-video-toggle{position:absolute;left:11px;bottom:11px;z-index:4;border:1px solid rgba(255,255,255,.6);background:rgba(8,9,10,.88);color:#fff;min-height:36px;padding:6px 12px;font:700 11px 'Chakra Petch',sans-serif;letter-spacing:.08em;cursor:pointer;display:flex;align-items:center;gap:6px;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.dw-method-video-toggle:hover,.dw-method-video-toggle:focus-visible{border-color:#BF1304;outline:2px solid #BF1304;outline-offset:2px}
+.dw-method-video-toggle .dw-video-symbol::before{content:'▶'}
+.dw-method-visual.is-video-playing .dw-method-video-toggle .dw-video-symbol::before{content:'Ⅱ'}
+.dw-prod-stage[data-stage="2"] .dw-prod-stage-visual {background:#111;isolation:isolate}
+.dw-prod-stage[data-stage="2"] .dw-prod-stage-visual img{object-fit:cover;object-position:center 43%}
+.dw-prod-stage[data-stage="2"] .dw-stage-video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;background:#101112;opacity:0;pointer-events:none;z-index:2;transition:opacity .25s}
+.dw-prod-stage[data-stage="2"].is-video-playing .dw-stage-video{opacity:1}
+@media(max-width:640px){.dw-prod-method .dw-method-visual.is-video-playing{height:clamp(320px,112vw,545px)!important;min-height:320px!important}.dw-method-video-toggle{left:9px;bottom:9px;min-height:44px;padding:9px 12px}}
+@media(prefers-reduced-motion:reduce){.dw-method-video,.dw-stage-video{transition:none!important}}
+</style><link rel="stylesheet" href="css/dw-no-horizontal-v1.css?v=20260927-consolidated1"><link rel="stylesheet" href="css/produkcja-ui.css?v=20260927-consolidated1">
+
+<style id="dw-prod-methods-static-carousel-v1">
+/* Metody znakowania: stale rozwinięte + duży kwadratowy podgląd + karuzela zdjęć. */
+.dw-production-v3 .dw-prod-method-list{gap:clamp(26px,3vw,44px)!important}
+.dw-production-v3 .dw-prod-method{background:#111315!important;border:1px solid #373b3e!important;box-shadow:none!important;overflow:hidden}
+.dw-production-v3 .dw-method-grid{display:grid!important;grid-template-columns:minmax(330px,430px) minmax(0,1fr)!important;align-items:stretch;min-height:0!important}
+.dw-production-v3 .dw-method-visual{position:relative!important;width:100%!important;aspect-ratio:1/1!important;height:auto!important;min-height:0!important;background:#101112!important;overflow:hidden!important}
+.dw-production-v3 .dw-method-visual::after{display:none!important;content:none!important}
+.dw-production-v3 .dw-method-visual>img{display:block!important;position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;background:#101112!important;filter:none!important;transform:none!important;opacity:1;transition:opacity .35s ease!important}
+.dw-production-v3 .dw-method-visual>img.is-fading{opacity:0}
+.dw-production-v3 .dw-method-icon,.dw-production-v3 .dw-method-video,.dw-production-v3 .dw-method-video-toggle,.dw-production-v3 .dw-video-feedback{display:none!important}
+.dw-production-v3 .dw-method-info{display:flex!important;flex-direction:column!important;justify-content:center!important;padding:clamp(30px,4vw,58px)!important;min-width:0}
+.dw-production-v3 .dw-method-static-head{display:block;margin:0 0 24px;padding:0;background:transparent;color:#f2f3f3}
+.dw-production-v3 .dw-method-title-wrap{display:block!important}
+.dw-production-v3 .dw-prod-method-num{display:block;margin:0 0 9px;font:700 12px 'Chakra Petch',sans-serif;letter-spacing:.18em;color:#BF1304}
+.dw-production-v3 .dw-method-title{font:700 clamp(30px,3vw,44px)/1.12 'Chakra Petch',sans-serif!important;text-transform:uppercase;margin:0!important;letter-spacing:-.015em}
+.dw-production-v3 .dw-method-teaser,.dw-production-v3 .dw-method-expand{display:none!important}
+.dw-production-v3 .dw-method-details,.dw-production-v3 .dw-method-details[hidden]{display:block!important;padding:0!important;color:#d0d3d5!important;animation:none!important}
+.dw-production-v3 .dw-method-details p{font-size:clamp(15px,1.16vw,18px)!important;line-height:1.78!important;color:#c6cbd0!important;margin:0 0 26px!important;max-width:850px}
+.dw-production-v3 .dw-prod-features{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:13px 22px!important;margin:0!important;padding:23px 0 0!important}
+.dw-production-v3 .dw-prod-features li{font-size:clamp(13px,1vw,16px)!important;line-height:1.55!important}
+@media(max-width:1000px){
+ .dw-production-v3 .dw-method-grid{grid-template-columns:minmax(290px,39%) minmax(0,1fr)!important}
+ .dw-production-v3 .dw-method-info{padding:30px!important}
+}
+@media(max-width:700px){
+ .dw-production-v3 .dw-prod-method-list{gap:20px!important}
+ .dw-production-v3 .dw-method-grid{grid-template-columns:1fr!important}
+ .dw-production-v3 .dw-method-visual{width:100%!important;aspect-ratio:1/1!important;height:auto!important;min-height:0!important}
+ .dw-production-v3 .dw-method-info{padding:24px 20px 26px!important}
+ .dw-production-v3 .dw-method-static-head{margin-bottom:19px}
+ .dw-production-v3 .dw-method-title{font-size:clamp(27px,7vw,34px)!important}
+ .dw-production-v3 .dw-prod-features{grid-template-columns:1fr!important;gap:11px!important}
+}
+@media(prefers-reduced-motion:reduce){.dw-production-v3 .dw-method-visual>img{transition:none!important}}
+</style>
+
+<style id="dw-prod-methods-product-typography-v3">
+/* Metody znakowania — kompaktowa wysokość + typografia wg karty produktu MESH. */
+@media (min-width:1001px){
+  .dw-production-v3 .dw-prod-method-list{gap:22px!important}
+  .dw-production-v3 .dw-method-grid{
+    grid-template-columns:250px minmax(0,1fr)!important;
+    min-height:250px!important;
+    align-items:stretch!important;
+  }
+  .dw-production-v3 .dw-method-visual{
+    width:250px!important;
+    height:250px!important;
+    min-height:250px!important;
+    aspect-ratio:1/1!important;
+  }
+  .dw-production-v3 .dw-method-info{
+    min-height:250px!important;
+    padding:18px 28px!important;
+    justify-content:center!important;
+  }
+  .dw-production-v3 .dw-method-static-head{margin:0 0 14px!important}
+  .dw-production-v3 .dw-method-title-wrap{
+    display:flex!important;
+    align-items:center!important;
+    gap:11px!important;
+  }
+  .dw-production-v3 .dw-method-title-icon{
+    display:block!important;
+    flex:0 0 28px!important;
+    width:28px!important;
+    height:28px!important;
+    object-fit:contain!important;
+  }
+  .dw-production-v3 .dw-prod-method .dw-method-title{
+    font-family:"Chakra Petch",sans-serif!important;
+    font-size:38px!important;
+    line-height:.98!important;
+    font-weight:700!important;
+    letter-spacing:-.035em!important;
+    text-transform:uppercase!important;
+  }
+  .dw-production-v3 .dw-prod-method .dw-method-details p{
+    margin:0 0 12px!important;
+    max-width:none!important;
+    color:#bdbdbd!important;
+    font-family:"Chakra Petch",sans-serif!important;
+    font-size:14px!important;
+    line-height:1.58!important;
+    font-weight:400!important;
+  }
+  .dw-production-v3 .dw-prod-features{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:7px 20px!important;
+    margin:0!important;
+    padding:10px 0 0!important;
+    border-top:1px solid #1b1b1b!important;
+  }
+  .dw-production-v3 .dw-prod-method .dw-prod-features li{
+    color:#ededed!important;
+    font-family:"Chakra Petch",sans-serif!important;
+    font-size:13px!important;
+    line-height:1.4!important;
+    font-weight:500!important;
+  }
+  .dw-production-v3 .dw-prod-method .dw-prod-features li::before{
+    color:#BF1304!important;
+    margin-right:9px!important;
+  }
+}
+@media (min-width:701px) and (max-width:1000px){
+  .dw-production-v3 .dw-prod-method-list{gap:20px!important}
+  .dw-production-v3 .dw-method-grid{grid-template-columns:220px minmax(0,1fr)!important;min-height:220px!important}
+  .dw-production-v3 .dw-method-visual{width:220px!important;height:220px!important;min-height:220px!important;aspect-ratio:1/1!important}
+  .dw-production-v3 .dw-method-info{min-height:220px!important;padding:16px 22px!important}
+  .dw-production-v3 .dw-method-static-head{margin-bottom:10px!important}
+  .dw-production-v3 .dw-method-title-wrap{display:flex!important;align-items:center!important;gap:9px!important}
+  .dw-production-v3 .dw-method-title-icon{display:block!important;width:24px!important;height:24px!important;flex:0 0 24px!important;object-fit:contain!important}
+  .dw-production-v3 .dw-prod-method .dw-method-title{font-size:32px!important;line-height:1!important}
+  .dw-production-v3 .dw-prod-method .dw-method-details p{font-size:12px!important;line-height:1.5!important;margin-bottom:9px!important}
+  .dw-production-v3 .dw-prod-features{gap:5px 14px!important;padding-top:8px!important}
+  .dw-production-v3 .dw-prod-method .dw-prod-features li{font-size:11px!important;line-height:1.35!important}
+}
+@media (max-width:700px){
+  .dw-production-v3 .dw-method-title-wrap{display:flex!important;align-items:center!important;gap:9px!important}
+  .dw-production-v3 .dw-method-title-icon{display:block!important;width:25px!important;height:25px!important;flex:0 0 25px!important;object-fit:contain!important}
+}
+</style>
+
+
+<style id="dw-prod-method-reference-1to1-v4">
+/* Exact reconstruction from user reference: image | copy | large method icon. */
+@media (min-width:901px){
+.dw-production-v3 .dw-prod-method-list{gap:18px!important}
+.dw-production-v3 .dw-prod-method{height:250px!important;min-height:250px!important;background:#101214!important;border:1px solid #2d3134!important;overflow:hidden!important}
+.dw-production-v3 .dw-method-grid{display:grid!important;grid-template-columns:250px minmax(0,1fr) 250px!important;height:250px!important;min-height:250px!important;align-items:stretch!important}
+.dw-production-v3 .dw-method-visual{width:250px!important;height:250px!important;min-height:250px!important;aspect-ratio:1/1!important;background:#101112!important}
+.dw-production-v3 .dw-method-visual>img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important}
+.dw-production-v3 .dw-method-info{height:250px!important;min-height:250px!important;padding:24px 28px 22px!important;justify-content:center!important;background:#101214!important}
+.dw-production-v3 .dw-method-static-head{margin:0 0 14px!important}
+.dw-production-v3 .dw-method-title-wrap{display:block!important}
+.dw-production-v3 .dw-method-title-icon{display:none!important}
+.dw-production-v3 .dw-method-title{font:700 38px/1.05 'Chakra Petch',sans-serif!important;letter-spacing:-.015em!important;text-transform:uppercase!important;margin:0!important;color:#f2f2f2!important}
+.dw-production-v3 .dw-method-details{padding:0!important;margin:0!important}
+.dw-production-v3 .dw-method-details p{font-size:14px!important;line-height:1.48!important;color:#c3c7ca!important;margin:0 0 16px!important;max-width:none!important}
+.dw-production-v3 .dw-prod-features{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px 26px!important;margin:0!important;padding:13px 0 0!important;border-top:1px solid #2c3033!important}
+.dw-production-v3 .dw-prod-features li{font-size:13px!important;line-height:1.35!important;color:#eef0f1!important}
+.dw-production-v3 .dw-prod-features li::before{margin-right:9px!important}
+.dw-production-v3 .dw-method-side-icon{display:grid!important;place-items:center!important;width:250px!important;height:250px!important;overflow:hidden!important;background:#101214!important}
+.dw-production-v3 .dw-method-side-icon img{display:block!important;width:230px!important;height:230px!important;object-fit:contain!important;opacity:.28!important;filter:none!important;transform:none!important}
+}
+@media (max-width:900px){.dw-production-v3 .dw-method-side-icon{display:none!important}.dw-production-v3 .dw-method-title-icon{display:none!important}}
+</style>
+<style id="dw-prod-methods-clean-airy-v1">
+/* Metody znakowania — większy oddech, bez dużych ikon po prawej. */
+.dw-production-v3 .dw-method-side-icon{display:none!important}
+@media (min-width:901px){
+  .dw-production-v3 .dw-prod-method-list{gap:36px!important}
+  .dw-production-v3 .dw-prod-method{height:auto!important;min-height:250px!important}
+  .dw-production-v3 .dw-method-grid{grid-template-columns:250px minmax(0,1fr)!important;height:auto!important;min-height:250px!important}
+  .dw-production-v3 .dw-method-info{height:auto!important;min-height:250px!important;padding:28px 38px!important;justify-content:center!important}
+  .dw-production-v3 .dw-method-static-head{margin:0 0 18px!important}
+  .dw-production-v3 .dw-method-details p{line-height:1.62!important;margin:0 0 20px!important}
+  .dw-production-v3 .dw-prod-features{gap:11px 30px!important;padding:17px 0 0!important}
+  .dw-production-v3 .dw-prod-features li{line-height:1.48!important}
+}
+@media (min-width:701px) and (max-width:900px){
+  .dw-production-v3 .dw-prod-method-list{gap:30px!important}
+  .dw-production-v3 .dw-method-info{padding:22px 28px!important}
+  .dw-production-v3 .dw-method-static-head{margin-bottom:14px!important}
+  .dw-production-v3 .dw-prod-method .dw-method-details p{line-height:1.6!important;margin-bottom:14px!important}
+  .dw-production-v3 .dw-prod-features{gap:8px 18px!important;padding-top:12px!important}
+  .dw-production-v3 .dw-prod-method .dw-prod-features li{line-height:1.45!important}
+}
+@media (max-width:700px){
+  .dw-production-v3 .dw-prod-method-list{gap:24px!important}
+  .dw-production-v3 .dw-method-info{padding:24px 22px 28px!important}
+  .dw-production-v3 .dw-method-static-head{margin-bottom:14px!important}
+  .dw-production-v3 .dw-prod-method .dw-method-details p{line-height:1.62!important;margin-bottom:18px!important}
+  .dw-production-v3 .dw-prod-features{gap:10px!important;padding-top:14px!important}
+  .dw-production-v3 .dw-prod-method .dw-prod-features li{line-height:1.48!important}
+}
+</style>
+<style id="dw-prod-route-dot-pulse-v1">
+/* Numbered route nodes replaced by small pulsing red dots. */
+.dw-prod-route-node{
+  width:14px!important;height:14px!important;min-width:14px!important;min-height:14px!important;
+  padding:0!important;border:0!important;border-radius:50%!important;
+  background:#BF1304!important;color:transparent!important;
+  box-shadow:0 0 0 1px rgba(191,19,4,.42),0 0 14px rgba(191,19,4,.42)!important;
+  transform:translate(-50%,-50%)!important;
+}
+.dw-prod-route-node .dw-prod-route-dot{display:block;width:100%;height:100%;border-radius:50%;background:#BF1304}
+.dw-prod-route-node::before,.dw-prod-route-node::after{
+  content:'';position:absolute;inset:-7px;border:1px solid rgba(191,19,4,.72);border-radius:50%;
+  pointer-events:none;animation:dw-prod-node-pulse 2.15s ease-out infinite;
+  animation-delay:0s;
+}
+.dw-prod-route-node::after{inset:-3px;animation-delay:.52s;opacity:.55}
+.dw-prod-route-node[data-route-stage="1"]::before{animation-delay:.16s}
+.dw-prod-route-node[data-route-stage="2"]::before{animation-delay:.32s}
+.dw-prod-route-node[data-route-stage="3"]::before{animation-delay:.48s}
+.dw-prod-route-node[data-route-stage="1"]::after{animation-delay:.68s}
+.dw-prod-route-node[data-route-stage="2"]::after{animation-delay:.84s}
+.dw-prod-route-node[data-route-stage="3"]::after{animation-delay:1s}
+.dw-prod-route-node:hover,.dw-prod-route-node:focus-visible,.dw-prod-route-node.is-active{
+  background:#BF1304!important;border-color:#BF1304!important;color:transparent!important;
+  box-shadow:0 0 0 2px rgba(191,19,4,.28),0 0 21px rgba(191,19,4,.72)!important;
+}
+.dw-prod-route-node.is-active::after{inset:-7px;border:1px solid rgba(191,19,4,.82);animation:dw-prod-node-pulse 1.75s ease-out infinite}
+@keyframes dw-prod-node-pulse{
+  0%{opacity:.82;transform:scale(.58)}
+  70%,100%{opacity:0;transform:scale(1.48)}
+}
+@media (prefers-reduced-motion:reduce){
+  .dw-prod-route-node::before,.dw-prod-route-node::after{animation:none!important;opacity:.35}
+}
+</style>
+<link rel="stylesheet" href="css/dw-light-theme-v2.css?v=20260930"></head>
+<body class="dw-production-v3" style="min-height: 100vh; display: flex; flex-direction: column; padding: 0;">
+<!-- MOBILE MENU -->
+<div class="mob-overlay" id="mobOverlay" onclick="closeMob()"></div>
+<div class="mob-menu" id="mobMenu">
+<button aria-label="Close menu" class="mob-close" onclick="closeMob()">✕</button>
+<div class="mob-section">
+<button class="mob-section-btn" id="mobProjBtn" onclick="toggleMobSub()">Products <span class="mc">›</span></button>
+<div class="mob-sub" id="mobSub"><a href="en/produkty.html" onclick="closeMob()">All products</a><a href="en/fightwear.html#sportswear" onclick="closeMob()">Sportswear</a><a href="en/fightwear.html#fightwear" onclick="closeMob()">Fightwear</a><a href="en/streetwear.html" onclick="closeMob()">Streetwear</a><a href="en/akcesoria.html" onclick="closeMob()">Accessories</a></div>
+</div>
+<a class="mob-plain" href="en/produkcja.html" onclick="closeMob()">Production</a>
+<a class="mob-plain" href="en/onas.html" onclick="closeMob()">About us</a>
+<a class="mob-plain" href="en/kontakt.html" onclick="closeMob()">Contact</a>
+</div>
+<!-- NAV -->
+<nav id="mainNav">
+<a class="nav-logo" href="en/index.html">
+<img alt="Danger Wear Production" src="assets/images/DW-logotyp.svg"/>
+<span class="nav-logo-text">DANGER WEAR PRODUCTION</span>
+</a>
+<ul class="nav-links">
+<li id="projLi">
+<button class="nav-link" onclick="toggleProj()">Products <span class="nav-chev">▾</span></button>
+<div aria-label="Product categories" class="nav-dropdown dw-home-mega">
+<section>
+<a class="nav-dropdown-label nav-dropdown-label-link" href="en/fightwear.html#sportswear">SPORTSWEAR</a>
+<a class="nav-dropdown-sub" href="en/koszulki-sportowe.html">MESH sports jerseys</a>
+<a class="nav-dropdown-sub" href="en/koszulki-sportowe-athletic.html">Athletic sports shirts</a>
+<a class="nav-dropdown-sub" href="en/tank-top.html">Tank top</a>
+<a class="nav-dropdown-label nav-dropdown-label-link nav-dropdown-label-fight" href="en/fightwear.html#fightwear">FIGHTWEAR</a>
+<a class="nav-dropdown-sub" href="en/fightwear-set.html">Sets</a>
+<a class="nav-dropdown-sub" href="en/rashguard.html">Rashguard</a>
+<a class="nav-dropdown-sub" href="en/spodenki-mma-luzne.html">Loose-fit MMA shorts</a>
+<a class="nav-dropdown-sub" href="en/spodenki-mma-vale-tudo.html">MMA Vale Tudo shorts</a>
+<a class="nav-dropdown-sub" href="en/legginsy-sportowe.html">Sports leggings</a>
+</section>
+<section>
+<a class="nav-dropdown-label nav-dropdown-label-link" href="en/streetwear.html">STREETWEAR</a>
+<a class="nav-dropdown-sub" href="en/streetwear-koszulki.html">T-shirts</a>
+<a class="nav-dropdown-sub" href="en/streetwear-bluzy.html">Sweatshirts</a>
+<a class="nav-dropdown-sub" href="en/streetwear-kurtki.html">Jackets</a>
+<a class="nav-dropdown-sub" href="en/streetwear-bezrekawniki.html">Padded vests</a>
+<a class="nav-dropdown-sub" href="en/streetwear-spodnie.html">Trousers</a>
+<a class="nav-dropdown-sub" href="en/streetwear-spodenki.html">Shorts</a>
+</section>
+<section>
+<a class="nav-dropdown-label nav-dropdown-label-link" href="en/akcesoria.html">ACCESSORIES</a>
+<a class="nav-dropdown-sub" href="en/czapki-z-daszkiem.html">Caps</a>
+<a class="nav-dropdown-sub" href="en/czapki-zimowe.html">Winter hats</a>
+<a class="nav-dropdown-sub" href="en/kominy-termoaktywne.html">Performance neck gaiters</a>
+<a class="nav-dropdown-sub" href="en/kominy-polarowe-zimowe.html">Winter fleece neck gaiters</a>
+<a class="nav-dropdown-sub" href="en/kominiarki.html">Balaclavas</a>
+<a class="nav-dropdown-sub" href="en/chusty.html">Bandanas</a>
+<a class="nav-dropdown-sub" href="en/rekawiczki.html">Gloves</a>
+<a class="nav-dropdown-sub" href="en/szaliki.html">Scarves</a>
+<a class="nav-dropdown-sub" href="en/nerki-saszetki.html">Waist bags / pouches</a>
+<a class="nav-dropdown-sub" href="en/reczniki.html">Towels</a>
+<a class="nav-dropdown-sub" href="en/worki-sportowe.html">Sports drawstring bags</a>
+<a class="nav-dropdown-sub" href="en/flagi-drukowane.html">Printed flags</a>
+<a class="nav-dropdown-sub" href="en/poduszki.html">Cushions</a>
+<a class="nav-dropdown-sub" href="en/smycze-na-klucze.html">Key lanyards</a>
+</section>
+</div>
+</li>
+<li><a class="nav-link active" href="en/produkcja.html">Production</a></li>
+<li><a class="nav-link" href="en/onas.html">About us</a></li>
+<li><a class="nav-link" href="en/kontakt.html">Contact</a></li>
+</ul>
+<button aria-label="Open menu" class="hamburger" id="hamburger" onclick="toggleMob()">
+<span></span><span></span><span></span>
+</button>
+</nav>
+<!-- MAIN WRAPPER -->
+<main class="proc-main" id="main-content">
+<section aria-labelledby="process-title" class="dw-prod-process dw-prod-shell"><h2 class="dw-prod-sr-only" id="process-title">Our production process</h2><div aria-label="Cztery etapy produkcji" class="dw-prod-path-viewport"><div class="dw-prod-path" id="dwProdPath" style="--stage-pos:12.5%">
+<div class="dw-prod-stages"><button aria-label="Pokaż etap 01: WYKONANIE PROJEKTU" aria-pressed="true" class="dw-prod-stage is-active" data-stage="0" type="button">
+<span class="dw-prod-stage-visual"><img alt="" loading="lazy" src="Produkcja/01_Wykonanie_projektu/obraz.jpg"/></span>
+<span class="dw-prod-stage-main"><span class="dw-prod-stage-num">01</span><span class="dw-prod-stage-title">DESIGN DEVELOPMENT</span></span>
+<span class="dw-prod-stage-caption">We prepare the graphic design and a product mockup based on your brief.</span>
+</button><button aria-label="Pokaż etap 02: WYDRUK / ZNAKOWANIE" aria-pressed="false" class="dw-prod-stage" data-stage="1" type="button">
+<span class="dw-prod-stage-visual"><img alt="" loading="lazy" src="Produkcja/02_Wydruk_znakowanie/obraz.jpg"/></span>
+<span class="dw-prod-stage-main"><span class="dw-prod-stage-num">02</span><span class="dw-prod-stage-title">PRINTING / DECORATION</span></span>
+<span class="dw-prod-stage-caption">We select the appropriate technique and reproduce the artwork with precision.</span>
+</button><button aria-label="Pokaż etap 03: SZYCIE" aria-pressed="false" class="dw-prod-stage" data-stage="2" type="button">
+<span class="dw-prod-stage-visual"><img alt="" loading="lazy" src="Produkcja/03_Szycie/poster.jpg"/><video class="dw-stage-video" data-src="Produkcja/03_Szycie/film.mp4" poster="Produkcja/03_Szycie/poster.jpg" preload="none" muted loop playsinline aria-hidden="true"></video></span>
+<span class="dw-prod-stage-main"><span class="dw-prod-stage-num">03</span><span class="dw-prod-stage-title">SEWING</span></span>
+<span class="dw-prod-stage-caption">We assemble the pieces into durable, comfortable products, taking care of every detail.</span>
+</button><button aria-label="Pokaż etap 04: WYSYŁKA DO KLIENTA" aria-pressed="false" class="dw-prod-stage" data-stage="3" type="button">
+<span class="dw-prod-stage-visual"><img alt="" loading="lazy" src="Produkcja/04_Wysylka_do_klienta/obraz.jpg"/></span>
+<span class="dw-prod-stage-main"><span class="dw-prod-stage-num">04</span><span class="dw-prod-stage-title">SHIPPING TO THE CUSTOMER</span></span>
+<span class="dw-prod-stage-caption">We pack the finished products and ship them directly to you.</span>
+</button></div>
+</div></div><div aria-label="Interaktywna ścieżka produkcji" class="dw-prod-progress-wrap"><div class="dw-prod-route-bar" id="dwProdRouteBar" style="--stage-pos:12.5%;--route-fill:0%"><span aria-hidden="true" class="dw-prod-route-line"></span><button aria-label="Wybierz etap 01 z 4" aria-pressed="true" class="dw-prod-route-node is-active" data-route-stage="0" style="--node-index:0" type="button"><span class="dw-prod-route-dot" aria-hidden="true"></span></button><button aria-label="Wybierz etap 02 z 4" aria-pressed="false" class="dw-prod-route-node" data-route-stage="1" style="--node-index:1" type="button"><span class="dw-prod-route-dot" aria-hidden="true"></span></button><button aria-label="Wybierz etap 03 z 4" aria-pressed="false" class="dw-prod-route-node" data-route-stage="2" style="--node-index:2" type="button"><span class="dw-prod-route-dot" aria-hidden="true"></span></button><button aria-label="Wybierz etap 04 z 4" aria-pressed="false" class="dw-prod-route-node" data-route-stage="3" style="--node-index:3" type="button"><span class="dw-prod-route-dot" aria-hidden="true"></span></button><input aria-label="Przeciągnij, aby wybrać etap produkcji od 1 do 4" id="dwProdSlider" max="3" min="0" step="1" type="range" value="0"/><span aria-hidden="true" class="dw-prod-route-orb" id="dwProdOrb" data-number="01"></span></div></div>
+</section>
+<section aria-labelledby="methods-title" class="dw-prod-methods"><div class="dw-prod-shell">
+<div class="dw-prod-heading"><span class="dw-prod-overline">02 / CUSTOMIZATION TECHNIQUES</span><h2 id="methods-title">DECORATION METHODS</h2></div>
+<div class="dw-prod-method-list"><article class="dw-prod-method dw-prod-method--static" data-method="sublimacja" id="sublimacja">
+<div class="dw-method-grid">
+<div class="dw-method-visual" data-carousel-images='["Produkcja/Metody_znakowania/Sublimacja/obraz.png"]'><img alt="Technologia znakowania: sublimacja" class="dw-method-carousel-image" loading="lazy" src="Produkcja/Metody_znakowania/Sublimacja/obraz.png"/></div>
+<div class="dw-method-info">
+<div class="dw-method-static-head"><span class="dw-method-title-wrap"><span class="dw-method-title">SUBLIMATION</span></span></div>
+<div class="dw-method-details" id="sublimacja-details">
+<p>Sublimation transfers multicolor artwork directly into polyester fibers. Heat drives the dye into the fabric, so the print does not create a raised layer on the surface. This method is particularly suitable for sportswear and full-surface designs.</p>
+<ul class="dw-prod-features"><li>Full-color artwork and gradients</li>
+<li>Print that cannot be felt on the fabric</li>
+<li>Durability under intensive use</li>
+<li>Best results on light-colored polyester</li></ul>
+</div>
+</div>
+</div>
+</article><article class="dw-prod-method dw-prod-method--static" data-method="haft-komputerowy" id="haft-komputerowy">
+<div class="dw-method-grid">
+<div class="dw-method-visual" data-carousel-images='["Produkcja/Metody_znakowania/Haft_komputerowy/Obraz ChatGPT 28 wrz 2026, 02_41_13.png","Produkcja/Metody_znakowania/Haft_komputerowy/Obraz ChatGPT 28 wrz 2026, 02_40_38.png","Produkcja/Metody_znakowania/Haft_komputerowy/Obraz ChatGPT 28 wrz 2026, 01_41_42-2.png","Produkcja/Metody_znakowania/Haft_komputerowy/dw-6dfce9bf71ff3dfbc9ae.webp","Produkcja/Metody_znakowania/Haft_komputerowy/dw-3e173aef9d172174cfc8.webp","Produkcja/Metody_znakowania/Haft_komputerowy/dw-e84a56394d21057f3694.webp","Produkcja/Metody_znakowania/Haft_komputerowy/dw-984eb8c22ab2aea80d9c.webp"]'><img alt="Technologia znakowania: haft komputerowy" class="dw-method-carousel-image" loading="lazy" src="Produkcja/Metody_znakowania/Haft_komputerowy/Obraz ChatGPT 28 wrz 2026, 02_41_13.png"/></div>
+<div class="dw-method-info">
+<div class="dw-method-static-head"><span class="dw-method-title-wrap"><span class="dw-method-title">MACHINE EMBROIDERY</span></span></div>
+<div class="dw-method-details" id="haft-komputerowy-details">
+<p>Embroidery reproduces a design with threads stitched by a machine. It gives logos a distinctive texture and refined appearance. We match stitch density, size and backing to the fabric so that the design looks right and holds its shape.</p>
+<ul class="dw-prod-features"><li>Distinctive texture and premium finish</li>
+<li>Well suited to sweatshirts, caps and fleece</li>
+<li>Durability in everyday use</li>
+<li>Fine details and large filled areas require artwork review</li></ul>
+</div>
+</div>
+</div>
+</article><article class="dw-prod-method dw-prod-method--static" data-method="sitodruk" id="sitodruk">
+<div class="dw-method-grid">
+<div class="dw-method-visual" data-carousel-images='["Produkcja/Metody_znakowania/Sitodruk/obraz.jpg"]'><img alt="Technologia znakowania: sitodruk" class="dw-method-carousel-image" loading="lazy" src="Produkcja/Metody_znakowania/Sitodruk/obraz.jpg"/></div>
+<div class="dw-method-info">
+<div class="dw-method-static-head"><span class="dw-method-title-wrap"><span class="dw-method-title">SCREEN PRINTING</span></span></div>
+<div class="dw-method-details" id="sitodruk-details">
+<p>Screen printing applies ink to fabric through a prepared screen. It produces rich, consistent colors and is especially practical for larger runs using the same design. Each print color requires its own preparation.</p>
+<ul class="dw-prod-features"><li>Rich colors and sharp edges</li>
+<li>Consistent results in larger runs</li>
+<li>Can be printed on various fabrics</li>
+<li>Setup costs may matter on small orders</li></ul>
+</div>
+</div>
+</div>
+</article><article class="dw-prod-method dw-prod-method--static" data-method="dtf" id="dtf">
+<div class="dw-method-grid">
+<div class="dw-method-visual" data-carousel-images='["Produkcja/Metody_znakowania/DTF/Obraz ChatGPT 28 wrz 2026, 02_39_16.png","Produkcja/Metody_znakowania/DTF/Obraz ChatGPT 28 wrz 2026, 02_39_02.png","Produkcja/Metody_znakowania/DTF/Obraz ChatGPT 28 wrz 2026, 02_38_53.png"]'><img alt="Technologia znakowania: DTF / transfer cyfrowy" class="dw-method-carousel-image" loading="lazy" src="Produkcja/Metody_znakowania/DTF/Obraz ChatGPT 28 wrz 2026, 02_39_16.png"/></div>
+<div class="dw-method-info">
+<div class="dw-method-static-head"><span class="dw-method-title-wrap"><span class="dw-method-title">DTF / DIGITAL TRANSFER</span></span></div>
+<div class="dw-method-details" id="dtf-details">
+<p>DTF transfers artwork from printed film onto fabric with a heat press. It delivers vivid colors, fine details and durable decoration on many fabric types. It works well for short and medium runs and multicolor designs.</p>
+<ul class="dw-prod-features"><li>Vivid colors and fine details</li>
+<li>Suitable for many fabrics</li>
+<li>A good fit for short and medium runs</li>
+<li>Heat press transfer</li></ul>
+</div>
+</div>
+</div>
+</article><article class="dw-prod-method dw-prod-method--static" data-method="dtg" id="dtg">
+<div class="dw-method-grid">
+<div class="dw-method-visual" data-carousel-images='["Produkcja/Metody_znakowania/DTG/Obraz ChatGPT 28 wrz 2026, 02_39_44.png","Produkcja/Metody_znakowania/DTG/dw-53379794a47c2410c999.webp","Produkcja/Metody_znakowania/DTG/dw-6aabd46d92fc11603c20.webp","Produkcja/Metody_znakowania/DTG/dw-51b6a2f57a01b57453fc.webp"]'><img alt="Technologia znakowania: dtg / druk cyfrowy" class="dw-method-carousel-image" loading="lazy" src="Produkcja/Metody_znakowania/DTG/Obraz ChatGPT 28 wrz 2026, 02_39_44.png"/></div>
+<div class="dw-method-info">
+<div class="dw-method-static-head"><span class="dw-method-title-wrap"><span class="dw-method-title">DTG / DIGITAL PRINTING</span></span></div>
+<div class="dw-method-details" id="dtg-details">
+<p>DTG applies ink directly to finished garments. It reproduces illustrations, gradients and complex artwork without a separate screen for each color. The result depends on the fabric, surface preparation and chosen design.</p>
+<ul class="dw-prod-features"><li>Great freedom of color</li>
+<li>Photographic and illustrated designs</li>
+<li>Suitable for short runs</li>
+<li>Requires suitable fabric and care</li></ul>
+</div>
+</div>
+</div>
+</article></div>
+</div></section>
+</main>
+<script>
+(function(){
+  'use strict';
+  var stageButtons=Array.prototype.slice.call(document.querySelectorAll('.dw-prod-stage'));
+  var path=document.getElementById('dwProdPath');
+  var stageData=Array.prototype.slice.call(document.querySelectorAll('.dw-prod-stage'));
+  var buttonDetails=stageData.map(function(b){return {
+    title:b.querySelector('.dw-prod-stage-title').textContent,
+    short:b.querySelector('.dw-prod-stage-caption').textContent
+  }});
+  var routeBar=document.getElementById('dwProdRouteBar');
+  var range=document.getElementById('dwProdSlider');
+  var orb=document.getElementById('dwProdOrb');
+  var routeNodes=Array.prototype.slice.call(document.querySelectorAll('.dw-prod-route-node'));
+  var strip=document.querySelector('.dw-prod-path-viewport');
+  var index=0,timer=null,changeTimer=null,glitchTimer=null,dragging=false,dragPointer=null;
+  var activeProgress=0,lastProgress=0,autoFrom=0,autoTo=0,autoStart=0;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var routeStart=.125,routeSpan=.75,autoDuration=900,holdDuration=3400;
+  function clamp(v,a,b){return Math.min(b,Math.max(a,v));}
+  function setRoutePosition(progress){
+    activeProgress=clamp(progress,0,3);
+    routeBar.style.setProperty('--stage-pos',String((routeStart+activeProgress/3*routeSpan)*100)+'%');
+    routeBar.style.setProperty('--route-fill',String(activeProgress/3*100)+'%');
+  }
+  function glitchStage(n){
+    var b=stageButtons[n];if(!b||reduce)return;
+    b.classList.remove('is-glitch');orb.classList.remove('is-glitch');
+    void b.offsetWidth;b.classList.add('is-glitch');orb.classList.add('is-glitch');
+    window.clearTimeout(glitchTimer);
+    glitchTimer=window.setTimeout(function(){b.classList.remove('is-glitch');orb.classList.remove('is-glitch')},460);
+  }
+  function chooseStage(n,fromUser){
+    n=clamp(Math.round(n),0,3);
+    if(index!==n){
+      index=n;
+      stageButtons.forEach(function(b,i){var a=i===n;b.classList.toggle('is-active',a);b.setAttribute('aria-pressed',String(a));});
+      routeNodes.forEach(function(b,i){var a=i===n;b.classList.toggle('is-active',a);b.setAttribute('aria-pressed',String(a));});
+      range.value=String(n);
+      range.setAttribute('aria-valuetext','Etap '+(n+1)+' z 4: '+buttonDetails[n].title);
+      orb.setAttribute('data-number','0'+(n+1));
+      glitchStage(n);
+      if(fromUser && strip && window.matchMedia('(max-width:900px)').matches){
+        var target=stageButtons[n];
+        var offset=target.offsetLeft-(strip.clientWidth-target.offsetWidth)/2;
+        strip.scrollTo({left:Math.max(0,offset),behavior:reduce?'auto':'smooth'});
+      }
+    }
+  }
+  function stop(){if(timer){window.cancelAnimationFrame(timer);timer=null;}routeBar.classList.remove('is-autoplay');}
+  function snap(n,user){
+    stop();chooseStage(n,!!user);
+    setRoutePosition(n);
+    lastProgress=n;
+  }
+  function progressFromPointer(clientX){
+    var rect=routeBar.getBoundingClientRect();
+    var fraction=clamp((clientX-rect.left)/rect.width,routeStart,routeStart+routeSpan);
+    return ((fraction-routeStart)/routeSpan)*3;
+  }
+  function updateFromPointer(clientX){
+    var v=progressFromPointer(clientX);
+    setRoutePosition(v);lastProgress=v;
+    chooseStage(v,true);
+  }
+  routeBar.addEventListener('pointerdown',function(e){
+    if(e.button!==0||dragging)return;
+    stop();dragging=true;dragPointer=e.pointerId;
+    routeBar.classList.add('is-dragging');routeBar.setPointerCapture(e.pointerId);
+    updateFromPointer(e.clientX);e.preventDefault();
+  });
+  routeBar.addEventListener('pointermove',function(e){
+    if(!dragging||e.pointerId!==dragPointer)return;
+    updateFromPointer(e.clientX);e.preventDefault();
+  });
+  function finishDrag(e){
+    if(!dragging||e.pointerId!==dragPointer)return;
+    dragging=false;dragPointer=null;
+    routeBar.classList.remove('is-dragging');
+    var selected=clamp(Math.round(activeProgress),0,3);
+    snap(selected,true);scheduleAutoplay();
+  }
+  routeBar.addEventListener('pointerup',finishDrag);
+  routeBar.addEventListener('pointercancel',finishDrag);
+  routeBar.addEventListener('lostpointercapture',function(){if(dragging){dragging=false;routeBar.classList.remove('is-dragging');snap(Math.round(activeProgress),true);scheduleAutoplay();}});
+  range.addEventListener('input',function(){snap(Number(range.value),true);scheduleAutoplay();});
+  routeNodes.forEach(function(b,i){b.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();snap(i,true);scheduleAutoplay();}});});
+  range.addEventListener('keydown',function(e){
+    var next=index;
+    if(e.key==='ArrowRight'||e.key==='ArrowUp')next++;
+    else if(e.key==='ArrowLeft'||e.key==='ArrowDown')next--;
+    else if(e.key==='Home')next=0;
+    else if(e.key==='End')next=3;
+    else return;
+    e.preventDefault();snap(next,true);scheduleAutoplay();
+  });
+  stageButtons.forEach(function(b,i){b.addEventListener('click',function(){snap(i,true);scheduleAutoplay();});});
+  function autoTick(now){
+    if(!timer)return;
+    var elapsed=now-autoStart;
+    // After the last step restart at 01, never rapidly sweep backwards over 03 and 02.
+    if(autoFrom===3 && autoTo===0){
+      if(elapsed>=holdDuration){setRoutePosition(0);chooseStage(0,false);autoFrom=0;autoTo=1;autoStart=now;}
+      timer=window.requestAnimationFrame(autoTick);return;
+    }
+    var fraction=clamp((elapsed-holdDuration)/autoDuration,0,1);
+    var ease=fraction*fraction*(3-2*fraction);
+    var current=autoFrom+(autoTo-autoFrom)*ease;
+    setRoutePosition(current);
+    if(fraction>0)chooseStage(current,false);
+    if(elapsed>=holdDuration+autoDuration){
+      setRoutePosition(autoTo);chooseStage(autoTo,false);
+      autoFrom=autoTo;autoTo=autoTo===3?0:autoTo+1;autoStart=now;
+    }
+    timer=window.requestAnimationFrame(autoTick);
+  }
+  function canAuto(){return !reduce&&!dragging&&!document.hidden&&!routeBar.matches(':hover')&&!document.querySelector('.dw-prod-process').matches(':focus-within');}
+  function scheduleAutoplay(){
+    stop();if(!canAuto())return;
+    autoFrom=index;autoTo=index===3?0:index+1;autoStart=performance.now();
+    routeBar.classList.add('is-autoplay');timer=window.requestAnimationFrame(autoTick);
+  }
+  routeBar.addEventListener('mouseenter',stop);
+  routeBar.addEventListener('mouseleave',scheduleAutoplay);
+  routeBar.addEventListener('focusin',stop);
+  routeBar.addEventListener('focusout',function(e){if(!routeBar.contains(e.relatedTarget))scheduleAutoplay();});
+  var block=document.querySelector('.dw-prod-process');
+  block.addEventListener('mouseenter',stop);
+  block.addEventListener('mouseleave',scheduleAutoplay);
+  block.addEventListener('focusin',stop);
+  block.addEventListener('focusout',function(e){if(!block.contains(e.relatedTarget))scheduleAutoplay();});
+  document.addEventListener('visibilitychange',function(){if(document.hidden)stop();else scheduleAutoplay();});
+  setRoutePosition(0);scheduleAutoplay();
+
+  var methods=Array.prototype.slice.call(document.querySelectorAll('.dw-prod-method'));
+  var aliases={'haft':'haft-komputerowy','haft-komputerowy':'haft-komputerowy','sublimacja-fullprint':'sublimacja','sublimacja':'sublimacja','flex':'dtf','flock':'dtf','nadruk-flex':'dtf','druk-cyfrowy':'dtg'};
+  function restoreHash(){
+    var raw=decodeURIComponent(location.hash.substring(1)).toLowerCase();
+    var id=aliases[raw]||raw;
+    var target=methods.filter(function(m){return m.id===id;})[0];
+    if(!target)return;
+    window.requestAnimationFrame(function(){window.setTimeout(function(){target.scrollIntoView({behavior:'auto',block:'start'});},85);});
+  }
+  window.addEventListener('hashchange',restoreHash);
+  if(location.hash)restoreHash();
+})();
+</script>
+<!-- /MAIN WRAPPER -->
+<!-- SOCIAL -->
+<div class="social-bar reveal" style="width: 100%;">
+<a class="social-item" href="https://www.instagram.com/danger_wear_production/" rel="noopener" target="_blank">
+<svg class="social-icon" fill="none" viewbox="0 0 24 24">
+<rect height="20" rx="5" stroke="currentColor" stroke-width="1.5" width="20" x="2" y="2"></rect>
+<circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.5"></circle>
+<circle cx="17.5" cy="6.5" fill="currentColor" r="1"></circle>
+</svg>
+<div class="social-info">
+<span class="social-name">Instagram</span>
+<span class="social-handle">@danger_wear_production</span>
+</div>
+<span class="social-arrow">↗</span>
+</a>
+<a class="social-item" href="https://www.facebook.com/DangerWearProduction" rel="noopener" target="_blank">
+<svg class="social-icon" fill="none" viewbox="0 0 24 24">
+<path d="M18 2H15C13.3 2 12 3.3 12 5V8H9V12H12V22H16V12H19L20 8H16V5C16 4.4 16.4 4 17 4H20V2Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+<div class="social-info">
+<span class="social-name">Facebook</span>
+<span class="social-handle">DangerWearProduction</span>
+</div>
+<span class="social-arrow">↗</span>
+</a>
+<a aria-label="Email Kontakt@Dangerwear.PL" class="social-item" href="mailto:kontakt@dangerwear.pl">
+<svg aria-hidden="true" class="social-icon" fill="none" viewbox="0 0 24 24">
+<rect height="15" rx="2" stroke="currentColor" stroke-width="1.5" width="19" x="2.5" y="4.5"></rect>
+<path d="M4 7L12 13L20 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+<div class="social-info">
+<span class="social-name">Kontakt@Dangerwear.PL</span>
+<span class="social-handle">Write to us</span>
+</div>
+<span class="social-arrow">↗</span>
+</a>
+</div>
+<!-- FOOTER -->
+<footer id="kontakt" style="width: 100%;">
+<p>© 2026 Danger Wear Production. All rights reserved.</p>
+<small>Custom apparel and promotional products made in Poland.</small>
+</footer>
+<script src="js/main.js?v=20260918-final-v5"></script>
+<script src="js/menu.js?v=20260927-consolidated1"></script>
+<script src="js/mobile.js?v=20260927-consolidated1"></script>
+<script src="js/i18n.js?v=20260927-consolidated1" defer></script>
+<script src="js/dw-clubs-production.js?v=20260929-methods-panel-fix"></script>
+</body></html>

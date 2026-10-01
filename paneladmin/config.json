@@ -1,0 +1,6 @@
+{
+  "source": "..",
+  "publication_mode": "folder",
+  "port": 8765,
+  "admin_path": "/admin"
+}

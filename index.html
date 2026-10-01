@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pl"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Produkcja odzieży i gadżetów | Danger Wear Production</title>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,600;0,700;1,400&amp;family=DM+Mono:wght@300;400&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/menu.css?v=20260927-consolidated1">
+<link rel="stylesheet" href="css/hero.css?v=20260929-homefix1">
+<link rel="stylesheet" href="css/socials.css?v=20260918-final-v5">
+<link rel="stylesheet" href="css/footer.css?v=20260918-final-v5">
+<link rel="stylesheet" href="css/zamow.css">
+<link rel="stylesheet" href="css/technical-fixes.css"><meta name="description" content="Produkcja odzieży i gadżetów — Danger Wear. Produkcja odzieży personalizowanej, druk sublimacyjny i gadżety."><link rel="stylesheet" href="css/dangerwear.css"><link rel="stylesheet" href="css/product-update.css"><link rel="stylesheet" href="css/mobile.css?v=20260927-consolidated1">
+
+
+<style id="dw-home-video-css">
+/* DW original footage: display-only crop, source MP4 remains byte-for-byte unchanged. */
+.dw-home-video-hero{isolation:isolate}
+/* Poster is a fallback BEHIND the actual film, never an opaque cover over it. */
+.dw-home-video-hero .hero-slide{z-index:0!important;background-position:center;background-size:cover}
+.dw-home-video-hero .dw-hero-bg-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;z-index:1!important;background:transparent;pointer-events:none;opacity:1!important;visibility:visible!important;filter:grayscale(.92) saturate(.08) contrast(1.08) brightness(.64);transition:opacity .3s ease,filter .3s ease}
+.dw-home-video-hero.is-video-playing .dw-hero-bg-video{opacity:1!important;visibility:visible!important}.dw-home-video-hero.is-video-unavailable .dw-hero-bg-video{opacity:0!important;visibility:hidden!important}
+.dw-home-video-hero .hero-overlay{z-index:2!important;background:linear-gradient(90deg,rgba(6,6,6,.72),rgba(6,6,6,.33)),linear-gradient(0deg,rgba(6,6,6,.66),transparent 55%)}
+.dw-home-video-hero .hero-grid-lines,.dw-home-video-hero .hero-orb{z-index:3!important}
+.dw-home-video-hero .hero-content{z-index:4!important}
+.dw-home-video-hero .hero-scroll{z-index:4!important}
+.dw-home-video-hero .dw-home-video-play{position:absolute;z-index:5;right:clamp(18px,3vw,48px);bottom:clamp(18px,3vw,34px);min-height:40px;padding:10px 15px;border:1px solid rgba(255,255,255,.75);border-radius:2px;background:rgba(8,8,8,.87);color:#fff;cursor:pointer;font:700 11px/1.25 'Chakra Petch',sans-serif;letter-spacing:.08em;transition:background .2s,border-color .2s}
+.dw-home-video-hero .dw-home-video-play:hover,.dw-home-video-hero .dw-home-video-play:focus-visible{border-color:#bf1304;background:#bf1304;outline:2px solid #fff;outline-offset:2px}
+.dw-home-video-hero .dw-home-video-play[hidden],.dw-home-video-hero .dw-home-video-status[hidden]{display:none!important}
+.dw-home-video-hero .dw-home-video-status{position:absolute;right:clamp(18px,3vw,48px);bottom:clamp(18px,3vw,34px);z-index:5;max-width:min(340px,85vw);padding:9px 12px;border:1px solid rgba(191,19,4,.7);background:rgba(8,8,8,.9);color:#eee;font:500 11px/1.5 'Chakra Petch',sans-serif}
+@media(max-width:900px){.dw-home-video-hero .hero-overlay{background:linear-gradient(180deg,rgba(5,5,5,.45),rgba(5,5,5,.56) 46%,rgba(5,5,5,.78))}}
+@media(prefers-reduced-motion:reduce){.dw-home-video-hero .dw-hero-bg-video{display:none!important}.dw-home-video-hero .hero-slide{filter:none!important}.dw-home-video-hero .dw-home-video-play{display:none!important}}
+</style>
+<link rel="stylesheet" href="css/i18n.css?v=20260927-consolidated1">
+<link rel="alternate" hreflang="pl" href="https://sydesignest2013.github.io/danger-wear-preview/index.html"><link rel="alternate" hreflang="en" href="https://sydesignest2013.github.io/danger-wear-preview/en/index.html"><link rel="alternate" hreflang="de" href="https://sydesignest2013.github.io/danger-wear-preview/de/index.html"><link rel="alternate" hreflang="fr" href="https://sydesignest2013.github.io/danger-wear-preview/fr/index.html"><link rel="alternate" hreflang="x-default" href="https://sydesignest2013.github.io/danger-wear-preview/index.html"><link rel="canonical" href="https://sydesignest2013.github.io/danger-wear-preview/index.html"><link rel="stylesheet" href="css/dw-no-horizontal-v1.css?v=20260927-consolidated1"><link rel="stylesheet" href="css/dw-light-theme-v2.css?v=20260930"><link rel="stylesheet" href="css/home-reference.css?v=20260930-1"></head>
+<body class="dw-home-reference">
+
+
+
+
+
+
+<!-- MOBILE MENU -->
+<div class="mob-overlay" id="mobOverlay" onclick="closeMob()"></div>
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" onclick="closeMob()" aria-label="Zamknij menu">✕</button>
+  <div class="mob-section">
+    <button class="mob-section-btn" id="mobProjBtn" onclick="toggleMobSub()">Produkty <span class="mc">›</span></button>
+    <div class="mob-sub" id="mobSub"><a href="produkty.html">Wszystkie produkty</a><a href="fightwear.html#sportswear">SPORTSWEAR</a><a href="fightwear.html#fightwear">FIGHTWEAR</a><a href="streetwear.html">STREETWEAR</a><a href="akcesoria.html">AKCESORIA</a></div>
+  </div>
+  <a href="produkcja.html" class="mob-plain" onclick="closeMob()">Produkcja</a>
+  <a href="onas.html" class="mob-plain" onclick="closeMob()">O nas</a>
+  <a href="kontakt.html" class="mob-plain" onclick="closeMob()">Kontakt</a>
+</div>
+
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/images/DW-logotyp.svg" alt="Danger Wear Production">
+    <span class="nav-logo-text">DANGER WEAR PRODUCTION</span>
+  </a>
+  <ul class="nav-links">
+    <li id="projLi">
+      <button class="nav-link" onclick="toggleProj()">Produkty <span class="nav-chev">▾</span></button>
+      <div class="nav-dropdown dw-home-mega" aria-label="Kategorie produktów"><section><a href="fightwear.html#sportswear" class="nav-dropdown-label nav-dropdown-label-link">SPORTSWEAR</a><a href="koszulki-sportowe.html" class="nav-dropdown-sub">KOSZULKI SPORTOWE MESH</a><a href="koszulki-sportowe-athletic.html" class="nav-dropdown-sub">KOSZULKI SPORTOWE ATHLETIC</a><a href="tank-top.html" class="nav-dropdown-sub">TANK TOP</a><a href="fightwear.html#fightwear" class="nav-dropdown-label nav-dropdown-label-link">FIGHTWEAR</a><a href="rashguard.html" class="nav-dropdown-sub">RASHGUARD</a><a href="spodenki-mma-luzne.html" class="nav-dropdown-sub">SPODENKI MMA LUŹNE</a><a href="spodenki-mma-vale-tudo.html" class="nav-dropdown-sub">SPODENKI MMA VALE TUDO</a><a href="legginsy-sportowe.html" class="nav-dropdown-sub">LEGGINSY SPORTOWE</a><a href="fightwear-set.html" class="nav-dropdown-sub">KOMPLETY FIGHTWEAR</a></section><section><a href="streetwear.html" class="nav-dropdown-label nav-dropdown-label-link">STREETWEAR</a><a href="streetwear-koszulki.html" class="nav-dropdown-sub">KOSZULKI</a><a href="streetwear-bluzy.html" class="nav-dropdown-sub">BLUZY</a><a href="streetwear-kurtki.html" class="nav-dropdown-sub">KURTKI</a><a href="streetwear-bezrekawniki.html" class="nav-dropdown-sub">BEZRĘKAWNIKI</a><a href="streetwear-spodnie.html" class="nav-dropdown-sub">SPODNIE</a><a href="streetwear-spodenki.html" class="nav-dropdown-sub">SPODENKI</a></section><section><a href="akcesoria.html" class="nav-dropdown-label nav-dropdown-label-link">AKCESORIA</a><a href="szaliki.html" class="nav-dropdown-sub">SZALIKI</a><a href="flagi-drukowane.html" class="nav-dropdown-sub">FLAGI DRUKOWANE</a><a href="czapki-z-daszkiem.html" class="nav-dropdown-sub">CZAPKI Z DASZKIEM</a><a href="czapki-zimowe.html" class="nav-dropdown-sub">CZAPKI ZIMOWE</a><a href="rekawiczki.html" class="nav-dropdown-sub">RĘKAWICZKI</a><a href="kominy-termoaktywne.html" class="nav-dropdown-sub">KOMINY TERMOAKTYWNE</a><a href="kominy-polarowe-zimowe.html" class="nav-dropdown-sub">KOMINY POLAROWE ZIMOWE</a><a href="kominiarki.html" class="nav-dropdown-sub">KOMINIARKI</a><a href="chusty.html" class="nav-dropdown-sub">CHUSTY</a><a href="nerki-saszetki.html" class="nav-dropdown-sub">NERKI / SASZETKI</a><a href="poduszki.html" class="nav-dropdown-sub">PODUSZKI</a><a href="reczniki.html" class="nav-dropdown-sub">RĘCZNIKI</a><a href="worki-sportowe.html" class="nav-dropdown-sub">WORKI SPORTOWE</a><a href="smycze-na-klucze.html" class="nav-dropdown-sub">SMYCZE NA KLUCZE</a></section></div>
+    </li>
+    <li><a href="produkcja.html" class="nav-link">Produkcja</a></li>
+    <li><a href="onas.html" class="nav-link">O nas</a></li>
+    <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" onclick="toggleMob()" aria-label="Otwórz menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+
+<!-- HERO -->
+<div class="hero dw-home-video-hero" id="hero">
+  <div class="hero-slide visible" style="background-image:url('assets/images/produkcja-wideo/home-poster.webp')"></div>
+  <video class="dw-hero-bg-video" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="assets/images/produkcja-wideo/home-poster.webp" aria-hidden="true" disablepictureinpicture><source src="hero-video/hero.mp4" type="video/mp4"></video>
+  <div class="hero-overlay"></div>
+  <button type="button" class="dw-home-video-play" hidden aria-label="Odtwórz film w tle">▶ ODTWÓRZ FILM</button>
+  <span class="dw-home-video-status" role="status" aria-live="polite" hidden></span>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-orb"></div>
+
+
+  <div class="hero-content">
+    <h1 class="hero-title hero-title-brand"><span class="solid" data-text="POLSKA">POLSKA</span><span class="hero-production" data-text="PRODUKCJA">PRODUKCJA</span></h1>
+    <p class="hero-tagline">Quality. End of story</p>
+    <div class="home-actions"><a href="produkty.html">ZOBACZ PRODUKTY <span aria-hidden="true">→</span></a><a href="kontakt.html">ZAPYTAJ O PRODUKCJĘ <span aria-hidden="true">→</span></a></div>
+  </div>
+<div class="home-stats"><div class="home-stat"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="5" width="18" height="25" rx="2"/><rect x="12" y="2" width="8" height="6" rx="2"/><path d="M12 13h8M12 18h8M12 23h8"/></svg><div><strong>+250</strong><span>REALIZACJI</span></div></div><div class="home-stat"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><circle cx="16" cy="9" r="5"/><circle cx="5" cy="12" r="3"/><circle cx="27" cy="12" r="3"/><path d="M8 29v-7a8 8 0 0 1 16 0v7ZM2 27v-6a5 5 0 0 1 5-5M30 27v-6a5 5 0 0 0-5-5"/></svg><div><strong>+100</strong><span>EKIP NAM ZAUFAŁO</span></div></div><div class="home-stat"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="M16 2 28 7v10c0 7-12 13-12 13S4 24 4 17V7Z"/><path d="m10 16 4 4 8-9"/></svg><div><strong>+5 LAT</strong><span>DOŚWIADCZENIA</span></div></div><div class="home-stat"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="m10 3-8 4 3 9 5-2v16h12V14l5 2 3-9-8-4c-1 5-11 5-12 0Z"/></svg><div><strong>+50</strong><span>PRODUKTÓW W OFERCIE</span></div></div></div>
+<a class="hero-scroll" href="#kategorie" aria-label="Przewiń do kategorii"><div class="scroll-line"></div><span class="scroll-word">Scroll</span></a>
+</div>
+
+
+<!-- CATEGORIES -->
+<div class="cat-section" id="kategorie">
+<div class="cat-grid reveal">
+  <a class="cat-tile" href="fightwear.html#sportswear"><img src="assets/images/catalog/photo-20.webp" alt="Sportswear"><div class="cat-tile-glow"></div><div class="cat-tile-body"><span class="cat-tile-name">Sportswear</span></div></a>
+  <a class="cat-tile" href="fightwear.html#fightwear"><img src="assets/images/catalog/photo-0.webp" alt="Fightwear"><div class="cat-tile-glow"></div><div class="cat-tile-body"><span class="cat-tile-name">Fightwear</span></div></a>
+  <a class="cat-tile" href="streetwear.html"><img src="assets/images/catalog/photo-14.webp" alt="Streetwear"><div class="cat-tile-glow"></div><div class="cat-tile-body"><span class="cat-tile-name">Streetwear</span></div></a>
+  <a class="cat-tile" href="akcesoria.html"><img src="assets/images/catalog/akcesoria.webp" alt="Akcesoria"><div class="cat-tile-glow"></div><div class="cat-tile-body"><span class="cat-tile-name">Akcesoria</span></div></a>
+</div>
+</div>
+<!-- SOCIAL -->
+<div class="social-bar reveal">
+  <a href="https://www.instagram.com/danger_wear_production/" target="_blank" rel="noopener" class="social-item">
+    <svg class="social-icon" viewbox="0 0 24 24" fill="none">
+      <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"></rect>
+      <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.5"></circle>
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor"></circle>
+    </svg>
+    <div class="social-info">
+      <span class="social-name">Instagram</span>
+      <span class="social-handle">@danger_wear_production</span>
+    </div>
+    <span class="social-arrow">↗</span>
+  </a>
+  <a href="https://www.facebook.com/DangerWearProduction" target="_blank" rel="noopener" class="social-item">
+    <svg class="social-icon" viewbox="0 0 24 24" fill="none">
+      <path d="M18 2H15C13.3 2 12 3.3 12 5V8H9V12H12V22H16V12H19L20 8H16V5C16 4.4 16.4 4 17 4H20V2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+    <div class="social-info">
+      <span class="social-name">Facebook</span>
+      <span class="social-handle">DangerWearProduction</span>
+    </div>
+    <span class="social-arrow">↗</span>
+  </a>
+  
+  <a href="mailto:kontakt@dangerwear.pl" class="social-item" aria-label="Napisz e-mail na Kontakt@Dangerwear.PL">
+    <svg class="social-icon" viewbox="0 0 24 24" fill="none" aria-hidden="true">
+      <rect x="2.5" y="4.5" width="19" height="15" rx="2" stroke="currentColor" stroke-width="1.5"></rect>
+      <path d="M4 7L12 13L20 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+    <div class="social-info">
+      <span class="social-name">Kontakt@Dangerwear.PL</span>
+      <span class="social-handle">Napisz do nas</span>
+    </div>
+    <span class="social-arrow">↗</span>
+  </a>
+</div>
+
+
+<!-- FOOTER -->
+<footer id="kontakt">
+  <p>© 2026 Danger Wear Production. Wszelkie prawa zastrzeżone.</p>
+  <small>Produkcja odzieży i gadżetów w Polsce.</small>
+</footer>
+
+
+<script src="js/main.js?v=20260918-final-v5"></script>
+<script src="js/menu.js?v=20260927-consolidated1"></script>
+
+
+<script src="js/mobile.js?v=20260927-consolidated1"></script>
+<script src="js/i18n.js?v=20260927-consolidated1" defer></script>
+<script src="js/home-video.js?v=20260929-homefix1" defer></script><script src="js/home-motion.js?v=20260930" defer></script></body></html>

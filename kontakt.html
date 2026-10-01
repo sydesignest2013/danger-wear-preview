@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pl"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt — wycena produkcji | Danger Wear Production</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,600;0,700&amp;family=DM+Mono:wght@300;400&amp;display=swap" rel="stylesheet">
+  
+  <!-- Globalne arkusze -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/menu.css?v=20260927-consolidated1">
+  <link rel="stylesheet" href="css/footer.css?v=20260918-final-v5">
+  
+  <!-- Style specyficzne dla formularza kontaktowego -->
+  <link rel="stylesheet" href="css/kontakt.css">
+<link rel="stylesheet" href="css/technical-fixes.css"><meta name="description" content="Kontakt — wycena produkcji — Danger Wear. Produkcja odzieży personalizowanej, druk sublimacyjny i gadżety."><link rel="stylesheet" href="css/dangerwear.css"><link rel="stylesheet" href="css/product-update.css"><link rel="stylesheet" href="css/mobile.css?v=20260927-consolidated1">
+<link rel="stylesheet" href="css/socials.css?v=20260918-final-v5">
+<link rel="stylesheet" href="css/i18n.css?v=20260927-consolidated1">
+<link rel="alternate" hreflang="pl" href="https://sydesignest2013.github.io/danger-wear-preview/kontakt.html"><link rel="alternate" hreflang="en" href="https://sydesignest2013.github.io/danger-wear-preview/en/kontakt.html"><link rel="alternate" hreflang="de" href="https://sydesignest2013.github.io/danger-wear-preview/de/kontakt.html"><link rel="alternate" hreflang="fr" href="https://sydesignest2013.github.io/danger-wear-preview/fr/kontakt.html"><link rel="alternate" hreflang="x-default" href="https://sydesignest2013.github.io/danger-wear-preview/kontakt.html"><link rel="canonical" href="https://sydesignest2013.github.io/danger-wear-preview/kontakt.html">
+<link rel="stylesheet" href="css/dw-light-theme-v2.css?v=20260930"></head>
+<body>
+  <!-- KURSOR -->
+  
+  
+  
+  <!-- TŁO DLA STRONY KONTAKT (Orby) -->
+  <div class="bg-orb bg-orb-1"></div>
+  <div class="bg-orb bg-orb-2"></div>
+
+  <!-- MOBILE MENU (Z index.html) -->
+  <div class="mob-overlay" id="mobOverlay" onclick="closeMob()"></div>
+  <div class="mob-menu" id="mobMenu">
+    <button class="mob-close" onclick="closeMob()" aria-label="Zamknij menu">✕</button>
+    <div class="mob-section">
+      <button class="mob-section-btn" id="mobProjBtn" onclick="toggleMobSub()">Produkty <span class="mc">›</span></button>
+      <div class="mob-sub" id="mobSub"><a href="produkty.html">Wszystkie produkty</a><a href="fightwear.html#sportswear">SPORTSWEAR</a><a href="fightwear.html#fightwear">FIGHTWEAR</a><a href="streetwear.html">STREETWEAR</a><a href="akcesoria.html">AKCESORIA</a></div>
+    </div>
+    <a href="produkcja.html" class="mob-plain" onclick="closeMob()">Produkcja</a>
+    <a href="onas.html" class="mob-plain" onclick="closeMob()">O nas</a>
+    <a href="kontakt.html" class="mob-plain" onclick="closeMob()">Kontakt</a>
+  </div>
+
+  <!-- NAV (Z index.html) -->
+  <nav id="mainNav">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/DW-logotyp.svg" alt="Danger Wear Production">
+      <span class="nav-logo-text">DANGER WEAR PRODUCTION</span>
+    </a>
+    <ul class="nav-links">
+      <li id="projLi">
+        <button class="nav-link" onclick="toggleProj()">Produkty <span class="nav-chev">▾</span></button>
+        <div class="nav-dropdown dw-home-mega" aria-label="Kategorie produktów"><section><a href="fightwear.html#sportswear" class="nav-dropdown-label nav-dropdown-label-link">SPORTSWEAR</a><a href="koszulki-sportowe.html" class="nav-dropdown-sub">KOSZULKI SPORTOWE MESH</a><a href="koszulki-sportowe-athletic.html" class="nav-dropdown-sub">KOSZULKI SPORTOWE ATHLETIC</a><a href="tank-top.html" class="nav-dropdown-sub">TANK TOP</a><a href="fightwear.html#fightwear" class="nav-dropdown-label nav-dropdown-label-link">FIGHTWEAR</a><a href="rashguard.html" class="nav-dropdown-sub">RASHGUARD</a><a href="spodenki-mma-luzne.html" class="nav-dropdown-sub">SPODENKI MMA LUŹNE</a><a href="spodenki-mma-vale-tudo.html" class="nav-dropdown-sub">SPODENKI MMA VALE TUDO</a><a href="legginsy-sportowe.html" class="nav-dropdown-sub">LEGGINSY SPORTOWE</a><a href="fightwear-set.html" class="nav-dropdown-sub">KOMPLETY FIGHTWEAR</a></section><section><a href="streetwear.html" class="nav-dropdown-label nav-dropdown-label-link">STREETWEAR</a><a href="streetwear-koszulki.html" class="nav-dropdown-sub">KOSZULKI</a><a href="streetwear-bluzy.html" class="nav-dropdown-sub">BLUZY</a><a href="streetwear-kurtki.html" class="nav-dropdown-sub">KURTKI</a><a href="streetwear-bezrekawniki.html" class="nav-dropdown-sub">BEZRĘKAWNIKI</a><a href="streetwear-spodnie.html" class="nav-dropdown-sub">SPODNIE</a><a href="streetwear-spodenki.html" class="nav-dropdown-sub">SPODENKI</a></section><section><a href="akcesoria.html" class="nav-dropdown-label nav-dropdown-label-link">AKCESORIA</a><a href="szaliki.html" class="nav-dropdown-sub">SZALIKI</a><a href="flagi-drukowane.html" class="nav-dropdown-sub">FLAGI DRUKOWANE</a><a href="czapki-z-daszkiem.html" class="nav-dropdown-sub">CZAPKI Z DASZKIEM</a><a href="czapki-zimowe.html" class="nav-dropdown-sub">CZAPKI ZIMOWE</a><a href="rekawiczki.html" class="nav-dropdown-sub">RĘKAWICZKI</a><a href="kominy-termoaktywne.html" class="nav-dropdown-sub">KOMINY TERMOAKTYWNE</a><a href="kominy-polarowe-zimowe.html" class="nav-dropdown-sub">KOMINY POLAROWE ZIMOWE</a><a href="kominiarki.html" class="nav-dropdown-sub">KOMINIARKI</a><a href="chusty.html" class="nav-dropdown-sub">CHUSTY</a><a href="nerki-saszetki.html" class="nav-dropdown-sub">NERKI / SASZETKI</a><a href="poduszki.html" class="nav-dropdown-sub">PODUSZKI</a><a href="reczniki.html" class="nav-dropdown-sub">RĘCZNIKI</a><a href="worki-sportowe.html" class="nav-dropdown-sub">WORKI SPORTOWE</a><a href="smycze-na-klucze.html" class="nav-dropdown-sub">SMYCZE NA KLUCZE</a></section></div>
+      </li>
+      <li><a href="produkcja.html" class="nav-link">Produkcja</a></li>
+      <li><a href="onas.html" class="nav-link">O nas</a></li>
+      <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" onclick="toggleMob()" aria-label="Otwórz menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- SUCCESS OVERLAY -->
+  <div class="success-overlay" id="successOverlay">
+    <div class="success-inner">
+      <div class="success-icon">✓</div>
+      <h2 class="success-title">Brief<br>wysłany</h2>
+      <p class="success-sub" id="successMessage">Dziękujemy. Brief trafił do naszego zespołu — wrócimy z odpowiedzią.</p>
+    <p style="margin-top:1rem"><button type="button" class="btn-ghost" onclick="closePreparedMail()">Wróć do formularza</button></p></div>
+  </div>
+
+  <!-- STRONA Z FORMULARZEM (PAGE) -->
+  <div class="page">
+    
+    <!-- LEFT: sticky panel -->
+    <div class="page-left" id="pageLeft">
+      <div class="left-ghost" id="leftGhost">BRIEF</div>
+      <div class="left-step-count" id="leftStepTxt">Krok 1 / 7</div>
+      <div class="left-step-progress">
+        <div class="left-step-bar" id="leftStepBar" style="width:14%"></div>
+      </div>
+      <p class="left-eyebrow">Zapytanie o produkcję</p>
+      <h1 class="left-title">Zamów<br><span class="outline">produkcję</span></h1>
+      <p class="left-desc" id="leftDesc">Podaj produkt, ilość sztuk i termin. Przygotujemy wycenę zamówienia.</p>
+      <div class="left-vtext">DANGER WEAR / PRODUKCJA / 2026</div>
+    </div>
+
+    <!-- RIGHT: scrollable form -->
+    <div class="page-right">
+      <form id="orderForm" onsubmit="handleSubmit(event)">
+
+        <!-- 01 PRODUKT -->
+        <div class="f-block" id="fb1">
+          <span class="f-step-num">01</span>
+          <label class="f-label" for="produkt">Produkt</label>
+          <div class="f-select-wrap">
+            <select class="f-select" id="produkt" name="produkt" required="" onchange="this.classList.add('filled'); updateLeft();"><option value="" disabled selected>Wybierz produkt…</option><optgroup label="SPORTSWEAR"><option value="KOSZULKI SPORTOWE MESH">KOSZULKI SPORTOWE MESH</option><option value="KOSZULKI SPORTOWE ATHLETIC">KOSZULKI SPORTOWE ATHLETIC</option><option value="TANK TOP">TANK TOP</option></optgroup><optgroup label="FIGHTWEAR"><option value="RASHGUARD">RASHGUARD</option><option value="SPODENKI MMA LUŹNE">SPODENKI MMA LUŹNE</option><option value="SPODENKI MMA VALE TUDO">SPODENKI MMA VALE TUDO</option><option value="LEGGINSY SPORTOWE">LEGGINSY SPORTOWE</option><option value="KOMPLETY FIGHTWEAR">KOMPLETY FIGHTWEAR</option></optgroup><optgroup label="STREETWEAR"><option value="KOSZULKI">KOSZULKI</option><option value="BLUZY">BLUZY</option><option value="KURTKI">KURTKI</option><option value="BEZRĘKAWNIKI">BEZRĘKAWNIKI</option><option value="SPODNIE">SPODNIE</option><option value="SPODENKI">SPODENKI</option></optgroup><optgroup label="AKCESORIA"><option value="SZALIKI">SZALIKI</option><option value="FLAGI DRUKOWANE">FLAGI DRUKOWANE</option><option value="CZAPKI Z DASZKIEM">CZAPKI Z DASZKIEM</option><option value="CZAPKI ZIMOWE">CZAPKI ZIMOWE</option><option value="RĘKAWICZKI">RĘKAWICZKI</option><option value="KOMINY TERMOAKTYWNE">KOMINY TERMOAKTYWNE</option><option value="KOMINY POLAROWE ZIMOWE">KOMINY POLAROWE ZIMOWE</option><option value="KOMINIARKI">KOMINIARKI</option><option value="CHUSTY">CHUSTY</option><option value="NERKI / SASZETKI">NERKI / SASZETKI</option><option value="PODUSZKI">PODUSZKI</option><option value="RĘCZNIKI">RĘCZNIKI</option><option value="WORKI SPORTOWE">WORKI SPORTOWE</option><option value="SMYCZE NA KLUCZE">SMYCZE NA KLUCZE</option></optgroup><option value="Inne">Inne</option></select>
+          </div>
+        </div>
+
+        <!-- 02 KLUB -->
+        <div class="f-block" id="fb2">
+          <span class="f-step-num">02</span>
+          <label class="f-label" for="klub">Klub / Ekipa / Firma</label>
+          <input class="f-input" type="text" id="klub" name="klub" placeholder="Nazwa klubu, ekipy lub firmy" required="" oninput="updateLeft()">
+        </div>
+
+        <!-- 03 OSOBA -->
+        <div class="f-block" id="fb3">
+          <span class="f-step-num">03</span>
+          <label class="f-label" for="osoba">Osoba kontaktowa</label>
+          <input class="f-input" type="text" id="osoba" name="osoba" placeholder="Imię i nazwisko" required="" oninput="updateLeft()">
+        </div>
+
+        <!-- 04 EMAIL -->
+        <div class="f-block" id="fb4">
+          <span class="f-step-num">04</span>
+          <label class="f-label" for="email">Email</label>
+          <input class="f-input" type="email" id="email" name="email" placeholder="twoj@email.pl" required="" oninput="updateLeft()">
+        </div>
+
+        <!-- 05 TELEFON -->
+        <div class="f-block" id="fb5">
+          <span class="f-step-num">05</span>
+          <label class="f-label" for="telefon">Telefon <span class="f-label-optional">— nieobowiązkowy</span></label>
+          <input class="f-input" type="tel" id="telefon" name="telefon" placeholder="+48 000 000 000" oninput="updateLeft()">
+        </div>
+
+        <div class="f-block" id="fb6">
+          <span class="f-step-num">06</span><label class="f-label" for="ilosc">Ilość sztuk</label>
+          <input class="f-input" type="number" id="ilosc" name="ilosc" placeholder="np. 100" min="1" required>
+        </div>
+        <div class="f-block" id="fb7">
+          <span class="f-step-num">07</span><label class="f-label" for="termin">Oczekiwany termin</label>
+          <input class="f-input" type="date" id="termin" name="termin" onchange="this.classList.add('filled')">
+        </div>
+
+        <!-- 07 OPIS -->
+        <div class="f-block" id="fb8">
+          <span class="f-step-num">08</span>
+          <label class="f-label" for="opis">Opis zamówienia</label>
+          <textarea class="f-textarea" id="opis" name="opis" placeholder="Opisz produkt, kolorystykę, nadruki, rozmiary i pozostałe wymagania." required="" oninput="document.getElementById('charCount').textContent=this.value.length+' znaków'; updateLeft();"></textarea>
+          <div class="f-char-count" id="charCount">0 znaków</div>
+          <label class="f-upload" for="zalaczniki">Dodaj załączniki <span>PNG, JPG, PDF · maks. 20 MB łącznie</span></label>
+          <input id="zalaczniki" name="zalaczniki" type="file" multiple accept="image/png,image/jpeg,application/pdf">
+        </div>
+
+        <!-- SUBMIT -->
+        <div class="f-submit-wrap">
+          <p class="f-submit-note">
+            Brief trafi bezpośrednio do zespołu Danger Wear.
+          </p>
+          <button type="submit" class="btn-submit" id="submitBtn">Wyślij brief</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER (Z index.html) -->
+  <footer id="kontakt">
+    <p>© 2026 Danger Wear Production. Wszelkie prawa zastrzeżone.</p>
+    <small>Produkcja odzieży i gadżetów w Polsce.</small>
+  </footer>
+
+  <!-- SKRYPTY -->
+  <script src="js/main.js?v=20260918-final-v5"></script>
+  <script src="js/menu.js?v=20260927-consolidated1"></script>
+  <script src="js/production-contact.js"></script>
+
+
+<script src="js/mobile.js?v=20260927-consolidated1"></script>
+<script>document.addEventListener("DOMContentLoaded",()=>{const m={"legginsy-sportowe":"LEGGINSY SPORTOWE","koszulki-sportowe":"KOSZULKI SPORTOWE MESH","rashguard":"RASHGUARD","koszulki-sportowe-athletic":"KOSZULKI SPORTOWE ATHLETIC","spodenki-mma-luzne":"SPODENKI MMA LUŹNE","spodenki-mma-vale-tudo":"SPODENKI MMA VALE TUDO","tank-top":"TANK TOP","fightwear-set":"KOMPLETY FIGHTWEAR","streetwear-koszulki":"KOSZULKI","streetwear-bluzy":"BLUZY","streetwear-kurtki":"KURTKI","streetwear-bezrekawniki":"BEZRĘKAWNIKI","streetwear-spodnie":"SPODNIE","streetwear-spodenki":"SPODENKI","czapki-z-daszkiem":"CZAPKI Z DASZKIEM","czapki-zimowe":"CZAPKI ZIMOWE","kominy-termoaktywne":"KOMINY TERMOAKTYWNE","kominy-polarowe-zimowe":"KOMINY POLAROWE ZIMOWE","kominiarki":"KOMINIARKI","chusty":"CHUSTY","rekawiczki":"RĘKAWICZKI","szaliki":"SZALIKI","nerki-saszetki":"NERKI / SASZETKI","reczniki":"RĘCZNIKI","worki-sportowe":"WORKI SPORTOWE","flagi-drukowane":"FLAGI DRUKOWANE","poduszki":"PODUSZKI","smycze-na-klucze":"SMYCZE NA KLUCZE"};const k=new URLSearchParams(location.search).get("produkt");if(m[k]){const s=document.getElementById("produkt");s.value=m[k];s.classList.add("filled");const d=document.getElementById("opis");if(d.value==="Zapytanie o produkcję: "+k)d.value="";}});</script><script src="js/i18n.js?v=20260927-consolidated1" defer></script>
+<script>document.addEventListener("DOMContentLoaded",()=>{const m={"koszulki-sportowe":"KOSZULKI SPORTOWE MESH","legginsy-sportowe":"LEGGINSY SPORTOWE","koszulki-sportowe-athletic":"KOSZULKI SPORTOWE ATHLETIC","rashguard":"RASHGUARD","spodenki-mma-luzne":"SPODENKI MMA LUŹNE","tank-top":"TANK TOP","spodenki-mma-vale-tudo":"SPODENKI MMA VALE TUDO","fightwear-set":"KOMPLETY FIGHTWEAR","streetwear-koszulki":"KOSZULKI","streetwear-bluzy":"BLUZY","streetwear-kurtki":"KURTKI","streetwear-bezrekawniki":"BEZRĘKAWNIKI","streetwear-spodnie":"SPODNIE","streetwear-spodenki":"SPODENKI","czapki-z-daszkiem":"CZAPKI Z DASZKIEM","czapki-zimowe":"CZAPKI ZIMOWE","kominy-termoaktywne":"KOMINY TERMOAKTYWNE","kominy-polarowe-zimowe":"KOMINY POLAROWE ZIMOWE","kominiarki":"KOMINIARKI","chusty":"CHUSTY","rekawiczki":"RĘKAWICZKI","szaliki":"SZALIKI","nerki-saszetki":"NERKI / SASZETKI","reczniki":"RĘCZNIKI","worki-sportowe":"WORKI SPORTOWE","flagi-drukowane":"FLAGI DRUKOWANE","poduszki":"PODUSZKI","smycze-na-klucze":"SMYCZE NA KLUCZE"};const k=new URLSearchParams(location.search).get("produkt");if(m[k]){const s=document.getElementById("produkt");s.value=m[k];s.classList.add("filled");const d=document.getElementById("opis");if(d.value==="Zapytanie o produkcję: "+k)d.value="";}});</script><script>document.addEventListener("DOMContentLoaded",()=>{const m={"koszulki-sportowe":"KOSZULKI SPORTOWE MESH","rashguard":"RASHGUARD","koszulki-sportowe-athletic":"KOSZULKI SPORTOWE ATHLETIC","spodenki-mma-luzne":"SPODENKI MMA LUŹNE","spodenki-mma-vale-tudo":"SPODENKI MMA VALE TUDO","tank-top":"TANK TOP","legginsy-sportowe":"LEGGINSY SPORTOWE","fightwear-set":"KOMPLETY FIGHTWEAR","streetwear-koszulki":"KOSZULKI","streetwear-bluzy":"BLUZY","streetwear-kurtki":"KURTKI","streetwear-bezrekawniki":"BEZRĘKAWNIKI","streetwear-spodnie":"SPODNIE","streetwear-spodenki":"SPODENKI","czapki-z-daszkiem":"CZAPKI Z DASZKIEM","czapki-zimowe":"CZAPKI ZIMOWE","kominy-termoaktywne":"KOMINY TERMOAKTYWNE","kominy-polarowe-zimowe":"KOMINY POLAROWE ZIMOWE","kominiarki":"KOMINIARKI","chusty":"CHUSTY","rekawiczki":"RĘKAWICZKI","szaliki":"SZALIKI","nerki-saszetki":"NERKI / SASZETKI","reczniki":"RĘCZNIKI","worki-sportowe":"WORKI SPORTOWE","flagi-drukowane":"FLAGI DRUKOWANE","poduszki":"PODUSZKI","smycze-na-klucze":"SMYCZE NA KLUCZE"};const k=new URLSearchParams(location.search).get("produkt");if(m[k]){const s=document.getElementById("produkt");s.value=m[k];s.classList.add("filled");const d=document.getElementById("opis");if(d.value==="Zapytanie o produkcję: "+k)d.value="";}});</script><script>document.addEventListener("DOMContentLoaded",()=>{const m={"koszulki-sportowe":"KOSZULKI SPORTOWE MESH","rashguard":"RASHGUARD","streetwear-koszulki":"KOSZULKI","koszulki-sportowe-athletic":"KOSZULKI SPORTOWE ATHLETIC","spodenki-mma-luzne":"SPODENKI MMA LUŹNE","streetwear-bluzy":"BLUZY","spodenki-mma-vale-tudo":"SPODENKI MMA VALE TUDO","streetwear-kurtki":"KURTKI","tank-top":"TANK TOP","legginsy-sportowe":"LEGGINSY SPORTOWE","streetwear-bezrekawniki":"BEZRĘKAWNIKI","fightwear-set":"KOMPLETY FIGHTWEAR","streetwear-spodnie":"SPODNIE","streetwear-spodenki":"SPODENKI","czapki-z-daszkiem":"CZAPKI Z DASZKIEM","czapki-zimowe":"CZAPKI ZIMOWE","kominy-termoaktywne":"KOMINY TERMOAKTYWNE","kominy-polarowe-zimowe":"KOMINY POLAROWE ZIMOWE","kominiarki":"KOMINIARKI","chusty":"CHUSTY","rekawiczki":"RĘKAWICZKI","szaliki":"SZALIKI","nerki-saszetki":"NERKI / SASZETKI","reczniki":"RĘCZNIKI","worki-sportowe":"WORKI SPORTOWE","flagi-drukowane":"FLAGI DRUKOWANE","poduszki":"PODUSZKI","smycze-na-klucze":"SMYCZE NA KLUCZE"};const k=new URLSearchParams(location.search).get("produkt");if(m[k]){const s=document.getElementById("produkt");s.value=m[k];s.classList.add("filled");const d=document.getElementById("opis");if(d.value==="Zapytanie o produkcję: "+k)d.value="";}});</script><script>document.addEventListener("DOMContentLoaded",()=>{const m={"koszulki-sportowe":"KOSZULKI SPORTOWE MESH","rashguard":"RASHGUARD","streetwear-koszulki":"KOSZULKI","szaliki":"SZALIKI","flagi-drukowane":"FLAGI DRUKOWANE","koszulki-sportowe-athletic":"KOSZULKI SPORTOWE ATHLETIC","spodenki-mma-luzne":"SPODENKI MMA LUŹNE","streetwear-bluzy":"BLUZY","czapki-z-daszkiem":"CZAPKI Z DASZKIEM","spodenki-mma-vale-tudo":"SPODENKI MMA VALE TUDO","streetwear-kurtki":"KURTKI","tank-top":"TANK TOP","czapki-zimowe":"CZAPKI ZIMOWE","legginsy-sportowe":"LEGGINSY SPORTOWE","streetwear-bezrekawniki":"BEZRĘKAWNIKI","fightwear-set":"KOMPLETY FIGHTWEAR","rekawiczki":"RĘKAWICZKI","streetwear-spodnie":"SPODNIE","kominy-termoaktywne":"KOMINY TERMOAKTYWNE","streetwear-spodenki":"SPODENKI","kominy-polarowe-zimowe":"KOMINY POLAROWE ZIMOWE","kominiarki":"KOMINIARKI","chusty":"CHUSTY","nerki-saszetki":"NERKI / SASZETKI","poduszki":"PODUSZKI","reczniki":"RĘCZNIKI","worki-sportowe":"WORKI SPORTOWE","smycze-na-klucze":"SMYCZE NA KLUCZE"};const k=new URLSearchParams(location.search).get("produkt");if(m[k]){const s=document.getElementById("produkt");s.value=m[k];s.classList.add("filled");const d=document.getElementById("opis");if(d.value==="Zapytanie o produkcję: "+k)d.value="";}});</script></body></html>

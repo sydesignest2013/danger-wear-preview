@@ -1,0 +1,12 @@
+WYMIANA FILMU W HERO — DANGER WEAR
+Podmień plik hero.mp4 w tym folderze. Zachowaj dokładnie tę nazwę.
+Format: MP4, obraz H.264, piksele yuv420p. Zalecany film bez dźwięku.
+Rozdzielczość: 1920 x 1080 px, proporcje 16:9, 25 lub 30 klatek/s.
+Zalecana długość: 10–25 sekund; płynne przejście końca w początek.
+Zalecana wielkość: do 10 MB. To zalecenia, nie sztywne ograniczenia.
+Film uruchamia się automatycznie, bez dźwięku, w pętli.
+Najważniejszy obraz umieść po prawej; lewą część przykrywa ciemny gradient.
+Na telefonie film jest kadrowany, bez zmiany proporcji obrazu.
+Nie umieszczaj napisów w filmie — nagłówek i przyciski należą do strony.
+Po podmianie odśwież stronę Ctrl+F5. Publikując stronę, prześlij też folder hero-video.
+Przy ograniczeniu animacji w ustawieniach urządzenia strona pokazuje nieruchomy plakat.

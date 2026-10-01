@@ -1,0 +1,13 @@
+body.dw-unified-product-page .dw-caption-outline{display:none!important}
+body.dw-unified-product-page .fw-personalization-copy{display:flex!important;flex-direction:column!important;gap:4px!important;justify-content:flex-end!important}
+body.dw-unified-product-page .fw-personalization-copy small{color:#e21a12!important;margin:0!important;padding:0!important;line-height:1.25!important}
+body.dw-unified-product-page .fw-personalization-copy strong{margin:0!important}
+body.dw-unified-product-page .fw-mark-panel .mark-badge{display:flex!important;flex-direction:column!important;align-items:center!important;height:auto!important;gap:5px!important;max-width:82px!important;background:transparent!important}
+.dw-method-art{display:block;width:100%;aspect-ratio:1730/1650;background-image:url('../assets/images/marking/methods-sheet.png');background-size:355.1445% 248.2424%;background-position:calc(var(--method-x) / 4414 * 100%) calc(var(--method-y) / 2446 * 100%);background-repeat:no-repeat}
+.dw-method-label{font:600 10px/1.2 'Chakra Petch',sans-serif;color:inherit;text-align:center;overflow-wrap:anywhere}
+@media(max-width:760px){body.dw-unified-product-page .fw-personalization>summary{display:flex!important;flex-wrap:wrap!important;gap:12px!important}body.dw-unified-product-page .mesh-ref-info .fw-mark-panel{flex:1 0 100%!important;width:100%!important;justify-content:flex-start!important;flex-wrap:wrap!important;overflow:visible!important}body.dw-unified-product-page .mesh-ref-info .fw-mark-panel .mark-badge{flex:0 0 64px!important;width:64px!important;min-width:64px!important}body.dw-unified-product-page .dw-method-label{white-space:normal!important}body.dw-unified-product-page{overflow-x:clip!important}}
+/* Realization images retain alpha; backgrounds are shared by thumbnails and preview. */
+:root{--dw-realization-light:linear-gradient(145deg,#ffffff,#e6e8eb);--dw-realization-dark:linear-gradient(145deg,#25292e,#101215)}
+body.dw-unified-product-page .realization-thumb img,body.dw-unified-product-page #lightboxImage{background-image:var(--dw-realization-dark)!important;background-color:#171a1e!important;background-size:cover!important;background-position:center!important;object-fit:contain!important}
+html[data-theme="light"] body.dw-unified-product-page .realization-thumb img,html[data-theme="light"] body.dw-unified-product-page #lightboxImage{background-image:var(--dw-realization-light)!important;background-color:#f1f2f4!important}
+@media(max-width:1180px){body.dw-unified-product-page .mob-panel:not(.open){visibility:hidden!important}body.dw-unified-product-page .mob-panel.open{visibility:visible!important}html:has(body.dw-unified-product-page){overflow-x:clip!important}}

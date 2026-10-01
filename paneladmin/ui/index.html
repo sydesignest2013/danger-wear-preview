@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Danger Wear • Pracownia produktów</title><link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="__ADMIN_BASE__/ui/style.css"><link rel="stylesheet" href="__ADMIN_BASE__/ui/etap1.css?v=1"><link rel="stylesheet" href="__ADMIN_BASE__/ui/clubs.css?v=1"><link rel="stylesheet" href="__ADMIN_BASE__/ui/section-switch.css?v=20260930"></head>
+<body><aside class="sidebar"><button class="sidebar-toggle" id="sidebarToggle" type="button" aria-label="Zwiń menu" aria-expanded="true">‹</button><a class="brand" href="__ADMIN_BASE__/"><img class="brand-logo" src="__ADMIN_BASE__/asset/assets/images/dangerwear-logo.webp" alt="Danger Wear"><span>DANGER WEAR<small>PRODUCTION</small></span></a><div class="local"><i></i> PANEL LOKALNY</div>
+<div class="section-switch" aria-label="Sekcja aplikacji"><a href="http://127.0.0.1:8765/admin/" aria-current="page">PANEL STRONY</a><a href="#social" data-open-social>SOCIAL MEDIA</a></div><nav aria-label="Panel">
+  <button class="nav" data-page="categories"><span>⊞</span> Kategorie</button>
+  <button class="nav active" data-page="products"><span>▦</span> Produkty <b id="productCount">—</b></button>
+  <a class="nav" href="#social" data-open-social><span>▦</span> DW Social Media</a>
+  <details class="database-menu">
+    <summary class="database-toggle"><span aria-hidden="true">◫</span> Baza danych <span class="database-chevron" aria-hidden="true">⌄</span></summary>
+    <div class="database-submenu">
+      <button class="nav" data-page="clubs"><span>☆</span> Kluby</button>
+      <button class="nav" data-page="methodPhotos"><span>▧</span> Zdjęcia metod znakowania</button>
+      <button class="nav" data-page="tables"><span>▤</span> Tabele rozmiarów</button>
+      <button class="nav" data-page="methods"><span>◈</span> Metody znakowania</button>
+      <button class="nav" data-page="media"><span>▧</span> Biblioteka zdjęć</button>
+      <div class="database-utilities">
+        <button class="nav nav-utility" data-page="history"><span>↶</span> Publikacje i historia</button>
+        <button class="nav nav-utility" data-page="backup"><span>◫</span> Kopie zapasowe</button>
+      </div>
+    </div>
+  </details>
+</nav><div class="sidebar-bottom"><a href="/" target="_blank" rel="noopener">Otwórz stronę lokalną ↗</a><div class="account-controls"><span>● Sesja zabezpieczona</span><button id="changePassword">Zmień hasło</button><button id="logout">Wyloguj</button></div><p>Publikacja zapisuje pliki<br>w folderze strony.</p></div></aside>
+<main><header class="top"><div><span class="eyebrow">DANGER WEAR PRODUCTION</span><h1 id="pageTitle">Produkty</h1></div><div class="top-right"><span class="tag">Na tym komputerze</span><button id="newProduct" class="primary">＋ Dodaj produkt</button></div></header><div id="content"><div class="empty">Wczytywanie pracowni…</div></div></main>
+<div id="toast" role="status" aria-live="polite"></div>
+<dialog id="modal"><div class="modal-head"><h2 id="modalTitle"></h2><button id="closeModal" aria-label="Zamknij">✕</button></div><div id="modalBody"></div></dialog>
+<script>window.DW_BASE="__ADMIN_BASE__";window.DW_TOKEN="__TOKEN__";</script><script src="__ADMIN_BASE__/ui/app.js"></script><script src="__ADMIN_BASE__/ui/etap1.js?v=1"></script><script src="__ADMIN_BASE__/ui/clubs.js?v=1"></script><script src="__ADMIN_BASE__/ui/unified.js"></script></body></html>

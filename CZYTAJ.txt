@@ -1,0 +1,5 @@
+Danger Wear — aktualna strona, panel i Social Media.
+Uruchom START.cmd.
+Panel: http://127.0.0.1:8765/admin/
+Social Media: http://127.0.0.1:8786/
+Przed pierwszym startem zatrzymaj starsza kopie aplikacji. Haslo i dane zostaly zachowane.

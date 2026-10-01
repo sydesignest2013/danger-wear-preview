@@ -1,0 +1,12 @@
+FILMY — NASZA PRODUKCJA
+
+W każdym z czterech folderów etapu można umieścić film o dokładnej nazwie: film.mp4
+
+01_Wykonanie_projektu\film.mp4
+02_Wydruk_znakowanie\film.mp4
+03_Szycie\film.mp4
+04_Wysylka_do_klienta\film.mp4
+
+Format: MP4 (H.264, yuv420p), bez dźwięku. Zalecany poziomy kadr i długość 5–20 sekund.
+Film uruchamia się po najechaniu na kafel i zatrzymuje po opuszczeniu kursorem. Na telefonie pojedyncze dotknięcie kafla uruchamia film, kolejne go zatrzymuje.
+Gdy filmu nie ma, kafel automatycznie pokazuje obecne zdjęcie. Nie trzeba zmieniać kodu ani nazw plików.

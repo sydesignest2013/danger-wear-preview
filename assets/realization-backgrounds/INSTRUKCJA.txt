@@ -1,0 +1,7 @@
+TŁA REALIZACJI
+Realizacje wgrywaj jako PNG z przezroczystością. Nie zapisuj tła w samym zdjęciu.
+settings.json zawiera oddzielne ścieżki light i dark, liczone od głównego folderu strony. Pusta ścieżka oznacza neutralne tło właściwe dla motywu.
+Grafiki tła mogą być JPG, WEBP lub PNG. Zalecane proporcje takie jak prezentowane zdjęcia, minimum 1600 px dłuższego boku.
+Ustawienie dotyczy miniaturek realizacji i ich powiększeń, nie galerii lifestyle.
+Istniejące zdjęcia z zapisanym tłem zachowują swój wygląd. Przezroczystość musi istnieć w pliku źródłowym.
+Obsługa tych ustawień w panelu zostanie dodana w końcowym etapie aktualizacji.

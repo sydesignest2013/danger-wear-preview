@@ -1,0 +1,30 @@
+# Local Python runtime and generated Python artefacts
+runtime/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+
+# Local databases, user uploads, exports, backups and application state
+*.sqlite
+*.sqlite3
+*.db
+paneladmin/data/
+social-media/data/
+**/dw-social-uploads/
+**/backups/
+**/exports/
+
+# Local authentication and machine-specific settings
+paneladmin/config.local.json
+paneladmin/launcher-config.local.json
+social-media/config.local.json
+*.token
+*.secret
+.env
+.env.*
+
+# Logs and operating-system files
+*.log
+desktop.ini
+Thumbs.db
+.DS_Store
