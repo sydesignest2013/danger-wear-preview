@@ -1,5 +1,4 @@
-/* Danger Wear / O nas — layout based on supplied SYDESIGN reference.
-   Scoped to body.dw-about-page, without changes to shared header, contact flow or other pages. */
+
 body.dw-about-page{--dw-about-accent:#BF1304}
 .dw-about-page .intro{position:relative;isolation:isolate;min-height:clamp(480px,66vh,720px);max-height:none;height:auto;display:flex;align-items:center;border-bottom:1px solid var(--border);overflow:hidden;padding:92px 0 36px}
 .dw-about-page .intro-left{width:58%;padding:clamp(56px,7vw,112px) 3vw clamp(60px,8vw,120px) max(36px,9vw);position:relative;z-index:2;min-width:0}
@@ -44,58 +43,62 @@ body.dw-about-page{--dw-about-accent:#BF1304}
 .dw-about-page .dw-about-cta h2{font-size:clamp(2rem,4.4vw,4.8rem);text-transform:uppercase;letter-spacing:-.03em;line-height:.99;margin-bottom:16px}
 .dw-about-page .dw-about-cta p:not(.dw-about-cta-label){font-size:clamp(.84rem,1vw,1rem);color:var(--mid);line-height:1.8;max-width:630px}
 .dw-about-page .dw-about-cta-link{flex-shrink:0;min-width:190px;display:inline-flex;align-items:center;justify-content:space-between;gap:30px;padding:17px 21px;text-decoration:none;text-transform:uppercase;font-weight:700;letter-spacing:.1em;font-size:.8rem;color:#fff;background:var(--dw-about-accent);border:1px solid var(--dw-about-accent);transition:background .25s,transform .25s}
-.dw-about-page .dw-about-cta-link:hover,.dw-about-page .dw-about-cta-link:focus-visible{background:#080808;transform:translateY(-3px)}
+.dw-about-page .dw-about-cta-link:hover,
+.dw-about-page .dw-about-cta-link:focus-visible{background:#080808;transform:translateY(-3px)}
 .dw-about-page .dw-about-cta-link:focus-visible{outline:2px solid #fff;outline-offset:3px}
 @media(max-width:1024px){
- .dw-about-page .intro-left{width:69%;padding-left:5vw}
- .dw-about-page .intro-right{width:47%}
- .dw-about-page .intro-name{font-size:clamp(3.35rem,8vw,6.9rem)}
- .dw-about-page .manifesto-inner{grid-template-columns:1fr;gap:24px}
- .dw-about-page .dw-about-pillars-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
- .dw-about-page .dw-about-pillar:nth-child(2){border-right:0}
- .dw-about-page .dw-about-pillar:nth-child(n+3){border-top:1px solid var(--border)}
- .dw-about-page .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+.dw-about-page .intro-left{width:69%;padding-left:5vw}
+.dw-about-page .intro-right{width:47%}
+.dw-about-page .intro-name{font-size:clamp(3.35rem,8vw,6.9rem)}
+.dw-about-page .manifesto-inner{grid-template-columns:1fr;gap:24px}
+.dw-about-page .dw-about-pillars-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.dw-about-page .dw-about-pillar:nth-child(2){border-right:0}
+.dw-about-page .dw-about-pillar:nth-child(n+3){border-top:1px solid var(--border)}
+.dw-about-page .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media(max-width:767px){
- .dw-about-page .intro{min-height:550px!important;max-height:none!important;height:auto!important;padding:72px 0 30px;align-items:flex-end}
- .dw-about-page .intro-left{width:100%!important;padding:85px 20px 72px!important}
- .dw-about-page .intro-right{display:flex!important;right:0;top:72px;bottom:0;width:100%;opacity:.4;background:radial-gradient(circle at 70% 32%,rgba(191,19,4,.19),transparent 58%)}
- .dw-about-page .intro-right::before{background:linear-gradient(to top,#080808 2%,rgba(8,8,8,.8) 40%,rgba(8,8,8,.28) 100%)}
- .dw-about-page .intro-right::after{display:none}
- .dw-about-page .intro-right .dw-about-logo{max-width:50%;max-height:45%;position:absolute;right:0;top:6%;opacity:.65}
- .dw-about-page .intro-name{font-size:clamp(3.1rem,12vw,6rem)!important;line-height:.9!important}
- .dw-about-page .intro-role{align-items:stretch;flex-direction:column;gap:9px}
- .dw-about-page .role-pill{width:max-content;max-width:100%}
- .dw-about-page .intro-scroll{bottom:15px}
- .dw-about-page .manifesto{padding:70px 0!important}
- .dw-about-page .manifesto-inner{padding:0 20px;gap:14px}
- .dw-about-page .manifesto-label{margin-bottom:7px}
- .dw-about-page .manifesto-counter{display:none}
- .dw-about-page .manifesto-quote{font-size:clamp(1.85rem,8vw,3rem)!important;margin-bottom:23px}
- .dw-about-page .dw-about-pillars-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
- .dw-about-page .dw-about-pillar{padding:26px 17px 29px}
- .dw-about-page .dw-about-pillar-num{font-size:2.4rem;margin-bottom:14px}
- .dw-about-page .dw-about-pillar-title{font-size:.85rem}
- .dw-about-page .dw-about-pillar-desc{font-size:.74rem}
- .dw-about-page .process-section{padding:70px 20px!important}
- .dw-about-page .process-header{margin-bottom:32px!important}
- .dw-about-page .steps{grid-template-columns:1fr!important}
- .dw-about-page .process-sub{text-align:left!important}
- .dw-about-page .dw-about-cta{padding:54px 20px}
- .dw-about-page .dw-about-cta-inner{display:block}
- .dw-about-page .dw-about-cta-link{margin-top:26px;min-height:52px;width:100%}
+.dw-about-page .intro{min-height:550px!important;max-height:none!important;height:auto!important;padding:72px 0 30px;align-items:flex-end}
+.dw-about-page .intro-left{width:100%!important;padding:85px 20px 72px!important}
+.dw-about-page .intro-right{display:flex!important;right:0;top:72px;bottom:0;width:100%;opacity:.4;background:radial-gradient(circle at 70% 32%,rgba(191,19,4,.19),transparent 58%)}
+.dw-about-page .intro-right::before{background:linear-gradient(to top,#080808 2%,rgba(8,8,8,.8) 40%,rgba(8,8,8,.28) 100%)}
+.dw-about-page .intro-right::after{display:none}
+.dw-about-page .intro-right .dw-about-logo{max-width:50%;max-height:45%;position:absolute;right:0;top:6%;opacity:.65}
+.dw-about-page .intro-name{font-size:clamp(3.1rem,12vw,6rem)!important;line-height:.9!important}
+.dw-about-page .intro-role{align-items:stretch;flex-direction:column;gap:9px}
+.dw-about-page .role-pill{width:max-content;max-width:100%}
+.dw-about-page .intro-scroll{bottom:15px}
+.dw-about-page .manifesto{padding:70px 0!important}
+.dw-about-page .manifesto-inner{padding:0 20px;gap:14px}
+.dw-about-page .manifesto-label{margin-bottom:7px}
+.dw-about-page .manifesto-counter{display:none}
+.dw-about-page .manifesto-quote{font-size:clamp(1.85rem,8vw,3rem)!important;margin-bottom:23px}
+.dw-about-page .dw-about-pillars-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.dw-about-page .dw-about-pillar{padding:26px 17px 29px}
+.dw-about-page .dw-about-pillar-num{font-size:2.4rem;margin-bottom:14px}
+.dw-about-page .dw-about-pillar-title{font-size:.85rem}
+.dw-about-page .dw-about-pillar-desc{font-size:.74rem}
+.dw-about-page .process-section{padding:70px 20px!important}
+.dw-about-page .process-header{margin-bottom:32px!important}
+.dw-about-page .steps{grid-template-columns:1fr!important}
+.dw-about-page .process-sub{text-align:left!important}
+.dw-about-page .dw-about-cta{padding:54px 20px}
+.dw-about-page .dw-about-cta-inner{display:block}
+.dw-about-page .dw-about-cta-link{margin-top:26px;min-height:52px;width:100%}
 }
-@media(max-width:360px){.dw-about-page .intro-name{font-size:clamp(2.75rem,11vw,3.5rem)!important}.dw-about-page .dw-about-pillar{padding:22px 13px}.dw-about-page .role-pill{font-size:.52rem}}
-@media(prefers-reduced-motion:reduce){.dw-about-page .intro-right .dw-about-logo{animation:none}.dw-about-page .dw-about-cta-link{transition:none}}
+@media(max-width:360px){
+.dw-about-page .intro-name{font-size:clamp(2.75rem,11vw,3.5rem)!important}
+.dw-about-page .dw-about-pillar{padding:22px 13px}
+.dw-about-page .role-pill{font-size:.52rem}}
+@media(prefers-reduced-motion:reduce){
+.dw-about-page .intro-right .dw-about-logo{animation:none}
+.dw-about-page .dw-about-cta-link{transition:none}}
 html[data-theme="light"] .dw-about-page .dw-about-pillar-num{color:rgba(0,0,0,.22)}
 html[data-theme="light"] .dw-about-page .intro-right::before{background:linear-gradient(to right,#f5f5f5,rgba(245,245,245,.15) 75%)}
-@media(max-width:767px){html[data-theme="light"] .dw-about-page .intro-right::before{background:linear-gradient(to top,#f5f5f5,rgba(245,245,245,.76),rgba(245,245,245,.1))}}
-
-
-/* 2026-09-29: O nas starts directly with the manifesto block; legacy intro row removed from HTML. */
+@media(max-width:767px){
+html[data-theme="light"] .dw-about-page .intro-right::before{background:linear-gradient(to top,#f5f5f5,rgba(245,245,245,.76),rgba(245,245,245,.1))}}
 .dw-about-page.dw-about-no-intro .manifesto{
   padding-top:clamp(44px,5vw,72px);
 }
 @media(max-width:767px){
-  .dw-about-page.dw-about-no-intro .manifesto{padding-top:38px!important}
+.dw-about-page.dw-about-no-intro .manifesto{padding-top:38px!important}
 }

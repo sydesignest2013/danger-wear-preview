@@ -1,5 +1,4 @@
-/* Danger Wear | production page refinements and drop-in media 2026-09-27 */
-body.dw-production-v3 nav#mainNav .nav-logo-text{white-space:nowrap!important;}
+
 .dw-production-v3 .dw-prod-process{padding-top:clamp(122px,10vw,150px)!important;padding-bottom:clamp(45px,5vw,78px)!important;}
 .dw-production-v3 .dw-prod-process-heading{position:relative;z-index:1;margin:0 0 clamp(22px,2.5vw,32px)!important;max-width:none!important;}
 .dw-production-v3 .dw-prod-process-heading .dw-prod-overline{
@@ -10,12 +9,13 @@ body.dw-production-v3 nav#mainNav .nav-logo-text{white-space:nowrap!important;}
   margin:0!important;color:#f5f5f5!important;font:800 clamp(28px,3.6vw,49px)/1.08 'Chakra Petch',sans-serif!important;
   letter-spacing:-.025em!important;text-transform:uppercase!important;
 }
-@media(max-width:900px){.dw-production-v3 .dw-prod-process{padding-top:105px!important;}}
-@media(max-width:640px){.dw-production-v3 .dw-prod-process{padding-top:94px!important;}
- .dw-production-v3 .dw-prod-process-heading{margin-bottom:18px!important;}
- .dw-production-v3 .dw-prod-process-heading h2{font-size:clamp(26px,7vw,36px)!important;}
+@media(max-width:900px){
+.dw-production-v3 .dw-prod-process{padding-top:105px!important;}}
+@media(max-width:640px){
+.dw-production-v3 .dw-prod-process{padding-top:94px!important;}
+.dw-production-v3 .dw-prod-process-heading{margin-bottom:18px!important;}
+.dw-production-v3 .dw-prod-process-heading h2{font-size:clamp(26px,7vw,36px)!important;}
 }
-/* A small video play glyph belongs to the photo, not to the stage text. */
 .dw-production-v3 .dw-prod-stage-visual{position:relative;isolation:isolate;}
 .dw-production-v3 .dw-prod-stage-visual video.dw-stage-video{
  position:absolute!important;inset:0!important;display:block!important;width:100%!important;height:100%!important;
@@ -27,14 +27,16 @@ body.dw-production-v3 nav#mainNav .nav-logo-text{white-space:nowrap!important;}
 }
 .dw-production-v3 .dw-prod-stage.is-video-playing .dw-prod-stage-visual{background:#101112;}
 .dw-production-v3 .dw-prod-stage.is-video-playing .dw-prod-stage-visual>img{opacity:0!important;}
-.dw-production-v3 .dw-prod-stage.is-video-playing:hover,.dw-production-v3 .dw-prod-stage.is-video-playing:focus-visible{border-color:#e43c31!important;}
+.dw-production-v3 .dw-prod-stage.is-video-playing:hover,
+.dw-production-v3 .dw-prod-stage.is-video-playing:focus-visible{border-color:#e43c31!important;}
 .dw-production-v3 .dw-stage-video-toggle{
  position:absolute;right:12px;bottom:10px;z-index:5;display:grid;place-items:center;
  width:34px;height:34px;min-width:34px;min-height:34px;padding:0;
  color:#f6f6f6;background:rgba(6,7,8,.83);border:1px solid rgba(255,255,255,.58);border-radius:2px;
  font:700 13px/1 'Chakra Petch',sans-serif;cursor:pointer;transition:background .2s,border-color .2s,transform .2s;
 }
-.dw-production-v3 .dw-stage-video-toggle:hover,.dw-production-v3 .dw-stage-video-toggle:focus-visible{
+.dw-production-v3 .dw-stage-video-toggle:hover,
+.dw-production-v3 .dw-stage-video-toggle:focus-visible{
  background:rgba(191,19,4,.85)!important;border-color:#e43c31!important;outline:2px solid #e43c31!important;outline-offset:2px!important;transform:scale(1.04);
 }
 .dw-production-v3 .dw-prod-stage.is-video-playing .dw-stage-video-toggle{background:rgba(6,7,8,.88);}
@@ -42,15 +44,17 @@ body.dw-production-v3 nav#mainNav .nav-logo-text{white-space:nowrap!important;}
 .dw-production-v3 .dw-prod-stage.is-video-playing .dw-stage-video-toggle .dw-video-symbol{font-size:17px;}
 .dw-production-v3 .dw-method-video-toggle{right:11px!important;left:auto!important;bottom:10px!important;}
 .dw-production-v3 .dw-method-visual video.dw-method-video{object-fit:contain!important;object-position:center!important;}
-.dw-production-v3 .dw-prod-stage-visual.is-video-unavailable::after,.dw-production-v3 .dw-method-visual.is-video-unavailable::after{pointer-events:none!important;}
+.dw-production-v3 .dw-prod-stage-visual.is-video-unavailable::after,
+.dw-production-v3 .dw-method-visual.is-video-unavailable::after{pointer-events:none!important;}
 @media(max-width:640px){
- .dw-production-v3 .dw-stage-video-toggle{right:9px;bottom:8px;width:34px;height:34px;min-height:34px;}
- .dw-production-v3 .dw-method-video-toggle{right:9px!important;left:auto!important;}
+.dw-production-v3 .dw-stage-video-toggle{right:9px;bottom:8px;width:34px;height:34px;min-height:34px;}
+.dw-production-v3 .dw-method-video-toggle{right:9px!important;left:auto!important;}
 }
-@media(prefers-reduced-motion:reduce){.dw-stage-video-toggle,.dw-stage-video,.dw-method-video{transition:none!important;}}
-
-/* Visible status instead of silent failure when a clip folder is empty or MP4 is unsupported. */
-.dw-production-v3 .dw-video-feedback {
+@media(prefers-reduced-motion:reduce){
+.dw-stage-video-toggle,
+.dw-stage-video,
+.dw-method-video{transition:none!important;}}
+.dw-production-v3 .dw-video-feedback{
  position:absolute;left:8px;right:8px;bottom:51px;z-index:7;display:block;
  max-width:calc(100% - 16px);padding:7px 8px;border:1px solid rgba(191,19,4,.65);
  background:rgba(8,9,10,.95);color:#f4f4f4;

@@ -1,0 +1,24 @@
+/* Route centre follows the lower outline of the production cards. */
+.dw-production-v3 .dw-prod-progress-wrap{position:relative;z-index:8;margin-top:-24px!important;padding:0!important;background:transparent!important;border:0!important}
+.dw-production-v3 .dw-prod-route-bar{height:48px!important;touch-action:pan-y}
+.dw-production-v3 .dw-prod-route-orb{cursor:grab}
+.dw-production-v3 .dw-prod-route-bar.is-dragging .dw-prod-route-orb{cursor:grabbing}
+
+/* Match the homepage category and counter grid at every viewport. */
+.dw-production-v3 .dw-prod-shell{width:var(--dw-home-content-width);max-width:none;margin-inline:auto;padding-inline:0;box-sizing:border-box}
+
+/* Clean process route; keep the moving orb and interactive stage dots. */
+.dw-production-v3 .dw-prod-route-orb::before{content:none!important}
+.dw-production-v3 .dw-prod-route-line{display:none!important}
+/* A playing film stays inside the photograph area, without its dark overlay. */
+.dw-production-v3 .dw-prod-stage.is-video-playing .dw-prod-stage-visual::after{display:none!important}
+.dw-production-v3 .dw-prod-stage.is-video-playing .dw-stage-video{filter:none!important}
+
+/* Keep production readable when the shared light theme is selected. */
+html[data-theme="light"] body.dw-production-v3,
+html[data-theme="light"] body.dw-production-v3 .proc-main{background:#f6f7f8!important;color:#171c22!important}
+html[data-theme="light"] body.dw-production-v3 :is(.dw-prod-methods,.dw-prod-progress-wrap){background:transparent!important}
+html[data-theme="light"] body.dw-production-v3 :is(.dw-prod-stage,.dw-prod-method,.dw-method-info,.dw-prod-spotlight){background:#fff!important;color:#171c22!important;border-color:#cbd3d9!important}
+html[data-theme="light"] body.dw-production-v3 .dw-prod-stage.is-active{background:#fff4f2!important;border-color:#BF1304!important}
+html[data-theme="light"] body.dw-production-v3 :is(.dw-prod-heading h2,.dw-prod-stage-title,.dw-method-title,#methods-title){color:#171c22!important}
+html[data-theme="light"] body.dw-production-v3 :is(.dw-prod-stage-caption,.dw-method-details p,.dw-prod-features li){color:#505963!important}

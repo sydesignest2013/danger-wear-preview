@@ -1,0 +1,6 @@
+
+.dw-new-product{ max-width: 1000px; min-height: 75vh; margin: 0 auto; padding: 160px 28px 80px; }
+.dw-new-product h1{ font-size: clamp(30px,5vw,64px); line-height: 1.1; margin: 24px 0; }
+.dw-new-product .fw-kicker{ color: #df210d; font-weight: 700; }
+.dw-new-product .fw-lead{ max-width: 650px; line-height: 1.7; color: #ddd; }
+.dw-new-product-cta{ display: inline-block; margin-top: 36px; padding: 18px 24px; color: #fff; background: #bf1304; font-weight: 700; text-decoration: none; }

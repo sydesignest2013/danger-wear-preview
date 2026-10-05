@@ -1,3 +1,4 @@
+
 body.dw-unified-product-page .dw-caption-outline{display:none!important}
 body.dw-unified-product-page .fw-personalization-copy{display:flex!important;flex-direction:column!important;gap:4px!important;justify-content:flex-end!important}
 body.dw-unified-product-page .fw-personalization-copy small{color:#e21a12!important;margin:0!important;padding:0!important;line-height:1.25!important}
@@ -5,9 +6,77 @@ body.dw-unified-product-page .fw-personalization-copy strong{margin:0!important}
 body.dw-unified-product-page .fw-mark-panel .mark-badge{display:flex!important;flex-direction:column!important;align-items:center!important;height:auto!important;gap:5px!important;max-width:82px!important;background:transparent!important}
 .dw-method-art{display:block;width:100%;aspect-ratio:1730/1650;background-image:url('../assets/images/marking/methods-sheet.png');background-size:355.1445% 248.2424%;background-position:calc(var(--method-x) / 4414 * 100%) calc(var(--method-y) / 2446 * 100%);background-repeat:no-repeat}
 .dw-method-label{font:600 10px/1.2 'Chakra Petch',sans-serif;color:inherit;text-align:center;overflow-wrap:anywhere}
-@media(max-width:760px){body.dw-unified-product-page .fw-personalization>summary{display:flex!important;flex-wrap:wrap!important;gap:12px!important}body.dw-unified-product-page .mesh-ref-info .fw-mark-panel{flex:1 0 100%!important;width:100%!important;justify-content:flex-start!important;flex-wrap:wrap!important;overflow:visible!important}body.dw-unified-product-page .mesh-ref-info .fw-mark-panel .mark-badge{flex:0 0 64px!important;width:64px!important;min-width:64px!important}body.dw-unified-product-page .dw-method-label{white-space:normal!important}body.dw-unified-product-page{overflow-x:clip!important}}
-/* Realization images retain alpha; backgrounds are shared by thumbnails and preview. */
+@media(max-width:760px){
+body.dw-unified-product-page .fw-personalization>summary{display:flex!important;flex-wrap:wrap!important;gap:12px!important}
+body.dw-unified-product-page .mesh-ref-info .fw-mark-panel{flex:1 0 100%!important;width:100%!important;justify-content:flex-start!important;flex-wrap:wrap!important;overflow:visible!important}
+body.dw-unified-product-page .mesh-ref-info .fw-mark-panel .mark-badge{flex:0 0 64px!important;width:64px!important;min-width:64px!important}
+body.dw-unified-product-page .dw-method-label{white-space:normal!important}
+body.dw-unified-product-page{overflow-x:clip!important}}
 :root{--dw-realization-light:linear-gradient(145deg,#ffffff,#e6e8eb);--dw-realization-dark:linear-gradient(145deg,#25292e,#101215)}
-body.dw-unified-product-page .realization-thumb img,body.dw-unified-product-page #lightboxImage{background-image:var(--dw-realization-dark)!important;background-color:#171a1e!important;background-size:cover!important;background-position:center!important;object-fit:contain!important}
-html[data-theme="light"] body.dw-unified-product-page .realization-thumb img,html[data-theme="light"] body.dw-unified-product-page #lightboxImage{background-image:var(--dw-realization-light)!important;background-color:#f1f2f4!important}
-@media(max-width:1180px){body.dw-unified-product-page .mob-panel:not(.open){visibility:hidden!important}body.dw-unified-product-page .mob-panel.open{visibility:visible!important}html:has(body.dw-unified-product-page){overflow-x:clip!important}}
+body.dw-unified-product-page .realization-thumb img,
+body.dw-unified-product-page #lightboxImage{background-image:var(--dw-realization-dark)!important;background-color:#171a1e!important;background-size:cover!important;background-position:center!important;object-fit:contain!important}
+html[data-theme="light"] body.dw-unified-product-page .realization-thumb img,
+html[data-theme="light"] body.dw-unified-product-page #lightboxImage{background-image:var(--dw-realization-light)!important;background-color:#f1f2f4!important}
+@media(max-width:1180px){
+html:has(body.dw-unified-product-page){overflow-x:clip!important}}
+
+/* Product spacing and a caption fully below the lifestyle photograph. */
+body.dw-unified-product-page .mesh-ref-shell{padding-top:calc(106px - var(--dw-product-top-reduction,0px))!important}
+body.dw-unified-product-page .mesh-ref-visual{margin-top:70px!important;min-width:0}
+body.dw-unified-product-page .mesh-ref-visual .stage{width:calc(100% - 40px)!important;margin-inline:auto!important}
+html body.dw-unified-product-page.sw-mesh-page .mesh-ref-visual .mesh-ref-caption.dw-kinetic-caption.dw-has-lifestyle{position:relative!important;inset:auto!important;transform:none!important;margin:8px auto 0!important;width:min(414px,100%)!important;height:auto!important;min-height:64px!important;background:transparent!important}
+body.dw-unified-product-page.sw-mesh-page .dw-kinetic-caption .dw-caption-subline::before,
+body.dw-unified-product-page.sw-mesh-page .dw-kinetic-caption .dw-caption-subline::after{content:none!important;display:none!important}
+@media(max-width:900px){
+body.dw-unified-product-page .mesh-ref-shell{padding-top:calc(96px - var(--dw-product-top-reduction,0px))!important}
+body.dw-unified-product-page .mesh-ref-visual{margin-top:28px!important}
+body.dw-unified-product-page .mesh-ref-visual .stage{width:100%!important}
+}
+/* Shared product variant control and final gallery proportions. */
+.dw-variant-picker{display:flex;align-items:center;flex-wrap:wrap;gap:10px 16px;margin:18px 0 24px}
+.dw-variant-picker label{font:600 12px 'Chakra Petch',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#aeb2b9}
+.dw-variant-picker select{font:600 15px 'Chakra Petch',sans-serif;color:#fff;background:#17191d;border:1px solid #494b50;padding:10px 38px 10px 14px;min-width:220px;max-width:100%;border-radius:0;cursor:pointer}
+.dw-variant-picker select:focus-visible{outline:2px solid #f21d0b;outline-offset:3px}
+.dw-variant-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+html[data-theme="light"] .dw-variant-picker select{color:#14161a;background:#f0f1f3;border-color:#b8bcc2}
+html[data-theme="light"] .dw-variant-picker label{color:#515760}
+body.dw-unified-product-page.sw-mesh-page .mesh-ref-visual .main-card{box-shadow:-22px 8px 32px #000e,22px 8px 32px #000e,0 20px 40px #000b!important}
+body.dw-unified-product-page.sw-mesh-page .dw-kinetic-caption.dw-has-lifestyle .mesh-project-title#lifestyleTitle{font-size:clamp(18px,1.5vw,23px)!important;line-height:1.15!important;text-shadow:none!important;letter-spacing:.015em!important}
+body.dw-unified-product-page.sw-mesh-page .dw-kinetic-caption.dw-has-lifestyle .dw-caption-headline{min-height:28px!important}
+body.dw-unified-product-page.sw-mesh-page .dw-kinetic-caption.dw-has-lifestyle #lifestyleSubtitle{color:#969ca5!important;text-shadow:none!important;font-family:'Chakra Petch',sans-serif!important;font-weight:500!important;letter-spacing:.1em!important}
+@media(min-width:901px){
+ body.dw-unified-product-page.sw-mesh-page .mesh-ref-visual .stage{--mesh-carousel-card-h:520px;height:520px!important;min-height:520px!important}
+}
+
+body.dw-unified-product-page #realizacje[hidden]{display:none!important}
+html[data-theme="light"] body.dw-unified-product-page.sw-mesh-page .dw-kinetic-caption.dw-has-lifestyle .mesh-project-title#lifestyleTitle{color:#171a1f!important}
+html[data-theme="light"] body.dw-unified-product-page.sw-mesh-page .dw-kinetic-caption.dw-has-lifestyle #lifestyleSubtitle{color:#555e68!important}
+
+/* Hide the frame in the existing icon sheet without altering the artwork. */
+body.dw-unified-product-page .dw-method-art{clip-path:inset(6%)}
+body.dw-unified-product-page .dw-method-label{text-transform:uppercase}
+
+/* Variant buttons follow the supplied reference and wrap as options are added. */
+.dw-variant-picker-buttons>label,.dw-variant-picker-buttons>select{display:none!important}
+.dw-variant-buttons{display:flex;flex-wrap:wrap;gap:12px;width:100%}
+.dw-variant-button{max-width:100%;padding:10px 18px;border:1px solid #30383b;border-radius:4px;background:linear-gradient(125deg,#29363b,#0a0d0e 65%);color:#fff;font:600 18px/1.25 'Chakra Petch',sans-serif;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;overflow-wrap:anywhere;box-shadow:inset 0 1px 2px #ffffff12,0 4px 8px #0005}
+.dw-variant-button[aria-pressed="true"]{border-color:#d52a1b;background:linear-gradient(125deg,#df1a08,#900900 65%,#3d0803);box-shadow:inset 0 1px 3px #ff806055,0 3px 9px #0005}
+.dw-variant-button:focus-visible{outline:2px solid #f33;outline-offset:4px}
+@media(max-width:600px){.dw-variant-button{font-size:15px;padding:10px 14px}}
+
+/* Keep the full icon caption visible where older mobile rules fixed badge heights. */
+html body.dw-unified-product-page.sw-mesh-page .mesh-ref-info .fw-mark-panel .mark-badge{height:auto!important;min-height:0!important}
+
+/* Shared light-theme contrast, including the more specific mobile rules. */
+html[data-theme="light"] body.dw-unified-product-page.sw-mesh-page .mesh-ref-info .fw-specs dd{color:#171c22!important}
+html[data-theme="light"] body.dw-unified-product-page.sw-mesh-page .mesh-ref-info .fw-specs dt{color:#505963!important}
+html[data-theme="light"] body.dw-unified-product-page.sw-mesh-page .mesh-ref-info :is(.fw-data-fold,.fw-personalization,.fw-data-fold summary,.fw-personalization summary,.fw-mark-panel){background:#fff!important;color:#171c22!important;border-color:#cbd3d9!important}
+html[data-theme="light"] body.dw-unified-product-page.sw-mesh-page .mesh-ref-info :is(.fw-personalization-copy strong,.dw-size-label,.dw-method-label){color:#171c22!important}
+html[data-theme="light"] body.dw-unified-product-page.sw-mesh-page .mesh-ref-actions a:not(.mesh-ref-primary){color:#505963!important}
+
+/* Long translated titles must not expand the mobile grid or clip the card. */
+@media(max-width:900px){
+ html body.dw-unified-product-page.sw-mesh-page :is(.mesh-ref-main,.mesh-mobile-heading,.mesh-ref-info){min-width:0!important;max-width:100%!important}
+ html body.dw-unified-product-page.sw-mesh-page :is(.mesh-mobile-heading h1,.mesh-ref-info h1){max-width:100%!important;white-space:normal!important;overflow-wrap:anywhere!important;word-break:normal!important;line-height:1.08!important}
+ html body.dw-unified-product-page.sw-mesh-page .mesh-ref-info .fw-specs dd{min-width:0!important;overflow-wrap:anywhere!important}
+}

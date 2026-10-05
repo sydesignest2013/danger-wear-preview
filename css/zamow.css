@@ -1,3 +1,4 @@
+
 .inquiry{margin-top:0rem;padding:1.5rem 3rem;border:1px solid var(--border);position:relative;overflow:hidden;backdrop-filter:blur(0px)}
 .inquiry::before{content:'';position:absolute;inset:0;pointer-events:none}
 .inquiry-eyebrow{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.3em;color:var(--red);text-transform:uppercase;margin-bottom:.8rem}
@@ -9,7 +10,5 @@
 .btn-primary{display:inline-flex;align-items:center;gap:.8rem;padding:.95rem 2rem;background:var(--red);color:#ffffff;text-decoration:none;font-size:.72rem;letter-spacing:.2em;font-weight:700;text-transform:uppercase;border:1px solid var(--red);transition:background .3s,color .3s;font-family:'Chakra Petch',sans-serif}
 .btn-primary:hover{background:transparent;color:var(--red)}
 .btn-primary::after{content:'→';margin-left:.3rem}
-
-/* REVEAL */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
 .reveal.in{opacity:1;transform:translateY(0)}
