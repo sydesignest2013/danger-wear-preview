@@ -1,4 +1,4 @@
-/* Production shares the fixed crowd texture used throughout the public site. */
+
 html:not([data-theme="light"]) body.dw-production-v3{
   background-image:linear-gradient(180deg,rgba(2,4,7,.56) 0%,rgba(3,7,12,.58) 42%,rgba(1,2,4,.74) 100%),radial-gradient(ellipse at 74% 12%,rgba(28,44,64,.14),transparent 48%),url('../assets/images/tlodark.jpg')!important;
   background-size:cover,cover,cover!important;
@@ -6,12 +6,9 @@ html:not([data-theme="light"]) body.dw-production-v3{
   background-repeat:no-repeat!important;
   background-attachment:fixed!important;
 }
-
 .dw-production-v3 .proc-main,
 .dw-production-v3 .dw-prod-methods,
 .dw-production-v3 .dw-prod-progress-wrap{background:transparent!important}
-
-/* Cards retain contrast but reveal 30% of the common background beneath them. */
 .dw-production-v3 .dw-prod-stage,
 .dw-production-v3 .dw-prod-method,
 .dw-production-v3 .dw-method-info,
@@ -24,15 +21,15 @@ html:not([data-theme="light"]) body.dw-production-v3{
 .dw-production-v3 .dw-prod-stage-visual::after{background:linear-gradient(180deg,rgba(8,12,16,0) 28%,rgba(8,12,16,.78) 98%)!important}
 
 @media(max-width:900px){
-  html:not([data-theme="light"]) body.dw-production-v3{background-attachment:fixed!important}
+html:not([data-theme="light"]) body.dw-production-v3{background-attachment:fixed!important}
 }
 
-/* Final composition of the production page: the selectable route sits on the visuals. */
+/* Final composition of the production page: the selectable route follows the card bottoms. */
 @media(min-width:901px){
-  .dw-production-v3 .dw-prod-path{position:relative!important}
-  .dw-production-v3 .dw-prod-progress-wrap{
-    position:absolute!important;
-    top:clamp(54px,5.8vw,82px)!important;
+.dw-production-v3 .dw-prod-path{position:relative!important}
+.dw-production-v3 .dw-prod-progress-wrap{
+    position:relative!important;
+    top:auto!important;
     left:0!important;
     right:0!important;
     z-index:12!important;
@@ -41,16 +38,14 @@ html:not([data-theme="light"]) body.dw-production-v3{
     padding:0!important;
     pointer-events:auto!important;
   }
-  .dw-production-v3 .dw-prod-route-bar{height:46px!important}
-  .dw-production-v3 .dw-prod-route-line{opacity:.9!important}
-  .dw-production-v3 .dw-prod-route-node{
+.dw-production-v3 .dw-prod-route-bar{height:46px!important}
+.dw-production-v3 .dw-prod-route-line{opacity:.9!important}
+.dw-production-v3 .dw-prod-route-node{
     background:rgba(8,12,16,.78)!important;
     backdrop-filter:blur(3px);
     -webkit-backdrop-filter:blur(3px);
   }
 }
-
-/* Tighter transition to methods and a 30% smaller section title. */
 .dw-production-v3 .dw-prod-methods{
   padding-top:clamp(38px,4vw,56px)!important;
   padding-bottom:clamp(34px,4vw,56px)!important;

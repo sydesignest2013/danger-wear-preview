@@ -1,0 +1,10 @@
+body:has(#orderForm) .page{grid-template-columns:minmax(0,1fr) minmax(0,2fr)!important}
+body:has(#orderForm) .page-left{width:auto!important;min-width:0;padding-inline:clamp(20px,3vw,48px)!important;border:0!important}
+body:has(#orderForm) .left-title{font-size:clamp(32px,3.5vw,62px)!important;overflow-wrap:normal}
+body:has(#orderForm) .page-right{width:auto!important;min-width:0;padding-inline:clamp(22px,4vw,64px)!important}
+body:has(#orderForm) :is(.f-block,.f-block.focused,.f-upload){border:0!important;box-shadow:none!important;background:transparent!important}
+body:has(#orderForm) .f-block::after{display:none!important}
+body:has(#orderForm) :is(.f-input,.f-select,.f-textarea){box-sizing:border-box;border:0!important;border-radius:2px;background:rgba(255,255,255,.055)!important;padding:14px 16px!important;color:#eee!important}
+body:has(#orderForm) :is(.f-input,.f-select,.f-textarea):focus-visible{outline:1px solid #bf1304!important;outline-offset:2px;background:rgba(255,255,255,.09)!important}
+html[data-theme="light"] body:has(#orderForm) :is(.f-input,.f-select,.f-textarea){background:#eef0f2!important;color:#171c22!important}
+@media(max-width:900px){body:has(#orderForm) .page{grid-template-columns:minmax(0,1fr)!important}body:has(#orderForm) .page-left{height:auto!important;position:relative!important}body:has(#orderForm) .page-right{padding-top:24px!important}}

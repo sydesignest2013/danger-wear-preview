@@ -1,0 +1,5 @@
+/* Shared PDF category lettering; translated accessory names remain real text. */
+#kategorie .cat-tile-body{inset:auto 0 0!important;min-height:86px;padding:0 18px 15px!important;display:flex;align-items:flex-end;border:0!important;background:linear-gradient(0deg,rgba(0,0,0,.94),rgba(0,0,0,.06));transform:none!important;container-type:inline-size}
+#kategorie .cat-tile-name-pdf{display:block!important;width:100%!important;writing-mode:horizontal-tb!important;line-height:1!important}
+#kategorie .cat-tile-name-pdf .cat-label-pdf{position:static!important;display:block!important;width:57.5%!important;height:auto!important;aspect-ratio:773/141!important;object-fit:contain!important;transform:none!important;filter:drop-shadow(0 3px 5px rgba(0,0,0,.45))!important;opacity:1!important;margin:0!important}
+#kategorie .cat-tile-name-localized{display:flex!important;align-items:center;width:57.5%!important;aspect-ratio:773/141;font:700 italic min(8.3cqw,27px)/1 'Chakra Petch',sans-serif!important;letter-spacing:-.055em!important;color:#fff!important;white-space:nowrap;text-shadow:0 2px 8px #000!important}

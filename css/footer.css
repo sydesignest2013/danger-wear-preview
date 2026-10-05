@@ -1,15 +1,14 @@
-/* ===== FOOTER ===== */
-footer { text-align: center; padding: 3rem 2rem; border-top: 1px solid var(--border); }
-footer p { font-size: .62rem; letter-spacing: .22em; color: var(--muted); text-transform: uppercase; }
-footer small { display: block; font-size: .48rem; letter-spacing: .16em; color: rgba(255,255,255,.15); text-transform: uppercase; margin-top: .5rem; }
-/* === GLOBAL FOOTER COMPACT V1 / 2026-09-18 === */
+
+footer{ text-align: center; padding: 3rem 2rem; border-top: 1px solid var(--border); }
+footer p{ font-size: .62rem; letter-spacing: .22em; color: var(--muted); text-transform: uppercase; }
+footer small{ display: block; font-size: .48rem; letter-spacing: .16em; color: rgba(255,255,255,.15); text-transform: uppercase; margin-top: .5rem; }
 footer,
 .dw-global-footer{
   width:min(var(--dw-content-max,1180px),calc(100% - 64px))!important;
   max-width:var(--dw-content-max,1180px)!important;
   margin:0 auto!important;
   padding:1.85rem 1.5rem 2rem!important;
-  background:#08090a!important;
+  background:rgb(var(--dw-chrome-rgb,5,6,7))!important;
   border-top:0!important;
   text-align:center!important;
 }
@@ -18,8 +17,8 @@ footer p,
 footer small,
 .dw-global-footer small{color:rgba(255,255,255,.18)!important;font-size:.46rem!important;}
 html[data-theme="light"] footer,
-html[data-theme="light"] .dw-global-footer{background:#08090a!important;}
+html[data-theme="light"] .dw-global-footer{background:rgb(var(--dw-chrome-rgb,5,6,7))!important;}
 @media (max-width:900px){
-  footer,
-  .dw-global-footer{width:calc(100% - 24px)!important;padding:1.5rem 1rem 1.7rem!important;}
+footer,
+.dw-global-footer{width:calc(100% - 24px)!important;padding:1.5rem 1rem 1.7rem!important;}
 }
